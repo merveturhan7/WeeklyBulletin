@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Weekly Bulletin</title>
+<title>Product and Services Weekly Bulletin</title>
 
 <style>
 *{
@@ -36,20 +36,21 @@ header{
 }
 
 .logo{
-    width:46px;
-    height:46px;
-    border-radius:12px;
+    width:48px;
+    height:48px;
+    border-radius:13px;
     background:#172033;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
     font-weight:700;
+    font-size:14px;
 }
 
 h1{
     margin:0;
-    font-size:26px;
+    font-size:25px;
 }
 
 .subtitle{
@@ -60,12 +61,12 @@ h1{
 
 .hero{
     max-width:1200px;
-    margin:32px auto 0;
+    margin:30px auto 0;
     padding:0 22px;
 }
 
 .hero-box{
-    background:linear-gradient(135deg,#172033,#30415f);
+    background:linear-gradient(135deg,#172033,#344866);
     color:white;
     border-radius:20px;
     padding:34px;
@@ -73,12 +74,12 @@ h1{
 
 .hero-box h2{
     margin:0 0 10px;
-    font-size:30px;
+    font-size:29px;
 }
 
 .hero-box p{
     margin:0;
-    opacity:.78;
+    opacity:.8;
     line-height:1.6;
 }
 
@@ -92,32 +93,27 @@ h1{
     display:flex;
     gap:12px;
     flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
     margin-bottom:18px;
 }
 
 .search{
     flex:1;
-    min-width:220px;
+    min-width:210px;
 }
 
-.search input{
+.search input,
+.week-select{
     width:100%;
-    padding:13px 16px;
+    padding:13px 15px;
     border-radius:12px;
     border:1px solid #dce1e8;
     background:white;
-    font-size:15px;
+    font-size:14px;
     outline:none;
 }
 
-.week{
-    background:white;
-    border:1px solid #dce1e8;
-    padding:12px 16px;
-    border-radius:12px;
-    font-size:14px;
+.week-wrapper{
+    min-width:190px;
 }
 
 .filters{
@@ -125,7 +121,6 @@ h1{
     gap:8px;
     overflow-x:auto;
     padding-bottom:12px;
-    margin-bottom:12px;
 }
 
 .filter{
@@ -133,8 +128,8 @@ h1{
     background:white;
     padding:9px 14px;
     border-radius:30px;
-    cursor:pointer;
     white-space:nowrap;
+    cursor:pointer;
     font-size:13px;
 }
 
@@ -148,17 +143,17 @@ h1{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin:24px 0 16px;
+    margin:22px 0 16px;
 }
 
 .section-title h2{
-    font-size:20px;
     margin:0;
+    font-size:20px;
 }
 
 .count{
-    color:#8490a3;
     font-size:13px;
+    color:#8490a3;
 }
 
 .grid{
@@ -170,7 +165,7 @@ h1{
 .card{
     background:white;
     border:1px solid #e4e8ef;
-    border-radius:16px;
+    border-radius:17px;
     overflow:hidden;
     transition:.2s;
 }
@@ -181,12 +176,12 @@ h1{
 }
 
 .card-image{
-    height:150px;
-    background:linear-gradient(135deg,#e8edf5,#d5ddea);
+    height:145px;
+    background:linear-gradient(135deg,#e9edf4,#d7dfeb);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:36px;
+    font-size:40px;
 }
 
 .card-body{
@@ -196,7 +191,7 @@ h1{
 .badge{
     display:inline-block;
     padding:6px 10px;
-    border-radius:30px;
+    border-radius:20px;
     background:#eef1f5;
     color:#526077;
     font-size:11px;
@@ -205,32 +200,32 @@ h1{
 }
 
 .card h3{
-    font-size:18px;
     margin:0 0 9px;
-    line-height:1.35;
+    font-size:18px;
+    line-height:1.4;
 }
 
 .card p{
+    margin:0 0 16px;
     color:#68758a;
     font-size:14px;
     line-height:1.6;
-    margin:0 0 16px;
 }
 
 .read-more{
     color:#172033;
+    font-size:13px;
     font-weight:600;
     text-decoration:none;
-    font-size:13px;
 }
 
-.empty{
+.message{
     display:none;
     background:white;
     border-radius:16px;
-    padding:40px;
+    padding:35px 20px;
     text-align:center;
-    color:#7b8799;
+    color:#778397;
 }
 
 footer{
@@ -249,7 +244,11 @@ footer{
 @media(max-width:600px){
 
     .header-inner{
-        padding:20px 18px;
+        padding:20px 17px;
+    }
+
+    h1{
+        font-size:20px;
     }
 
     .hero{
@@ -272,6 +271,10 @@ footer{
     .grid{
         grid-template-columns:1fr;
     }
+
+    .week-wrapper{
+        width:100%;
+    }
 }
 </style>
 </head>
@@ -279,312 +282,173 @@ footer{
 <body>
 
 <header>
-    <div class="header-inner">
 
-        <div class="logo-area">
+<div class="header-inner">
 
-            <div class="logo">
-                WB
-            </div>
+<div class="logo-area">
 
-            <div>
-                <h1>Weekly Bulletin</h1>
-                <div class="subtitle">
-                    Weekly developments, news & insights
-                </div>
-            </div>
+<div class="logo">
+PS
+</div>
 
-        </div>
+<div>
+<h1>Product and Services Weekly Bulletin</h1>
 
-    </div>
+<div class="subtitle">
+Weekly developments, news & insights
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </header>
 
 
 <section class="hero">
 
-    <div class="hero-box">
+<div class="hero-box">
 
-        <h2>Bu Haftanın Öne Çıkanları</h2>
+<h2>Bu Haftanın Öne Çıkanları</h2>
 
-        <p>
-            Sektör, ürün geliştirme, müşteri ve pazar gündemindeki önemli
-            gelişmeleri tek ekranda takip edin.
-        </p>
+<p>
+Ürün, hizmet, pazar ve müşteri gündemindeki önemli gelişmeleri
+tek ekranda takip edin.
+</p>
 
-    </div>
+</div>
 
 </section>
 
 
 <main class="container">
 
-    <div class="toolbar">
 
-        <div class="search">
-            <input
-            type="text"
-            id="searchInput"
-            placeholder="Haberlerde ara...">
-        </div>
+<div class="toolbar">
 
-        <div class="week">
-            29 Eylül 2026
-        </div>
+<div class="search">
 
-    </div>
+<input
+type="text"
+id="searchInput"
+placeholder="İçeriklerde ara...">
 
+</div>
 
-    <div class="filters">
 
-        <button class="filter active" data-category="all">
-            Tümü
-        </button>
+<div class="week-wrapper">
 
-        <button class="filter" data-category="market">
-            Market News
-        </button>
+<select
+id="weekSelect"
+class="week-select">
 
-        <button class="filter" data-category="product">
-            Product Development
-        </button>
+<option>Hafta yükleniyor...</option>
 
-        <button class="filter" data-category="customer">
-            Customer Voice
-        </button>
+</select>
 
-        <button class="filter" data-category="industry">
-            Industry
-        </button>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="section-title">
+<div class="filters">
 
-        <h2>Weekly Updates</h2>
+<button
+class="filter active"
+data-category="all">
+Tümü
+</button>
 
-        <div class="count" id="resultCount">
-            6 içerik
-        </div>
+<button
+class="filter"
+data-category="market">
+Market News
+</button>
 
-    </div>
+<button
+class="filter"
+data-category="product">
+Product Development
+</button>
 
+<button
+class="filter"
+data-category="customer">
+Customer Voice
+</button>
 
-    <div class="grid" id="newsGrid">
+<button
+class="filter"
+data-category="industry">
+Industry
+</button>
 
+</div>
 
-        <article class="card"
-        data-category="market">
 
-            <div class="card-image">
-                🌍
-            </div>
+<div class="section-title">
 
-            <div class="card-body">
+<h2 id="weekTitle">
+Weekly Updates
+</h2>
 
-                <span class="badge">
-                    MARKET NEWS
-                </span>
+<div
+class="count"
+id="resultCount">
+</div>
 
-                <h3>
-                    Küresel pazardaki yeni gelişmeler
-                </h3>
+</div>
 
-                <p>
-                    Haftanın öne çıkan pazar gelişmeleri ve sektörel
-                    değişiklikleri.
-                </p>
 
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
+<div
+class="grid"
+id="newsGrid">
+</div>
 
-            </div>
 
-        </article>
+<div
+class="message"
+id="emptyState">
 
+Aramanızla eşleşen içerik bulunamadı.
 
-        <article class="card"
-        data-category="product">
+</div>
 
-            <div class="card-image">
-                🚀
-            </div>
 
-            <div class="card-body">
+<div
+class="message"
+id="errorState">
 
-                <span class="badge">
-                    PRODUCT DEVELOPMENT
-                </span>
+İçerikler yüklenirken bir sorun oluştu.
 
-                <h3>
-                    Yeni ürün geliştirme çalışmaları
-                </h3>
+</div>
 
-                <p>
-                    Ürün deneyimini geliştirmeye yönelik yeni proje
-                    ve uygulamalar.
-                </p>
-
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="card"
-        data-category="customer">
-
-            <div class="card-image">
-                💬
-            </div>
-
-            <div class="card-body">
-
-                <span class="badge">
-                    CUSTOMER VOICE
-                </span>
-
-                <h3>
-                    Müşterilerden gelen geri bildirimler
-                </h3>
-
-                <p>
-                    Haftanın müşteri görüşmeleri ve öne çıkan
-                    beklentiler.
-                </p>
-
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="card"
-        data-category="industry">
-
-            <div class="card-image">
-                ✈️
-            </div>
-
-            <div class="card-body">
-
-                <span class="badge">
-                    INDUSTRY
-                </span>
-
-                <h3>
-                    Havacılık sektöründen gelişmeler
-                </h3>
-
-                <p>
-                    Havacılık ve lojistik sektöründeki önemli
-                    gelişmeler.
-                </p>
-
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="card"
-        data-category="market">
-
-            <div class="card-image">
-                📊
-            </div>
-
-            <div class="card-body">
-
-                <span class="badge">
-                    MARKET NEWS
-                </span>
-
-                <h3>
-                    Haftalık pazar görünümü
-                </h3>
-
-                <p>
-                    Pazardaki eğilimler, fırsatlar ve rekabet
-                    ortamına ilişkin kısa değerlendirme.
-                </p>
-
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="card"
-        data-category="product">
-
-            <div class="card-image">
-                ⚙️
-            </div>
-
-            <div class="card-body">
-
-                <span class="badge">
-                    PRODUCT DEVELOPMENT
-                </span>
-
-                <h3>
-                    Dijital süreç geliştirmeleri
-                </h3>
-
-                <p>
-                    Süreçleri kolaylaştıracak dijital geliştirmeler
-                    ve yeni özellikler.
-                </p>
-
-                <a class="read-more" href="#">
-                    Detayları Gör →
-                </a>
-
-            </div>
-
-        </article>
-
-    </div>
-
-
-    <div class="empty" id="emptyState">
-        Aramanızla eşleşen içerik bulunamadı.
-    </div>
 
 </main>
 
 
 <footer>
 
-Weekly Bulletin · 2026
+Product and Services Weekly Bulletin · 2026
 
 </footer>
 
 
 <script>
 
-const filters =
-document.querySelectorAll(".filter");
+let allItems = [];
+let selectedCategory = "all";
 
-const cards =
-document.querySelectorAll(".card");
+const newsGrid =
+document.getElementById("newsGrid");
 
 const searchInput =
 document.getElementById("searchInput");
+
+const weekSelect =
+document.getElementById("weekSelect");
 
 const resultCount =
 document.getElementById("resultCount");
@@ -592,85 +456,292 @@ document.getElementById("resultCount");
 const emptyState =
 document.getElementById("emptyState");
 
-let selectedCategory = "all";
+const errorState =
+document.getElementById("errorState");
+
+const weekTitle =
+document.getElementById("weekTitle");
+
+const filterButtons =
+document.querySelectorAll(".filter");
 
 
-function filterCards(){
+async function loadWeeks(){
 
-    const search =
-    searchInput.value.toLowerCase();
+    try{
 
-    let visible = 0;
+        const response =
+        await fetch("./data/index.json");
+
+        const data =
+        await response.json();
+
+        weekSelect.innerHTML = "";
+
+        data.weeks.forEach((week,index)=>{
+
+            const option =
+            document.createElement("option");
+
+            option.value =
+            week.date;
+
+            option.textContent =
+            week.title;
+
+            weekSelect.appendChild(option);
+
+        });
 
 
-    cards.forEach(card => {
+        if(data.weeks.length > 0){
 
-        const category =
-        card.dataset.category;
-
-        const text =
-        card.innerText.toLowerCase();
-
-        const categoryMatch =
-        selectedCategory === "all"
-        || category === selectedCategory;
-
-        const searchMatch =
-        text.includes(search);
-
-
-        if(categoryMatch && searchMatch){
-
-            card.style.display = "block";
-
-            visible++;
-
-        }else{
-
-            card.style.display = "none";
+            await loadWeek(
+                data.weeks[0].date
+            );
 
         }
 
-    });
+    }
 
+    catch(error){
 
-    resultCount.innerText =
-    visible + " içerik";
+        console.error(error);
 
+        errorState.style.display =
+        "block";
 
-    emptyState.style.display =
-    visible === 0 ? "block" : "none";
+    }
 
 }
 
 
-filters.forEach(button => {
+async function loadWeek(date){
 
-    button.addEventListener("click", () => {
+    try{
 
-        filters.forEach(b =>
-        b.classList.remove("active"));
+        errorState.style.display =
+        "none";
 
-        button.classList.add("active");
+        const response =
+        await fetch(
+            "./data/" +
+            date +
+            ".json?cache=" +
+            Date.now()
+        );
+
+        if(!response.ok){
+            throw new Error(
+                "Dosya bulunamadı"
+            );
+        }
+
+        const data =
+        await response.json();
+
+        allItems =
+        data.items || [];
+
+        weekTitle.textContent =
+        data.date + " · Weekly Updates";
 
         selectedCategory =
-        button.dataset.category;
+        "all";
 
-        filterCards();
+        filterButtons.forEach(
+            button =>
+            button.classList.remove(
+                "active"
+            )
+        );
+
+        filterButtons[0]
+        .classList.add("active");
+
+        searchInput.value = "";
+
+        renderItems();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        newsGrid.innerHTML = "";
+
+        errorState.style.display =
+        "block";
+
+    }
+
+}
+
+
+function renderItems(){
+
+    const search =
+    searchInput.value
+    .toLowerCase()
+    .trim();
+
+
+    const filteredItems =
+    allItems.filter(item=>{
+
+        const categoryMatch =
+        selectedCategory === "all"
+        ||
+        item.category ===
+        selectedCategory;
+
+
+        const searchText =
+        (
+            item.title +
+            " " +
+            item.summary +
+            " " +
+            item.categoryName
+        )
+        .toLowerCase();
+
+
+        const searchMatch =
+        searchText.includes(search);
+
+
+        return (
+            categoryMatch &&
+            searchMatch
+        );
 
     });
+
+
+    newsGrid.innerHTML = "";
+
+
+    filteredItems.forEach(item=>{
+
+        const card =
+        document.createElement(
+            "article"
+        );
+
+        card.className =
+        "card";
+
+
+        card.innerHTML = `
+
+        <div class="card-image">
+            ${item.icon || "📰"}
+        </div>
+
+        <div class="card-body">
+
+            <span class="badge">
+                ${item.categoryName}
+            </span>
+
+            <h3>
+                ${item.title}
+            </h3>
+
+            <p>
+                ${item.summary}
+            </p>
+
+            ${
+            item.url &&
+            item.url !== "#"
+            ?
+            `<a
+            class="read-more"
+            href="${item.url}"
+            target="_blank"
+            rel="noopener">
+            Detayları Gör →
+            </a>`
+            :
+            ""
+            }
+
+        </div>
+        `;
+
+
+        newsGrid.appendChild(card);
+
+    });
+
+
+    resultCount.textContent =
+    filteredItems.length +
+    " içerik";
+
+
+    emptyState.style.display =
+    filteredItems.length === 0
+    ?
+    "block"
+    :
+    "none";
+
+}
+
+
+filterButtons.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            filterButtons.forEach(
+                b =>
+                b.classList.remove(
+                    "active"
+                )
+            );
+
+            button.classList.add(
+                "active"
+            );
+
+            selectedCategory =
+            button.dataset.category;
+
+            renderItems();
+
+        }
+    );
 
 });
 
 
 searchInput.addEventListener(
-"input",
-filterCards
+    "input",
+    renderItems
 );
+
+
+weekSelect.addEventListener(
+    "change",
+    ()=>{
+
+        loadWeek(
+            weekSelect.value
+        );
+
+    }
+);
+
+
+loadWeeks();
 
 </script>
 
-
 </body>
 </html>
-
