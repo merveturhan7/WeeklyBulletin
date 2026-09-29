@@ -2,1948 +2,1392 @@
 <html lang="tr">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Kargo Ürün ve Posta Müdürlüğü | Weekly Bulletin
-</title>
-
+<title>Kargo Ürün ve Posta Müdürlüğü | Weekly Bulletin</title>
 
 <style>
 
 :root{
-
-    --red:#d71920;
-    --dark:#141b2a;
-    --text:#222a38;
-    --muted:#727b8c;
-    --background:#f6f7f9;
-    --white:#ffffff;
-    --border:#e7e9ed;
-
+  --red:#d71920;
+  --dark:#141b2a;
+  --text:#222a38;
+  --muted:#727b8c;
+  --background:#f5f8f9;
+  --white:#ffffff;
+  --border:#e3e7ea;
 }
-
 
 *{
-
-    box-sizing:border-box;
-
+  box-sizing:border-box;
 }
-
 
 body{
-
-    margin:0;
-
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Arial,
-    sans-serif;
-
-    background:var(--background);
-
-    color:var(--text);
-
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:var(--background);
+  color:var(--text);
 }
-
 
 /* HEADER */
 
 header{
-
-    background:white;
-
-    border-bottom:1px solid var(--border);
-
+  background:white;
+  border-bottom:1px solid var(--border);
 }
-
 
 .header-inner{
-
-    max-width:1180px;
-
-    margin:auto;
-
-    padding:22px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:25px;
-
+  max-width:1180px;
+  margin:auto;
+  padding:22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
-
 
 .brand{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:25px;
-
+  display:flex;
+  align-items:center;
+  gap:25px;
 }
-
 
 .brand-logo{
-
-    width:145px;
-
-    flex-shrink:0;
-
+  width:145px;
+  flex-shrink:0;
 }
-
 
 .brand-logo img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
+  width:100%;
+  height:auto;
+  display:block;
 }
-
 
 .brand-divider{
-
-    width:1px;
-
-    height:42px;
-
-    background:#e3e5e9;
-
+  width:1px;
+  height:42px;
+  background:#e3e5e9;
 }
-
 
 .department{
-
-    color:var(--red);
-
-    font-size:10px;
-
-    font-weight:750;
-
-    letter-spacing:1.1px;
-
-    text-transform:uppercase;
-
-    margin-bottom:5px;
-
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  margin-bottom:5px;
 }
-
 
 .brand h1{
-
-    margin:0;
-
-    color:var(--dark);
-
-    font-size:22px;
-
-    font-weight:700;
-
+  margin:0;
+  color:var(--dark);
+  font-size:22px;
+  font-weight:750;
 }
-
 
 .header-date{
-
-    color:var(--muted);
-
-    font-size:12px;
-
-    text-align:right;
-
+  color:var(--muted);
+  font-size:12px;
+  text-align:right;
 }
 
-
-/* HERO */
+/* INTRO HERO */
 
 .hero{
-
-    max-width:1180px;
-
-    margin:28px auto 0;
-
-    padding:0 22px;
-
+  max-width:1180px;
+  margin:28px auto 0;
+  padding:0 22px;
 }
-
 
 .hero-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-        125deg,
-        #121927 0%,
-        #1b263a 100%
-    );
-
-    border-radius:24px;
-
-    color:white;
-
-    padding:40px;
-
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(125deg,#121927 0%,#1b263a 100%);
+  border-radius:24px;
+  color:white;
+  padding:40px;
 }
-
 
 .hero-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:270px;
-
-    height:270px;
-
-    border-radius:50%;
-
-    background:
-    rgba(215,25,32,.28);
-
-    right:-100px;
-
-    top:-125px;
-
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:rgba(215,25,32,.28);
+  right:-100px;
+  top:-140px;
 }
-
 
 .hero-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:160px;
-
-    height:160px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(255,255,255,.08);
-
-    right:95px;
-
-    bottom:-100px;
-
+  content:"";
+  position:absolute;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  right:90px;
+  bottom:-110px;
 }
-
 
 .hero-content{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:700px;
-
+  position:relative;
+  z-index:2;
+  max-width:720px;
 }
-
 
 .hero-label{
-
-    color:#ff7a7f;
-
-    font-size:11px;
-
-    font-weight:750;
-
-    letter-spacing:1.4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:13px;
-
+  color:#ff7a7f;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:13px;
 }
-
 
 .hero-card h2{
-
-    margin:0;
-
-    font-size:36px;
-
-    line-height:1.18;
-
-    letter-spacing:-.6px;
-
+  margin:0;
+  font-size:36px;
+  line-height:1.18;
+  letter-spacing:-.6px;
 }
-
 
 .hero-card p{
-
-    margin:16px 0 0;
-
-    color:#c7ceda;
-
-    line-height:1.7;
-
-    font-size:14px;
-
-    max-width:650px;
-
+  margin:16px 0 0;
+  color:#c7ceda;
+  line-height:1.7;
+  font-size:14px;
+  max-width:650px;
 }
-
 
 /* MAIN */
 
 .container{
-
-    max-width:1180px;
-
-    margin:22px auto 0;
-
-    padding:0 22px;
-
+  max-width:1180px;
+  margin:22px auto 0;
+  padding:0 22px;
 }
-
 
 /* STATS */
 
 .stats{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:12px;
-
-    margin-bottom:22px;
-
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:22px;
 }
-
 
 .stat{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    border-radius:16px;
-
-    padding:17px 18px;
-
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:17px 18px;
 }
-
 
 .stat-number{
-
-    font-size:24px;
-
-    font-weight:750;
-
-    color:var(--dark);
-
+  font-size:24px;
+  font-weight:800;
+  color:var(--dark);
 }
-
 
 .stat-title{
-
-    margin-top:5px;
-
-    color:var(--muted);
-
-    font-size:11px;
-
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
 }
 
-
-/* SEARCH */
+/* TOOLBAR */
 
 .toolbar{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 220px;
-
-    gap:12px;
-
-    margin-bottom:14px;
-
+  display:grid;
+  grid-template-columns:1fr 220px;
+  gap:12px;
+  margin-bottom:14px;
 }
-
 
 .search input,
 .week-select{
-
-    width:100%;
-
-    height:46px;
-
-    border:
-    1px solid var(--border);
-
-    border-radius:12px;
-
-    background:white;
-
-    padding:0 15px;
-
-    color:var(--text);
-
-    font-size:13px;
-
-    outline:none;
-
+  width:100%;
+  height:46px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:white;
+  padding:0 15px;
+  color:var(--text);
+  font-size:13px;
+  outline:none;
 }
-
 
 .search input:focus,
 .week-select:focus{
-
-    border-color:#b7bbc4;
-
+  border-color:#b7bbc4;
 }
-
 
 /* FILTERS */
 
 .filters{
-
-    display:flex;
-
-    gap:8px;
-
-    overflow-x:auto;
-
-    padding-bottom:10px;
-
-    scrollbar-width:none;
-
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:10px;
+  scrollbar-width:none;
 }
-
 
 .filters::-webkit-scrollbar{
-
-    display:none;
-
+  display:none;
 }
-
 
 .filter{
-
-    flex:0 0 auto;
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    color:#626b7a;
-
-    padding:9px 14px;
-
-    border-radius:30px;
-
-    font-size:11px;
-
-    font-weight:550;
-
-    cursor:pointer;
-
+  flex:0 0 auto;
+  background:white;
+  border:1px solid var(--border);
+  color:#626b7a;
+  padding:9px 14px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:600;
+  cursor:pointer;
 }
-
 
 .filter.active{
-
-    background:var(--red);
-
-    border-color:var(--red);
-
-    color:white;
-
+  background:var(--red);
+  border-color:var(--red);
+  color:white;
 }
 
+/* FEATURED */
 
-/* SECTION TITLE */
+.featured-section{
+  display:none;
+  margin:26px 0 34px;
+}
+
+.featured-heading{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:13px;
+}
+
+.featured-heading-line{
+  width:30px;
+  height:3px;
+  border-radius:5px;
+  background:var(--red);
+}
+
+.featured-heading span{
+  color:var(--red);
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.featured-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:23px;
+  background:linear-gradient(125deg,#111a29,#202c40);
+  color:white;
+  min-height:300px;
+  padding:36px;
+}
+
+.featured-card::before{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:rgba(215,25,32,.22);
+  right:-120px;
+  top:-150px;
+}
+
+.featured-card::after{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  right:80px;
+  bottom:-130px;
+}
+
+.featured-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+}
+
+.featured-category{
+  display:inline-block;
+  color:#ff8589;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.featured-card h2{
+  margin:0 0 15px;
+  font-size:30px;
+  line-height:1.25;
+  letter-spacing:-.4px;
+}
+
+.featured-summary{
+  margin:0;
+  color:#c9d0dc;
+  font-size:14px;
+  line-height:1.7;
+  max-width:700px;
+}
+
+.featured-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:20px;
+}
+
+.featured-meta span{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.07);
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:10px;
+  color:#dce1e9;
+}
+
+.featured-link{
+  display:inline-flex;
+  align-items:center;
+  margin-top:22px;
+  padding:11px 16px;
+  border-radius:10px;
+  background:var(--red);
+  color:white;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:750;
+}
+
+/* SECTION */
 
 .section-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:15px;
-
-    margin:20px 0 15px;
-
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:15px;
+  margin:20px 0 15px;
 }
-
 
 .section-label{
-
-    color:var(--red);
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    font-size:10px;
-
-    font-weight:750;
-
+  color:var(--red);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:10px;
+  font-weight:800;
 }
-
 
 .section-header h2{
-
-    margin:5px 0 0;
-
-    color:var(--dark);
-
-    font-size:22px;
-
+  margin:5px 0 0;
+  color:var(--dark);
+  font-size:22px;
 }
-
 
 .result-count{
-
-    color:var(--muted);
-
-    font-size:11px;
-
+  color:var(--muted);
+  font-size:11px;
 }
 
-
-/* CARDS */
+/* NEWS CARDS */
 
 .grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
 }
-
 
 .card{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    transition:.2s ease;
-
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.2s ease;
 }
-
 
 .card:hover{
-
-    transform:
-    translateY(-3px);
-
-    box-shadow:
-    0 12px 35px
-    rgba(15,23,42,.08);
-
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(15,23,42,.08);
 }
-
 
 .card-visual{
-
-    height:115px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:38px;
-
-    position:relative;
-
-    background:
-    linear-gradient(
-        140deg,
-        #edf0f4,
-        #fafafa
-    );
-
+  height:115px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:38px;
+  position:relative;
+  background:linear-gradient(140deg,#edf0f4,#fafafa);
 }
-
 
 .card-visual::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:20px;
-
-    bottom:0;
-
-    width:42px;
-
-    height:4px;
-
-    background:var(--red);
-
-    border-radius:4px 4px 0 0;
-
+  content:"";
+  position:absolute;
+  left:20px;
+  bottom:0;
+  width:42px;
+  height:4px;
+  background:var(--red);
+  border-radius:4px 4px 0 0;
 }
-
 
 .card-body{
-
-    padding:20px;
-
+  padding:20px;
 }
-
 
 .category{
-
-    color:var(--red);
-
-    text-transform:uppercase;
-
-    letter-spacing:.8px;
-
-    font-size:9px;
-
-    font-weight:800;
-
-    margin-bottom:10px;
-
+  color:var(--red);
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  font-size:9px;
+  font-weight:850;
+  margin-bottom:10px;
 }
-
 
 .card h3{
-
-    margin:0 0 10px;
-
-    color:var(--dark);
-
-    font-size:17px;
-
-    line-height:1.4;
-
+  margin:0 0 10px;
+  color:var(--dark);
+  font-size:17px;
+  line-height:1.4;
 }
-
 
 .card p{
-
-    margin:0 0 16px;
-
-    color:#697282;
-
-    font-size:12.5px;
-
-    line-height:1.65;
-
+  margin:0 0 16px;
+  color:#697282;
+  font-size:12.5px;
+  line-height:1.65;
 }
-
 
 .meta-area{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:6px;
-
-    margin-bottom:14px;
-
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:14px;
 }
-
 
 .meta{
-
-    background:#f2f3f5;
-
-    color:#777f8d;
-
-    padding:5px 8px;
-
-    border-radius:20px;
-
-    font-size:9px;
-
+  background:#f2f3f5;
+  color:#777f8d;
+  padding:5px 8px;
+  border-radius:20px;
+  font-size:9px;
 }
-
 
 .source-link{
-
-    text-decoration:none;
-
-    color:var(--dark);
-
-    font-size:11px;
-
-    font-weight:700;
-
+  display:inline-block;
+  text-decoration:none;
+  color:var(--dark);
+  font-size:11px;
+  font-weight:750;
 }
-
 
 .source-link:hover{
-
-    color:var(--red);
-
+  color:var(--red);
 }
 
-
-/* EMPTY */
+/* MESSAGES */
 
 .message{
-
-    display:none;
-
-    padding:35px 20px;
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    border-radius:17px;
-
-    text-align:center;
-
-    color:var(--muted);
-
-    font-size:13px;
-
+  display:none;
+  padding:35px 20px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:17px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
 }
-
 
 /* FOOTER */
 
 footer{
-
-    max-width:1180px;
-
-    margin:50px auto 0;
-
-    padding:
-    23px 22px 40px;
-
-    border-top:
-    1px solid var(--border);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:15px;
-
-    color:#8b93a1;
-
-    font-size:10px;
-
+  max-width:1180px;
+  margin:50px auto 0;
+  padding:23px 22px 40px;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  color:#8b93a1;
+  font-size:10px;
 }
-
 
 /* TABLET */
 
 @media(max-width:850px){
 
-    .grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
 }
-
 
 /* MOBILE */
 
 @media(max-width:600px){
 
-    .header-inner{
-
-        padding:
-        16px;
-
-    }
-
-
-    .brand{
-
-        gap:13px;
-
-    }
-
-
-    .brand-logo{
-
-        width:100px;
-
-    }
-
-
-    .brand-divider{
-
-        height:35px;
-
-    }
-
-
-    .department{
-
-        font-size:7.5px;
-
-        letter-spacing:.7px;
-
-    }
-
-
-    .brand h1{
-
-        font-size:15px;
-
-    }
-
-
-    .header-date{
-
-        display:none;
-
-    }
-
-
-    .hero{
-
-        padding:
-        0 16px;
-
-        margin-top:17px;
-
-    }
-
-
-    .hero-card{
-
-        padding:
-        27px 22px;
-
-        border-radius:20px;
-
-    }
-
-
-    .hero-card h2{
-
-        font-size:27px;
-
-    }
-
-
-    .hero-card p{
-
-        font-size:12.5px;
-
-    }
-
-
-    .container{
-
-        padding:
-        0 16px;
-
-    }
-
-
-    .stats{
-
-        gap:7px;
-
-    }
-
-
-    .stat{
-
-        padding:
-        13px 10px;
-
-    }
-
-
-    .stat-number{
-
-        font-size:20px;
-
-    }
-
-
-    .stat-title{
-
-        font-size:8.5px;
-
-    }
-
-
-    .toolbar{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .grid{
-
-        grid-template-columns:
-        1fr;
-
-    }
-
-
-    .section-header h2{
-
-        font-size:19px;
-
-    }
-
-
-    footer{
-
-        margin-top:35px;
-
-        padding:
-        20px 16px 35px;
-
-        flex-direction:column;
-
-    }
+  .header-inner{
+    padding:16px;
+  }
+
+  .brand{
+    gap:13px;
+  }
+
+  .brand-logo{
+    width:100px;
+  }
+
+  .brand-divider{
+    height:35px;
+  }
+
+  .department{
+    font-size:7.5px;
+    letter-spacing:.7px;
+  }
+
+  .brand h1{
+    font-size:15px;
+  }
+
+  .header-date{
+    display:none;
+  }
+
+  .hero{
+    padding:0 16px;
+    margin-top:17px;
+  }
+
+  .hero-card{
+    padding:27px 22px;
+    border-radius:20px;
+  }
+
+  .hero-card h2{
+    font-size:27px;
+  }
+
+  .hero-card p{
+    font-size:12.5px;
+  }
+
+  .container{
+    padding:0 16px;
+  }
+
+  .stats{
+    gap:7px;
+  }
+
+  .stat{
+    padding:13px 10px;
+  }
+
+  .stat-number{
+    font-size:20px;
+  }
+
+  .stat-title{
+    font-size:8.5px;
+  }
+
+  .toolbar{
+    grid-template-columns:1fr;
+  }
+
+  .featured-section{
+    margin-top:24px;
+  }
+
+  .featured-card{
+    min-height:auto;
+    padding:26px 22px;
+    border-radius:20px;
+  }
+
+  .featured-card h2{
+    font-size:23px;
+    line-height:1.3;
+  }
+
+  .featured-summary{
+    font-size:12.5px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-header h2{
+    font-size:19px;
+  }
+
+  footer{
+    margin-top:35px;
+    padding:20px 16px 35px;
+    flex-direction:column;
+  }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
 <header>
 
-<div class="header-inner">
+  <div class="header-inner">
 
+    <div class="brand">
 
-<div class="brand">
+      <div class="brand-logo">
+        <img src="./turkish-cargo-logo.png" alt="Turkish Cargo">
+      </div>
 
+      <div class="brand-divider"></div>
 
-<div class="brand-logo">
+      <div>
+        <div class="department">
+          Kargo Ürün ve Posta Müdürlüğü
+        </div>
 
-<img
-src="./turkish-cargo-logo.png"
-alt="Turkish Cargo">
+        <h1>Weekly Bulletin</h1>
+      </div>
 
-</div>
+    </div>
 
+    <div class="header-date" id="headerDate">
+      Weekly Insights
+    </div>
 
-<div class="brand-divider"></div>
-
-
-<div>
-
-<div class="department">
-
-Kargo Ürün ve Posta Müdürlüğü
-
-</div>
-
-<h1>
-
-Weekly Bulletin
-
-</h1>
-
-</div>
-
-
-</div>
-
-
-<div
-class="header-date"
-id="headerDate">
-
-Weekly Insights
-
-</div>
-
-
-</div>
+  </div>
 
 </header>
 
 
-
 <section class="hero">
 
-<div class="hero-card">
+  <div class="hero-card">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="hero-label">
+      <div class="hero-label">
+        Weekly Intelligence
+      </div>
 
-Weekly Intelligence
+      <h2>
+        Ürün, pazar ve sektör gündeminden öne çıkan gelişmeler
+      </h2>
 
-</div>
+      <p>
+        Kargo Ürün ve Posta Müdürlüğü tarafından takip edilen
+        ürün, müşteri, pazar, posta, teknoloji ve havacılık
+        gündemindeki önemli gelişmeler.
+      </p>
 
+    </div>
 
-<h2>
-
-Ürün, pazar ve sektör gündeminden öne çıkan gelişmeler
-
-</h2>
-
-
-<p>
-
-Kargo Ürün ve Posta Müdürlüğü tarafından takip edilen
-ürün, müşteri, pazar, posta, teknoloji ve havacılık
-gündemindeki önemli gelişmeler.
-
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 
 <main class="container">
 
+  <section class="stats">
 
-<section class="stats">
+    <div class="stat">
+      <div class="stat-number" id="totalStat">0</div>
+      <div class="stat-title">Haftalık İçerik</div>
+    </div>
 
+    <div class="stat">
+      <div class="stat-number" id="categoryStat">0</div>
+      <div class="stat-title">Aktif Kategori</div>
+    </div>
 
-<div class="stat">
+    <div class="stat">
+      <div class="stat-number" id="weekStat">—</div>
+      <div class="stat-title">Güncel Hafta</div>
+    </div>
 
-<div
-class="stat-number"
-id="totalStat">
+  </section>
 
-0
 
-</div>
+  <div class="toolbar">
 
-<div class="stat-title">
+    <div class="search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Başlık, şirket, kategori veya içerikte ara..."
+      >
+    </div>
 
-Haftalık İçerik
+    <select id="weekSelect" class="week-select">
+      <option>Hafta yükleniyor...</option>
+    </select>
 
-</div>
+  </div>
 
-</div>
 
+  <div class="filters">
 
+    <button class="filter active" data-category="all">
+      Tümü
+    </button>
 
-<div class="stat">
+    <button class="filter" data-category="product">
+      Ürün & Hizmetler
+    </button>
 
-<div
-class="stat-number"
-id="categoryStat">
+    <button class="filter" data-category="market">
+      Pazar & Rekabet
+    </button>
 
-0
+    <button class="filter" data-category="customer">
+      Müşteri İçgörüleri
+    </button>
 
-</div>
+    <button class="filter" data-category="mail">
+      Posta & Kurye
+    </button>
 
-<div class="stat-title">
+    <button class="filter" data-category="industry">
+      Havacılık & Lojistik
+    </button>
 
-Aktif Kategori
+    <button class="filter" data-category="digital">
+      Dijital & Teknoloji
+    </button>
 
-</div>
+  </div>
 
-</div>
 
+  <!-- FEATURED STORY -->
 
+  <section class="featured-section" id="featuredSection">
 
-<div class="stat">
+    <div class="featured-heading">
+      <div class="featured-heading-line"></div>
+      <span>Haftanın Öne Çıkan Gelişmesi</span>
+    </div>
 
-<div
-class="stat-number"
-id="weekStat">
+    <article class="featured-card">
 
-—
+      <div class="featured-content">
 
-</div>
+        <div
+          class="featured-category"
+          id="featuredCategory">
+        </div>
 
-<div class="stat-title">
+        <h2 id="featuredTitle"></h2>
 
-Güncel Hafta
+        <p
+          class="featured-summary"
+          id="featuredSummary">
+        </p>
 
-</div>
+        <div
+          class="featured-meta"
+          id="featuredMeta">
+        </div>
 
-</div>
+        <a
+          class="featured-link"
+          id="featuredLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+          Haberi İncele →
+        </a>
 
+      </div>
 
-</section>
+    </article>
 
+  </section>
 
 
-<div class="toolbar">
+  <div class="section-header">
 
+    <div>
 
-<div class="search">
+      <div class="section-label">
+        Weekly Updates
+      </div>
 
-<input
-type="text"
-id="searchInput"
-placeholder="Başlık, şirket, kategori veya içerikte ara...">
+      <h2 id="weekTitle">
+        Haftanın Gelişmeleri
+      </h2>
 
-</div>
+    </div>
 
+    <div
+      class="result-count"
+      id="resultCount">
+    </div>
 
+  </div>
 
-<select
-id="weekSelect"
-class="week-select">
 
-<option>
+  <div class="grid" id="newsGrid"></div>
 
-Hafta yükleniyor...
 
-</option>
+  <div class="message" id="emptyState">
+    Bu filtre veya aramayla eşleşen içerik bulunamadı.
+  </div>
 
-</select>
 
-
-</div>
-
-
-
-<div class="filters">
-
-
-<button
-class="filter active"
-data-category="all">
-
-Tümü
-
-</button>
-
-
-<button
-class="filter"
-data-category="product">
-
-Ürün & Hizmetler
-
-</button>
-
-
-<button
-class="filter"
-data-category="market">
-
-Pazar & Rekabet
-
-</button>
-
-
-<button
-class="filter"
-data-category="customer">
-
-Müşteri İçgörüleri
-
-</button>
-
-
-<button
-class="filter"
-data-category="mail">
-
-Posta & Kurye
-
-</button>
-
-
-<button
-class="filter"
-data-category="industry">
-
-Havacılık & Lojistik
-
-</button>
-
-
-<button
-class="filter"
-data-category="digital">
-
-Dijital & Teknoloji
-
-</button>
-
-
-</div>
-
-
-
-<div class="section-header">
-
-
-<div>
-
-<div class="section-label">
-
-Weekly Updates
-
-</div>
-
-<h2 id="weekTitle">
-
-Haftanın Gelişmeleri
-
-</h2>
-
-</div>
-
-
-<div
-class="result-count"
-id="resultCount">
-
-</div>
-
-
-</div>
-
-
-
-<div
-class="grid"
-id="newsGrid">
-
-</div>
-
-
-
-<div
-class="message"
-id="emptyState">
-
-Bu filtre veya aramayla eşleşen içerik bulunamadı.
-
-</div>
-
-
-
-<div
-class="message"
-id="errorState">
-
-İçerikler yüklenirken bir sorun oluştu.
-
-</div>
-
+  <div class="message" id="errorState">
+    İçerikler yüklenirken bir sorun oluştu.
+  </div>
 
 </main>
 
 
-
 <footer>
 
-<div>
+  <div>
+    Kargo Ürün ve Posta Müdürlüğü
+  </div>
 
-Kargo Ürün ve Posta Müdürlüğü
-
-</div>
-
-<div>
-
-Weekly Bulletin · 2026
-
-</div>
+  <div>
+    Weekly Bulletin · 2026
+  </div>
 
 </footer>
 
 
-
 <script>
 
-
 let allItems = [];
-
-let selectedCategory =
-"all";
-
+let selectedCategory = "all";
 
 const newsGrid =
-document.getElementById(
-"newsGrid"
-);
-
+document.getElementById("newsGrid");
 
 const searchInput =
-document.getElementById(
-"searchInput"
-);
-
+document.getElementById("searchInput");
 
 const weekSelect =
-document.getElementById(
-"weekSelect"
-);
-
+document.getElementById("weekSelect");
 
 const resultCount =
-document.getElementById(
-"resultCount"
-);
-
+document.getElementById("resultCount");
 
 const emptyState =
-document.getElementById(
-"emptyState"
-);
-
+document.getElementById("emptyState");
 
 const errorState =
-document.getElementById(
-"errorState"
-);
-
+document.getElementById("errorState");
 
 const weekTitle =
-document.getElementById(
-"weekTitle"
-);
-
+document.getElementById("weekTitle");
 
 const totalStat =
-document.getElementById(
-"totalStat"
-);
-
+document.getElementById("totalStat");
 
 const categoryStat =
-document.getElementById(
-"categoryStat"
-);
-
+document.getElementById("categoryStat");
 
 const weekStat =
-document.getElementById(
-"weekStat"
-);
-
+document.getElementById("weekStat");
 
 const headerDate =
-document.getElementById(
-"headerDate"
-);
-
+document.getElementById("headerDate");
 
 const filterButtons =
-document.querySelectorAll(
-".filter"
-);
+document.querySelectorAll(".filter");
 
+const featuredSection =
+document.getElementById("featuredSection");
+
+const featuredCategory =
+document.getElementById("featuredCategory");
+
+const featuredTitle =
+document.getElementById("featuredTitle");
+
+const featuredSummary =
+document.getElementById("featuredSummary");
+
+const featuredMeta =
+document.getElementById("featuredMeta");
+
+const featuredLink =
+document.getElementById("featuredLink");
 
 
 async function loadWeeks(){
 
-try{
+  try{
 
-const response =
-await fetch(
-"./data/index.json?cache=" +
-Date.now()
-);
+    const response =
+    await fetch(
+      "./data/index.json?cache=" + Date.now()
+    );
 
+    if(!response.ok){
+      throw new Error("Hafta listesi bulunamadı");
+    }
 
-if(!response.ok){
+    const data =
+    await response.json();
 
-throw new Error(
-"Hafta listesi bulunamadı"
-);
+    weekSelect.innerHTML = "";
 
-}
+    data.weeks.forEach(week => {
 
+      const option =
+      document.createElement("option");
 
-const data =
-await response.json();
+      option.value =
+      week.date;
 
+      option.textContent =
+      week.title;
 
-weekSelect.innerHTML =
-"";
+      weekSelect.appendChild(option);
 
+    });
 
-data.weeks.forEach(
-week => {
+    if(data.weeks.length > 0){
 
+      await loadWeek(
+        data.weeks[0].date
+      );
 
-const option =
-document.createElement(
-"option"
-);
+    }
 
+  }
 
-option.value =
-week.date;
+  catch(error){
 
+    console.error(error);
 
-option.textContent =
-week.title;
+    errorState.style.display =
+    "block";
 
-
-weekSelect.appendChild(
-option
-);
-
-
-});
-
-
-if(
-data.weeks.length > 0
-){
-
-await loadWeek(
-data.weeks[0].date
-);
+  }
 
 }
 
 
-}
+async function loadWeek(date){
 
-catch(error){
+  try{
 
-console.error(
-error
-);
+    errorState.style.display =
+    "none";
 
-errorState.style.display =
-"block";
+    const response =
+    await fetch(
+      "./data/" +
+      date +
+      ".json?cache=" +
+      Date.now()
+    );
 
-}
+    if(!response.ok){
+      throw new Error("Hafta dosyası bulunamadı");
+    }
 
-}
+    const data =
+    await response.json();
 
+    allItems =
+    data.items || [];
 
+    weekTitle.textContent =
+    data.date;
 
-async function loadWeek(
-date
-){
+    headerDate.textContent =
+    data.date;
 
-try{
+    totalStat.textContent =
+    allItems.length;
 
+    const categories =
+    new Set(
+      allItems.map(
+        item => item.category
+      )
+    );
 
-errorState.style.display =
-"none";
+    categoryStat.textContent =
+    categories.size;
 
+    const dateParts =
+    date.split("-");
 
-const response =
-await fetch(
+    weekStat.textContent =
+    dateParts[2] +
+    "." +
+    dateParts[1];
 
-"./data/" +
-date +
-".json?cache=" +
-Date.now()
+    selectedCategory =
+    "all";
 
-);
+    filterButtons.forEach(button =>
+      button.classList.remove("active")
+    );
 
+    filterButtons[0]
+    .classList.add("active");
 
-if(!response.ok){
+    searchInput.value = "";
 
-throw new Error(
-"Hafta dosyası bulunamadı"
-);
+    renderFeatured();
 
-}
+    renderItems();
 
+  }
 
-const data =
-await response.json();
+  catch(error){
 
+    console.error(error);
 
-allItems =
-data.items || [];
+    newsGrid.innerHTML = "";
 
+    featuredSection.style.display =
+    "none";
 
-weekTitle.textContent =
-data.date;
+    errorState.style.display =
+    "block";
 
-
-headerDate.textContent =
-data.date;
-
-
-totalStat.textContent =
-allItems.length;
-
-
-const categories =
-new Set(
-
-allItems.map(
-item =>
-item.category
-)
-
-);
-
-
-categoryStat.textContent =
-categories.size;
-
-
-const dateParts =
-date.split("-");
-
-
-weekStat.textContent =
-
-dateParts[2]
-+
-"."
-+
-dateParts[1];
-
-
-selectedCategory =
-"all";
-
-
-filterButtons.forEach(
-
-button =>
-
-button.classList.remove(
-"active"
-)
-
-);
-
-
-filterButtons[0]
-.classList.add(
-"active"
-);
-
-
-searchInput.value =
-"";
-
-
-renderItems();
-
+  }
 
 }
 
-catch(error){
 
+function renderFeatured(){
 
-console.error(
-error
-);
+  const featured =
+  allItems.find(
+    item => item.featured === true
+  );
 
+  if(!featured){
 
-newsGrid.innerHTML =
-"";
+    featuredSection.style.display =
+    "none";
 
+    return;
 
-errorState.style.display =
-"block";
+  }
 
+  featuredSection.style.display =
+  "block";
+
+  featuredCategory.textContent =
+  featured.categoryName ||
+  "Öne Çıkan Gelişme";
+
+  featuredTitle.textContent =
+  featured.title || "";
+
+  featuredSummary.textContent =
+  featured.summary || "";
+
+  featuredMeta.innerHTML = "";
+
+  const metaItems = [
+    featured.company,
+    featured.country,
+    featured.publishedDate,
+    featured.source
+  ];
+
+  metaItems.forEach(value => {
+
+    if(value){
+
+      const span =
+      document.createElement("span");
+
+      span.textContent =
+      value;
+
+      featuredMeta.appendChild(span);
+
+    }
+
+  });
+
+  if(
+    featured.url &&
+    featured.url !== "#"
+  ){
+
+    featuredLink.href =
+    featured.url;
+
+    featuredLink.style.display =
+    "inline-flex";
+
+  }
+
+  else{
+
+    featuredLink.style.display =
+    "none";
+
+  }
 
 }
-
-}
-
 
 
 function renderItems(){
 
+  const search =
+  searchInput.value
+  .toLowerCase()
+  .trim();
 
-const search =
-searchInput.value
-.toLowerCase()
-.trim();
+  const filteredItems =
+  allItems.filter(item => {
 
+    /*
+    Featured haber yalnızca
+    "Tümü" görünümünde normal
+    kartlarda tekrar gösterilmez.
+    */
 
-const filteredItems =
-allItems.filter(
-item => {
+    const isFeatured =
+    item.featured === true;
 
+    const categoryMatch =
+    selectedCategory === "all" ||
+    item.category === selectedCategory;
 
-const categoryMatch =
+    const searchText =
+    (
+      (item.title || "") +
+      " " +
+      (item.summary || "") +
+      " " +
+      (item.categoryName || "") +
+      " " +
+      (item.company || "") +
+      " " +
+      (item.country || "") +
+      " " +
+      (item.source || "") +
+      " " +
+      (item.publishedDate || "")
+    )
+    .toLowerCase();
 
-selectedCategory ===
-"all"
+    const searchMatch =
+    searchText.includes(search);
 
-||
+    if(
+      selectedCategory === "all" &&
+      search === "" &&
+      isFeatured
+    ){
+      return false;
+    }
 
-item.category ===
-selectedCategory;
+    return(
+      categoryMatch &&
+      searchMatch
+    );
 
-
-
-const searchText =
-(
-
-(item.title || "")
-
-+
-
-" "
-
-+
-
-(item.summary || "")
-
-+
-
-" "
-
-+
-
-(item.categoryName || "")
-
-+
-
-" "
-
-+
-
-(item.company || "")
-
-+
-
-" "
-
-+
-
-(item.country || "")
-
-+
-
-" "
-
-+
-
-(item.source || "")
-
-)
-.toLowerCase();
+  });
 
 
-
-const searchMatch =
-searchText.includes(
-search
-);
+  newsGrid.innerHTML = "";
 
 
-return(
+  filteredItems.forEach(item => {
 
-categoryMatch
+    const card =
+    document.createElement("article");
 
-&&
+    card.className =
+    "card";
 
-searchMatch
 
-);
+    let metaHTML = "";
 
+
+    if(item.company){
+
+      metaHTML +=
+      `<span class="meta">${item.company}</span>`;
+
+    }
+
+
+    if(item.country){
+
+      metaHTML +=
+      `<span class="meta">${item.country}</span>`;
+
+    }
+
+
+    if(item.publishedDate){
+
+      metaHTML +=
+      `<span class="meta">${item.publishedDate}</span>`;
+
+    }
+
+
+    if(item.source){
+
+      metaHTML +=
+      `<span class="meta">${item.source}</span>`;
+
+    }
+
+
+    let sourceHTML = "";
+
+
+    if(
+      item.url &&
+      item.url !== "#"
+    ){
+
+      sourceHTML = `
+        <a
+          class="source-link"
+          href="${item.url}"
+          target="_blank"
+          rel="noopener noreferrer">
+          Kaynağa Git →
+        </a>
+      `;
+
+    }
+
+
+    card.innerHTML = `
+
+      <div class="card-visual">
+        ${item.icon || "📰"}
+      </div>
+
+      <div class="card-body">
+
+        <div class="category">
+          ${item.categoryName || "Weekly Update"}
+        </div>
+
+        <h3>
+          ${item.title || ""}
+        </h3>
+
+        <p>
+          ${item.summary || ""}
+        </p>
+
+        ${
+          metaHTML
+          ?
+          `<div class="meta-area">
+            ${metaHTML}
+          </div>`
+          :
+          ""
+        }
+
+        ${sourceHTML}
+
+      </div>
+
+    `;
+
+    newsGrid.appendChild(card);
+
+  });
+
+
+  resultCount.textContent =
+  filteredItems.length +
+  " içerik";
+
+
+  emptyState.style.display =
+  filteredItems.length === 0
+  ?
+  "block"
+  :
+  "none";
+
+}
+
+
+filterButtons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      filterButtons.forEach(
+        b =>
+        b.classList.remove("active")
+      );
+
+      button.classList.add("active");
+
+      selectedCategory =
+      button.dataset.category;
+
+      renderItems();
+
+    }
+  );
 
 });
-
-
-newsGrid.innerHTML =
-"";
-
-
-
-filteredItems.forEach(
-item => {
-
-
-const card =
-document.createElement(
-"article"
-);
-
-
-card.className =
-"card";
-
-
-let metaHTML =
-"";
-
-
-if(item.company){
-
-metaHTML +=
-
-`<span class="meta">
-
-${item.company}
-
-</span>`;
-
-}
-
-
-if(item.country){
-
-metaHTML +=
-
-`<span class="meta">
-
-${item.country}
-
-</span>`;
-
-}
-
-
-if(item.source){
-
-metaHTML +=
-
-`<span class="meta">
-
-${item.source}
-
-</span>`;
-
-}
-
-
-
-card.innerHTML = `
-
-
-<div class="card-visual">
-
-${item.icon || "📰"}
-
-</div>
-
-
-<div class="card-body">
-
-
-<div class="category">
-
-${item.categoryName || "Weekly Update"}
-
-</div>
-
-
-<h3>
-
-${item.title || ""}
-
-</h3>
-
-
-<p>
-
-${item.summary || ""}
-
-</p>
-
-
-${
-
-metaHTML
-
-?
-
-`<div class="meta-area">
-
-${metaHTML}
-
-</div>`
-
-:
-
-""
-
-}
-
-
-${
-
-item.url
-
-&&
-
-item.url !== "#"
-
-?
-
-`
-
-<a
-class="source-link"
-href="${item.url}"
-target="_blank"
-rel="noopener noreferrer">
-
-Kaynağa Git →
-
-</a>
-
-`
-
-:
-
-""
-
-}
-
-
-</div>
-
-
-`;
-
-
-newsGrid.appendChild(
-card
-);
-
-
-});
-
-
-
-resultCount.textContent =
-
-filteredItems.length
-
-+
-
-" içerik";
-
-
-
-emptyState.style.display =
-
-filteredItems.length === 0
-
-?
-
-"block"
-
-:
-
-"none";
-
-
-}
-
-
-
-filterButtons.forEach(
-
-button => {
-
-
-button.addEventListener(
-
-"click",
-
-()=>{
-
-
-filterButtons.forEach(
-
-b =>
-
-b.classList.remove(
-"active"
-)
-
-);
-
-
-button.classList.add(
-"active"
-);
-
-
-selectedCategory =
-button.dataset.category;
-
-
-renderItems();
-
-
-}
-
-);
-
-
-});
-
 
 
 searchInput.addEventListener(
-
-"input",
-
-renderItems
-
+  "input",
+  renderItems
 );
-
 
 
 weekSelect.addEventListener(
+  "change",
+  () => {
 
-"change",
+    loadWeek(
+      weekSelect.value
+    );
 
-()=>{
-
-loadWeek(
-weekSelect.value
+  }
 );
-
-}
-
-);
-
 
 
 loadWeeks();
 
-
 </script>
 
-
 </body>
-
 </html>
