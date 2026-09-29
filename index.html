@@ -10,14 +10,14 @@
 <style>
 :root{
   --red:#d71920;
-  --red-soft:#fff1f1;
+  --red-soft:#fff3f3;
   --navy:#111827;
-  --navy2:#1b2638;
-  --text:#18202d;
-  --muted:#737c8c;
+  --navy2:#1d2939;
+  --text:#202938;
+  --muted:#70798a;
   --bg:#f4f7f9;
   --white:#ffffff;
-  --border:#e4e8ec;
+  --border:#e3e7eb;
 }
 
 *{box-sizing:border-box}
@@ -45,27 +45,25 @@ header{
 .header-inner{
   max-width:1180px;
   margin:auto;
-  padding:20px 24px;
+  padding:19px 24px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:24px;
+  gap:22px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:19px;
 }
 
 .brand-logo{
   width:145px;
-  flex-shrink:0;
 }
 
 .brand-logo img{
   width:100%;
-  height:auto;
   display:block;
 }
 
@@ -78,52 +76,40 @@ header{
 .department{
   color:var(--red);
   font-size:10px;
-  font-weight:800;
-  letter-spacing:1.25px;
+  font-weight:850;
+  letter-spacing:1.15px;
   text-transform:uppercase;
   margin-bottom:5px;
 }
 
 .brand h1{
   margin:0;
-  font-size:21px;
   color:var(--navy);
+  font-size:21px;
 }
 
 .header-date{
   color:var(--muted);
-  font-size:12px;
-  white-space:nowrap;
+  font-size:11px;
 }
 
 /* HERO */
 
 .hero{
   max-width:1180px;
-  margin:22px auto 0;
+  margin:20px auto 0;
   padding:0 24px;
 }
 
 .hero-card{
   position:relative;
   overflow:hidden;
-  background:
-    radial-gradient(circle at 88% 10%,rgba(215,25,32,.30) 0 19%,transparent 20%),
-    linear-gradient(125deg,#111827,#1b2638);
-  color:#fff;
   border-radius:22px;
-  padding:31px 36px;
-}
-
-.hero-card:after{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:280px;
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:50%;
-  right:22%;
-  bottom:-210px;
+  padding:30px 35px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 90% 5%,rgba(215,25,32,.32) 0 18%,transparent 19%),
+    linear-gradient(125deg,#111827,#1d2939);
 }
 
 .hero-content{
@@ -133,34 +119,33 @@ header{
 }
 
 .eyebrow{
-  color:#ff7c80;
-  font-size:10px;
+  color:#ff8589;
+  font-size:9.5px;
   font-weight:850;
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
 .hero h2{
-  margin:10px 0 0;
-  max-width:700px;
-  font-size:31px;
-  line-height:1.18;
-  letter-spacing:-.5px;
+  margin:9px 0 0;
+  font-size:30px;
+  line-height:1.2;
+  letter-spacing:-.45px;
 }
 
 .hero p{
-  margin:13px 0 0;
+  margin:12px 0 0;
   max-width:650px;
   color:#cbd2dc;
-  font-size:13px;
-  line-height:1.65;
+  font-size:12.5px;
+  line-height:1.6;
 }
 
 /* MAIN */
 
 .container{
   max-width:1180px;
-  margin:18px auto 0;
+  margin:16px auto 0;
   padding:0 24px;
 }
 
@@ -169,87 +154,84 @@ header{
 .stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-bottom:18px;
+  gap:9px;
+  margin-bottom:17px;
 }
 
 .stat{
   background:#fff;
   border:1px solid var(--border);
-  border-radius:15px;
-  padding:15px 17px;
+  border-radius:14px;
+  padding:14px 16px;
 }
 
 .stat-number{
-  font-size:23px;
-  font-weight:800;
   color:var(--navy);
-  letter-spacing:-.4px;
+  font-size:22px;
+  font-weight:800;
 }
 
 .stat-label{
-  margin-top:4px;
   color:var(--muted);
-  font-size:10px;
+  font-size:9.5px;
+  margin-top:4px;
 }
 
-/* WEEK AT A GLANCE */
+/* THIS WEEK */
 
 .glance{
-  display:none;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:18px;
-  margin-bottom:18px;
-  padding:19px 21px;
+  border-radius:17px;
+  padding:18px 20px;
+  margin-bottom:17px;
 }
 
 .glance-header{
   display:flex;
   justify-content:space-between;
-  gap:15px;
   align-items:center;
   margin-bottom:13px;
 }
 
 .glance-title{
   color:var(--red);
-  font-size:10px;
+  font-size:9.5px;
   font-weight:850;
-  letter-spacing:1.25px;
+  letter-spacing:1.2px;
   text-transform:uppercase;
 }
 
 .glance-date{
   color:#8b93a0;
-  font-size:10px;
+  font-size:9.5px;
 }
 
-.glance-list{
+.glance-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
 }
 
 .glance-item{
-  border-left:3px solid var(--red);
   padding-left:11px;
+  border-left:3px solid var(--red);
 }
 
-.glance-category{
+.glance-item-label{
   color:#9299a4;
-  font-size:8.5px;
-  font-weight:750;
+  font-size:8px;
+  font-weight:800;
   text-transform:uppercase;
-  letter-spacing:.5px;
+  letter-spacing:.65px;
   margin-bottom:4px;
 }
 
-.glance-text{
+.glance-item-text{
   color:var(--navy);
   font-size:11.5px;
-  line-height:1.45;
   font-weight:650;
+  line-height:1.45;
 }
 
 /* FEATURED */
@@ -258,33 +240,40 @@ header{
   display:none;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:21px;
+  border-radius:20px;
   overflow:hidden;
-  margin-bottom:20px;
+  margin-bottom:18px;
+}
+
+.featured.has-image{
+  display:block;
 }
 
 .featured-grid{
   display:grid;
-  grid-template-columns:1.12fr 1fr;
+  grid-template-columns:1.05fr 1fr;
+}
+
+.featured.no-image .featured-grid{
+  grid-template-columns:1fr;
 }
 
 .featured-media{
-  min-height:330px;
-  position:relative;
+  min-height:315px;
+  background:#eef1f4;
   overflow:hidden;
-  background:#e9edf1;
 }
 
 .featured-media img{
   width:100%;
   height:100%;
-  position:absolute;
-  inset:0;
+  min-height:315px;
   object-fit:cover;
+  display:block;
 }
 
 .featured-body{
-  padding:28px;
+  padding:27px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -292,68 +281,114 @@ header{
 
 .featured-label{
   color:var(--red);
-  font-size:9.5px;
+  font-size:9px;
   font-weight:850;
-  letter-spacing:1.3px;
+  letter-spacing:1.25px;
   text-transform:uppercase;
-  margin-bottom:10px;
+  margin-bottom:9px;
 }
 
 .featured h3{
   color:var(--navy);
-  margin:0 0 11px;
-  font-size:27px;
+  margin:0 0 10px;
+  font-size:26px;
   line-height:1.25;
-  letter-spacing:-.35px;
 }
 
-.featured-summary{
+.summary{
   margin:0;
-  color:#697282;
-  font-size:13px;
+  color:#687282;
+  font-size:12.5px;
   line-height:1.65;
 }
 
-.why-box{
-  margin-top:16px;
-  padding:13px 14px;
+/* ANALYSIS */
+
+.analysis-box{
+  margin-top:14px;
+  padding:12px 13px;
   background:#f7f8fa;
-  border-left:3px solid var(--red);
+  border-left:3px solid #cfd4db;
   border-radius:0 9px 9px 0;
 }
 
-.why-label{
-  color:var(--red);
-  font-size:8.5px;
+.analysis-label{
+  color:#596273;
+  font-size:8px;
   font-weight:850;
   letter-spacing:.8px;
   text-transform:uppercase;
   margin-bottom:5px;
 }
 
-.why-text{
-  color:#4e5868;
-  font-size:11.5px;
+.analysis-text{
+  color:#505a69;
+  font-size:10.8px;
   line-height:1.55;
 }
+
+/* PRODUCT PERSPECTIVE */
+
+.product-box{
+  margin-top:11px;
+  padding:12px 13px;
+  background:var(--red-soft);
+  border-left:3px solid var(--red);
+  border-radius:0 9px 9px 0;
+}
+
+.product-label{
+  color:var(--red);
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.product-analysis{
+  color:#5a4c50;
+  font-size:10.8px;
+  line-height:1.55;
+}
+
+.product-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:9px;
+}
+
+.product-tag{
+  display:inline-flex;
+  background:#fff;
+  border:1px solid #f0c8ca;
+  color:var(--red);
+  padding:5px 8px;
+  border-radius:20px;
+  font-size:8px;
+  font-weight:800;
+}
+
+/* META */
 
 .meta-area{
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
-  margin-top:15px;
+  gap:5px;
+  margin-top:13px;
 }
 
 .meta{
   background:#f1f3f5;
-  color:#737c88;
+  color:#747d89;
   padding:5px 8px;
   border-radius:20px;
-  font-size:9px;
+  font-size:8.5px;
 }
 
 .source-row{
-  margin-top:16px;
+  margin-top:14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -362,16 +397,13 @@ header{
 
 .source-name{
   color:#9299a4;
-  font-size:9px;
+  font-size:8.5px;
 }
 
 .source-link{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
   color:var(--navy);
   text-decoration:none;
-  font-size:10.5px;
+  font-size:10px;
   font-weight:800;
 }
 
@@ -383,51 +415,63 @@ header{
 
 .toolbar{
   display:grid;
-  grid-template-columns:1fr 220px;
+  grid-template-columns:1fr 230px;
   gap:10px;
-  margin-bottom:12px;
+  margin-bottom:11px;
 }
 
 .search-wrap{
   position:relative;
 }
 
-.search-icon{
+.search-symbol{
   position:absolute;
   left:14px;
   top:50%;
   transform:translateY(-50%);
-  opacity:.45;
-  font-size:13px;
+  color:#9299a4;
 }
 
 .search-wrap input,
 .week-select{
   width:100%;
-  height:46px;
+  height:45px;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:12px;
+  border-radius:11px;
   outline:none;
   color:var(--text);
-  font-size:12.5px;
+  font-size:12px;
 }
 
 .search-wrap input{
-  padding:0 15px 0 38px;
+  padding:0 14px 0 37px;
 }
 
 .week-select{
-  padding:0 13px;
+  padding:0 12px;
 }
 
-/* FILTERS */
+/* FILTER AREAS */
+
+.filter-section{
+  margin-bottom:10px;
+}
+
+.filter-heading{
+  color:#8a929f;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
 
 .filters{
   display:flex;
-  gap:7px;
+  gap:6px;
   overflow-x:auto;
-  padding:1px 0 9px;
+  padding-bottom:4px;
   scrollbar-width:none;
 }
 
@@ -435,22 +479,29 @@ header{
   display:none;
 }
 
-.filter{
+.filter,
+.product-filter{
   flex:0 0 auto;
-  border:1px solid var(--border);
   background:#fff;
-  color:#687180;
-  padding:9px 14px;
-  border-radius:30px;
-  font-size:10.5px;
+  border:1px solid var(--border);
+  color:#677181;
+  padding:8px 12px;
+  border-radius:25px;
+  font-size:9.5px;
   font-weight:650;
   cursor:pointer;
 }
 
 .filter.active{
-  color:#fff;
   background:var(--red);
   border-color:var(--red);
+  color:#fff;
+}
+
+.product-filter.active{
+  background:var(--navy);
+  border-color:var(--navy);
+  color:#fff;
 }
 
 /* SECTION */
@@ -460,57 +511,55 @@ header{
   justify-content:space-between;
   align-items:flex-end;
   gap:15px;
-  margin:18px 0 13px;
+  margin:17px 0 12px;
 }
 
 .section-kicker{
   color:var(--red);
-  font-size:9px;
+  font-size:8.5px;
   font-weight:850;
-  letter-spacing:1.15px;
+  letter-spacing:1px;
   text-transform:uppercase;
 }
 
 .section-header h2{
-  margin:4px 0 0;
   color:var(--navy);
-  font-size:21px;
+  margin:4px 0 0;
+  font-size:20px;
 }
 
 .result-count{
   color:#858e9c;
-  font-size:10.5px;
-  text-align:right;
+  font-size:9.5px;
 }
 
-/* GRID */
+/* CARDS */
 
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
+  gap:14px;
 }
 
 .card{
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:17px;
-  min-width:0;
-  transition:transform .18s ease,box-shadow .18s ease;
+  border-radius:16px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:.18s ease;
 }
 
 .card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 30px rgba(17,24,39,.07);
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px rgba(17,24,39,.06);
 }
 
 .card-visual{
   height:155px;
-  position:relative;
   overflow:hidden;
+  position:relative;
   background:#eef1f4;
 }
 
@@ -518,6 +567,7 @@ header{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
 }
 
 .card-visual:after{
@@ -525,169 +575,77 @@ header{
   position:absolute;
   left:18px;
   bottom:0;
-  width:40px;
+  width:39px;
   height:4px;
-  background:var(--red);
   border-radius:4px 4px 0 0;
+  background:var(--red);
 }
-
-/* FALLBACK COVERS */
-
-.fallback{
-  height:100%;
-  width:100%;
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  padding:20px;
-  overflow:hidden;
-  color:#fff;
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
-    linear-gradient(135deg,#111827,#243248);
-}
-
-.fallback:before{
-  content:"";
-  position:absolute;
-  width:120px;
-  height:120px;
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:50%;
-  right:22px;
-  bottom:-55px;
-}
-
-.fallback.product{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.48) 0 22%,transparent 23%),
-    linear-gradient(135deg,#151b29,#313b4d);
-}
-
-.fallback.market{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.44) 0 22%,transparent 23%),
-    linear-gradient(135deg,#16202e,#263b50);
-}
-
-.fallback.customer{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
-    linear-gradient(135deg,#1b1e2c,#353247);
-}
-
-.fallback.mail{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
-    linear-gradient(135deg,#17202b,#34404c);
-}
-
-.fallback.industry{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.46) 0 22%,transparent 23%),
-    linear-gradient(135deg,#101827,#26354b);
-}
-
-.fallback.digital{
-  background:
-    radial-gradient(circle at 90% 10%,rgba(215,25,32,.46) 0 22%,transparent 23%),
-    linear-gradient(135deg,#111927,#29394d);
-}
-
-.fallback-small{
-  position:relative;
-  z-index:2;
-  color:#ff8a8e;
-  font-size:8px;
-  font-weight:850;
-  letter-spacing:1.1px;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.fallback-title{
-  position:relative;
-  z-index:2;
-  font-size:17px;
-  font-weight:750;
-  line-height:1.2;
-  max-width:190px;
-}
-
-/* CARD BODY */
 
 .card-body{
+  padding:17px;
   display:flex;
   flex-direction:column;
   flex:1;
-  padding:18px;
 }
 
 .category{
   color:var(--red);
-  text-transform:uppercase;
-  letter-spacing:.8px;
-  font-size:8.5px;
+  font-size:8px;
   font-weight:850;
-  margin-bottom:9px;
+  letter-spacing:.75px;
+  text-transform:uppercase;
+  margin-bottom:8px;
 }
 
 .card h3{
-  margin:0 0 9px;
   color:var(--navy);
-  font-size:16px;
-  line-height:1.35;
-  letter-spacing:-.15px;
+  margin:0 0 8px;
+  font-size:15.5px;
+  line-height:1.38;
 }
 
-.card-summary{
-  margin:0;
-  color:#6d7583;
-  font-size:11.5px;
+.card .summary{
+  font-size:11.3px;
   line-height:1.58;
 }
 
-.card .why-box{
-  margin-top:13px;
+.card .analysis-box,
+.card .product-box{
   padding:10px 11px;
 }
 
-.card .why-text{
-  font-size:10.5px;
-}
-
-.card .meta-area{
-  margin-top:13px;
+.card .analysis-text,
+.card .product-analysis{
+  font-size:10px;
 }
 
 .card .source-row{
   margin-top:auto;
-  padding-top:14px;
+  padding-top:13px;
 }
 
 .message{
   display:none;
+  padding:30px 20px;
+  text-align:center;
+  color:var(--muted);
   background:#fff;
   border:1px solid var(--border);
   border-radius:15px;
-  padding:32px 20px;
-  color:var(--muted);
-  text-align:center;
-  font-size:12px;
+  font-size:11px;
 }
 
 /* FOOTER */
 
 footer{
   max-width:1180px;
-  margin:45px auto 0;
-  padding:22px 24px 36px;
+  margin:43px auto 0;
+  padding:21px 24px 35px;
   border-top:1px solid var(--border);
   display:flex;
   justify-content:space-between;
-  gap:15px;
   color:#8c94a1;
-  font-size:9.5px;
+  font-size:9px;
 }
 
 /* TABLET */
@@ -702,11 +660,12 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .featured-media{
-    min-height:260px;
+  .featured-media,
+  .featured-media img{
+    min-height:250px;
   }
 
-  .glance-list{
+  .glance-grid{
     grid-template-columns:1fr;
   }
 
@@ -746,70 +705,64 @@ footer{
   }
 
   .hero{
-    margin-top:14px;
     padding:0 16px;
+    margin-top:14px;
   }
 
   .hero-card{
+    padding:22px 20px;
     border-radius:18px;
-    padding:23px 20px;
   }
 
   .hero h2{
-    font-size:24px;
-    line-height:1.18;
+    font-size:23px;
   }
 
   .hero p{
-    margin-top:11px;
-    font-size:11.5px;
-    line-height:1.55;
+    font-size:11px;
   }
 
   .container{
-    margin-top:14px;
     padding:0 16px;
+    margin-top:13px;
   }
 
   .stats{
-    gap:6px;
+    gap:5px;
   }
 
   .stat{
-    padding:12px 8px;
-    border-radius:13px;
+    padding:11px 7px;
+    border-radius:12px;
   }
 
   .stat-number{
-    font-size:18px;
+    font-size:17px;
   }
 
   .stat-label{
-    font-size:7.5px;
+    font-size:7px;
   }
 
   .glance{
-    padding:16px;
+    padding:15px;
   }
 
   .featured{
-    border-radius:17px;
+    border-radius:16px;
   }
 
-  .featured-media{
-    min-height:205px;
+  .featured-media,
+  .featured-media img{
+    min-height:200px;
   }
 
   .featured-body{
-    padding:20px;
+    padding:19px;
   }
 
   .featured h3{
-    font-size:21px;
-  }
-
-  .featured-summary{
-    font-size:12px;
+    font-size:20px;
   }
 
   .toolbar{
@@ -825,83 +778,87 @@ footer{
   }
 
   .card-body{
-    padding:18px;
+    padding:17px;
   }
 
   .card h3{
-    font-size:18px;
+    font-size:17px;
   }
 
-  .card-summary{
-    font-size:12.5px;
+  .card .summary{
+    font-size:12px;
   }
 
   .section-header h2{
-    font-size:19px;
+    font-size:18px;
   }
 
   footer{
-    margin-top:35px;
     padding:20px 16px 32px;
+    margin-top:34px;
     flex-direction:column;
+    gap:5px;
   }
-}
 
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="header-inner">
+<div class="header-inner">
 
-    <div class="brand">
+  <div class="brand">
 
-      <div class="brand-logo">
-        <img src="./turkish-cargo-logo.png" alt="Turkish Cargo">
-      </div>
-
-      <div class="brand-divider"></div>
-
-      <div>
-        <div class="department">
-          Kargo Ürün ve Posta Müdürlüğü
-        </div>
-        <h1>Weekly Bulletin</h1>
-      </div>
-
+    <div class="brand-logo">
+      <img src="./turkish-cargo-logo.png" alt="Turkish Cargo">
     </div>
 
-    <div class="header-date" id="headerDate">
-      Weekly Intelligence
+    <div class="brand-divider"></div>
+
+    <div>
+      <div class="department">
+        Kargo Ürün ve Posta Müdürlüğü
+      </div>
+
+      <h1>Weekly Bulletin</h1>
     </div>
 
   </div>
+
+  <div class="header-date" id="headerDate">
+    Weekly Intelligence
+  </div>
+
+</div>
 </header>
 
 
 <section class="hero">
-  <div class="hero-card">
 
-    <div class="hero-content">
+<div class="hero-card">
 
-      <div class="eyebrow">
-        Weekly Intelligence
-      </div>
+  <div class="hero-content">
 
-      <h2>
-        Ürün, pazar ve sektör gündeminden öne çıkan gelişmeler
-      </h2>
-
-      <p>
-        Kargo Ürün ve Posta Müdürlüğü tarafından takip edilen ürün,
-        müşteri, pazar, posta, teknoloji ve havacılık gündemindeki
-        önemli gelişmeler.
-      </p>
-
+    <div class="eyebrow">
+      Weekly Intelligence
     </div>
 
+    <h2>
+      Ürün, pazar ve sektör gündeminden öne çıkan gelişmeler
+    </h2>
+
+    <p>
+      Hava kargo, lojistik, posta, kurye, e-ticaret,
+      müşteri, teknoloji ve endüstri ekosistemindeki
+      önemli gelişmeler ve haftalık içgörüler.
+    </p>
+
   </div>
+
+</div>
+
 </section>
 
 
@@ -920,19 +877,19 @@ footer{
   </div>
 
   <div class="stat">
-    <div class="stat-number" id="featuredStat">0</div>
-    <div class="stat-label">Öne Çıkan</div>
+    <div class="stat-number" id="productStat">0</div>
+    <div class="stat-label">Ürün Perspektifi</div>
   </div>
 
   <div class="stat">
     <div class="stat-number" id="weekStat">—</div>
-    <div class="stat-label">Güncel Hafta</div>
+    <div class="stat-label">Hafta Başlangıcı</div>
   </div>
 
 </section>
 
 
-<section class="glance" id="glance">
+<section class="glance">
 
   <div class="glance-header">
 
@@ -944,24 +901,27 @@ footer{
 
   </div>
 
-  <div class="glance-list" id="glanceList"></div>
+  <div class="glance-grid" id="glanceGrid"></div>
 
 </section>
 
 
-<section class="featured" id="featuredStory"></section>
+<section
+  class="featured"
+  id="featuredStory"
+></section>
 
 
 <div class="toolbar">
 
   <div class="search-wrap">
 
-    <span class="search-icon">⌕</span>
+    <span class="search-symbol">⌕</span>
 
     <input
       type="text"
       id="searchInput"
-      placeholder="Başlık, şirket, kategori veya içerikte ara..."
+      placeholder="Başlık, şirket, ürün veya içerikte ara..."
     >
 
   </div>
@@ -976,35 +936,88 @@ footer{
 </div>
 
 
-<div class="filters">
+<div class="filter-section">
 
-  <button class="filter active" data-category="all">
-    Tümü
-  </button>
+  <div class="filter-heading">
+    Konuya Göre
+  </div>
 
-  <button class="filter" data-category="product">
-    Ürün & Hizmetler
-  </button>
+  <div class="filters">
 
-  <button class="filter" data-category="market">
-    Pazar & Rekabet
-  </button>
+    <button class="filter active" data-category="all">
+      Tümü
+    </button>
 
-  <button class="filter" data-category="customer">
-    Müşteri İçgörüleri
-  </button>
+    <button class="filter" data-category="product">
+      Ürün & Hizmetler
+    </button>
 
-  <button class="filter" data-category="mail">
-    Posta & Kurye
-  </button>
+    <button class="filter" data-category="market">
+      Pazar & Rekabet
+    </button>
 
-  <button class="filter" data-category="industry">
-    Havacılık & Lojistik
-  </button>
+    <button class="filter" data-category="customer">
+      Müşteri İçgörüleri
+    </button>
 
-  <button class="filter" data-category="digital">
-    Dijital & Teknoloji
-  </button>
+    <button class="filter" data-category="mail">
+      Posta & Kurye
+    </button>
+
+    <button class="filter" data-category="industry">
+      Havacılık & Lojistik
+    </button>
+
+    <button class="filter" data-category="digital">
+      Dijital & Teknoloji
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="filter-section">
+
+  <div class="filter-heading">
+    Ürün Perspektifi
+  </div>
+
+  <div class="filters">
+
+    <button class="product-filter active" data-product="all">
+      Tümü
+    </button>
+
+    <button class="product-filter" data-product="TK URGENT">
+      TK URGENT
+    </button>
+
+    <button class="product-filter" data-product="TK PREMIUM">
+      TK PREMIUM
+    </button>
+
+    <button class="product-filter" data-product="TK SMART">
+      TK SMART
+    </button>
+
+    <button class="product-filter" data-product="TK AERO">
+      TK AERO
+    </button>
+
+    <button class="product-filter" data-product="TK AUTO">
+      TK AUTO
+    </button>
+
+    <button class="product-filter" data-product="POSTA">
+      POSTA
+    </button>
+
+    <button class="product-filter" data-product="TK COURIER">
+      TK COURIER
+    </button>
+
+  </div>
 
 </div>
 
@@ -1041,7 +1054,7 @@ footer{
   class="message"
   id="emptyState"
 >
-  Bu filtre veya aramayla eşleşen içerik bulunamadı.
+  Seçilen filtrelerle eşleşen içerik bulunamadı.
 </div>
 
 
@@ -1072,62 +1085,32 @@ footer{
 
 let allItems = [];
 let selectedCategory = "all";
+let selectedProduct = "all";
 
-const newsGrid =
-  document.getElementById("newsGrid");
+const $ = id =>
+  document.getElementById(id);
 
-const searchInput =
-  document.getElementById("searchInput");
+const newsGrid = $("newsGrid");
+const searchInput = $("searchInput");
+const weekSelect = $("weekSelect");
+const resultCount = $("resultCount");
+const emptyState = $("emptyState");
+const errorState = $("errorState");
+const weekTitle = $("weekTitle");
+const totalStat = $("totalStat");
+const categoryStat = $("categoryStat");
+const productStat = $("productStat");
+const weekStat = $("weekStat");
+const headerDate = $("headerDate");
+const featuredStory = $("featuredStory");
+const glanceDate = $("glanceDate");
+const glanceGrid = $("glanceGrid");
 
-const weekSelect =
-  document.getElementById("weekSelect");
-
-const resultCount =
-  document.getElementById("resultCount");
-
-const emptyState =
-  document.getElementById("emptyState");
-
-const errorState =
-  document.getElementById("errorState");
-
-const weekTitle =
-  document.getElementById("weekTitle");
-
-const totalStat =
-  document.getElementById("totalStat");
-
-const categoryStat =
-  document.getElementById("categoryStat");
-
-const featuredStat =
-  document.getElementById("featuredStat");
-
-const weekStat =
-  document.getElementById("weekStat");
-
-const headerDate =
-  document.getElementById("headerDate");
-
-const featuredStory =
-  document.getElementById("featuredStory");
-
-const glance =
-  document.getElementById("glance");
-
-const glanceList =
-  document.getElementById("glanceList");
-
-const glanceDate =
-  document.getElementById("glanceDate");
-
-const filterButtons =
+const categoryButtons =
   document.querySelectorAll(".filter");
 
-
-function safe(value){
-  return value || "";
-}
+const productButtons =
+  document.querySelectorAll(".product-filter");
 
 
 function escapeHTML(value){
@@ -1142,86 +1125,132 @@ function escapeHTML(value){
 }
 
 
-function fallbackCover(item){
+function productData(item){
 
-  const category =
-    escapeHTML(item.category || "industry");
+  return item.productRelevance || {
+    relevant:false,
+    products:[],
+    analysis:""
+  };
 
-  const categoryName =
-    escapeHTML(
-      item.categoryName ||
-      "Weekly Intelligence"
-    );
+}
 
-  const company =
-    escapeHTML(
-      item.company ||
-      "Kargo Gündemi"
-    );
+
+function renderProductBox(item){
+
+  const data = productData(item);
+
+  if(
+    !data.relevant ||
+    !data.products ||
+    !data.products.length
+  )
+    return "";
+
+
+  const tags =
+    data.products.map(product =>
+
+      `<span class="product-tag">
+        ${escapeHTML(product)}
+      </span>`
+
+    ).join("");
+
 
   return `
-    <div class="fallback ${category}">
 
-      <div>
+    <div class="product-box">
 
-        <div class="fallback-small">
-          ${categoryName}
-        </div>
+      <div class="product-label">
+        Ürün Perspektifi
+      </div>
 
-        <div class="fallback-title">
-          ${company}
-        </div>
+      ${
+        data.analysis
+        ? `
+          <div class="product-analysis">
+            ${escapeHTML(data.analysis)}
+          </div>
+        `
+        : ""
+      }
 
+      <div class="product-tags">
+        ${tags}
       </div>
 
     </div>
+
   `;
 
 }
 
 
-function createImage(item){
+function renderAnalysis(item){
+
+  if(!item.whyImportant)
+    return "";
+
+  return `
+
+    <div class="analysis-box">
+
+      <div class="analysis-label">
+        Neden Önemli?
+      </div>
+
+      <div class="analysis-text">
+        ${escapeHTML(item.whyImportant)}
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+function renderMeta(item){
+
+  const values = [
+    item.company,
+    item.country,
+    item.publishedDate
+  ].filter(Boolean);
+
+  return values.map(value =>
+
+    `<span class="meta">
+      ${escapeHTML(value)}
+    </span>`
+
+  ).join("");
+
+}
+
+
+function createImage(item,container){
 
   if(!item.image)
-    return fallbackCover(item);
+    return false;
 
-  const image =
+  const img =
     document.createElement("img");
 
-  image.src =
-    item.image;
+  img.src = item.image;
+  img.alt = item.title || "Haber görseli";
+  img.loading = "lazy";
+  img.referrerPolicy = "no-referrer";
 
-  image.alt =
-    item.title || "Haber görseli";
-
-  image.loading =
-    "lazy";
-
-  image.referrerPolicy =
-    "no-referrer";
-
-  image.addEventListener(
+  img.addEventListener(
     "error",
-    function(){
-
-      const parent =
-        image.parentElement;
-
-      if(parent){
-
-        image.remove();
-
-        parent.insertAdjacentHTML(
-          "afterbegin",
-          fallbackCover(item)
-        );
-
-      }
-
-    }
+    () => container.remove()
   );
 
-  return image;
+  container.appendChild(img);
+
+  return true;
 
 }
 
@@ -1237,44 +1266,31 @@ async function loadWeeks(){
       );
 
     if(!response.ok)
-      throw new Error(
-        "Hafta listesi bulunamadı"
-      );
+      throw new Error("index.json yüklenemedi");
 
     const data =
       await response.json();
 
-    weekSelect.innerHTML =
-      "";
-
     const weeks =
       data.weeks || [];
+
+    weekSelect.innerHTML = "";
 
     weeks.forEach(week => {
 
       const option =
         document.createElement("option");
 
-      option.value =
-        week.date;
+      option.value = week.date;
+      option.textContent = week.title;
 
-      option.textContent =
-        week.title;
-
-      weekSelect.appendChild(
-        option
-      );
+      weekSelect.appendChild(option);
 
     });
 
 
-    if(weeks.length){
-
-      await loadWeek(
-        weeks[0].date
-      );
-
-    }
+    if(weeks.length)
+      await loadWeek(weeks[0].date);
 
   }
 
@@ -1282,8 +1298,7 @@ async function loadWeeks(){
 
     console.error(error);
 
-    errorState.style.display =
-      "block";
+    errorState.style.display = "block";
 
   }
 
@@ -1294,8 +1309,7 @@ async function loadWeek(date){
 
   try{
 
-    errorState.style.display =
-      "none";
+    errorState.style.display = "none";
 
     const response =
       await fetch(
@@ -1306,9 +1320,7 @@ async function loadWeek(date){
       );
 
     if(!response.ok)
-      throw new Error(
-        "Hafta dosyası bulunamadı"
-      );
+      throw new Error("Hafta dosyası yüklenemedi");
 
     const data =
       await response.json();
@@ -1317,13 +1329,19 @@ async function loadWeek(date){
       data.items || [];
 
     weekTitle.textContent =
-      data.date || "Haftanın Gelişmeleri";
+      data.title ||
+      data.date ||
+      "Haftanın Gelişmeleri";
 
     headerDate.textContent =
-      data.date || "Weekly Intelligence";
+      data.title ||
+      data.date ||
+      "";
 
     glanceDate.textContent =
-      data.date || "";
+      data.title ||
+      data.date ||
+      "";
 
     totalStat.textContent =
       allItems.length;
@@ -1331,42 +1349,51 @@ async function loadWeek(date){
     categoryStat.textContent =
       new Set(
         allItems
-          .map(item => item.category)
+          .map(x => x.category)
           .filter(Boolean)
       ).size;
 
-    featuredStat.textContent =
-      allItems.filter(
-        item => item.featured
+    productStat.textContent =
+      allItems.filter(item =>
+        productData(item).relevant
       ).length;
 
-    const parts =
-      date.split("-");
 
-    weekStat.textContent =
-      parts.length === 3
-      ? parts[2] + "." + parts[1]
-      : "—";
+    const parts = date.split("-");
 
-    selectedCategory =
-      "all";
+    if(parts.length === 3){
 
-    searchInput.value =
-      "";
+      const months = [
+        "",
+        "OCA","ŞUB","MAR","NİS","MAY","HAZ",
+        "TEM","AĞU","EYL","EKİ","KAS","ARA"
+      ];
 
-    filterButtons.forEach(
-      button =>
-        button.classList.remove(
-          "active"
-        )
+      weekStat.textContent =
+        Number(parts[2]) +
+        " " +
+        months[Number(parts[1])];
+
+    }
+
+
+    selectedCategory = "all";
+    selectedProduct = "all";
+
+    searchInput.value = "";
+
+    categoryButtons.forEach(
+      x => x.classList.remove("active")
     );
 
-    if(filterButtons[0])
-      filterButtons[0]
-        .classList.add("active");
+    productButtons.forEach(
+      x => x.classList.remove("active")
+    );
 
-    renderGlance();
+    categoryButtons[0]?.classList.add("active");
+    productButtons[0]?.classList.add("active");
 
+    renderGlance(data);
     renderAll();
 
   }
@@ -1375,113 +1402,74 @@ async function loadWeek(date){
 
     console.error(error);
 
-    newsGrid.innerHTML =
-      "";
-
-    errorState.style.display =
-      "block";
+    newsGrid.innerHTML = "";
+    errorState.style.display = "block";
 
   }
 
 }
 
 
-function renderGlance(){
+function renderGlance(data){
 
-  glanceList.innerHTML =
-    "";
+  glanceGrid.innerHTML = "";
 
-  if(!allItems.length){
-
-    glance.style.display =
-      "none";
-
-    return;
-
-  }
+  let themes =
+    data.weeklyThemes || [];
 
 
-  const selected = [];
+  if(!themes.length){
 
-  const featured =
-    allItems.find(
-      item => item.featured
-    );
-
-  if(featured)
-    selected.push(featured);
-
-
-  for(const item of allItems){
-
-    if(selected.length >= 3)
-      break;
-
-    if(
-      !selected.includes(item)
-    )
-      selected.push(item);
+    themes =
+      allItems.slice(0,3).map(item => ({
+        label:item.categoryName || "Gündem",
+        text:item.title
+      }));
 
   }
 
 
-  selected
-    .slice(0,3)
-    .forEach(item => {
+  themes.slice(0,3).forEach(theme => {
 
-      const div =
-        document.createElement("div");
+    const div =
+      document.createElement("div");
 
-      div.className =
-        "glance-item";
+    div.className = "glance-item";
 
-      div.innerHTML = `
+    div.innerHTML = `
 
-        <div class="glance-category">
-          ${escapeHTML(
-            item.categoryName ||
-            "Weekly Update"
-          )}
-        </div>
+      <div class="glance-item-label">
+        ${escapeHTML(theme.label)}
+      </div>
 
-        <div class="glance-text">
-          ${escapeHTML(item.title)}
-        </div>
+      <div class="glance-item-text">
+        ${escapeHTML(theme.text)}
+      </div>
 
-      `;
+    `;
 
-      glanceList.appendChild(div);
+    glanceGrid.appendChild(div);
 
-    });
-
-
-  glance.style.display =
-    selected.length
-    ? "block"
-    : "none";
+  });
 
 }
 
 
 function renderFeatured(search){
 
-  const featured =
-    allItems.find(
-      item => item.featured
-    );
+  const item =
+    allItems.find(x => x.featured);
 
 
   if(
-    !featured ||
+    !item ||
     selectedCategory !== "all" ||
+    selectedProduct !== "all" ||
     search
   ){
 
-    featuredStory.style.display =
-      "none";
-
-    featuredStory.innerHTML =
-      "";
+    featuredStory.style.display = "none";
+    featuredStory.innerHTML = "";
 
     return;
 
@@ -1492,10 +1480,11 @@ function renderFeatured(search){
 
     <div class="featured-grid">
 
-      <div
-        class="featured-media"
-        id="featuredMedia"
-      ></div>
+      ${
+        item.image
+        ? `<div class="featured-media" id="featuredMedia"></div>`
+        : ""
+      }
 
       <div class="featured-body">
 
@@ -1504,82 +1493,43 @@ function renderFeatured(search){
         </div>
 
         <h3>
-          ${escapeHTML(featured.title)}
+          ${escapeHTML(item.title)}
         </h3>
 
-        <p class="featured-summary">
-          ${escapeHTML(featured.summary)}
+        <p class="summary">
+          ${escapeHTML(item.summary)}
         </p>
 
-        ${
-          featured.whyImportant
+        ${renderAnalysis(item)}
 
-          ? `
-            <div class="why-box">
-
-              <div class="why-label">
-                Neden Önemli?
-              </div>
-
-              <div class="why-text">
-                ${escapeHTML(
-                  featured.whyImportant
-                )}
-              </div>
-
-            </div>
-          `
-
-          : ""
-        }
+        ${renderProductBox(item)}
 
         <div class="meta-area">
-
-          ${
-            featured.company
-            ? `<span class="meta">${escapeHTML(featured.company)}</span>`
-            : ""
-          }
-
-          ${
-            featured.country
-            ? `<span class="meta">${escapeHTML(featured.country)}</span>`
-            : ""
-          }
-
-          ${
-            featured.publishedDate
-            ? `<span class="meta">${escapeHTML(featured.publishedDate)}</span>`
-            : ""
-          }
-
+          ${renderMeta(item)}
         </div>
 
         <div class="source-row">
 
           <div class="source-name">
             ${
-              featured.source
-              ? "Kaynak: " +
-                escapeHTML(featured.source)
+              item.source
+              ? "Kaynak: " + escapeHTML(item.source)
               : ""
             }
           </div>
 
           ${
-            featured.url
-
+            item.url
             ? `
               <a
                 class="source-link"
-                href="${escapeHTML(featured.url)}"
+                href="${escapeHTML(item.url)}"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Kaynağı İncele →
               </a>
             `
-
             : ""
           }
 
@@ -1588,31 +1538,45 @@ function renderFeatured(search){
       </div>
 
     </div>
+
   `;
 
 
-  const media =
-    document.getElementById(
-      "featuredMedia"
-    );
+  if(item.image){
 
+    featuredStory.className =
+      "featured has-image";
 
-  if(featured.image){
+    const media =
+      $("featuredMedia");
 
     const img =
-      createImage(featured);
+      document.createElement("img");
 
-    if(typeof img === "string")
-      media.innerHTML = img;
-    else
-      media.appendChild(img);
+    img.src = item.image;
+    img.alt = item.title || "";
+    img.referrerPolicy = "no-referrer";
+
+    img.addEventListener(
+      "error",
+      () => {
+
+        media.remove();
+
+        featuredStory.className =
+          "featured no-image";
+
+      }
+    );
+
+    media.appendChild(img);
 
   }
 
   else{
 
-    media.innerHTML =
-      fallbackCover(featured);
+    featuredStory.className =
+      "featured no-image";
 
   }
 
@@ -1623,14 +1587,23 @@ function renderFeatured(search){
 }
 
 
-function itemMatches(item,search){
+function matches(item,search){
 
   const categoryMatch =
     selectedCategory === "all" ||
     item.category === selectedCategory;
 
 
-  const searchText = [
+  const products =
+    productData(item).products || [];
+
+
+  const productMatch =
+    selectedProduct === "all" ||
+    products.includes(selectedProduct);
+
+
+  const text = [
 
     item.title,
     item.summary,
@@ -1638,7 +1611,9 @@ function itemMatches(item,search){
     item.categoryName,
     item.company,
     item.country,
-    item.source
+    item.source,
+    productData(item).analysis,
+    ...products
 
   ]
   .filter(Boolean)
@@ -1648,7 +1623,8 @@ function itemMatches(item,search){
 
   return (
     categoryMatch &&
-    searchText.includes(search)
+    productMatch &&
+    text.includes(search)
   );
 
 }
@@ -1671,20 +1647,17 @@ function renderAll(){
       if(
         item.featured &&
         selectedCategory === "all" &&
+        selectedProduct === "all" &&
         !search
       )
         return false;
 
-      return itemMatches(
-        item,
-        search
-      );
+      return matches(item,search);
 
     });
 
 
-  newsGrid.innerHTML =
-    "";
+  newsGrid.innerHTML = "";
 
 
   filtered.forEach(item => {
@@ -1692,33 +1665,32 @@ function renderAll(){
     const card =
       document.createElement("article");
 
-    card.className =
-      "card";
-
-
-    const visual =
-      document.createElement("div");
-
-    visual.className =
-      "card-visual";
+    card.className = "card";
 
 
     if(item.image){
 
+      const visual =
+        document.createElement("div");
+
+      visual.className = "card-visual";
+
       const img =
-        createImage(item);
+        document.createElement("img");
 
-      if(typeof img === "string")
-        visual.innerHTML = img;
-      else
-        visual.appendChild(img);
+      img.src = item.image;
+      img.alt = item.title || "";
+      img.loading = "lazy";
+      img.referrerPolicy = "no-referrer";
 
-    }
+      img.addEventListener(
+        "error",
+        () => visual.remove()
+      );
 
-    else{
+      visual.appendChild(img);
 
-      visual.innerHTML =
-        fallbackCover(item);
+      card.appendChild(visual);
 
     }
 
@@ -1726,8 +1698,7 @@ function renderAll(){
     const body =
       document.createElement("div");
 
-    body.className =
-      "card-body";
+    body.className = "card-body";
 
 
     body.innerHTML = `
@@ -1743,52 +1714,16 @@ function renderAll(){
         ${escapeHTML(item.title)}
       </h3>
 
-      <p class="card-summary">
+      <p class="summary">
         ${escapeHTML(item.summary)}
       </p>
 
-      ${
-        item.whyImportant
+      ${renderAnalysis(item)}
 
-        ? `
-          <div class="why-box">
-
-            <div class="why-label">
-              Neden Önemli?
-            </div>
-
-            <div class="why-text">
-              ${escapeHTML(
-                item.whyImportant
-              )}
-            </div>
-
-          </div>
-        `
-
-        : ""
-      }
+      ${renderProductBox(item)}
 
       <div class="meta-area">
-
-        ${
-          item.company
-          ? `<span class="meta">${escapeHTML(item.company)}</span>`
-          : ""
-        }
-
-        ${
-          item.country
-          ? `<span class="meta">${escapeHTML(item.country)}</span>`
-          : ""
-        }
-
-        ${
-          item.publishedDate
-          ? `<span class="meta">${escapeHTML(item.publishedDate)}</span>`
-          : ""
-        }
-
+        ${renderMeta(item)}
       </div>
 
       <div class="source-row">
@@ -1804,7 +1739,6 @@ function renderAll(){
 
         ${
           item.url
-
           ? `
             <a
               class="source-link"
@@ -1815,7 +1749,6 @@ function renderAll(){
               Kaynağı İncele →
             </a>
           `
-
           : ""
         }
 
@@ -1824,67 +1757,71 @@ function renderAll(){
     `;
 
 
-    card.appendChild(
-      visual
-    );
+    card.appendChild(body);
 
-    card.appendChild(
-      body
-    );
-
-    newsGrid.appendChild(
-      card
-    );
+    newsGrid.appendChild(card);
 
   });
 
 
   const featuredVisible =
-    featuredStory.style.display ===
-    "block";
+    featuredStory.style.display === "block";
 
 
-  const visibleCount =
+  const count =
     filtered.length +
     (featuredVisible ? 1 : 0);
 
 
   resultCount.textContent =
-    visibleCount +
-    (
-      visibleCount === 1
-      ? " içerik"
-      : " içerik"
-    );
+    count + " içerik";
 
 
   emptyState.style.display =
-    visibleCount === 0
+    count === 0
     ? "block"
     : "none";
 
 }
 
 
-filterButtons.forEach(button => {
+categoryButtons.forEach(button => {
 
   button.addEventListener(
     "click",
     () => {
 
-      filterButtons.forEach(
-        b =>
-          b.classList.remove(
-            "active"
-          )
+      categoryButtons.forEach(
+        x => x.classList.remove("active")
       );
 
-      button.classList.add(
-        "active"
-      );
+      button.classList.add("active");
 
       selectedCategory =
         button.dataset.category;
+
+      renderAll();
+
+    }
+  );
+
+});
+
+
+productButtons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      productButtons.forEach(
+        x => x.classList.remove("active")
+      );
+
+      button.classList.add("active");
+
+      selectedProduct =
+        button.dataset.product;
 
       renderAll();
 
@@ -1902,13 +1839,7 @@ searchInput.addEventListener(
 
 weekSelect.addEventListener(
   "change",
-  () => {
-
-    loadWeek(
-      weekSelect.value
-    );
-
-  }
+  () => loadWeek(weekSelect.value)
 );
 
 
