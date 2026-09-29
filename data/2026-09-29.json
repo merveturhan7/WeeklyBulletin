@@ -1,0 +1,29 @@
+{
+  "date": "29 Eylül 2026",
+  "items": [
+    {
+      "category": "market",
+      "categoryName": "Market News",
+      "icon": "🌍",
+      "title": "Küresel pazardaki yeni gelişmeler",
+      "summary": "Haftanın öne çıkan pazar gelişmeleri ve sektörel değişiklikleri.",
+      "url": "#"
+    },
+    {
+      "category": "product",
+      "categoryName": "Product Development",
+      "icon": "🚀",
+      "title": "Yeni ürün geliştirme çalışmaları",
+      "summary": "Ürün deneyimini geliştirmeye yönelik yeni proje ve uygulamalar.",
+      "url": "#"
+    },
+    {
+      "category": "customer",
+      "categoryName": "Customer Voice",
+      "icon": "💬",
+      "title": "Müşterilerden gelen geri bildirimler",
+      "summary": "Haftanın müşteri görüşmeleri ve öne çıkan beklentiler.",
+      "url": "#"
+    }
+  ]
+}
