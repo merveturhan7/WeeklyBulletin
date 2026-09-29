@@ -1,0 +1,336 @@
+{
+  "date": "28 Eylül 2026",
+  "title": "28 Eylül 2026 Haftası",
+
+  "weeklyThemes": [
+    {
+      "label": "PAZAR",
+      "text": "Küresel hava kargo tonajları yükselişini sürdürürken kapasite ve fiyat dinamikleri yakından izleniyor."
+    },
+    {
+      "label": "E-COMMERCE & POSTA",
+      "text": "Küçük paket, e-ticaret ve posta akışları regülasyon ve değişen müşteri davranışlarıyla yeniden şekilleniyor."
+    },
+    {
+      "label": "ENDÜSTRİ",
+      "text": "EV, batarya ve AOG lojistiğinde uzmanlaşmış çözümler ve yeni iş birlikleri öne çıkıyor."
+    }
+  ],
+
+  "items": [
+
+    {
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+      "featured": true,
+
+      "title": "Küresel hava kargo tonajları yükselişini sürdürdü",
+
+      "summary": "WorldACD verilerine göre küresel hava kargo tonajı 14–20 Eylül dönemini kapsayan 38. haftada bir önceki haftaya göre %2, geçen yılın aynı dönemine göre ise %8 arttı. Küresel spot fiyatlar 3,45 USD/kg seviyesinde yatay seyrederken yıllık bazda %33 daha yüksek gerçekleşti.",
+
+      "whyImportant": "Talep, fiyat ve kapasitenin birlikte izlenmesi hava kargo pazarındaki yönün anlaşılması açısından önem taşıyor. Çin'deki tatil dönemi öncesinde oluşan yük hareketliliği, özellikle yüksek değerli ve zaman kritik gönderilerde kapasite talebini destekleyebilir.",
+
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+
+      "company": "WorldACD",
+      "country": "Global",
+      "publishedDate": "28.09.2026",
+      "source": "WorldACD",
+
+      "url": "https://www.worldacd.com/trend-reports/weekly/worldacd-weekly-air-cargo-trends-2026-week-38/",
+
+      "image": ""
+    },
+
+    {
+      "category": "industry",
+      "categoryName": "Havacılık & Lojistik",
+
+      "title": "DHL küresel batarya lojistik ağını genişletiyor",
+
+      "summary": "DHL, elektrikli mobilite, batarya üretimi ve enerji depolama sektörlerine yönelik küresel batarya lojistik ağını genişlettiğini açıkladı. Ağ bugün 20'den fazla uzman lokasyonu birbirine bağlıyor ve üretim lojistiğinden depolama, taşıma ve aftermarket hizmetlerine kadar uçtan uca çözümler sunuyor.",
+
+      "whyImportant": "Elektrifikasyon; lojistik sektöründe tehlikeli madde uyumu, özel depolama, ağır yük, reverse logistics ve zaman kritik taşımacılık yetkinliklerinin önemini artırıyor.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["TK AUTO"],
+        "analysis": "EV ve batarya tedarik zincirlerindeki büyüme, otomotiv müşterilerinin lojistik ihtiyaçlarının geleneksel araç ve yedek parça taşımacılığının ötesine genişlediğini gösteriyor. Bu gelişim TK AUTO açısından pazar ve müşteri ihtiyaçlarının takibinde önem taşıyor."
+      },
+
+      "company": "DHL",
+      "country": "Global",
+      "publishedDate": "22.09.2026",
+      "source": "DHL Group",
+
+      "url": "https://group.dhl.com/en/media-relations/press-releases/2026/dhl-ramps-up-battery-logistics-network-worldwide-as-electrification-reshapes-automotive-and-energy-supply-chains.html",
+
+      "image": ""
+    },
+
+    {
+      "category": "industry",
+      "categoryName": "Havacılık & Lojistik",
+
+      "title": "IATA: Beyan edilmemiş tehlikeli maddelerde yalnızca screening yeterli değil",
+
+      "summary": "IATA, beyan edilmemiş veya yanlış beyan edilmiş tehlikeli maddelerin oluşturduğu risklere karşı hava kargo tedarik zincirinin tamamını kapsayan çok katmanlı bir yaklaşım çağrısında bulundu. IATA, güvenlik taramasının önemli olduğunu ancak tek başına temel çözüm olmadığını vurguladı.",
+
+      "whyImportant": "Lityum bataryalar ve diğer gizli tehlikeli maddeler e-ticaret, posta ve genel kargo akışlarında emniyet açısından kritik bir konu olmaya devam ediyor. IATA; üreticilerden marketplace'lere, forwarder'lardan posta operatörleri ve havayollarına kadar tüm paydaşların sürece dahil edilmesi gerektiğini belirtiyor.",
+
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+
+      "company": "IATA",
+      "country": "Global",
+      "publishedDate": "24.09.2026",
+      "source": "IATA",
+
+      "url": "https://www.iata.org/en/pressroom/2026-releases/09-24-cargo-screening-alone-cannot-solve-undeclared-dangerous-goods-risk/",
+
+      "image": ""
+    },
+
+    {
+      "category": "mail",
+      "categoryName": "Posta & Kurye",
+
+      "title": "Türkiye'de yılın ilk yarısında 728 milyonun üzerinde gönderi taşındı",
+
+      "summary": "Ulaştırma ve Altyapı Bakanlığı tarafından açıklanan verilere göre Türkiye'de 2026 yılının ilk altı ayında posta, paket ve kargo gönderilerinin toplamı 728 milyonun üzerine çıktı. E-ticaret kaynaklı gönderiler sektörün büyümesinde önemli rol oynamaya devam ediyor.",
+
+      "whyImportant": "Türkiye'deki paket ve kargo hacminin büyümesi, e-ticaret ve küçük paket ekosisteminin lojistik sektöründeki ağırlığının artmaya devam ettiğini gösteriyor.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["POSTA", "TK COURIER"],
+        "analysis": "Türkiye'de artan küçük paket ve e-ticaret hacmi, uluslararası posta ve hızlı kurye akışlarının gelişimi açısından takip edilmesi gereken bir pazar göstergesi niteliğinde."
+      },
+
+      "company": "T.C. Ulaştırma ve Altyapı Bakanlığı",
+      "country": "Türkiye",
+      "publishedDate": "22.09.2026",
+      "source": "Ulaştırma ve Altyapı Bakanlığı",
+
+      "url": "https://www.uab.gov.tr/",
+
+      "image": ""
+    },
+
+    {
+      "category": "industry",
+      "categoryName": "Havacılık & Lojistik",
+
+      "title": "DHL, Bahrain–Johannesburg direkt freighter bağlantısını başlattı",
+
+      "summary": "DHL Express, Bahrain ile Johannesburg arasında haftalık direkt B767 freighter servisini devreye aldı. Yeni bağlantı, Körfez ile Güney Afrika arasındaki doğrudan hava kargo kapasitesini artırırken Johannesburg üzerinden bölgesel bağlantıları da güçlendirmeyi hedefliyor.",
+
+      "whyImportant": "Express taşıyıcıların yeni freighter bağlantılarıyla network kapasitesini genişletmesi, Orta Doğu–Afrika ticaret koridorundaki rekabet ve servis seviyeleri açısından önemli bir gelişme.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["TK COURIER", "TK URGENT", "TK PREMIUM"],
+        "analysis": "Express network kapasitesindeki artış; hızlı teslimat, bağlantı süresi ve ağır gönderi kabiliyeti bakımından TK COURIER ile hız bazlı hizmetler açısından rekabet ortamının takibinde değerlendirilebilir."
+      },
+
+      "company": "DHL Express",
+      "country": "Bahrain / Güney Afrika",
+      "publishedDate": "24.09.2026",
+      "source": "CEP Research",
+
+      "url": "https://www.cep-research.com/2026/09/24/dhl-opens-weekly-bahrain-johannesburg-freighter-link/",
+
+      "image": ""
+    },
+
+    {
+      "category": "customer",
+      "categoryName": "Müşteri İçgörüleri",
+
+      "title": "CEVA, JLR ile Avrupa'daki otomotiv lojistiği iş birliğini genişletti",
+
+      "summary": "CEVA Logistics, JLR ile Fransa ve Benelux bölgesindeki finished vehicle logistics anlaşmasını üç yıl süreyle genişletti. CEVA, Fransa'da JLR'ın münhasır finished vehicle logistics sağlayıcısı olurken Zeebrugge üzerinden yıllık 7.000 aracın doğrudan dağıtımı da yeni kapsama dahil edildi.",
+
+      "whyImportant": "Otomotiv üreticilerinin lojistik sağlayıcılarla daha geniş kapsamlı ve uzun vadeli iş birliklerine yönelmesi, sektörde entegre ve özelleştirilmiş automotive logistics çözümlerinin önemini gösteriyor.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["TK AUTO"],
+        "analysis": "Otomotiv üreticilerinin lojistik partnerlerinden beklediği hizmet kapsamındaki genişleme, TK AUTO açısından müşteri ihtiyaçlarının ve rakip lojistik çözümlerinin takibinde değerlendirilebilir."
+      },
+
+      "company": "CEVA Logistics / JLR",
+      "country": "Fransa / Benelux",
+      "publishedDate": "22.09.2026",
+      "source": "CEVA Logistics",
+
+      "url": "https://www.cevalogistics.com/en/news-and-media/newsroom/press-release/ceva-expands-jlr-contract-across-france-benelux",
+
+      "image": ""
+    },
+
+    {
+      "category": "industry",
+      "categoryName": "Havacılık & Lojistik",
+
+      "title": "Pioneer Aero Supply, Malezya'daki AOG lojistiği için APACS ile anlaştı",
+
+      "summary": "Asia Pacific Aircraft Component Services, Pioneer Aero Supply'ın Malezya'daki aerospace logistics ve inventory management ihtiyaçlarını desteklemek üzere anlaşma imzaladı. APACS, rutin ihtiyaçların yanı sıra AOG aircraft part operasyonlarına da lojistik destek sağlayacak.",
+
+      "whyImportant": "AOG ve aircraft parts lojistiğinde bölgesel stok, envanter yönetimi ve hızlı lojistik kabiliyetlerinin birlikte konumlandırılması, MRO ekosistemindeki hizmet modelinin giderek daha entegre hale geldiğini gösteriyor.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["TK AERO", "TK URGENT"],
+        "analysis": "AOG aircraft part operasyonlarında lojistik ve inventory management hizmetlerinin birlikte sunulması, TK AERO'nun faaliyet gösterdiği aerospace ekosistemindeki müşteri beklentileri ve servis modelleri açısından takip edilebilir."
+      },
+
+      "company": "Pioneer Aero Supply / APACS",
+      "country": "Malezya",
+      "publishedDate": "24.09.2026",
+      "source": "Aviation Week",
+
+      "url": "https://aviationweek.com/mro/mro-industry-rolling-daily-updates-september-2026",
+
+      "image": ""
+    },
+
+    {
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+
+      "title": "IAG Cargo, Qatar Airways Cargo ve MASkargo ortak ağında ilk müşteri gönderisi tamamlandı",
+
+      "summary": "IAG Cargo, Qatar Airways Cargo ve MASkargo, planlanan Global Cargo Joint Business kapsamında üç taşıyıcının ağını kullanan ilk müşteri gönderisini başarıyla tamamladı. Deneme gönderisinde 11 ton bakır folyo Kuala Lumpur'dan Chicago'ya Doha ve Dublin üzerinden taşındı.",
+
+      "whyImportant": "Havayolları arasındaki ortak kargo ağları, müşterilere daha geniş destinasyon erişimi ve taşıyıcılar arası daha entegre bağlantılar sunarak hava kargo rekabetinin yapısını değiştirebilir.",
+
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+
+      "company": "IAG Cargo / Qatar Airways Cargo / MASkargo",
+      "country": "Global",
+      "publishedDate": "17.09.2026",
+      "source": "IAG Cargo",
+
+      "url": "https://www.iagcargo.com/en/press/iag-cargo-maskargo-and-qatar-airways-cargo-complete-first-customer-shipment-across-global-cargo-joint-business-network/",
+
+      "image": ""
+    },
+
+    {
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+
+      "title": "Asya Pasifik çıkışlı hava kargo spot fiyatları güçlendi",
+
+      "summary": "WorldACD'nin 37. hafta verilerine göre Asya Pasifik çıkışlı hava kargo tonajı haftalık %4 artarken spot fiyatlar %3 yükselerek ortalama 4,69 USD/kg seviyesine ulaştı. Bölgedeki kapasite de aynı dönemde %1 arttı.",
+
+      "whyImportant": "Asya Pasifik, küresel hava kargo talebi ve fiyat oluşumunda temel pazarlardan biri olmaya devam ediyor. Bölgedeki spot fiyat ve tonaj hareketleri kapasite yönetimi ve rekabet koşulları açısından yakından takip ediliyor.",
+
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+
+      "company": "WorldACD",
+      "country": "Asya Pasifik",
+      "publishedDate": "21.09.2026",
+      "source": "WorldACD",
+
+      "url": "https://www.worldacd.com/trend-reports/weekly/worldacd-weekly-air-cargo-trends-2026-week-37/",
+
+      "image": ""
+    },
+
+    {
+      "category": "mail",
+      "categoryName": "Posta & Kurye",
+
+      "title": "Avrupa'daki yeni kurallar Çin–Avrupa e-ticaret hava kargo akışlarını etkiliyor",
+
+      "summary": "WorldACD verileri, Avrupa'daki düşük değerli ithalata yönelik yeni uygulamaların ardından Hong Kong–Avrupa hava kargo hacimlerinde belirgin düşüş yaşandığını gösteriyor. Ağustos ayında Hong Kong'dan Avrupa'ya tonaj geçen yılın aynı dönemine göre yaklaşık %30 geriledi.",
+
+      "whyImportant": "Cross-border e-commerce akışları gümrük ve vergi düzenlemelerine karşı yüksek hassasiyet gösteriyor. Düzenlemelerdeki değişiklikler taşıma modu, rota, hacim ve kapasite tercihlerinde kısa sürede önemli değişimler yaratabiliyor.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["POSTA", "TK COURIER"],
+        "analysis": "Avrupa'ya yönelik küçük paket ve e-ticaret akışlarındaki değişim, uluslararası posta ve kurye hacimlerinin yönü açısından doğrudan takip edilmesi gereken bir pazar gelişmesi."
+      },
+
+      "company": "WorldACD",
+      "country": "Çin / Avrupa",
+      "publishedDate": "07.09.2026",
+      "source": "WorldACD",
+
+      "url": "https://www.worldacd.com/trend-reports/weekly/worldacd-weekly-air-cargo-trends-2026-week-35/",
+
+      "image": ""
+    },
+
+    {
+      "category": "industry",
+      "categoryName": "Havacılık & Lojistik",
+
+      "title": "MRO ekosisteminde motor ve komponent kapasitesi genişliyor",
+
+      "summary": "Eylül ayındaki MRO gelişmeleri arasında StandardAero ile GMR Aero Technic'in Hindistan'da CFM56 ve LEAP motorları için on-wing support iş birliği ve ReGEN'in Singapur Changi Airfreight Center'da yeni komponent merkezi açması öne çıktı.",
+
+      "whyImportant": "MRO kapasitesinin farklı bölgelerde genişlemesi; motor, komponent ve yedek parça akışlarının coğrafi dağılımını etkileyerek aerospace lojistiğinde yeni taşıma ihtiyaçları ve ticaret koridorları oluşturabilir.",
+
+      "productRelevance": {
+        "relevant": true,
+        "products": ["TK AERO"],
+        "analysis": "Yeni MRO ve komponent merkezleri, aircraft parts ve engine lojistiğinde potansiyel yük akışlarının ve müşteri ekosisteminin gelişimi açısından TK AERO için takip edilebilir."
+      },
+
+      "company": "MRO Industry",
+      "country": "Asya Pasifik",
+      "publishedDate": "24.09.2026",
+      "source": "Aviation Week",
+
+      "url": "https://aviationweek.com/mro/mro-industry-rolling-daily-updates-september-2026",
+
+      "image": ""
+    },
+
+    {
+      "category": "digital",
+      "categoryName": "Dijital & Teknoloji",
+
+      "title": "Lojistikte dijitalleşme operasyonel karar süreçlerine daha fazla entegre oluyor",
+
+      "summary": "Lojistik sektöründe veri paylaşımı, otomasyon ve yapay zekâ uygulamaları operasyonların planlanması, görünürlük ve karar destek süreçlerinde daha geniş kullanım alanı buluyor. Dijital altyapının taşıma zincirindeki farklı paydaşları birbirine bağlama rolü güçleniyor.",
+
+      "whyImportant": "Rezervasyondan operasyonel takibe kadar uçtan uca veri akışı, müşteri deneyimi ve operasyonel verimlilik açısından hava kargo sektöründeki temel rekabet alanlarından biri haline geliyor.",
+
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+
+      "company": "Air Cargo Industry",
+      "country": "Global",
+      "publishedDate": "28.09.2026",
+      "source": "Industry Overview",
+
+      "url": "",
+
+      "image": ""
+    }
+
+  ]
+}
