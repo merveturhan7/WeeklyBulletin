@@ -3,30 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4f7f9">
 
 <title>Kargo Ürün ve Posta Müdürlüğü | Weekly Bulletin</title>
 
 <style>
 :root{
   --red:#d71920;
-  --dark:#141b2a;
-  --text:#222a38;
-  --muted:#727b8c;
-  --background:#f6f7f9;
+  --red-soft:#fff1f1;
+  --navy:#111827;
+  --navy2:#1b2638;
+  --text:#18202d;
+  --muted:#737c8c;
+  --bg:#f4f7f9;
   --white:#ffffff;
-  --border:#e7e9ed;
+  --border:#e4e8ec;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:var(--background);
+  background:var(--bg);
   color:var(--text);
 }
+
+button,input,select{
+  font:inherit;
+}
+
+/* HEADER */
 
 header{
   background:#fff;
@@ -36,17 +45,17 @@ header{
 .header-inner{
   max-width:1180px;
   margin:auto;
-  padding:22px;
+  padding:20px 24px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
+  gap:24px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:20px;
 }
 
 .brand-logo{
@@ -62,94 +71,185 @@ header{
 
 .brand-divider{
   width:1px;
-  height:42px;
-  background:#e3e5e9;
+  height:40px;
+  background:#e0e4e8;
 }
 
 .department{
   color:var(--red);
   font-size:10px;
-  font-weight:750;
-  letter-spacing:1.1px;
+  font-weight:800;
+  letter-spacing:1.25px;
   text-transform:uppercase;
   margin-bottom:5px;
 }
 
 .brand h1{
   margin:0;
-  color:var(--dark);
-  font-size:22px;
+  font-size:21px;
+  color:var(--navy);
 }
 
 .header-date{
   color:var(--muted);
   font-size:12px;
-  text-align:right;
+  white-space:nowrap;
 }
 
 /* HERO */
 
 .hero{
   max-width:1180px;
-  margin:28px auto 0;
-  padding:0 22px;
+  margin:22px auto 0;
+  padding:0 24px;
 }
 
 .hero-card{
   position:relative;
   overflow:hidden;
-  background:linear-gradient(125deg,#121927 0%,#1b263a 100%);
-  border-radius:24px;
+  background:
+    radial-gradient(circle at 88% 10%,rgba(215,25,32,.30) 0 19%,transparent 20%),
+    linear-gradient(125deg,#111827,#1b2638);
   color:#fff;
-  padding:40px;
+  border-radius:22px;
+  padding:31px 36px;
 }
 
-.hero-card:before{
+.hero-card:after{
   content:"";
   position:absolute;
-  width:270px;
-  height:270px;
+  width:280px;
+  height:280px;
+  border:1px solid rgba(255,255,255,.07);
   border-radius:50%;
-  background:rgba(215,25,32,.28);
-  right:-100px;
-  top:-125px;
+  right:22%;
+  bottom:-210px;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:700px;
+  max-width:720px;
 }
 
-.hero-label,
-.section-label{
-  color:#ff7a7f;
-  font-size:11px;
-  font-weight:750;
-  letter-spacing:1.4px;
+.eyebrow{
+  color:#ff7c80;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
-.hero-card h2{
-  margin:12px 0 0;
-  font-size:36px;
+.hero h2{
+  margin:10px 0 0;
+  max-width:700px;
+  font-size:31px;
   line-height:1.18;
+  letter-spacing:-.5px;
 }
 
-.hero-card p{
-  margin:16px 0 0;
-  color:#c7ceda;
-  line-height:1.7;
-  font-size:14px;
+.hero p{
+  margin:13px 0 0;
   max-width:650px;
+  color:#cbd2dc;
+  font-size:13px;
+  line-height:1.65;
 }
 
-/* CONTENT */
+/* MAIN */
 
 .container{
   max-width:1180px;
-  margin:22px auto 0;
-  padding:0 22px;
+  margin:18px auto 0;
+  padding:0 24px;
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.stat{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:15px 17px;
+}
+
+.stat-number{
+  font-size:23px;
+  font-weight:800;
+  color:var(--navy);
+  letter-spacing:-.4px;
+}
+
+.stat-label{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* WEEK AT A GLANCE */
+
+.glance{
+  display:none;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  margin-bottom:18px;
+  padding:19px 21px;
+}
+
+.glance-header{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:center;
+  margin-bottom:13px;
+}
+
+.glance-title{
+  color:var(--red);
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:1.25px;
+  text-transform:uppercase;
+}
+
+.glance-date{
+  color:#8b93a0;
+  font-size:10px;
+}
+
+.glance-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.glance-item{
+  border-left:3px solid var(--red);
+  padding-left:11px;
+}
+
+.glance-category{
+  color:#9299a4;
+  font-size:8.5px;
+  font-weight:750;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:4px;
+}
+
+.glance-text{
+  color:var(--navy);
+  font-size:11.5px;
+  line-height:1.45;
+  font-weight:650;
 }
 
 /* FEATURED */
@@ -158,128 +258,176 @@ header{
   display:none;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:22px;
+  border-radius:21px;
   overflow:hidden;
   margin-bottom:20px;
 }
 
 .featured-grid{
   display:grid;
-  grid-template-columns:1.15fr 1fr;
+  grid-template-columns:1.12fr 1fr;
 }
 
 .featured-media{
-  min-height:310px;
-  background:#e9edf2;
+  min-height:330px;
   position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:50px;
+  overflow:hidden;
+  background:#e9edf1;
 }
 
 .featured-media img{
   width:100%;
   height:100%;
-  object-fit:cover;
   position:absolute;
   inset:0;
+  object-fit:cover;
 }
 
 .featured-body{
-  padding:30px;
+  padding:28px;
   display:flex;
   flex-direction:column;
   justify-content:center;
 }
 
-.featured-kicker{
+.featured-label{
   color:var(--red);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.1px;
+  font-size:9.5px;
+  font-weight:850;
+  letter-spacing:1.3px;
   text-transform:uppercase;
   margin-bottom:10px;
 }
 
 .featured h3{
-  font-size:28px;
+  color:var(--navy);
+  margin:0 0 11px;
+  font-size:27px;
   line-height:1.25;
-  color:var(--dark);
-  margin:0 0 12px;
+  letter-spacing:-.35px;
 }
 
-.featured p{
+.featured-summary{
+  margin:0;
   color:#697282;
+  font-size:13px;
   line-height:1.65;
-  font-size:14px;
-  margin:0 0 16px;
 }
 
-.featured-meta{
+.why-box{
+  margin-top:16px;
+  padding:13px 14px;
+  background:#f7f8fa;
+  border-left:3px solid var(--red);
+  border-radius:0 9px 9px 0;
+}
+
+.why-label{
+  color:var(--red);
+  font-size:8.5px;
+  font-weight:850;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.why-text{
+  color:#4e5868;
+  font-size:11.5px;
+  line-height:1.55;
+}
+
+.meta-area{
   display:flex;
-  gap:6px;
   flex-wrap:wrap;
-  margin-bottom:18px;
+  gap:6px;
+  margin-top:15px;
 }
 
-/* STATS */
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:22px;
+.meta{
+  background:#f1f3f5;
+  color:#737c88;
+  padding:5px 8px;
+  border-radius:20px;
+  font-size:9px;
 }
 
-.stat{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:17px 18px;
+.source-row{
+  margin-top:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
 }
 
-.stat-number{
-  font-size:24px;
-  font-weight:750;
-  color:var(--dark);
+.source-name{
+  color:#9299a4;
+  font-size:9px;
 }
 
-.stat-title{
-  margin-top:5px;
-  color:var(--muted);
-  font-size:11px;
+.source-link{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  color:var(--navy);
+  text-decoration:none;
+  font-size:10.5px;
+  font-weight:800;
 }
 
-/* SEARCH */
+.source-link:hover{
+  color:var(--red);
+}
+
+/* TOOLBAR */
 
 .toolbar{
   display:grid;
   grid-template-columns:1fr 220px;
-  gap:12px;
-  margin-bottom:14px;
+  gap:10px;
+  margin-bottom:12px;
 }
 
-.search input,
+.search-wrap{
+  position:relative;
+}
+
+.search-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  opacity:.45;
+  font-size:13px;
+}
+
+.search-wrap input,
 .week-select{
   width:100%;
   height:46px;
+  background:#fff;
   border:1px solid var(--border);
   border-radius:12px;
-  background:#fff;
-  padding:0 15px;
-  color:var(--text);
-  font-size:13px;
   outline:none;
+  color:var(--text);
+  font-size:12.5px;
+}
+
+.search-wrap input{
+  padding:0 15px 0 38px;
+}
+
+.week-select{
+  padding:0 13px;
 }
 
 /* FILTERS */
 
 .filters{
   display:flex;
-  gap:8px;
+  gap:7px;
   overflow-x:auto;
-  padding-bottom:10px;
+  padding:1px 0 9px;
   scrollbar-width:none;
 }
 
@@ -289,20 +437,20 @@ header{
 
 .filter{
   flex:0 0 auto;
-  background:#fff;
   border:1px solid var(--border);
-  color:#626b7a;
+  background:#fff;
+  color:#687180;
   padding:9px 14px;
   border-radius:30px;
-  font-size:11px;
-  font-weight:550;
+  font-size:10.5px;
+  font-weight:650;
   cursor:pointer;
 }
 
 .filter.active{
+  color:#fff;
   background:var(--red);
   border-color:var(--red);
-  color:#fff;
 }
 
 /* SECTION */
@@ -312,56 +460,58 @@ header{
   justify-content:space-between;
   align-items:flex-end;
   gap:15px;
-  margin:20px 0 15px;
+  margin:18px 0 13px;
 }
 
-.section-label{
+.section-kicker{
   color:var(--red);
-  font-size:10px;
-  letter-spacing:1px;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:1.15px;
+  text-transform:uppercase;
 }
 
 .section-header h2{
-  margin:5px 0 0;
-  color:var(--dark);
-  font-size:22px;
+  margin:4px 0 0;
+  color:var(--navy);
+  font-size:21px;
 }
 
 .result-count{
-  color:var(--muted);
-  font-size:11px;
+  color:#858e9c;
+  font-size:10.5px;
+  text-align:right;
 }
 
-/* NEWS GRID */
+/* GRID */
 
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:17px;
+  gap:15px;
 }
 
 .card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:18px;
-  overflow:hidden;
-  transition:.2s ease;
+  border-radius:17px;
+  min-width:0;
+  transition:transform .18s ease,box-shadow .18s ease;
 }
 
 .card:hover{
   transform:translateY(-3px);
-  box-shadow:0 12px 35px rgba(15,23,42,.08);
+  box-shadow:0 12px 30px rgba(17,24,39,.07);
 }
 
 .card-visual{
-  height:165px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:38px;
+  height:155px;
   position:relative;
-  background:linear-gradient(140deg,#edf0f4,#fafafa);
   overflow:hidden;
+  background:#eef1f4;
 }
 
 .card-visual img{
@@ -373,96 +523,177 @@ header{
 .card-visual:after{
   content:"";
   position:absolute;
-  left:20px;
+  left:18px;
   bottom:0;
-  width:42px;
+  width:40px;
   height:4px;
   background:var(--red);
   border-radius:4px 4px 0 0;
 }
 
-.card-body{
+/* FALLBACK COVERS */
+
+.fallback{
+  height:100%;
+  width:100%;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
   padding:20px;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
+    linear-gradient(135deg,#111827,#243248);
+}
+
+.fallback:before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:50%;
+  right:22px;
+  bottom:-55px;
+}
+
+.fallback.product{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.48) 0 22%,transparent 23%),
+    linear-gradient(135deg,#151b29,#313b4d);
+}
+
+.fallback.market{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.44) 0 22%,transparent 23%),
+    linear-gradient(135deg,#16202e,#263b50);
+}
+
+.fallback.customer{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
+    linear-gradient(135deg,#1b1e2c,#353247);
+}
+
+.fallback.mail{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.45) 0 22%,transparent 23%),
+    linear-gradient(135deg,#17202b,#34404c);
+}
+
+.fallback.industry{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.46) 0 22%,transparent 23%),
+    linear-gradient(135deg,#101827,#26354b);
+}
+
+.fallback.digital{
+  background:
+    radial-gradient(circle at 90% 10%,rgba(215,25,32,.46) 0 22%,transparent 23%),
+    linear-gradient(135deg,#111927,#29394d);
+}
+
+.fallback-small{
+  position:relative;
+  z-index:2;
+  color:#ff8a8e;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.fallback-title{
+  position:relative;
+  z-index:2;
+  font-size:17px;
+  font-weight:750;
+  line-height:1.2;
+  max-width:190px;
+}
+
+/* CARD BODY */
+
+.card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:18px;
 }
 
 .category{
   color:var(--red);
   text-transform:uppercase;
   letter-spacing:.8px;
-  font-size:9px;
-  font-weight:800;
-  margin-bottom:10px;
+  font-size:8.5px;
+  font-weight:850;
+  margin-bottom:9px;
 }
 
 .card h3{
-  margin:0 0 10px;
-  color:var(--dark);
-  font-size:17px;
-  line-height:1.4;
+  margin:0 0 9px;
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.35;
+  letter-spacing:-.15px;
 }
 
-.card p{
-  margin:0 0 16px;
-  color:#697282;
-  font-size:12.5px;
-  line-height:1.65;
+.card-summary{
+  margin:0;
+  color:#6d7583;
+  font-size:11.5px;
+  line-height:1.58;
 }
 
-.meta-area{
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  margin-bottom:14px;
+.card .why-box{
+  margin-top:13px;
+  padding:10px 11px;
 }
 
-.meta{
-  background:#f2f3f5;
-  color:#777f8d;
-  padding:5px 8px;
-  border-radius:20px;
-  font-size:9px;
+.card .why-text{
+  font-size:10.5px;
 }
 
-.source-link{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
-  text-decoration:none;
-  color:var(--dark);
-  font-size:11px;
-  font-weight:700;
+.card .meta-area{
+  margin-top:13px;
 }
 
-.source-link:hover{
-  color:var(--red);
+.card .source-row{
+  margin-top:auto;
+  padding-top:14px;
 }
 
 .message{
   display:none;
-  padding:35px 20px;
   background:#fff;
   border:1px solid var(--border);
-  border-radius:17px;
-  text-align:center;
+  border-radius:15px;
+  padding:32px 20px;
   color:var(--muted);
-  font-size:13px;
+  text-align:center;
+  font-size:12px;
 }
+
+/* FOOTER */
 
 footer{
   max-width:1180px;
-  margin:50px auto 0;
-  padding:23px 22px 40px;
+  margin:45px auto 0;
+  padding:22px 24px 36px;
   border-top:1px solid var(--border);
   display:flex;
   justify-content:space-between;
   gap:15px;
-  color:#8b93a1;
-  font-size:10px;
+  color:#8c94a1;
+  font-size:9.5px;
 }
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:850px){
+
   .grid{
     grid-template-columns:repeat(2,1fr);
   }
@@ -474,33 +705,40 @@ footer{
   .featured-media{
     min-height:260px;
   }
+
+  .glance-list{
+    grid-template-columns:1fr;
+  }
+
 }
+
+/* MOBILE */
 
 @media(max-width:600px){
 
   .header-inner{
-    padding:16px;
+    padding:14px 16px;
   }
 
   .brand{
-    gap:13px;
+    gap:11px;
   }
 
   .brand-logo{
-    width:100px;
+    width:92px;
   }
 
   .brand-divider{
-    height:35px;
+    height:31px;
   }
 
   .department{
-    font-size:7.5px;
-    letter-spacing:.7px;
+    font-size:6.8px;
+    letter-spacing:.65px;
   }
 
   .brand h1{
-    font-size:15px;
+    font-size:14px;
   }
 
   .header-date{
@@ -508,57 +746,70 @@ footer{
   }
 
   .hero{
+    margin-top:14px;
     padding:0 16px;
-    margin-top:17px;
   }
 
   .hero-card{
-    padding:27px 22px;
-    border-radius:20px;
+    border-radius:18px;
+    padding:23px 20px;
   }
 
-  .hero-card h2{
-    font-size:27px;
+  .hero h2{
+    font-size:24px;
+    line-height:1.18;
   }
 
-  .hero-card p{
-    font-size:12.5px;
+  .hero p{
+    margin-top:11px;
+    font-size:11.5px;
+    line-height:1.55;
   }
 
   .container{
+    margin-top:14px;
     padding:0 16px;
   }
 
-  .featured{
-    border-radius:18px;
-  }
-
-  .featured-media{
-    min-height:220px;
-  }
-
-  .featured-body{
-    padding:22px;
-  }
-
-  .featured h3{
-    font-size:22px;
-  }
-
   .stats{
-    gap:7px;
+    gap:6px;
   }
 
   .stat{
-    padding:13px 10px;
+    padding:12px 8px;
+    border-radius:13px;
   }
 
   .stat-number{
-    font-size:20px;
+    font-size:18px;
   }
 
-  .stat-title{
-    font-size:8.5px;
+  .stat-label{
+    font-size:7.5px;
+  }
+
+  .glance{
+    padding:16px;
+  }
+
+  .featured{
+    border-radius:17px;
+  }
+
+  .featured-media{
+    min-height:205px;
+  }
+
+  .featured-body{
+    padding:20px;
+  }
+
+  .featured h3{
+    font-size:21px;
+  }
+
+  .featured-summary{
+    font-size:12px;
   }
 
   .toolbar{
@@ -569,16 +820,33 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .card-visual{
+    height:180px;
+  }
+
+  .card-body{
+    padding:18px;
+  }
+
+  .card h3{
+    font-size:18px;
+  }
+
+  .card-summary{
+    font-size:12.5px;
+  }
+
   .section-header h2{
     font-size:19px;
   }
 
   footer{
     margin-top:35px;
-    padding:20px 16px 35px;
+    padding:20px 16px 32px;
     flex-direction:column;
   }
 }
+
 </style>
 </head>
 
@@ -599,14 +867,13 @@ footer{
         <div class="department">
           Kargo Ürün ve Posta Müdürlüğü
         </div>
-
         <h1>Weekly Bulletin</h1>
       </div>
 
     </div>
 
     <div class="header-date" id="headerDate">
-      Weekly Insights
+      Weekly Intelligence
     </div>
 
   </div>
@@ -614,12 +881,11 @@ footer{
 
 
 <section class="hero">
-
   <div class="hero-card">
 
     <div class="hero-content">
 
-      <div class="hero-label">
+      <div class="eyebrow">
         Weekly Intelligence
       </div>
 
@@ -636,46 +902,74 @@ footer{
     </div>
 
   </div>
-
 </section>
 
 
 <main class="container">
 
-<section class="featured" id="featuredStory"></section>
-
-
 <section class="stats">
 
   <div class="stat">
     <div class="stat-number" id="totalStat">0</div>
-    <div class="stat-title">Haftalık İçerik</div>
+    <div class="stat-label">Haber</div>
   </div>
 
   <div class="stat">
     <div class="stat-number" id="categoryStat">0</div>
-    <div class="stat-title">Aktif Kategori</div>
+    <div class="stat-label">Kategori</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number" id="featuredStat">0</div>
+    <div class="stat-label">Öne Çıkan</div>
   </div>
 
   <div class="stat">
     <div class="stat-number" id="weekStat">—</div>
-    <div class="stat-title">Güncel Hafta</div>
+    <div class="stat-label">Güncel Hafta</div>
   </div>
 
 </section>
 
 
+<section class="glance" id="glance">
+
+  <div class="glance-header">
+
+    <div class="glance-title">
+      Bu Hafta
+    </div>
+
+    <div class="glance-date" id="glanceDate"></div>
+
+  </div>
+
+  <div class="glance-list" id="glanceList"></div>
+
+</section>
+
+
+<section class="featured" id="featuredStory"></section>
+
+
 <div class="toolbar">
 
-  <div class="search">
+  <div class="search-wrap">
+
+    <span class="search-icon">⌕</span>
+
     <input
       type="text"
       id="searchInput"
       placeholder="Başlık, şirket, kategori veya içerikte ara..."
     >
+
   </div>
 
-  <select id="weekSelect" class="week-select">
+  <select
+    id="weekSelect"
+    class="week-select"
+  >
     <option>Hafta yükleniyor...</option>
   </select>
 
@@ -719,7 +1013,7 @@ footer{
 
   <div>
 
-    <div class="section-label">
+    <div class="section-kicker">
       Weekly Updates
     </div>
 
@@ -729,18 +1023,32 @@ footer{
 
   </div>
 
-  <div class="result-count" id="resultCount"></div>
+  <div
+    class="result-count"
+    id="resultCount"
+  ></div>
 
 </div>
 
 
-<div class="grid" id="newsGrid"></div>
+<div
+  class="grid"
+  id="newsGrid"
+></div>
 
-<div class="message" id="emptyState">
+
+<div
+  class="message"
+  id="emptyState"
+>
   Bu filtre veya aramayla eşleşen içerik bulunamadı.
 </div>
 
-<div class="message" id="errorState">
+
+<div
+  class="message"
+  id="errorState"
+>
   İçerikler yüklenirken bir sorun oluştu.
 </div>
 
@@ -792,6 +1100,9 @@ const totalStat =
 const categoryStat =
   document.getElementById("categoryStat");
 
+const featuredStat =
+  document.getElementById("featuredStat");
+
 const weekStat =
   document.getElementById("weekStat");
 
@@ -801,8 +1112,118 @@ const headerDate =
 const featuredStory =
   document.getElementById("featuredStory");
 
+const glance =
+  document.getElementById("glance");
+
+const glanceList =
+  document.getElementById("glanceList");
+
+const glanceDate =
+  document.getElementById("glanceDate");
+
 const filterButtons =
   document.querySelectorAll(".filter");
+
+
+function safe(value){
+  return value || "";
+}
+
+
+function escapeHTML(value){
+
+  return String(value || "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+function fallbackCover(item){
+
+  const category =
+    escapeHTML(item.category || "industry");
+
+  const categoryName =
+    escapeHTML(
+      item.categoryName ||
+      "Weekly Intelligence"
+    );
+
+  const company =
+    escapeHTML(
+      item.company ||
+      "Kargo Gündemi"
+    );
+
+  return `
+    <div class="fallback ${category}">
+
+      <div>
+
+        <div class="fallback-small">
+          ${categoryName}
+        </div>
+
+        <div class="fallback-title">
+          ${company}
+        </div>
+
+      </div>
+
+    </div>
+  `;
+
+}
+
+
+function createImage(item){
+
+  if(!item.image)
+    return fallbackCover(item);
+
+  const image =
+    document.createElement("img");
+
+  image.src =
+    item.image;
+
+  image.alt =
+    item.title || "Haber görseli";
+
+  image.loading =
+    "lazy";
+
+  image.referrerPolicy =
+    "no-referrer";
+
+  image.addEventListener(
+    "error",
+    function(){
+
+      const parent =
+        image.parentElement;
+
+      if(parent){
+
+        image.remove();
+
+        parent.insertAdjacentHTML(
+          "afterbegin",
+          fallbackCover(item)
+        );
+
+      }
+
+    }
+  );
+
+  return image;
+
+}
 
 
 async function loadWeeks(){
@@ -810,17 +1231,26 @@ async function loadWeeks(){
   try{
 
     const response =
-      await fetch("./data/index.json?cache=" + Date.now());
+      await fetch(
+        "./data/index.json?v=" +
+        Date.now()
+      );
 
     if(!response.ok)
-      throw new Error("Hafta listesi bulunamadı");
+      throw new Error(
+        "Hafta listesi bulunamadı"
+      );
 
     const data =
       await response.json();
 
-    weekSelect.innerHTML = "";
+    weekSelect.innerHTML =
+      "";
 
-    data.weeks.forEach(week => {
+    const weeks =
+      data.weeks || [];
+
+    weeks.forEach(week => {
 
       const option =
         document.createElement("option");
@@ -831,14 +1261,17 @@ async function loadWeeks(){
       option.textContent =
         week.title;
 
-      weekSelect.appendChild(option);
+      weekSelect.appendChild(
+        option
+      );
 
     });
 
-    if(data.weeks.length > 0){
+
+    if(weeks.length){
 
       await loadWeek(
-        data.weeks[0].date
+        weeks[0].date
       );
 
     }
@@ -868,12 +1301,14 @@ async function loadWeek(date){
       await fetch(
         "./data/" +
         date +
-        ".json?cache=" +
+        ".json?v=" +
         Date.now()
       );
 
     if(!response.ok)
-      throw new Error("Hafta dosyası bulunamadı");
+      throw new Error(
+        "Hafta dosyası bulunamadı"
+      );
 
     const data =
       await response.json();
@@ -882,41 +1317,55 @@ async function loadWeek(date){
       data.items || [];
 
     weekTitle.textContent =
-      data.date;
+      data.date || "Haftanın Gelişmeleri";
 
     headerDate.textContent =
-      data.date;
+      data.date || "Weekly Intelligence";
+
+    glanceDate.textContent =
+      data.date || "";
 
     totalStat.textContent =
       allItems.length;
 
     categoryStat.textContent =
       new Set(
-        allItems.map(
-          item => item.category
-        )
+        allItems
+          .map(item => item.category)
+          .filter(Boolean)
       ).size;
+
+    featuredStat.textContent =
+      allItems.filter(
+        item => item.featured
+      ).length;
 
     const parts =
       date.split("-");
 
     weekStat.textContent =
-      parts[2] +
-      "." +
-      parts[1];
+      parts.length === 3
+      ? parts[2] + "." + parts[1]
+      : "—";
 
     selectedCategory =
       "all";
 
-    filterButtons.forEach(
-      b => b.classList.remove("active")
-    );
-
-    filterButtons[0]
-      .classList.add("active");
-
     searchInput.value =
       "";
+
+    filterButtons.forEach(
+      button =>
+        button.classList.remove(
+          "active"
+        )
+    );
+
+    if(filterButtons[0])
+      filterButtons[0]
+        .classList.add("active");
+
+    renderGlance();
 
     renderAll();
 
@@ -937,30 +1386,79 @@ async function loadWeek(date){
 }
 
 
-function itemMatches(item, search){
+function renderGlance(){
 
-  const categoryMatch =
-    selectedCategory === "all" ||
-    item.category === selectedCategory;
+  glanceList.innerHTML =
+    "";
 
-  const searchText = [
+  if(!allItems.length){
 
-    item.title,
-    item.summary,
-    item.categoryName,
-    item.company,
-    item.country,
-    item.source
+    glance.style.display =
+      "none";
 
-  ]
-  .filter(Boolean)
-  .join(" ")
-  .toLowerCase();
+    return;
 
-  return (
-    categoryMatch &&
-    searchText.includes(search)
-  );
+  }
+
+
+  const selected = [];
+
+  const featured =
+    allItems.find(
+      item => item.featured
+    );
+
+  if(featured)
+    selected.push(featured);
+
+
+  for(const item of allItems){
+
+    if(selected.length >= 3)
+      break;
+
+    if(
+      !selected.includes(item)
+    )
+      selected.push(item);
+
+  }
+
+
+  selected
+    .slice(0,3)
+    .forEach(item => {
+
+      const div =
+        document.createElement("div");
+
+      div.className =
+        "glance-item";
+
+      div.innerHTML = `
+
+        <div class="glance-category">
+          ${escapeHTML(
+            item.categoryName ||
+            "Weekly Update"
+          )}
+        </div>
+
+        <div class="glance-text">
+          ${escapeHTML(item.title)}
+        </div>
+
+      `;
+
+      glanceList.appendChild(div);
+
+    });
+
+
+  glance.style.display =
+    selected.length
+    ? "block"
+    : "none";
 
 }
 
@@ -971,6 +1469,7 @@ function renderFeatured(search){
     allItems.find(
       item => item.featured
     );
+
 
   if(
     !featured ||
@@ -989,81 +1488,168 @@ function renderFeatured(search){
   }
 
 
-  const image =
-    featured.image
-
-    ? `
-      <img
-        src="${featured.image}"
-        alt="${featured.title}"
-        onerror="this.remove()"
-      >
-    `
-
-    : featured.icon || "📰";
-
-
-  const metas = [
-
-    featured.company,
-    featured.country,
-    featured.publishedDate,
-    featured.source
-
-  ]
-  .filter(Boolean)
-  .map(
-    x =>
-    `<span class="meta">${x}</span>`
-  )
-  .join("");
-
-
   featuredStory.innerHTML = `
 
     <div class="featured-grid">
 
-      <div class="featured-media">
-
-        ${image}
-
-      </div>
+      <div
+        class="featured-media"
+        id="featuredMedia"
+      ></div>
 
       <div class="featured-body">
 
-        <div class="featured-kicker">
+        <div class="featured-label">
           Öne Çıkan Gelişme
         </div>
 
         <h3>
-          ${featured.title}
+          ${escapeHTML(featured.title)}
         </h3>
 
-        <p>
-          ${featured.summary}
+        <p class="featured-summary">
+          ${escapeHTML(featured.summary)}
         </p>
 
-        <div class="featured-meta">
-          ${metas}
+        ${
+          featured.whyImportant
+
+          ? `
+            <div class="why-box">
+
+              <div class="why-label">
+                Neden Önemli?
+              </div>
+
+              <div class="why-text">
+                ${escapeHTML(
+                  featured.whyImportant
+                )}
+              </div>
+
+            </div>
+          `
+
+          : ""
+        }
+
+        <div class="meta-area">
+
+          ${
+            featured.company
+            ? `<span class="meta">${escapeHTML(featured.company)}</span>`
+            : ""
+          }
+
+          ${
+            featured.country
+            ? `<span class="meta">${escapeHTML(featured.country)}</span>`
+            : ""
+          }
+
+          ${
+            featured.publishedDate
+            ? `<span class="meta">${escapeHTML(featured.publishedDate)}</span>`
+            : ""
+          }
+
         </div>
 
-        <a
-          class="source-link"
-          href="${featured.url}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Kaynağa Git →
-        </a>
+        <div class="source-row">
+
+          <div class="source-name">
+            ${
+              featured.source
+              ? "Kaynak: " +
+                escapeHTML(featured.source)
+              : ""
+            }
+          </div>
+
+          ${
+            featured.url
+
+            ? `
+              <a
+                class="source-link"
+                href="${escapeHTML(featured.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kaynağı İncele →
+              </a>
+            `
+
+            : ""
+          }
+
+        </div>
 
       </div>
 
     </div>
-
   `;
+
+
+  const media =
+    document.getElementById(
+      "featuredMedia"
+    );
+
+
+  if(featured.image){
+
+    const img =
+      createImage(featured);
+
+    if(typeof img === "string")
+      media.innerHTML = img;
+    else
+      media.appendChild(img);
+
+  }
+
+  else{
+
+    media.innerHTML =
+      fallbackCover(featured);
+
+  }
+
 
   featuredStory.style.display =
     "block";
+
+}
+
+
+function itemMatches(item,search){
+
+  const categoryMatch =
+    selectedCategory === "all" ||
+    item.category === selectedCategory;
+
+
+  const searchText = [
+
+    item.title,
+    item.summary,
+    item.whyImportant,
+    item.categoryName,
+    item.company,
+    item.country,
+    item.source
+
+  ]
+  .filter(Boolean)
+  .join(" ")
+  .toLocaleLowerCase("tr-TR");
+
+
+  return (
+    categoryMatch &&
+    searchText.includes(search)
+  );
 
 }
 
@@ -1072,8 +1658,9 @@ function renderAll(){
 
   const search =
     searchInput.value
-    .toLowerCase()
-    .trim();
+      .toLocaleLowerCase("tr-TR")
+      .trim();
+
 
   renderFeatured(search);
 
@@ -1110,57 +1697,109 @@ function renderAll(){
 
 
     const visual =
-      item.image
+      document.createElement("div");
 
-      ? `
-        <img
-          src="${item.image}"
-          alt="${item.title}"
-          onerror="this.parentElement.innerHTML='${item.icon || "📰"}'"
-        >
-      `
-
-      : item.icon || "📰";
+    visual.className =
+      "card-visual";
 
 
-    const metas = [
+    if(item.image){
 
-      item.company,
-      item.country,
-      item.publishedDate,
-      item.source
+      const img =
+        createImage(item);
 
-    ]
-    .filter(Boolean)
-    .map(
-      x =>
-      `<span class="meta">${x}</span>`
-    )
-    .join("");
+      if(typeof img === "string")
+        visual.innerHTML = img;
+      else
+        visual.appendChild(img);
+
+    }
+
+    else{
+
+      visual.innerHTML =
+        fallbackCover(item);
+
+    }
 
 
-    card.innerHTML = `
+    const body =
+      document.createElement("div");
 
-      <div class="card-visual">
-        ${visual}
+    body.className =
+      "card-body";
+
+
+    body.innerHTML = `
+
+      <div class="category">
+        ${escapeHTML(
+          item.categoryName ||
+          "Weekly Update"
+        )}
       </div>
 
-      <div class="card-body">
+      <h3>
+        ${escapeHTML(item.title)}
+      </h3>
 
-        <div class="category">
-          ${item.categoryName || "Weekly Update"}
-        </div>
+      <p class="card-summary">
+        ${escapeHTML(item.summary)}
+      </p>
 
-        <h3>
-          ${item.title || ""}
-        </h3>
+      ${
+        item.whyImportant
 
-        <p>
-          ${item.summary || ""}
-        </p>
+        ? `
+          <div class="why-box">
 
-        <div class="meta-area">
-          ${metas}
+            <div class="why-label">
+              Neden Önemli?
+            </div>
+
+            <div class="why-text">
+              ${escapeHTML(
+                item.whyImportant
+              )}
+            </div>
+
+          </div>
+        `
+
+        : ""
+      }
+
+      <div class="meta-area">
+
+        ${
+          item.company
+          ? `<span class="meta">${escapeHTML(item.company)}</span>`
+          : ""
+        }
+
+        ${
+          item.country
+          ? `<span class="meta">${escapeHTML(item.country)}</span>`
+          : ""
+        }
+
+        ${
+          item.publishedDate
+          ? `<span class="meta">${escapeHTML(item.publishedDate)}</span>`
+          : ""
+        }
+
+      </div>
+
+      <div class="source-row">
+
+        <div class="source-name">
+          ${
+            item.source
+            ? "Kaynak: " +
+              escapeHTML(item.source)
+            : ""
+          }
         </div>
 
         ${
@@ -1169,11 +1808,11 @@ function renderAll(){
           ? `
             <a
               class="source-link"
-              href="${item.url}"
+              href="${escapeHTML(item.url)}"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Kaynağa Git →
+              Kaynağı İncele →
             </a>
           `
 
@@ -1185,6 +1824,14 @@ function renderAll(){
     `;
 
 
+    card.appendChild(
+      visual
+    );
+
+    card.appendChild(
+      body
+    );
+
     newsGrid.appendChild(
       card
     );
@@ -1192,23 +1839,28 @@ function renderAll(){
   });
 
 
-  resultCount.textContent =
+  const featuredVisible =
+    featuredStory.style.display ===
+    "block";
+
+
+  const visibleCount =
     filtered.length +
+    (featuredVisible ? 1 : 0);
+
+
+  resultCount.textContent =
+    visibleCount +
     (
-      featuredStory.style.display === "block"
-
-      ? " içerik + 1 öne çıkan"
-
+      visibleCount === 1
+      ? " içerik"
       : " içerik"
     );
 
 
   emptyState.style.display =
-    filtered.length === 0 &&
-    featuredStory.style.display !== "block"
-
+    visibleCount === 0
     ? "block"
-
     : "none";
 
 }
@@ -1222,7 +1874,9 @@ filterButtons.forEach(button => {
 
       filterButtons.forEach(
         b =>
-        b.classList.remove("active")
+          b.classList.remove(
+            "active"
+          )
       );
 
       button.classList.add(
@@ -1248,10 +1902,13 @@ searchInput.addEventListener(
 
 weekSelect.addEventListener(
   "change",
-  () =>
+  () => {
+
     loadWeek(
       weekSelect.value
-    )
+    );
+
+  }
 );
 
 
