@@ -1,8 +1,6 @@
 {
   "weeks": [
-    {
-      "date": "2026-09-28",
-      "title": "28 Eylül 2026 Haftası"
-    }
+    {"date":"2026-10-12","title":"12–18 Ekim 2026 Haftası","status":"current"},
+    {"date":"2026-09-28","title":"28 Eylül–4 Ekim 2026 Haftası","status":"archive"}
   ]
 }
