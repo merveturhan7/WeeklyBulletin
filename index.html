@@ -1,805 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f4f7f9">
-
-<title>Kargo Ürün ve Posta Müdürlüğü | Weekly Bulletin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101c32">
+<title>Weekly Bulletin | Turkish Cargo</title>
 
 <style>
-:root{
-  --red:#d71920;
-  --red-soft:#fff3f3;
-  --navy:#111827;
-  --navy2:#1d2939;
-  --text:#202938;
-  --muted:#70798a;
-  --bg:#f4f7f9;
-  --white:#ffffff;
-  --border:#e3e7eb;
+:root {
+  --red:#c8102e;
+  --navy:#101c32;
+  --ink:#1c2739;
+  --muted:#667184;
+  --line:#e4e9f0;
+  --bg:#f5f7fa;
+  --soft:#fff5f6;
 }
-
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
+* { box-sizing:border-box; }
+body {
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   background:var(--bg);
-  color:var(--text);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
-
-button,input,select{
-  font:inherit;
-}
+button,input,select { font:inherit; }
+button { cursor:pointer; }
+a { color:inherit; }
+.wrap { width:min(1190px,calc(100% - 44px));margin:auto; }
+.hidden { display:none!important; }
 
 /* HEADER */
-
-header{
-  background:#fff;
-  border-bottom:1px solid var(--border);
-}
-
-.header-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:19px 24px;
+header { background:#fff;border-bottom:1px solid var(--line); }
+.header-inner {
+  min-height:87px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:22px;
-}
-
-.brand{
-  display:flex;
   align-items:center;
-  gap:19px;
+  gap:20px;
 }
-
-.brand-logo{
-  width:145px;
+.brand { display:flex;align-items:center;gap:17px; }
+.brand img { width:148px;max-height:52px;object-fit:contain; }
+.brand-divider { height:40px;width:1px;background:#dce2e9; }
+.dept {
+  font-size:10px;font-weight:800;
+  color:var(--red);letter-spacing:1px;
 }
-
-.brand-logo img{
-  width:100%;
-  display:block;
+.brand-title {
+  font-size:24px;font-weight:800;
+  color:var(--navy);margin-top:4px;
 }
-
-.brand-divider{
-  width:1px;
-  height:40px;
-  background:#e0e4e8;
-}
-
-.department{
-  color:var(--red);
-  font-size:10px;
-  font-weight:850;
-  letter-spacing:1.15px;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.brand h1{
-  margin:0;
-  color:var(--navy);
-  font-size:21px;
-}
-
-.header-date{
-  color:var(--muted);
-  font-size:11px;
+.top-right { display:flex;align-items:center;gap:12px; }
+.top-date { font-size:11px;color:var(--muted); }
+.share {
+  background:#fff;border:1px solid var(--line);
+  border-radius:10px;padding:11px 14px;
+  font-size:11px;font-weight:700;
 }
 
 /* HERO */
-
-.hero{
-  max-width:1180px;
-  margin:20px auto 0;
-  padding:0 24px;
-}
-
-.hero-card{
-  position:relative;
-  overflow:hidden;
+.hero {
+  margin-top:22px;
+  padding:40px 45px 34px;
   border-radius:22px;
-  padding:30px 35px;
-  color:#fff;
+  color:white;
   background:
-    radial-gradient(circle at 90% 5%,rgba(215,25,32,.32) 0 18%,transparent 19%),
-    linear-gradient(125deg,#111827,#1d2939);
+    radial-gradient(circle at 95% 10%,#8a193b55,transparent 42%),
+    linear-gradient(120deg,#101c32,#203653);
 }
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:720px;
+.eyebrow {
+  color:#ff9eab;font-size:10px;
+  font-weight:800;letter-spacing:2px;
 }
-
-.eyebrow{
-  color:#ff8589;
-  font-size:9.5px;
-  font-weight:850;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+.hero h1 {
+  max-width:730px;
+  font-size:clamp(29px,4.5vw,45px);
+  line-height:1.14;
+  margin:15px 0;
 }
-
-.hero h2{
-  margin:9px 0 0;
-  font-size:30px;
-  line-height:1.2;
-  letter-spacing:-.45px;
+.hero p {
+  max-width:670px;
+  color:#c4cfde;
+  line-height:1.7;
+  font-size:13px;
 }
-
-.hero p{
-  margin:12px 0 0;
-  max-width:650px;
-  color:#cbd2dc;
-  font-size:12.5px;
-  line-height:1.6;
+.hero-foot {
+  margin-top:28px;padding-top:17px;
+  border-top:1px solid #ffffff30;
+  display:flex;flex-wrap:wrap;gap:12px 24px;
+  color:#d3dce8;font-size:11px;
 }
+.hero-foot strong { color:white; }
 
-/* MAIN */
-
-.container{
-  max-width:1180px;
-  margin:16px auto 0;
-  padding:0 24px;
+/* SECTIONS */
+.section { margin-top:27px; }
+.section-top {
+  display:flex;justify-content:space-between;
+  align-items:end;gap:12px;margin-bottom:15px;
 }
-
-/* STATS */
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:9px;
-  margin-bottom:17px;
+.overline {
+  font-size:10px;color:var(--red);
+  font-weight:850;letter-spacing:1.2px;
 }
-
-.stat{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:14px 16px;
-}
-
-.stat-number{
+.section-top h2 {
+  margin:6px 0 0;
   color:var(--navy);
-  font-size:22px;
-  font-weight:800;
+  font-size:23px;
 }
+.aside-note { color:var(--muted);font-size:11px; }
 
-.stat-label{
-  color:var(--muted);
-  font-size:9.5px;
-  margin-top:4px;
+/* EXECUTIVE SUMMARY */
+.executive {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:19px;
+  padding:25px;
 }
-
-/* THIS WEEK */
-
-.glance{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:17px;
-  padding:18px 20px;
-  margin-bottom:17px;
-}
-
-.glance-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:13px;
-}
-
-.glance-title{
-  color:var(--red);
-  font-size:9.5px;
-  font-weight:850;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-}
-
-.glance-date{
-  color:#8b93a0;
-  font-size:9.5px;
-}
-
-.glance-grid{
+.insight-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
-
-.glance-item{
-  padding-left:11px;
+.insight {
+  padding:4px 15px;
   border-left:3px solid var(--red);
 }
-
-.glance-item-label{
-  color:#9299a4;
-  font-size:8px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.65px;
-  margin-bottom:4px;
+.insight-label {
+  color:var(--red);font-size:9px;
+  font-weight:850;letter-spacing:1px;
 }
-
-.glance-item-text{
+.insight h3 {
   color:var(--navy);
-  font-size:11.5px;
-  font-weight:650;
-  line-height:1.45;
+  font-size:15px;line-height:1.4;
+  margin:9px 0;
+}
+.insight p {
+  font-size:11px;line-height:1.7;
+  color:var(--muted);margin:0;
 }
 
-/* FEATURED */
-
-.featured{
-  display:none;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:20px;
-  overflow:hidden;
-  margin-bottom:18px;
-}
-
-.featured.has-image{
-  display:block;
-}
-
-.featured-grid{
+/* FEATURED STORY */
+.lead {
   display:grid;
-  grid-template-columns:1.05fr 1fr;
-}
-
-.featured.no-image .featured-grid{
-  grid-template-columns:1fr;
-}
-
-.featured-media{
-  min-height:315px;
-  background:#eef1f4;
+  grid-template-columns:1.25fr .75fr;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:19px;
   overflow:hidden;
 }
-
-.featured-media img{
-  width:100%;
-  height:100%;
-  min-height:315px;
-  object-fit:cover;
-  display:block;
+.lead-content { padding:30px; }
+.lead h3 {
+  font-size:clamp(23px,3vw,30px);
+  line-height:1.25;
+  color:var(--navy);
+  margin:12px 0;
 }
+.lead-visual {
+  min-height:320px;
+  background:linear-gradient(145deg,#213d62,#101c32);
+  display:flex;align-items:center;justify-content:center;
+  color:white;text-align:center;
+}
+.metric strong {
+  display:block;font-size:90px;
+  letter-spacing:-4px;
+}
+.metric span { font-size:11px;letter-spacing:1px; }
+.lead .media { height:100%; }
+.lead .media img { height:100%; }
 
-.featured-body{
-  padding:27px;
+/* NEWS CARDS */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.card {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:17px;
+  overflow:hidden;
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  min-width:0;
 }
-
-.featured-label{
-  color:var(--red);
-  font-size:9px;
-  font-weight:850;
-  letter-spacing:1.25px;
-  text-transform:uppercase;
-  margin-bottom:9px;
+.card:hover { box-shadow:0 10px 30px #101c3212; }
+.media { position:relative;overflow:hidden; }
+.card .media { height:178px; }
+.media img {
+  display:block;width:100%;height:100%;
+  object-fit:cover;
 }
-
-.featured h3{
+.photo-caption {
+  position:absolute;bottom:0;left:0;right:0;
+  background:#101c32cc;color:#fff;
+  padding:7px 10px;font-size:9px;
+}
+.card-body {
+  padding:20px;
+  display:flex;flex-direction:column;flex:1;
+}
+.meta-top {
+  display:flex;justify-content:space-between;
+  align-items:center;gap:8px;flex-wrap:wrap;
+}
+.category {
+  color:var(--red);font-size:9px;
+  font-weight:850;letter-spacing:.8px;
+}
+.date { color:#8791a0;font-size:10px; }
+.card h3 {
   color:var(--navy);
-  margin:0 0 10px;
-  font-size:26px;
-  line-height:1.25;
+  font-size:17px;line-height:1.4;
+  margin:12px 0 10px;
+}
+.card-summary {
+  color:#647083;font-size:11.5px;
+  line-height:1.7;margin:0;
+}
+.card .card-summary {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  overflow:hidden;
+}
+.lead .card-summary { font-size:13px; }
+
+/* PRODUCT TAGS */
+.group-tags {
+  display:flex;flex-wrap:wrap;
+  gap:6px;margin-top:13px;
+}
+.group-tag {
+  background:#f1f4f8;color:#4c5c70;
+  border-radius:20px;padding:6px 9px;
+  font-size:9px;font-weight:700;
 }
 
-.summary{
-  margin:0;
-  color:#687282;
-  font-size:12.5px;
-  line-height:1.65;
+/* EXPANDABLE ANALYSIS */
+.card-bottom { margin-top:auto;padding-top:16px; }
+.detail {
+  margin-top:12px;
+  border-top:1px solid var(--line);
 }
-
-/* ANALYSIS */
-
-.analysis-box{
-  margin-top:14px;
-  padding:12px 13px;
-  background:#f7f8fa;
-  border-left:3px solid #cfd4db;
-  border-radius:0 9px 9px 0;
-}
-
-.analysis-label{
-  color:#596273;
-  font-size:8px;
-  font-weight:850;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.analysis-text{
-  color:#505a69;
-  font-size:10.8px;
-  line-height:1.55;
-}
-
-/* PRODUCT PERSPECTIVE */
-
-.product-box{
-  margin-top:11px;
-  padding:12px 13px;
-  background:var(--red-soft);
-  border-left:3px solid var(--red);
-  border-radius:0 9px 9px 0;
-}
-
-.product-label{
-  color:var(--red);
-  font-size:8px;
-  font-weight:850;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.product-analysis{
-  color:#5a4c50;
-  font-size:10.8px;
-  line-height:1.55;
-}
-
-.product-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-  margin-top:9px;
-}
-
-.product-tag{
-  display:inline-flex;
-  background:#fff;
-  border:1px solid #f0c8ca;
-  color:var(--red);
-  padding:5px 8px;
-  border-radius:20px;
-  font-size:8px;
-  font-weight:800;
-}
-
-/* META */
-
-.meta-area{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-  margin-top:13px;
-}
-
-.meta{
-  background:#f1f3f5;
-  color:#747d89;
-  padding:5px 8px;
-  border-radius:20px;
-  font-size:8.5px;
-}
-
-.source-row{
-  margin-top:14px;
-  display:flex;
+.detail summary {
+  list-style:none;
+  display:flex;justify-content:space-between;
   align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.source-name{
-  color:#9299a4;
-  font-size:8.5px;
-}
-
-.source-link{
+  padding:13px 0 0;
+  font-size:11px;font-weight:800;
   color:var(--navy);
-  text-decoration:none;
-  font-size:10px;
-  font-weight:800;
-}
-
-.source-link:hover{
-  color:var(--red);
-}
-
-/* TOOLBAR */
-
-.toolbar{
-  display:grid;
-  grid-template-columns:1fr 230px;
-  gap:10px;
-  margin-bottom:11px;
-}
-
-.search-wrap{
-  position:relative;
-}
-
-.search-symbol{
-  position:absolute;
-  left:14px;
-  top:50%;
-  transform:translateY(-50%);
-  color:#9299a4;
-}
-
-.search-wrap input,
-.week-select{
-  width:100%;
-  height:45px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:11px;
-  outline:none;
-  color:var(--text);
-  font-size:12px;
-}
-
-.search-wrap input{
-  padding:0 14px 0 37px;
-}
-
-.week-select{
-  padding:0 12px;
-}
-
-/* FILTER AREAS */
-
-.filter-section{
-  margin-bottom:10px;
-}
-
-.filter-heading{
-  color:#8a929f;
-  font-size:8px;
-  font-weight:850;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-  margin-bottom:6px;
-}
-
-.filters{
-  display:flex;
-  gap:6px;
-  overflow-x:auto;
-  padding-bottom:4px;
-  scrollbar-width:none;
-}
-
-.filters::-webkit-scrollbar{
-  display:none;
-}
-
-.filter,
-.product-filter{
-  flex:0 0 auto;
-  background:#fff;
-  border:1px solid var(--border);
-  color:#677181;
-  padding:8px 12px;
-  border-radius:25px;
-  font-size:9.5px;
-  font-weight:650;
   cursor:pointer;
 }
-
-.filter.active{
-  background:var(--red);
-  border-color:var(--red);
-  color:#fff;
+.detail summary::-webkit-details-marker { display:none; }
+.detail summary:after {
+  content:"+";
+  color:var(--red);font-size:19px;
+}
+.detail[open] summary:after { content:"−"; }
+.detail-content { padding:13px 0 3px; }
+.detail-label {
+  font-size:9px;font-weight:850;
+  letter-spacing:.8px;margin-bottom:7px;
+}
+.analysis {
+  background:#f6f8fb;
+  border-radius:10px;
+  padding:13px;margin-bottom:10px;
+}
+.product-panel {
+  background:var(--soft);
+  border-left:3px solid var(--red);
+  border-radius:0 10px 10px 0;
+  padding:13px;
+}
+.product-panel .detail-label { color:var(--red); }
+.analysis p,.product-panel p {
+  font-size:11px;line-height:1.7;
+  color:#526071;margin:0;
+}
+.product-pills {
+  display:flex;flex-wrap:wrap;
+  gap:5px;margin-top:9px;
+}
+.product-pills span {
+  background:#fff;
+  border:1px solid #efcdd2;
+  color:var(--red);
+  padding:5px 8px;border-radius:20px;
+  font-size:9px;font-weight:750;
 }
 
-.product-filter.active{
+/* SOURCE */
+.source-line {
+  display:flex;justify-content:space-between;
+  gap:10px;align-items:center;
+  flex-wrap:wrap;margin-top:14px;
+}
+.source-line small { color:#8b94a2;font-size:9.5px; }
+.source-line a {
+  color:var(--red);
+  text-decoration:none;
+  font-size:10.5px;font-weight:800;
+}
+.credit {
+  margin-top:8px;
+  font-size:9px;color:#8791a0;
+}
+
+/* FILTERS */
+.toolbar {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:19px;margin-top:28px;
+}
+.tools-top {
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:12px;margin-bottom:18px;
+}
+.search,.week-select {
+  width:100%;height:45px;
+  border:1px solid #dfe5ec;
+  border-radius:10px;
+  padding:0 13px;
+  background:#fff;color:var(--navy);
+  font-size:12px;
+}
+.filter-label {
+  color:#8992a0;font-size:9px;
+  font-weight:850;letter-spacing:1px;
+  margin:13px 0 9px;
+}
+.filter-row {
+  display:flex;flex-wrap:wrap;gap:7px;
+}
+.filter {
+  border:1px solid #e1e6ee;
+  border-radius:30px;
+  background:white;color:#566375;
+  padding:8px 11px;
+  font-size:10px;font-weight:700;
+}
+.filter.active {
   background:var(--navy);
   border-color:var(--navy);
-  color:#fff;
+  color:white;
 }
-
-/* SECTION */
-
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:15px;
-  margin:17px 0 12px;
-}
-
-.section-kicker{
-  color:var(--red);
-  font-size:8.5px;
-  font-weight:850;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-
-.section-header h2{
-  color:var(--navy);
-  margin:4px 0 0;
-  font-size:20px;
-}
-
-.result-count{
-  color:#858e9c;
-  font-size:9.5px;
-}
-
-/* CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:.18s ease;
-}
-
-.card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 28px rgba(17,24,39,.06);
-}
-
-.card-visual{
-  height:155px;
-  overflow:hidden;
-  position:relative;
-  background:#eef1f4;
-}
-
-.card-visual img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.card-visual:after{
-  content:"";
-  position:absolute;
-  left:18px;
-  bottom:0;
-  width:39px;
-  height:4px;
-  border-radius:4px 4px 0 0;
+.category-filter.active {
   background:var(--red);
+  border-color:var(--red);
 }
-
-.card-body{
-  padding:17px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
-}
-
-.category{
-  color:var(--red);
-  font-size:8px;
-  font-weight:850;
-  letter-spacing:.75px;
-  text-transform:uppercase;
-  margin-bottom:8px;
-}
-
-.card h3{
-  color:var(--navy);
-  margin:0 0 8px;
-  font-size:15.5px;
-  line-height:1.38;
-}
-
-.card .summary{
-  font-size:11.3px;
-  line-height:1.58;
-}
-
-.card .analysis-box,
-.card .product-box{
-  padding:10px 11px;
-}
-
-.card .analysis-text,
-.card .product-analysis{
-  font-size:10px;
-}
-
-.card .source-row{
-  margin-top:auto;
-  padding-top:13px;
-}
-
-.message{
-  display:none;
-  padding:30px 20px;
-  text-align:center;
+.results { color:#7d8797;font-size:11px; }
+.empty,.error {
+  padding:25px;background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
   color:var(--muted);
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:15px;
-  font-size:11px;
+  text-align:center;font-size:12px;
 }
-
-/* FOOTER */
-
-footer{
-  max-width:1180px;
-  margin:43px auto 0;
-  padding:21px 24px 35px;
-  border-top:1px solid var(--border);
-  display:flex;
-  justify-content:space-between;
-  color:#8c94a1;
-  font-size:9px;
+.footnote {
+  margin-top:27px;padding:18px;
+  border:1px solid var(--line);
+  border-radius:14px;background:#fff;
+  font-size:11px;line-height:1.7;
+  color:#697586;
 }
-
-/* TABLET */
-
-@media(max-width:850px){
-
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .featured-grid{
-    grid-template-columns:1fr;
-  }
-
-  .featured-media,
-  .featured-media img{
-    min-height:250px;
-  }
-
-  .glance-grid{
-    grid-template-columns:1fr;
-  }
-
+.footer {
+  margin-top:36px;padding:22px 0 34px;
+  border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;
+  color:#8b95a3;font-size:10px;
 }
 
 /* MOBILE */
-
-@media(max-width:600px){
-
-  .header-inner{
-    padding:14px 16px;
+@media(max-width:950px) {
+  .lead { grid-template-columns:1fr; }
+  .lead-visual { min-height:210px; }
+  .cards { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:650px) {
+  .wrap { width:calc(100% - 28px); }
+  .header-inner { min-height:76px; }
+  .brand { gap:10px; }
+  .brand img { width:95px; }
+  .brand-divider { height:32px; }
+  .dept { font-size:7px; }
+  .brand-title { font-size:17px; }
+  .top-date { display:none; }
+  .share { padding:9px;font-size:10px; }
+  .hero { padding:27px 23px;margin-top:13px; }
+  .hero h1 { font-size:28px; }
+  .hero p { font-size:12px; }
+  .hero-foot { gap:8px 16px; }
+  .section-top h2 { font-size:20px; }
+  .executive { padding:19px; }
+  .insight-grid { grid-template-columns:1fr;gap:15px; }
+  .lead-content { padding:22px; }
+  .lead-visual { min-height:180px; }
+  .metric strong { font-size:70px; }
+  .cards { grid-template-columns:1fr; }
+  .card .media { height:185px; }
+  .tools-top { grid-template-columns:1fr; }
+  .toolbar { padding:15px; }
+  .filter-row {
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding-bottom:5px;
   }
-
-  .brand{
-    gap:11px;
-  }
-
-  .brand-logo{
-    width:92px;
-  }
-
-  .brand-divider{
-    height:31px;
-  }
-
-  .department{
-    font-size:6.8px;
-    letter-spacing:.65px;
-  }
-
-  .brand h1{
-    font-size:14px;
-  }
-
-  .header-date{
-    display:none;
-  }
-
-  .hero{
-    padding:0 16px;
-    margin-top:14px;
-  }
-
-  .hero-card{
-    padding:22px 20px;
-    border-radius:18px;
-  }
-
-  .hero h2{
-    font-size:23px;
-  }
-
-  .hero p{
-    font-size:11px;
-  }
-
-  .container{
-    padding:0 16px;
-    margin-top:13px;
-  }
-
-  .stats{
-    gap:5px;
-  }
-
-  .stat{
-    padding:11px 7px;
-    border-radius:12px;
-  }
-
-  .stat-number{
-    font-size:17px;
-  }
-
-  .stat-label{
-    font-size:7px;
-  }
-
-  .glance{
-    padding:15px;
-  }
-
-  .featured{
-    border-radius:16px;
-  }
-
-  .featured-media,
-  .featured-media img{
-    min-height:200px;
-  }
-
-  .featured-body{
-    padding:19px;
-  }
-
-  .featured h3{
-    font-size:20px;
-  }
-
-  .toolbar{
-    grid-template-columns:1fr;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .card-visual{
-    height:180px;
-  }
-
-  .card-body{
-    padding:17px;
-  }
-
-  .card h3{
-    font-size:17px;
-  }
-
-  .card .summary{
-    font-size:12px;
-  }
-
-  .section-header h2{
-    font-size:18px;
-  }
-
-  footer{
-    padding:20px 16px 32px;
-    margin-top:34px;
-    flex-direction:column;
-    gap:5px;
-  }
-
+  .filter { white-space:nowrap; }
 }
 </style>
 </head>
@@ -807,1044 +418,676 @@ footer{
 <body>
 
 <header>
-<div class="header-inner">
-
-  <div class="brand">
-
-    <div class="brand-logo">
+  <div class="wrap header-inner">
+    <div class="brand">
       <img src="./turkish-cargo-logo.png" alt="Turkish Cargo">
-    </div>
-
-    <div class="brand-divider"></div>
-
-    <div>
-      <div class="department">
-        Kargo Ürün ve Posta Müdürlüğü
+      <div class="brand-divider"></div>
+      <div>
+        <div class="dept">KARGO ÜRÜN VE POSTA MÜDÜRLÜĞÜ</div>
+        <div class="brand-title">Weekly Bulletin</div>
       </div>
-
-      <h1>Weekly Bulletin</h1>
     </div>
-
+    <div class="top-right">
+      <div class="top-date" id="topDate"></div>
+      <button class="share" id="shareButton">↗ Paylaş</button>
+    </div>
   </div>
-
-  <div class="header-date" id="headerDate">
-    Weekly Intelligence
-  </div>
-
-</div>
 </header>
 
+<main class="wrap">
 
-<section class="hero">
-
-<div class="hero-card">
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      Weekly Intelligence
+  <section class="hero">
+    <div class="eyebrow" id="heroEyebrow">
+      WEEKLY INTELLIGENCE
     </div>
-
-    <h2>
-      Ürün, pazar ve sektör gündeminden öne çıkan gelişmeler
-    </h2>
-
+    <h1>Hava Kargo ve Lojistikte Haftanın Gündemi</h1>
     <p>
-      Hava kargo, lojistik, posta, kurye, e-ticaret,
-      müşteri, teknoloji ve endüstri ekosistemindeki
-      önemli gelişmeler ve haftalık içgörüler.
+      Küresel pazar, havacılık, endüstri, e-ticaret,
+      posta ve teknolojideki önemli gelişmeler,
+      sektör analizleri ve ürün perspektifleri.
     </p>
+    <div class="hero-foot">
+      <span id="heroWeek">Hafta yükleniyor...</span>
+      <span id="heroCount"></span>
+      <span id="heroUpdate"></span>
+    </div>
+  </section>
 
-  </div>
+  <section class="section">
+    <div class="section-top">
+      <div>
+        <div class="overline">HAFTAYA BAKIŞ</div>
+        <h2>Yönetici Özeti</h2>
+      </div>
+      <span class="aside-note">3 temel çıkarım</span>
+    </div>
+    <div class="executive">
+      <div class="insight-grid" id="insights"></div>
+    </div>
+  </section>
 
-</div>
+  <section class="section" id="leadSection">
+    <div class="section-top">
+      <div>
+        <div class="overline">01 / ÖNE ÇIKAN</div>
+        <h2>Haftanın Manşeti</h2>
+      </div>
+    </div>
+    <div id="leadRoot"></div>
+  </section>
 
-</section>
+  <section class="section" id="spotlightSection">
+    <div class="section-top">
+      <div>
+        <div class="overline">HAFTANIN ÖNCELİKLERİ</div>
+        <h2>Öne Çıkan Gelişmeler</h2>
+      </div>
+    </div>
+    <div class="cards" id="spotlightRoot"></div>
+  </section>
 
-
-<main class="container">
-
-<section class="stats">
-
-  <div class="stat">
-    <div class="stat-number" id="totalStat">0</div>
-    <div class="stat-label">Haber</div>
-  </div>
-
-  <div class="stat">
-    <div class="stat-number" id="categoryStat">0</div>
-    <div class="stat-label">Kategori</div>
-  </div>
-
-  <div class="stat">
-    <div class="stat-number" id="productStat">0</div>
-    <div class="stat-label">Ürün Perspektifi</div>
-  </div>
-
-  <div class="stat">
-    <div class="stat-number" id="weekStat">—</div>
-    <div class="stat-label">Hafta Başlangıcı</div>
-  </div>
-
-</section>
-
-
-<section class="glance">
-
-  <div class="glance-header">
-
-    <div class="glance-title">
-      Bu Hafta
+  <section class="toolbar">
+    <div class="tools-top">
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Başlık, şirket, sektör veya üründe ara..."
+      >
+      <select id="weekSelect" class="week-select">
+        <option>Haftalar yükleniyor...</option>
+      </select>
     </div>
 
-    <div class="glance-date" id="glanceDate"></div>
+    <div class="filter-label">HABER KATEGORİSİ</div>
+    <div class="filter-row" id="categoryFilters"></div>
 
-  </div>
+    <div class="filter-label">ÜRÜN PERSPEKTİFİ</div>
+    <div class="filter-row" id="productFilters"></div>
+  </section>
 
-  <div class="glance-grid" id="glanceGrid"></div>
-
-</section>
-
-
-<section
-  class="featured"
-  id="featuredStory"
-></section>
-
-
-<div class="toolbar">
-
-  <div class="search-wrap">
-
-    <span class="search-symbol">⌕</span>
-
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Başlık, şirket, ürün veya içerikte ara..."
-    >
-
-  </div>
-
-  <select
-    id="weekSelect"
-    class="week-select"
-  >
-    <option>Hafta yükleniyor...</option>
-  </select>
-
-</div>
-
-
-<div class="filter-section">
-
-  <div class="filter-heading">
-    Konuya Göre
-  </div>
-
-  <div class="filters">
-
-    <button class="filter active" data-category="all">
-      Tümü
-    </button>
-
-    <button class="filter" data-category="product">
-      Ürün & Hizmetler
-    </button>
-
-    <button class="filter" data-category="market">
-      Pazar & Rekabet
-    </button>
-
-    <button class="filter" data-category="customer">
-      Müşteri İçgörüleri
-    </button>
-
-    <button class="filter" data-category="mail">
-      Posta & Kurye
-    </button>
-
-    <button class="filter" data-category="industry">
-      Havacılık & Lojistik
-    </button>
-
-    <button class="filter" data-category="digital">
-      Dijital & Teknoloji
-    </button>
-
-  </div>
-
-</div>
-
-
-<div class="filter-section">
-
-  <div class="filter-heading">
-    Ürün Perspektifi
-  </div>
-
-  <div class="filters">
-
-    <button class="product-filter active" data-product="all">
-      Tümü
-    </button>
-
-    <button class="product-filter" data-product="TK URGENT">
-      TK URGENT
-    </button>
-
-    <button class="product-filter" data-product="TK PREMIUM">
-      TK PREMIUM
-    </button>
-
-    <button class="product-filter" data-product="TK SMART">
-      TK SMART
-    </button>
-
-    <button class="product-filter" data-product="TK AERO">
-      TK AERO
-    </button>
-
-    <button class="product-filter" data-product="TK AUTO">
-      TK AUTO
-    </button>
-
-    <button class="product-filter" data-product="POSTA">
-      POSTA
-    </button>
-
-    <button class="product-filter" data-product="TK COURIER">
-      TK COURIER
-    </button>
-
-  </div>
-
-</div>
-
-
-<div class="section-header">
-
-  <div>
-
-    <div class="section-kicker">
-      Weekly Updates
+  <section class="section">
+    <div class="section-top">
+      <div>
+        <div class="overline">WEEKLY UPDATES</div>
+        <h2 id="listTitle">Sektörden Diğer Haberler</h2>
+      </div>
+      <span class="results" id="resultCount"></span>
     </div>
 
-    <h2 id="weekTitle">
-      Haftanın Gelişmeleri
-    </h2>
+    <div class="cards" id="newsRoot"></div>
 
-  </div>
+    <div class="empty hidden" id="emptyState">
+      Bu filtrelerle eşleşen haber bulunamadı.
+    </div>
 
-  <div
-    class="result-count"
-    id="resultCount"
-  ></div>
+    <div class="error hidden" id="errorState"></div>
+  </section>
 
-</div>
+  <div class="footnote" id="editorialNote"></div>
 
-
-<div
-  class="grid"
-  id="newsGrid"
-></div>
-
-
-<div
-  class="message"
-  id="emptyState"
->
-  Seçilen filtrelerle eşleşen içerik bulunamadı.
-</div>
-
-
-<div
-  class="message"
-  id="errorState"
->
-  İçerikler yüklenirken bir sorun oluştu.
-</div>
+  <footer class="footer">
+    <div>Kargo Ürün ve Posta Müdürlüğü · Weekly Bulletin</div>
+    <div>Haber ve görsel hakları ilgili kaynaklarına aittir.</div>
+  </footer>
 
 </main>
 
-
-<footer>
-
-  <div>
-    Kargo Ürün ve Posta Müdürlüğü
-  </div>
-
-  <div>
-    Weekly Bulletin · 2026
-  </div>
-
-</footer>
-
-
 <script>
+(() => {
+"use strict";
 
-let allItems = [];
-let selectedCategory = "all";
-let selectedProduct = "all";
+const $ = id => document.getElementById(id);
 
-const $ = id =>
-  document.getElementById(id);
-
-const newsGrid = $("newsGrid");
-const searchInput = $("searchInput");
-const weekSelect = $("weekSelect");
-const resultCount = $("resultCount");
-const emptyState = $("emptyState");
-const errorState = $("errorState");
-const weekTitle = $("weekTitle");
-const totalStat = $("totalStat");
-const categoryStat = $("categoryStat");
-const productStat = $("productStat");
-const weekStat = $("weekStat");
-const headerDate = $("headerDate");
-const featuredStory = $("featuredStory");
-const glanceDate = $("glanceDate");
-const glanceGrid = $("glanceGrid");
-
-const categoryButtons =
-  document.querySelectorAll(".filter");
-
-const productButtons =
-  document.querySelectorAll(".product-filter");
-
-
-function escapeHTML(value){
-
-  return String(value || "")
+const escapeHTML = value =>
+  String(value ?? "")
     .replaceAll("&","&amp;")
     .replaceAll("<","&lt;")
     .replaceAll(">","&gt;")
     .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+    .replaceAll("'","&#39;");
 
-}
-
-
-function productData(item){
-
-  return item.productRelevance || {
-    relevant:false,
-    products:[],
-    analysis:""
-  };
-
-}
-
-
-function renderProductBox(item){
-
-  const data = productData(item);
-
-  if(
-    !data.relevant ||
-    !data.products ||
-    !data.products.length
-  )
+function safeUrl(value) {
+  try {
+    const url = new URL(value, location.href);
+    return ["https:","http:"].includes(url.protocol)
+      ? url.href : "";
+  } catch {
     return "";
+  }
+}
 
+/* PRODUCT GROUPS */
 
-  const tags =
-    data.products.map(product =>
+const groups = [
+  {
+    id:"speed",
+    label:"Hız Odaklı Hizmetler",
+    products:["TK SMART","TK PREMIUM","TK URGENT"]
+  },
+  {
+    id:"industry",
+    label:"Endüstri Ürünleri",
+    products:["TK AERO","TK AUTO"]
+  },
+  {
+    id:"commerce",
+    label:"E-Ticaret ve Posta Ürünleri",
+    products:["TK COURIER","POSTA"]
+  },
+  {
+    id:"special",
+    label:"Özel Kargo Ürünleri",
+    products:[
+      "İlaç ve Sağlık Ürünleri",
+      "Canlı Hayvan",
+      "Bozulabilir Ürünler",
+      "Tehlikeli Madde",
+      "Değerli Kargolar",
+      "Hassas Kargolar"
+    ]
+  }
+];
 
-      `<span class="product-tag">
-        ${escapeHTML(product)}
-      </span>`
+const categories = [
+  ["all","Tümü"],
+  ["market","Pazar & Rekabet"],
+  ["aviation","Havacılık & MRO"],
+  ["automotive","Otomotiv & Endüstri"],
+  ["ecommerce","E-Ticaret & Posta"],
+  ["digital","Dijital & Teknoloji"],
+  ["sustainability","Sürdürülebilirlik"]
+];
 
+const legacyCategories = {
+  industry:"aviation",
+  mail:"ecommerce",
+  customer:"market",
+  product:"automotive"
+};
+
+let items = [];
+let weeks = [];
+let issue = null;
+let activeCategory = "all";
+let activeGroup = "all";
+
+function productInfo(item) {
+  const data = item.productRelevance || {};
+  return {
+    products:Array.isArray(data.products) ? data.products : [],
+    analysis:data.analysis || "",
+    relevant:!!data.relevant
+  };
+}
+
+function itemGroups(item) {
+  const products = productInfo(item).products;
+  return groups.filter(group =>
+    group.products.some(product => products.includes(product))
+  );
+}
+
+function categoryOf(item) {
+  return legacyCategories[item.category] ||
+    item.category || "market";
+}
+
+function formatDate(value) {
+  if (!value) return "";
+  const date = new Date(value + "T12:00:00");
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString("tr-TR",{
+    day:"numeric",month:"long",year:"numeric"
+  });
+}
+
+/* ANALYSIS */
+
+function detailHTML(item) {
+  const info = productInfo(item);
+
+  const important = item.whyImportant
+    ? `
+      <div class="analysis">
+        <div class="detail-label">NEDEN ÖNEMLİ?</div>
+        <p>${escapeHTML(item.whyImportant)}</p>
+      </div>
+    ` : "";
+
+  const productBox = info.relevant && info.products.length
+    ? `
+      <div class="product-panel">
+        <div class="detail-label">ÜRÜN PERSPEKTİFİ</div>
+        <p>${escapeHTML(info.analysis)}</p>
+        <div class="product-pills">
+          ${info.products.map(product =>
+            `<span>${escapeHTML(product)}</span>`
+          ).join("")}
+        </div>
+      </div>
+    ` : "";
+
+  if (!important && !productBox) return "";
+
+  return `
+    <details class="detail">
+      <summary>Analizi Gör</summary>
+      <div class="detail-content">
+        ${important}
+        ${productBox}
+      </div>
+    </details>
+  `;
+}
+
+/* IMAGE */
+
+function imageHTML(item) {
+  const url = safeUrl(item.image);
+  if (!url) return "";
+
+  return `
+    <div class="media">
+      <img
+        loading="lazy"
+        src="${escapeHTML(url)}"
+        alt="${escapeHTML(item.imageCaption || item.title)}"
+        onerror="this.parentElement.remove()"
+      >
+      ${item.imageCredit
+        ? `<div class="photo-caption">
+             ${escapeHTML(item.imageCaption || "Temsili fotoğraf")}
+           </div>`
+        : ""}
+    </div>
+  `;
+}
+
+/* SOURCE */
+
+function sourceHTML(item) {
+  const url = safeUrl(item.url);
+
+  const creditUrl = safeUrl(item.imageCreditUrl);
+
+  return `
+    <div class="source-line">
+      <small>
+        ${escapeHTML(item.source || "Kaynak")}
+        · ${escapeHTML(item.publishedDate || "")}
+      </small>
+      ${url
+        ? `<a href="${escapeHTML(url)}"
+              target="_blank"
+              rel="noopener noreferrer">
+             Kaynağı İncele ↗
+           </a>`
+        : ""}
+    </div>
+    ${creditUrl
+      ? `<div class="credit">
+           Fotoğraf:
+           <a href="${escapeHTML(creditUrl)}"
+              target="_blank"
+              rel="noopener noreferrer">
+             ${escapeHTML(item.imageCredit || "Görsel kaynağı")}
+           </a>
+         </div>`
+      : ""}
+  `;
+}
+
+/* NEWS CARD */
+
+function cardHTML(item, isLead = false) {
+  const categoryName =
+    item.categoryName ||
+    categories.find(c => c[0] === categoryOf(item))?.[1] ||
+    "Sektör";
+
+  const tags = itemGroups(item)
+    .map(group =>
+      `<span class="group-tag">${escapeHTML(group.label)}</span>`
     ).join("");
 
-
-  return `
-
-    <div class="product-box">
-
-      <div class="product-label">
-        Ürün Perspektifi
-      </div>
-
-      ${
-        data.analysis
-        ? `
-          <div class="product-analysis">
-            ${escapeHTML(data.analysis)}
-          </div>
-        `
-        : ""
-      }
-
-      <div class="product-tags">
-        ${tags}
-      </div>
-
+  const content = `
+    <div class="meta-top">
+      <span class="category">${escapeHTML(categoryName)}</span>
+      <span class="date">${escapeHTML(item.publishedDate)}</span>
     </div>
 
-  `;
+    <h3>${escapeHTML(item.title)}</h3>
 
-}
+    <p class="card-summary">${escapeHTML(item.summary)}</p>
 
+    ${tags ? `<div class="group-tags">${tags}</div>` : ""}
 
-function renderAnalysis(item){
-
-  if(!item.whyImportant)
-    return "";
-
-  return `
-
-    <div class="analysis-box">
-
-      <div class="analysis-label">
-        Neden Önemli?
-      </div>
-
-      <div class="analysis-text">
-        ${escapeHTML(item.whyImportant)}
-      </div>
-
+    <div class="card-bottom">
+      ${detailHTML(item)}
+      ${sourceHTML(item)}
     </div>
-
   `;
 
-}
-
-
-function renderMeta(item){
-
-  const values = [
-    item.company,
-    item.country,
-    item.publishedDate
-  ].filter(Boolean);
-
-  return values.map(value =>
-
-    `<span class="meta">
-      ${escapeHTML(value)}
-    </span>`
-
-  ).join("");
-
-}
-
-
-function createImage(item,container){
-
-  if(!item.image)
-    return false;
-
-  const img =
-    document.createElement("img");
-
-  img.src = item.image;
-  img.alt = item.title || "Haber görseli";
-  img.loading = "lazy";
-  img.referrerPolicy = "no-referrer";
-
-  img.addEventListener(
-    "error",
-    () => container.remove()
-  );
-
-  container.appendChild(img);
-
-  return true;
-
-}
-
-
-async function loadWeeks(){
-
-  try{
-
-    const response =
-      await fetch(
-        "./data/index.json?v=" +
-        Date.now()
-      );
-
-    if(!response.ok)
-      throw new Error("index.json yüklenemedi");
-
-    const data =
-      await response.json();
-
-    const weeks =
-      data.weeks || [];
-
-    weekSelect.innerHTML = "";
-
-    weeks.forEach(week => {
-
-      const option =
-        document.createElement("option");
-
-      option.value = week.date;
-      option.textContent = week.title;
-
-      weekSelect.appendChild(option);
-
-    });
-
-
-    if(weeks.length)
-      await loadWeek(weeks[0].date);
-
-  }
-
-  catch(error){
-
-    console.error(error);
-
-    errorState.style.display = "block";
-
-  }
-
-}
-
-
-async function loadWeek(date){
-
-  try{
-
-    errorState.style.display = "none";
-
-    const response =
-      await fetch(
-        "./data/" +
-        date +
-        ".json?v=" +
-        Date.now()
-      );
-
-    if(!response.ok)
-      throw new Error("Hafta dosyası yüklenemedi");
-
-    const data =
-      await response.json();
-
-    allItems =
-      data.items || [];
-
-    weekTitle.textContent =
-      data.title ||
-      data.date ||
-      "Haftanın Gelişmeleri";
-
-    headerDate.textContent =
-      data.title ||
-      data.date ||
-      "";
-
-    glanceDate.textContent =
-      data.title ||
-      data.date ||
-      "";
-
-    totalStat.textContent =
-      allItems.length;
-
-    categoryStat.textContent =
-      new Set(
-        allItems
-          .map(x => x.category)
-          .filter(Boolean)
-      ).size;
-
-    productStat.textContent =
-      allItems.filter(item =>
-        productData(item).relevant
-      ).length;
-
-
-    const parts = date.split("-");
-
-    if(parts.length === 3){
-
-      const months = [
-        "",
-        "OCA","ŞUB","MAR","NİS","MAY","HAZ",
-        "TEM","AĞU","EYL","EKİ","KAS","ARA"
-      ];
-
-      weekStat.textContent =
-        Number(parts[2]) +
-        " " +
-        months[Number(parts[1])];
-
-    }
-
-
-    selectedCategory = "all";
-    selectedProduct = "all";
-
-    searchInput.value = "";
-
-    categoryButtons.forEach(
-      x => x.classList.remove("active")
-    );
-
-    productButtons.forEach(
-      x => x.classList.remove("active")
-    );
-
-    categoryButtons[0]?.classList.add("active");
-    productButtons[0]?.classList.add("active");
-
-    renderGlance(data);
-    renderAll();
-
-  }
-
-  catch(error){
-
-    console.error(error);
-
-    newsGrid.innerHTML = "";
-    errorState.style.display = "block";
-
-  }
-
-}
-
-
-function renderGlance(data){
-
-  glanceGrid.innerHTML = "";
-
-  let themes =
-    data.weeklyThemes || [];
-
-
-  if(!themes.length){
-
-    themes =
-      allItems.slice(0,3).map(item => ({
-        label:item.categoryName || "Gündem",
-        text:item.title
-      }));
-
-  }
-
-
-  themes.slice(0,3).forEach(theme => {
-
-    const div =
-      document.createElement("div");
-
-    div.className = "glance-item";
-
-    div.innerHTML = `
-
-      <div class="glance-item-label">
-        ${escapeHTML(theme.label)}
+  if (isLead) {
+    const visual = imageHTML(item) || `
+      <div class="lead-visual">
+        <div class="metric">
+          <strong>${escapeHTML(item.metric || "↗")}</strong>
+          <span>${escapeHTML(item.metricLabel || "SEKTÖR GÜNDEMİ")}</span>
+        </div>
       </div>
-
-      <div class="glance-item-text">
-        ${escapeHTML(theme.text)}
-      </div>
-
     `;
 
-    glanceGrid.appendChild(div);
-
-  });
-
-}
-
-
-function renderFeatured(search){
-
-  const item =
-    allItems.find(x => x.featured);
-
-
-  if(
-    !item ||
-    selectedCategory !== "all" ||
-    selectedProduct !== "all" ||
-    search
-  ){
-
-    featuredStory.style.display = "none";
-    featuredStory.innerHTML = "";
-
-    return;
-
+    return `
+      <article class="lead">
+        <div class="lead-content">${content}</div>
+        ${visual}
+      </article>
+    `;
   }
 
-
-  featuredStory.innerHTML = `
-
-    <div class="featured-grid">
-
-      ${
-        item.image
-        ? `<div class="featured-media" id="featuredMedia"></div>`
-        : ""
-      }
-
-      <div class="featured-body">
-
-        <div class="featured-label">
-          Öne Çıkan Gelişme
-        </div>
-
-        <h3>
-          ${escapeHTML(item.title)}
-        </h3>
-
-        <p class="summary">
-          ${escapeHTML(item.summary)}
-        </p>
-
-        ${renderAnalysis(item)}
-
-        ${renderProductBox(item)}
-
-        <div class="meta-area">
-          ${renderMeta(item)}
-        </div>
-
-        <div class="source-row">
-
-          <div class="source-name">
-            ${
-              item.source
-              ? "Kaynak: " + escapeHTML(item.source)
-              : ""
-            }
-          </div>
-
-          ${
-            item.url
-            ? `
-              <a
-                class="source-link"
-                href="${escapeHTML(item.url)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Kaynağı İncele →
-              </a>
-            `
-            : ""
-          }
-
-        </div>
-
-      </div>
-
-    </div>
-
+  return `
+    <article class="card">
+      ${imageHTML(item)}
+      <div class="card-body">${content}</div>
+    </article>
   `;
-
-
-  if(item.image){
-
-    featuredStory.className =
-      "featured has-image";
-
-    const media =
-      $("featuredMedia");
-
-    const img =
-      document.createElement("img");
-
-    img.src = item.image;
-    img.alt = item.title || "";
-    img.referrerPolicy = "no-referrer";
-
-    img.addEventListener(
-      "error",
-      () => {
-
-        media.remove();
-
-        featuredStory.className =
-          "featured no-image";
-
-      }
-    );
-
-    media.appendChild(img);
-
-  }
-
-  else{
-
-    featuredStory.className =
-      "featured no-image";
-
-  }
-
-
-  featuredStory.style.display =
-    "block";
-
 }
 
+/* FILTERS */
 
-function matches(item,search){
+function renderFilters() {
+  $("categoryFilters").innerHTML = categories
+    .map(([id,label]) => `
+      <button
+        class="filter category-filter ${activeCategory === id ? "active" : ""}"
+        data-cat="${id}">
+        ${escapeHTML(label)}
+      </button>
+    `).join("");
 
-  const categoryMatch =
-    selectedCategory === "all" ||
-    item.category === selectedCategory;
+  $("productFilters").innerHTML =
+    [{id:"all",label:"Tümü"},...groups]
+    .map(group => `
+      <button
+        class="filter ${activeGroup === group.id ? "active" : ""}"
+        data-group="${group.id}">
+        ${escapeHTML(group.label)}
+      </button>
+    `).join("");
+}
 
+function matches(item) {
+  const query = $("search").value
+    .toLocaleLowerCase("tr-TR").trim();
 
-  const products =
-    productData(item).products || [];
+  const info = productInfo(item);
 
-
-  const productMatch =
-    selectedProduct === "all" ||
-    products.includes(selectedProduct);
-
-
-  const text = [
-
+  const searchable = [
     item.title,
     item.summary,
     item.whyImportant,
-    item.categoryName,
     item.company,
     item.country,
     item.source,
-    productData(item).analysis,
-    ...products
+    item.categoryName,
+    info.analysis,
+    ...info.products,
+    ...itemGroups(item).map(group => group.label)
+  ].filter(Boolean).join(" ").toLocaleLowerCase("tr-TR");
 
-  ]
-  .filter(Boolean)
-  .join(" ")
-  .toLocaleLowerCase("tr-TR");
+  const categoryMatch =
+    activeCategory === "all" ||
+    categoryOf(item) === activeCategory;
 
+  const groupMatch =
+    activeGroup === "all" ||
+    itemGroups(item).some(group => group.id === activeGroup);
 
-  return (
-    categoryMatch &&
-    productMatch &&
-    text.includes(search)
-  );
-
+  return categoryMatch && groupMatch && searchable.includes(query);
 }
 
+/* EXECUTIVE SUMMARY */
 
-function renderAll(){
+function renderInsights() {
+  const themes = issue.weeklyThemes ||
+    issue.insights ||
+    items.slice(0,3).map(item => ({
+      label:item.categoryName,
+      title:item.title,
+      text:item.whyImportant || ""
+    }));
 
-  const search =
-    searchInput.value
-      .toLocaleLowerCase("tr-TR")
-      .trim();
-
-
-  renderFeatured(search);
-
-
-  const filtered =
-    allItems.filter(item => {
-
-      if(
-        item.featured &&
-        selectedCategory === "all" &&
-        selectedProduct === "all" &&
-        !search
-      )
-        return false;
-
-      return matches(item,search);
-
-    });
-
-
-  newsGrid.innerHTML = "";
-
-
-  filtered.forEach(item => {
-
-    const card =
-      document.createElement("article");
-
-    card.className = "card";
-
-
-    if(item.image){
-
-      const visual =
-        document.createElement("div");
-
-      visual.className = "card-visual";
-
-      const img =
-        document.createElement("img");
-
-      img.src = item.image;
-      img.alt = item.title || "";
-      img.loading = "lazy";
-      img.referrerPolicy = "no-referrer";
-
-      img.addEventListener(
-        "error",
-        () => visual.remove()
-      );
-
-      visual.appendChild(img);
-
-      card.appendChild(visual);
-
-    }
-
-
-    const body =
-      document.createElement("div");
-
-    body.className = "card-body";
-
-
-    body.innerHTML = `
-
-      <div class="category">
-        ${escapeHTML(
-          item.categoryName ||
-          "Weekly Update"
-        )}
-      </div>
-
-      <h3>
-        ${escapeHTML(item.title)}
-      </h3>
-
-      <p class="summary">
-        ${escapeHTML(item.summary)}
-      </p>
-
-      ${renderAnalysis(item)}
-
-      ${renderProductBox(item)}
-
-      <div class="meta-area">
-        ${renderMeta(item)}
-      </div>
-
-      <div class="source-row">
-
-        <div class="source-name">
-          ${
-            item.source
-            ? "Kaynak: " +
-              escapeHTML(item.source)
-            : ""
-          }
+  $("insights").innerHTML = themes.slice(0,3)
+    .map(theme => `
+      <div class="insight">
+        <div class="insight-label">
+          ${escapeHTML(theme.label)}
         </div>
-
-        ${
-          item.url
-          ? `
-            <a
-              class="source-link"
-              href="${escapeHTML(item.url)}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Kaynağı İncele →
-            </a>
-          `
-          : ""
-        }
-
+        <h3>${escapeHTML(theme.title || theme.text)}</h3>
+        ${theme.title
+          ? `<p>${escapeHTML(theme.text)}</p>`
+          : ""}
       </div>
-
-    `;
-
-
-    card.appendChild(body);
-
-    newsGrid.appendChild(card);
-
-  });
-
-
-  const featuredVisible =
-    featuredStory.style.display === "block";
-
-
-  const count =
-    filtered.length +
-    (featuredVisible ? 1 : 0);
-
-
-  resultCount.textContent =
-    count + " içerik";
-
-
-  emptyState.style.display =
-    count === 0
-    ? "block"
-    : "none";
-
+    `).join("");
 }
 
+/* RENDER NEWS */
 
-categoryButtons.forEach(button => {
+function render() {
+  const filtered = items.filter(matches);
 
-  button.addEventListener(
-    "click",
-    () => {
+  const unfiltered =
+    activeCategory === "all" &&
+    activeGroup === "all" &&
+    !$("search").value.trim();
 
-      categoryButtons.forEach(
-        x => x.classList.remove("active")
-      );
+  const lead = unfiltered
+    ? filtered.find(item =>
+        item.priority === "lead" || item.featured
+      )
+    : null;
 
-      button.classList.add("active");
+  const spotlight = unfiltered
+    ? filtered.filter(item =>
+        item !== lead && item.priority === "spotlight"
+      )
+    : [];
 
-      selectedCategory =
-        button.dataset.category;
-
-      renderAll();
-
-    }
+  const others = filtered.filter(item =>
+    item !== lead && !spotlight.includes(item)
   );
 
-});
+  $("leadSection").classList.toggle("hidden",!lead);
+  $("spotlightSection").classList.toggle("hidden",!spotlight.length);
 
+  $("leadRoot").innerHTML = lead ? cardHTML(lead,true) : "";
 
-productButtons.forEach(button => {
+  $("spotlightRoot").innerHTML =
+    spotlight.map(item => cardHTML(item)).join("");
 
-  button.addEventListener(
-    "click",
-    () => {
+  $("newsRoot").innerHTML =
+    others.map(item => cardHTML(item)).join("");
 
-      productButtons.forEach(
-        x => x.classList.remove("active")
-      );
+  $("listTitle").textContent = unfiltered
+    ? "Sektörden Diğer Haberler"
+    : "Filtrelenen Haberler";
 
-      button.classList.add("active");
+  $("resultCount").textContent = filtered.length + " haber";
 
-      selectedProduct =
-        button.dataset.product;
+  $("emptyState").classList.toggle("hidden",filtered.length !== 0);
 
-      renderAll();
+  renderFilters();
+}
 
+/* LOAD WEEK */
+
+async function loadWeek(date) {
+  try {
+    $("errorState").classList.add("hidden");
+
+    const response = await fetch(
+      "./data/" + encodeURIComponent(date) + ".json?v=" + Date.now(),
+      {cache:"no-store"}
+    );
+
+    if (!response.ok) {
+      throw new Error("Hafta dosyası bulunamadı: " + date);
     }
-  );
 
+    issue = await response.json();
+    items = Array.isArray(issue.items) ? issue.items : [];
+
+    activeCategory = "all";
+    activeGroup = "all";
+    $("search").value = "";
+
+    const label = issue.title || issue.date || date;
+
+    $("heroWeek").textContent = label;
+    $("topDate").textContent = label;
+
+    $("heroCount").innerHTML =
+      "<strong>" + items.length + "</strong> haber";
+
+    $("heroUpdate").textContent =
+      "Son güncelleme: " +
+      formatDate(issue.updatedAt || issue.publishedAt || date);
+
+    $("heroEyebrow").textContent =
+      "WEEKLY INTELLIGENCE · " +
+      (issue.issueStatus || "ARŞİV");
+
+    $("editorialNote").textContent =
+      issue.editorialNote ||
+      "Haberler kaynaklarına dayanır. Ürün perspektifleri editoryal değerlendirmedir.";
+
+    $("weekSelect").value = date;
+
+    renderInsights();
+    render();
+
+    const url = new URL(location.href);
+    url.searchParams.set("week",date);
+
+    history.replaceState(
+      null,"",url.pathname + url.search + url.hash
+    );
+
+  } catch(error) {
+    console.error(error);
+
+    $("errorState").textContent =
+      "Bülten yüklenemedi. " + error.message;
+
+    $("errorState").classList.remove("hidden");
+    $("leadSection").classList.add("hidden");
+    $("spotlightSection").classList.add("hidden");
+    $("leadRoot").innerHTML = "";
+    $("spotlightRoot").innerHTML = "";
+    $("newsRoot").innerHTML = "";
+  }
+}
+
+/* INITIAL LOAD */
+
+async function start() {
+  try {
+    const response = await fetch(
+      "./data/index.json?v=" + Date.now(),
+      {cache:"no-store"}
+    );
+
+    if (!response.ok) {
+      throw new Error("data/index.json bulunamadı");
+    }
+
+    const data = await response.json();
+
+    const weeks = Array.isArray(data.weeks) ? data.weeks : [];
+
+    if (!weeks.length) {
+      throw new Error("Hafta listesi boş");
+    }
+
+    weeks.sort((a,b) => b.date.localeCompare(a.date));
+
+    $("weekSelect").innerHTML = weeks.map(week => `
+      <option value="${escapeHTML(week.date)}">
+        ${escapeHTML(week.title)}
+        ${week.status === "current" ? " · Güncel Sayı" : ""}
+      </option>
+    `).join("");
+
+    const requested = new URLSearchParams(location.search).get("week");
+
+    const selected = weeks.some(week => week.date === requested)
+      ? requested
+      : weeks[0].date;
+
+    await loadWeek(selected);
+
+  } catch(error) {
+    console.error(error);
+
+    $("errorState").textContent =
+      "Hafta listesi yüklenemedi: " + error.message;
+
+    $("errorState").classList.remove("hidden");
+  }
+}
+
+/* EVENTS */
+
+$("categoryFilters").addEventListener("click",event => {
+  const button = event.target.closest("button[data-cat]");
+  if (!button) return;
+
+  activeCategory = button.dataset.cat;
+  render();
 });
 
+$("productFilters").addEventListener("click",event => {
+  const button = event.target.closest("button[data-group]");
+  if (!button) return;
 
-searchInput.addEventListener(
-  "input",
-  renderAll
-);
+  activeGroup = button.dataset.group;
+  render();
+});
 
+$("search").addEventListener("input",render);
 
-weekSelect.addEventListener(
-  "change",
-  () => loadWeek(weekSelect.value)
-);
+$("weekSelect").addEventListener("change",event => {
+  loadWeek(event.target.value);
+});
 
+/* SHARE */
 
-loadWeeks();
+$("shareButton").addEventListener("click",async () => {
+  const url = location.href;
 
+  try {
+    if (navigator.share) {
+      await navigator.share({
+        title:"Weekly Bulletin",
+        url
+      });
+    } else {
+      await navigator.clipboard.writeText(url);
+      $("shareButton").textContent = "✓ Kopyalandı";
+      setTimeout(() => {
+        $("shareButton").textContent = "↗ Paylaş";
+      },1800);
+    }
+  } catch(error) {
+    console.log(error);
+  }
+});
+
+start();
+
+})();
 </script>
 
 </body>
