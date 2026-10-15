@@ -1,0 +1,105 @@
+      "whyImportant":"İlaç lojistiğinde rekabet yalnızca taşıma süresine değil; sıcaklık bütünlüğü, transfer sayısı, ağ kontrolü ve doğrulanmış süreçlerin birlikte sunulmasına dayanıyor.",
+      "productRelevance":{"relevant":true,"products":["İlaç ve Sağlık Ürünleri"],"analysis":"Yeni koridorlar, ilaç ve sağlık ürünleri taşımalarında müşteri beklentilerinin hat bazlı soğuk zincir kapasitesi ve operasyonel güvenilirlik etrafında yoğunlaştığını gösteriyor. Özel kargo hizmetleri açısından rekabetçi ağ çözümleri takip edilebilir."},
+      "company":"DHL Global Forwarding", "country":"Avrupa / Kuzey Amerika / Asya", "publishedDate":"12.10.2026", "source":"DHL Group", "url":"https://group.dhl.com/en/media-relations/press-releases/2026/dhl-expands-cold-chain-network.html", "image":""
+    },
+    {
+      "id":"lufthansa-winter-network",
+      "priority":"spotlight",
+      "category":"aviation",
+      "categoryName":"Havacılık & MRO",
+      "title":"Lufthansa Cargo kış tarifesinde Asya ve Hindistan bağlantılarını genişletiyor",
+      "summary":"Lufthansa Cargo, 2026/27 kış tarifesinde 40 destinasyona uzanan 88 freighter bağlantısı sunacağını açıkladı. Şirket, Asya Pasifik'teki freighter rotasyonlarını artırırken Navi Mumbai Havalimanı'nı ağına dahil ediyor. New York, Dallas/Fort Worth ve Houston'a mevsimsel kapasite artışları planlanıyor; İstanbul da Boeing 777 freighter ağındaki düzenli bağlantılar arasında yer alıyor.",
+      "whyImportant":"Yeni freighter rotasyonları ve havalimanı tercihleri, Asya–Avrupa ve transpasifik hatlarında erişilebilir kapasiteyi ve rekabeti etkileyebilir. Kış dönemi bağlantılarını karşılaştırmak ağ stratejisi açısından önem taşıyor.",
+      "productRelevance":{"relevant":false,"products":[],"analysis":""},
+      "company":"Lufthansa Cargo", "country":"Global", "publishedDate":"12.10.2026", "source":"Lufthansa Cargo", "url":"https://www.mynewsdesk.com/lufthansa-cargo-ag/pressreleases/lufthansa-cargo-releases-2026-strich-2027-winter-flight-schedule-and-enhances-connectivity-in-mumbai-3471968", "image":"https://commons.wikimedia.org/wiki/Special:FilePath/Lufthansa_Cargo_Boeing_777F_D-ALFI.jpg?width=1280", "imageCaption":"Temsili fotoğraf: Lufthansa Cargo B777F, Frankfurt (2024)", "imageCredit":"Arthur CHI YEN · CC0 / Wikimedia Commons", "imageCreditUrl":"https://commons.wikimedia.org/wiki/File:Lufthansa_Cargo_Boeing_777F_D-ALFI.jpg"
+    },
+    {
+      "id":"ge-prestwick-mro-investment",
+      "priority":"spotlight",
+      "category":"aviation",
+      "categoryName":"Havacılık & MRO",
+      "title":"GE Aerospace, Prestwick motor bakım tesisini genişletiyor",
+      "summary":"GE Aerospace, İskoçya'nın Prestwick kentindeki motor bakım, onarım ve revizyon tesisine 30 milyon sterlin yatırım yapacağını duyurdu. Ayrshire Growth Deal kapsamındaki 27 milyon sterlinlik destekle proje toplamı 57 milyon sterline ulaşıyor. Yeni 55 bin fit karelik bina ve modernizasyon çalışmalarıyla tesis kapasitesinin artırılması, tam operasyonun ise 2028'in ilk çeyreğinde başlaması hedefleniyor.",
+      "whyImportant":"Motor bakım tesislerindeki kapasite artışı, parça ve motor akışlarının coğrafi dağılımını değiştirebilir. Yeni yatırımlar, MRO ekosistemindeki potansiyel taşıma koridorlarını değerlendirmek için somut işaretler sunuyor.",
+      "productRelevance":{"relevant":true,"products":["TK AERO"],"analysis":"Prestwick'teki kapasite artışı, motor ve komponent hareketleri açısından TK AERO'nun hedeflediği MRO müşteri ekosistemini izlemek için önem taşıyor. Olası yük akışları ayrıca ticari verilerle doğrulanmalı."},
+      "company":"GE Aerospace", "country":"Birleşik Krallık", "publishedDate":"12.10.2026", "source":"GE Aerospace", "url":"https://www.geaerospace.com/news/press-releases/europe/ge-aerospace-announces-ps30-million-investment-part-ps57-million-partnership", "image":""
+    },
+    {
+      "id":"ups-clark-hub",
+      "priority":"standard",
+      "category":"ecommerce",
+      "categoryName":"E-Ticaret & Posta",
+      "title":"UPS, Filipinler'de yeni Clark merkezini hizmete açtı",
+      "summary":"UPS, Clark Uluslararası Havalimanı'nda 80 milyon doların üzerinde yatırımla kurduğu yeni lojistik merkezini 15 Ekim'de açtı. Önceki tesisin 15 katı büyüklüğündeki merkez, günde ortalama 46 bin paket hacmine ve saatte 15 bin paket işleme kapasitesine ulaşabiliyor. Şirket, yatırımın dünya genelinde 1.100'den fazla ticaret hattında servis iyileştirmesi sağlayacağını belirtiyor.",
+      "whyImportant":"Asya Pasifik'te artan ayıklama ve uçuş kapasitesi, sınır ötesi paket akışlarında bağlantı sürelerini ve rekabetçi teslimat seçeneklerini etkileyebilir.",
+      "productRelevance":{"relevant":true,"products":["TK COURIER","POSTA"],"analysis":"Uluslararası paket ağlarının genişlemesi, e-ticaret ve posta ürünleri açısından rakiplerin transit süre, ayrıştırma kapasitesi ve ağ erişimi yatırımlarının izlenmesini anlamlı kılıyor."},
+      "company":"UPS", "country":"Filipinler", "publishedDate":"15.10.2026", "source":"UPS", "url":"https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html", "image":"https://commons.wikimedia.org/wiki/Special:FilePath/UPS_Airbus_A300_N130UP_on_final_approach_to_Boston_July_2026_02.jpg?width=1280", "imageCaption":"Temsili fotoğraf: UPS A300, Boston (Temmuz 2026); Clark tesisi değildir", "imageCredit":"4300streetcar · CC BY 4.0 / Wikimedia Commons", "imageCreditUrl":"https://commons.wikimedia.org/wiki/File:UPS_Airbus_A300_N130UP_on_final_approach_to_Boston_July_2026_02.jpg"
+    },
+    {
+      "id":"fedex-temp-assure-portal",
+      "priority":"standard",
+      "category":"digital",
+      "categoryName":"Dijital & Teknoloji",
+      "title":"FedEx Avrupa'da sıcaklık kontrollü ilaç taşımaları için dijital portal açtı",
+      "summary":"FedEx Europe, ilaç ve yaşam bilimleri müşterilerinin sıcaklık kontrollü gönderilerini çevrim içi planlayıp yönetebileceği yeni portalını 13 Ekim'de duyurdu. Avrupa'da 26 pazarda erişilebilir olan sistem, Temp-Assure Advantage çözümüne erişimi kolaylaştırıyor. Müşteriler portal üzerinden kayıt, ön koşullandırılmış ambalaj siparişi, gönderi planlama ve iade işlemlerini yönetebiliyor.",
+      "whyImportant":"Özel kargo taşımalarında dijital müşteri deneyimi, fiziksel taşıma altyapısına ek bir rekabet alanına dönüşüyor. Rezervasyon ve ambalaj süreçlerinin tek noktadan yönetilmesi operasyonel sürtünmeyi azaltabilir.",
+      "productRelevance":{"relevant":true,"products":["İlaç ve Sağlık Ürünleri"],"analysis":"Sağlık ürünlerinde dijital rezervasyon ve hizmet görünürlüğünün gelişmesi, özel kargo müşterilerinin self-servis işlem ve uçtan uca takip beklentilerini değerlendirmek için karşılaştırmalı bir örnek sunuyor."},
+      "company":"FedEx Europe", "country":"Avrupa", "publishedDate":"13.10.2026", "source":"FedEx Newsroom", "url":"https://newsroom.fedex.com/newsroom/europe-english/fedex-europe-enhances-temperature-controlled-logistics-for-pharmaceuticals-with-digital-booking-portal", "image":""
+    },
+    {
+      "id":"afkl-cdg-perishables-automation",
+      "priority":"standard",
+      "category":"digital",
+      "categoryName":"Dijital & Teknoloji",
+      "title":"Air France KLM, CDG'deki bozulabilir kargo merkezini otomatikleştiriyor",
+      "summary":"Air France KLM Martinair Cargo, Paris Charles de Gaulle Havalimanı'ndaki bozulabilir kargo merkezini genişletmek ve otomatikleştirmek için Lödige Industries ile çalışıyor. Proje, ULD ve paletlerin çok katlı depolanıp alınmasını sağlayan bir ETV sistemi içeriyor. Toplam 58 depolama seviyesinin 17'si sıcaklık kontrollü alanlarda yer alacak; sistemin Eylül 2027 sonunda devreye girmesi planlanıyor.",
+      "whyImportant":"Soğuk zincir tesislerinde otomasyon, depolama alanının daha verimli kullanılmasına ve sıcaklık hassasiyeti bulunan gönderilerin daha tutarlı süreçlerle elleçlenmesine yardımcı olabilir.",
+      "productRelevance":{"relevant":true,"products":["Bozulabilir Ürünler","İlaç ve Sağlık Ürünleri"],"analysis":"Bozulabilir ve sağlık ürünlerinde terminal içi otomasyon yatırımları, özel kargo kabul ve transfer süreçlerinin hız, kapasite ve sıcaklık bütünlüğü bakımından nasıl geliştirildiğini izlemek için önem taşıyor."},
+      "company":"Air France KLM Martinair Cargo / Lödige", "country":"Fransa", "publishedDate":"14.10.2026", "source":"Lödige Industries", "url":"https://www.lodige.com/en-global/company/about-us/news/newsdetail/air-france-klm-martinair-cargo-automates-perishables-centre-at-paris-cdg/", "image":""
+    },
+    {
+      "id":"australia-post-parcels-office",
+      "priority":"standard",
+      "category":"ecommerce",
+      "categoryName":"E-Ticaret & Posta",
+      "title":"Australia Post yeni nesil paket şubesi ağını genişletiyor",
+      "summary":"Australia Post, Victoria eyaletindeki altıncı yeni nesil Parcels Post Office noktasını Clyde North'ta hizmete açtı. Merkez; paket gönderimi, teslim alma ve iade işlemlerini yüz yüze destekle birlikte self-servis seçeneklerle sunuyor. Tesiste 7/24 erişilebilen paket dolapları, etiket basımı ve gönderi hazırlama hizmetleri de bulunuyor.",
+      "whyImportant":"Paket teslimatında esnek teslim alma ve iade seçenekleri, e-ticaret müşteri deneyiminin giderek daha önemli bir parçası oluyor. Fiziksel şubeler ile self-servis ağlarının birleşmesi dikkat çekiyor.",
+      "productRelevance":{"relevant":true,"products":["POSTA","TK COURIER"],"analysis":"Paket dolapları ve iade hizmetlerinin yaygınlaşması, posta ve kurye müşterilerinin teslimat sonrası deneyime yönelik beklentilerini izlemek için faydalı bir pazar göstergesi."},
+      "company":"Australia Post", "country":"Avustralya", "publishedDate":"12.10.2026", "source":"Australia Post / National Tribune", "url":"https://www.nationaltribune.com.au/clyde-north-welcomes-next-generation-parcels-post-office/", "image":""
+    },
+    {
+      "id":"dhl-electric-truck-netherlands",
+      "priority":"standard",
+      "category":"sustainability",
+      "categoryName":"Sürdürülebilirlik",
+      "title":"DHL Freight elektrikli ağır vasıtayı Hollanda ağında düzenli kullanıma aldı",
+      "summary":"DHL Freight, Avrupa'da üretilen SuperPanther eTopas 600 elektrikli ağır vasıtayı Hollanda'da ticari operasyonlarına dahil ettiğini duyurdu. Araç, Hollanda içi ve Belçika bağlantılı hatlarda kullanılıyor; haftada yaklaşık 2 bin kilometre yol yapıyor. DHL, uygulamanın düşük emisyonlu karayolu taşımacılığının mevcut ağlara entegrasyonu için operasyonel deneyim sağlayacağını belirtiyor.",
+      "whyImportant":"Elektrikli ağır vasıtaların pilot projelerden düzenli taşımacılığa geçmesi, lojistikte emisyon azaltımı hedeflerinin gerçek operasyon koşullarında test edilmesi açısından önemli.",
+      "productRelevance":{"relevant":false,"products":[],"analysis":""},
+      "company":"DHL Freight", "country":"Hollanda / Belçika", "publishedDate":"14.10.2026", "source":"DHL Group", "url":"https://group.dhl.com/en/media-relations/press-releases/2026/dhl-freight-deploys-first-europe-built-superpanther-etopas-600-in-its-dutch-network.html", "image":""
+    },
+    {
+      "id":"fraport-september-cargo",
+      "priority":"standard",
+      "category":"market",
+      "categoryName":"Pazar & Rekabet",
+      "title":"Frankfurt Havalimanı'nın eylül kargo hacmi %2,5 büyüdü",
+      "summary":"Fraport'un ekim ayında açıkladığı trafik sonuçlarına göre Frankfurt Havalimanı, Eylül 2026'da 174.773 ton kargo elleçledi. Bu sonuç geçen yılın aynı dönemine göre %2,5 artış anlamına geliyor. Aynı dönemde uçuş hareketleri %3,5 gerilerken kargo hacmindeki yükseliş, Avrupa'nın önemli hava kargo merkezlerinden birinde farklı trafik kalemlerinin ayrıştığını gösterdi.",
+      "whyImportant":"Büyük aktarma merkezlerinde kargo hacmi ile uçuş sayısının farklı yönlerde hareket etmesi, kapasite kullanımını ve taşıma ağlarının verimliliğini değerlendirmek açısından dikkat çekici.",
+      "productRelevance":{"relevant":false,"products":[],"analysis":""},
+      "company":"Fraport", "country":"Almanya", "publishedDate":"13.10.2026", "source":"Fraport", "url":"https://www.fraport.com/de/newsroom/pressemitteilungen/2026/verkehrszahlen/fraport---verkehrszahlen-im-september-2026.html", "image":""
+    },
+    {
+      "id":"turkish-cargo-gsa-netherlands",
+      "priority":"standard",
+      "category":"market",
+      "categoryName":"Pazar & Rekabet",
+      "title":"Turkish Cargo'nun Hollanda pazarında aylık kargo hacmi 3.101 tona ulaştı",
+      "summary":"American Journal of Transportation'ın 14 Ekim tarihli haberine göre Global GSA Group ile Turkish Cargo'nun Hollanda'daki iş birliğinde ağustos ayında 3.101 ton kargo elleçlendi. Bu sonuç, ekiplerin bir ayda ilk kez 3 milyon kilogram eşiğini aşması anlamına geliyor. Haberde önceki en yüksek aylık seviyenin 2.700 ton olduğu belirtiliyor.",
+      "whyImportant":"GSA ve havayolu iş birliklerinde hacim rekorları, belirli pazarlarda satış ağı koordinasyonunun ve ticari erişimin önemini görünür kılıyor. Ancak tek aylık sonuçlardan uzun vadeli eğilim çıkarılmamalı.",
+      "productRelevance":{"relevant":false,"products":[],"analysis":""},
+      "company":"Global GSA Group / Turkish Cargo", "country":"Hollanda", "publishedDate":"14.10.2026", "source":"AJOT", "url":"https://www.ajot.com/news/global-gsa-group-and-turkish-cargo-celebrate-outstanding-cargo-performance", "image":""
+    }
+  ]
+}
