@@ -6,12 +6,27 @@
       "company": "Lufthansa Cargo",
       "platform": "LinkedIn",
       "publishedDate": "Ekim 2026",
-      "title": "Lufthansa Cargo, Rolls-Royce ve Kuehne+Nagel ile motor taşımacılığını video ile anlattı",
-      "summary": "Engine Mission içeriği, acil motor taşımacılığında teknik ekipler, lojistik iş ortakları ve havayolu arasındaki operasyonel koordinasyonu öne çıkarıyor.",
-      "communicationInsight": "Lufthansa Cargo, motor taşımacılığını gerçek müşteri ihtiyacı ve iş ortaklığı üzerinden hikâyeleştiriyor. Bu yaklaşım, TK AERO için AOG ve motor taşımacılığı iletişimlerinde değerlendirilebilecek bir örnek.",
+      "title": "Lufthansa Cargo, motor taşımacılığında iş ortaklığını hikâyeleştiriyor",
+      "subject": "Lufthansa Cargo, Rolls-Royce ve Kuehne+Nagel iş birliğiyle hazırlanan Engine Mission içeriğinde motor taşımacılığı operasyonunun farklı aşamalarını ve ekipler arası koordinasyonu anlatıyor.",
+      "competitorMessage": "Acil motor taşımacılığında uzmanlık, güvenilirlik ve güçlü iş ortaklıkları ön plana çıkarılıyor. Ürün özelliklerinden çok operasyonun nasıl başarıyla gerçekleştirildiğine odaklanılıyor.",
+      "ourTakeaway": "TK AERO için motor taşımacılığı ve AOG operasyonlarında gerçek taşıma hikâyeleri, müşteri iş birlikleri ve operasyonel uzmanlık üzerinden içerikler geliştirilebilir.",
       "relatedProduct": "TK AERO",
       "postUrl": "https://www.linkedin.com/company/lufthansa-cargo/",
+      "postLinkLabel": "LinkedIn Hesabı",
       "storyUrl": "https://www.lufthansa-cargo.com/en/ci/transport-stories-details/-/asset_publisher/H8t9hOen2LPD/?p_r_p_assetEntryId=9424749"
+    },
+    {
+      "company": "Qatar Airways Cargo",
+      "platform": "LinkedIn",
+      "publishedDate": "Ekim 2026",
+      "title": "Qatar Airways Cargo, kıtalar arası ilaç taşımacılığını iş birliğiyle öne çıkarıyor",
+      "subject": "Qatar Airways Cargo, Expeditors, Envirotainer ve Adani Airport Holdings iş birliğiyle Hindistan'dan Brezilya'ya gerçekleştirilen sıcaklık kontrollü ilaç taşımacılığını konu alan bir içerik paylaştı. Operasyonda 70'ten fazla sıcaklık kontrollü konteyner ve iki Boeing 777 kargo uçağı kullanıldığı aktarıldı.",
+      "competitorMessage": "Operasyonun ölçeği somut rakamlarla desteklenirken sıcaklık kontrollü taşımacılık kabiliyeti ve farklı iş ortaklarının katkısı vurgulanıyor. İçerik, özel kargo uzmanlığını gerçek bir operasyon üzerinden görünür kılıyor.",
+      "ourTakeaway": "İlaç ve sağlık ürünleri taşımacılığında operasyonun ölçeğini, sıcaklık kontrollü süreçleri ve müşteri iş birliklerini öne çıkaran vaka çalışmaları veya taşıma hikâyeleri hazırlanabilir.",
+      "relatedProduct": "İlaç ve Sağlık Ürünleri",
+      "postUrl": "https://www.linkedin.com/showcase/qatar-airways-cargo/",
+      "postLinkLabel": "LinkedIn Hesabı",
+      "storyUrl": ""
     }
   ]
 }
