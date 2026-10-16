@@ -3,748 +3,588 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101c32">
-<title>Weekly Bulletin | Turkish Cargo</title>
-
+<title>Kargo ve Lojistik Haftalık Bülteni</title>
 <style>
-:root {
-  --red: #c8102e;
-  --navy: #101c32;
-  --ink: #1c2739;
-  --muted: #667184;
-  --line: #e4e9f0;
-  --bg: #f5f7fa;
-  --soft: #fff5f6;
+:root{
+  --red:#c8102e;
+  --navy:#101c32;
+  --ink:#1c2739;
+  --muted:#667184;
+  --line:#e4e9f0;
+  --bg:#f5f7fa;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.wrap{
+  width:min(1190px,calc(100% - 32px));
+  margin:auto;
+}
+.hidden{display:none!important}
+
+/* ÜST ALAN VE LOGO */
+header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  min-height:126px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  min-width:0;
+}
+.logo-box{
+  width:260px;
+  flex:0 0 260px;
+  display:flex;
+  align-items:center;
+}
+.logo-box img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:108px;
+  object-fit:contain;
+  object-position:left center;
+}
+.brand-divider{
+  width:1px;
+  height:50px;
+  background:#dce2e9;
+}
+.dept{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.8px;
+}
+.brand-title{
+  margin-top:6px;
+  color:var(--navy);
+  font-size:23px;
+  font-weight:800;
+  line-height:1.25;
+}
+.share{
+  flex-shrink:0;
+  padding:10px 13px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:white;
+  color:var(--navy);
+  font-size:11px;
+  font-weight:700;
 }
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-button, input, select { font: inherit; }
-button { cursor: pointer; }
-a { color: inherit; }
-
-.wrap {
-  width: min(1190px, calc(100% - 36px));
-  margin: auto;
-}
-
-.hidden { display: none !important; }
-
-/* HEADER */
-
-header {
-  background: white;
-  border-bottom: 1px solid var(--line);
-}
-
-.header-inner {
-  min-height: 112px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  min-width: 0;
-}
-
-.brand img {
-  width: 215px;
-  height: auto;
-  max-height: 90px;
-  object-fit: contain;
-}
-
-.brand-divider {
-  width: 1px;
-  height: 48px;
-  background: #dce2e9;
-}
-
-.dept {
-  color: var(--red);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.brand-title {
-  color: var(--navy);
-  font-size: 27px;
-  font-weight: 800;
-  margin-top: 6px;
-}
-
-.top-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.top-date {
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.share {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 11px 14px;
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* HERO */
-
-.hero {
-  margin-top: 22px;
-  padding: 40px 45px 34px;
-  border-radius: 22px;
-  color: white;
+/* KAPAK */
+.hero{
+  margin-top:20px;
+  padding:39px 42px;
+  border-radius:20px;
+  color:white;
   background:
-    radial-gradient(circle at 95% 10%, #8a193b55, transparent 42%),
-    linear-gradient(120deg, #101c32, #203653);
+    radial-gradient(circle at 90% 5%,#85203c88,transparent 45%),
+    linear-gradient(125deg,#101c32,#203653);
+}
+.eyebrow{
+  color:#ff9eab;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.hero h1{
+  max-width:720px;
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.15;
+  margin:15px 0;
+}
+.hero p{
+  max-width:700px;
+  font-size:13px;
+  line-height:1.7;
+  color:#d2dbe7;
+}
+.hero-foot{
+  margin-top:25px;
+  padding-top:15px;
+  border-top:1px solid #ffffff33;
+  display:flex;
+  gap:12px 24px;
+  flex-wrap:wrap;
+  font-size:11px;
+  color:#d2dbe7;
 }
 
-.eyebrow {
-  color: #ff9eab;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
+/* BÖLÜMLER */
+.section{margin-top:27px}
+.section-top{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:15px;
+}
+.overline{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.section-top h2{
+  color:var(--navy);
+  font-size:23px;
+  margin:7px 0 0;
+}
+.note{
+  color:var(--muted);
+  font-size:11px;
 }
 
-.hero h1 {
-  max-width: 730px;
-  font-size: clamp(29px, 4.5vw, 45px);
-  line-height: 1.14;
-  margin: 15px 0;
+/* YÖNETİCİ ÖZETİ */
+.executive{
+  padding:25px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+.insights{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.insight{
+  border-left:3px solid var(--red);
+  padding:3px 15px;
+}
+.insight small{
+  color:var(--red);
+  font-size:9px;
+  font-weight:800;
+}
+.insight h3{
+  color:var(--navy);
+  font-size:15px;
+  line-height:1.4;
+  margin:9px 0;
+}
+.insight p{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+  margin:0;
 }
 
-.hero p {
-  max-width: 670px;
-  color: #c4cfde;
-  line-height: 1.7;
-  font-size: 13px;
+/* MANŞET VE HABERLER */
+.lead{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:white;
 }
-
-.hero-foot {
-  margin-top: 28px;
-  padding-top: 17px;
-  border-top: 1px solid #ffffff30;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  color: #d3dce8;
-  font-size: 11px;
+.lead-content{padding:28px}
+.lead h3{
+  color:var(--navy);
+  font-size:clamp(23px,3vw,30px);
+  line-height:1.3;
+  margin:12px 0;
 }
-
-.hero-foot strong { color: white; }
-
-/* SECTIONS */
-
-.section { margin-top: 28px; }
-
-.section-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 12px;
-  margin-bottom: 15px;
+.lead-visual{
+  min-height:300px;
+  background:linear-gradient(145deg,#28476e,#101c32);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
 }
-
-.overline {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: 1.2px;
+.lead-visual strong{
+  display:block;
+  font-size:80px;
 }
-
-.section-top h2 {
-  margin: 6px 0 0;
-  color: var(--navy);
-  font-size: 23px;
+.lead-visual span{
+  font-size:11px;
+  letter-spacing:1px;
 }
-
-.aside-note {
-  color: var(--muted);
-  font-size: 11px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
 }
-
-/* EXECUTIVE SUMMARY */
-
-.executive {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 19px;
-  padding: 25px;
+.card{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
 }
-
-.insight-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+.card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:20px;
 }
-
-.insight {
-  padding: 4px 15px;
-  border-left: 3px solid var(--red);
+.meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
 }
-
-.insight-label {
-  color: var(--red);
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: 1px;
+.category{
+  color:var(--red);
+  font-size:9px;
+  font-weight:800;
 }
-
-.insight h3 {
-  color: var(--navy);
-  font-size: 15px;
-  line-height: 1.4;
-  margin: 9px 0;
+.date{
+  color:#8993a0;
+  font-size:10px;
 }
-
-.insight p {
-  font-size: 11px;
-  line-height: 1.7;
-  color: var(--muted);
-  margin: 0;
+.card h3{
+  color:var(--navy);
+  font-size:17px;
+  line-height:1.4;
+  margin:12px 0;
 }
-
-/* FEATURED STORY */
-
-.lead {
-  display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 19px;
-  overflow: hidden;
+.summary{
+  color:#647083;
+  font-size:12px;
+  line-height:1.7;
+  margin:0;
 }
-
-.lead-content { padding: 30px; }
-
-.lead h3 {
-  font-size: clamp(23px, 3vw, 30px);
-  line-height: 1.25;
-  color: var(--navy);
-  margin: 12px 0;
+.card .summary{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  overflow:hidden;
 }
-
-.lead-visual {
-  min-height: 320px;
-  background: linear-gradient(145deg, #213d62, #101c32);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+.lead .summary{font-size:13px}
+.tags,.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:12px;
 }
-
-.metric strong {
-  display: block;
-  font-size: 78px;
-  letter-spacing: -3px;
+.tag{
+  padding:6px 9px;
+  border-radius:20px;
+  background:#f1f4f8;
+  color:#4c5c70;
+  font-size:9px;
+  font-weight:700;
 }
-
-.metric span {
-  font-size: 11px;
-  letter-spacing: 1px;
+.bottom{
+  margin-top:auto;
+  padding-top:14px;
 }
-
-.lead .media { height: 100%; }
-.lead .media img { height: 100%; }
-
-/* NEWS CARDS */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+details{
+  border-top:1px solid var(--line);
+  margin-top:12px;
 }
-
-.card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+summary{
+  padding-top:13px;
+  color:var(--navy);
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
 }
-
-.card:hover {
-  box-shadow: 0 10px 30px #101c3212;
+.analysis{
+  background:#f5f7fa;
+  padding:13px;
+  margin-top:12px;
+  border-radius:10px;
 }
-
-.media {
-  position: relative;
-  overflow: hidden;
+.product-analysis{
+  background:#fff4f6;
+  border-left:3px solid var(--red);
+  padding:13px;
+  margin-top:10px;
+  border-radius:0 10px 10px 0;
 }
-
-.card .media { height: 178px; }
-
-.media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.analysis strong,
+.product-analysis strong{
+  display:block;
+  font-size:10px;
+  margin-bottom:8px;
 }
-
-.photo-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #101c32cc;
-  color: white;
-  padding: 7px 10px;
-  font-size: 9px;
-}
-
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.meta-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.category {
-  color: var(--red);
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: .8px;
-}
-
-.date {
-  color: #8791a0;
-  font-size: 10px;
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 17px;
-  line-height: 1.4;
-  margin: 12px 0 10px;
-}
-
-.card-summary {
-  color: #647083;
-  font-size: 11.5px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.card .card-summary {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
-}
-
-.lead .card-summary { font-size: 13px; }
-
-/* PRODUCT TAGS */
-
-.group-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 13px;
-}
-
-.group-tag {
-  background: #f1f4f8;
-  color: #4c5c70;
-  border-radius: 20px;
-  padding: 6px 9px;
-  font-size: 9px;
-  font-weight: 700;
-}
-
-/* EXPANDABLE ANALYSIS */
-
-.card-bottom {
-  margin-top: auto;
-  padding-top: 16px;
-}
-
-.detail {
-  margin-top: 12px;
-  border-top: 1px solid var(--line);
-}
-
-.detail summary {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 13px 0 0;
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--navy);
-  cursor: pointer;
-}
-
-.detail summary::-webkit-details-marker {
-  display: none;
-}
-
-.detail summary::after {
-  content: "+";
-  color: var(--red);
-  font-size: 19px;
-}
-
-.detail[open] summary::after {
-  content: "−";
-}
-
-.detail-content { padding: 13px 0 3px; }
-
-.detail-label {
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: .8px;
-  margin-bottom: 7px;
-}
-
-.analysis {
-  background: #f6f8fb;
-  border-radius: 10px;
-  padding: 13px;
-  margin-bottom: 10px;
-}
-
-.product-panel {
-  background: var(--soft);
-  border-left: 3px solid var(--red);
-  border-radius: 0 10px 10px 0;
-  padding: 13px;
-}
-
-.product-panel .detail-label {
-  color: var(--red);
-}
-
+.product-analysis strong{color:var(--red)}
 .analysis p,
-.product-panel p {
-  font-size: 11px;
-  line-height: 1.7;
-  color: #526071;
-  margin: 0;
+.product-analysis p{
+  margin:0;
+  font-size:11px;
+  line-height:1.7;
+  color:#526071;
+}
+.pills span{
+  background:white;
+  color:var(--red);
+  border:1px solid #efcdd2;
+  border-radius:20px;
+  padding:5px 8px;
+  font-size:9px;
+}
+.source{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:14px;
+}
+.source small{
+  color:#8993a0;
+  font-size:10px;
+}
+.source a{
+  color:var(--red);
+  font-size:11px;
+  font-weight:800;
+  text-decoration:none;
+}
+.media{
+  height:185px;
+  overflow:hidden;
+}
+.media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.lead .media{
+  height:100%;
+  min-height:300px;
+}
+.image-credit{
+  color:#8b95a3;
+  font-size:9px;
+  margin-top:8px;
 }
 
-.product-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 9px;
+/* FİLTRELER */
+.toolbar{
+  margin-top:28px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:20px;
+}
+.tools-top{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:12px;
+  margin-bottom:17px;
+}
+.search,.week-select{
+  width:100%;
+  height:45px;
+  border:1px solid #dfe5ec;
+  border-radius:10px;
+  padding:0 13px;
+  background:white;
+  color:var(--navy);
+  font-size:12px;
+}
+.filter-label{
+  color:#8791a0;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin:14px 0 9px;
+}
+.filter-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.filter{
+  border:1px solid #e1e6ee;
+  border-radius:25px;
+  background:white;
+  padding:8px 11px;
+  color:#566375;
+  font-size:10px;
+  font-weight:700;
+}
+.filter.active{
+  background:var(--navy);
+  border-color:var(--navy);
+  color:white;
+}
+.filter.category-filter.active{
+  background:var(--red);
+  border-color:var(--red);
+}
+.results{
+  color:#7d8797;
+  font-size:11px;
+}
+.empty,.error{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:25px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+.error{
+  color:#a3263c;
+  background:#fff4f5;
+}
+.footnote{
+  margin-top:25px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:white;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+}
+footer{
+  margin-top:35px;
+  padding:20px 0 30px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  color:#8993a0;
+  font-size:10px;
 }
 
-.product-pills span {
-  background: white;
-  border: 1px solid #efcdd2;
-  color: var(--red);
-  padding: 5px 8px;
-  border-radius: 20px;
-  font-size: 9px;
-  font-weight: 750;
+/* SOSYAL MEDYA */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.social-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
+  overflow:hidden;
+}
+.social-top{
+  background:#f2f6fa;
+  padding:18px 20px;
+  border-bottom:1px solid var(--line);
+}
+.social-company{
+  color:var(--navy);
+  font-weight:800;
+  font-size:12px;
+}
+.social-platform{
+  color:var(--muted);
+  font-size:10px;
+  margin-top:5px;
+}
+.social-body{padding:20px}
+.social-body h3{
+  font-size:18px;
+  line-height:1.4;
+  color:var(--navy);
+  margin:0 0 12px;
+}
+.social-body p{
+  font-size:12px;
+  line-height:1.7;
+  color:#596679;
+}
+.social-analysis{
+  margin:15px 0;
+  background:#f5f7fa;
+  border-left:3px solid var(--red);
+  padding:13px;
+  border-radius:0 10px 10px 0;
+}
+.social-analysis strong{
+  color:var(--red);
+  font-size:10px;
+}
+.social-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:15px;
+}
+.social-links a{
+  color:var(--red);
+  font-size:11px;
+  font-weight:800;
+  text-decoration:none;
 }
 
-/* SOURCE */
-
-.source-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 14px;
+/* MOBİL GÖRÜNÜM */
+@media(max-width:950px){
+  .lead{grid-template-columns:1fr}
+  .lead-visual{min-height:200px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .logo-box{width:215px;flex-basis:215px}
 }
-
-.source-line small {
-  color: #8b94a2;
-  font-size: 9.5px;
-}
-
-.source-line a {
-  color: var(--red);
-  text-decoration: none;
-  font-size: 10.5px;
-  font-weight: 800;
-}
-
-.credit {
-  margin-top: 8px;
-  font-size: 9px;
-  color: #8791a0;
-}
-
-/* FILTERS */
-
-.toolbar {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  padding: 19px;
-  margin-top: 28px;
-}
-
-.tools-top {
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.search,
-.week-select {
-  width: 100%;
-  height: 45px;
-  border: 1px solid #dfe5ec;
-  border-radius: 10px;
-  padding: 0 13px;
-  background: white;
-  color: var(--navy);
-  font-size: 12px;
-}
-
-.filter-label {
-  color: #8992a0;
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: 1px;
-  margin: 13px 0 9px;
-}
-
-.filter-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.filter {
-  border: 1px solid #e1e6ee;
-  border-radius: 30px;
-  background: white;
-  color: #566375;
-  padding: 8px 11px;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.filter.active {
-  background: var(--navy);
-  border-color: var(--navy);
-  color: white;
-}
-
-.category-filter.active {
-  background: var(--red);
-  border-color: var(--red);
-}
-
-.results {
-  color: #7d8797;
-  font-size: 11px;
-}
-
-.empty,
-.error {
-  padding: 25px;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  color: var(--muted);
-  text-align: center;
-  font-size: 12px;
-}
-
-.error {
-  color: #a3263c;
-  background: #fff4f5;
-  border-color: #f0cbd2;
-}
-
-.footnote {
-  margin-top: 27px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: white;
-  font-size: 11px;
-  line-height: 1.7;
-  color: #697586;
-}
-
-.footer {
-  margin-top: 36px;
-  padding: 22px 0 34px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  color: #8b95a3;
-  font-size: 10px;
-}
-
-/* TABLET */
-
-@media (max-width: 950px) {
-  .lead {
-    grid-template-columns: 1fr;
+@media(max-width:650px){
+  .header-inner{
+    min-height:160px;
+    align-items:flex-start;
+    padding:15px 0;
+    gap:8px;
   }
-
-  .lead-visual {
-    min-height: 210px;
+  .brand{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:7px;
+    flex:1;
   }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
+  .logo-box{
+    width:215px;
+    max-width:calc(100vw - 115px);
+    flex:0 0 auto;
   }
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-  .wrap {
-    width: calc(100% - 28px);
+  .logo-box img{max-height:95px}
+  .brand-divider{display:none}
+  .dept{font-size:8px}
+  .brand-title{font-size:18px}
+  .share{padding:9px;font-size:10px}
+  .hero{
+    padding:27px 23px;
+    margin-top:13px;
   }
-
-  .header-inner {
-    min-height: 124px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    align-items: center;
+  .hero h1{font-size:28px}
+  .insights{grid-template-columns:1fr}
+  .executive{padding:19px}
+  .cards,.social-grid{grid-template-columns:1fr}
+  .tools-top{grid-template-columns:1fr}
+  .filter-row{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding-bottom:5px;
   }
-
-  .brand {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 7px;
-  }
-
-  .brand img {
-    width: 185px;
-    max-width: 100%;
-    max-height: 80px;
-    height: auto;
-  }
-
-  .brand-divider {
-    display: none;
-  }
-
-  .dept {
-    font-size: 8px;
-    letter-spacing: .4px;
-  }
-
-  .brand-title {
-    font-size: 20px;
-    margin-top: 3px;
-  }
-
-  .top-date {
-    display: none;
-  }
-
-  .share {
-    padding: 9px;
-    font-size: 10px;
-  }
-
-  .hero {
-    padding: 27px 23px;
-    margin-top: 13px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 12px;
-  }
-
-  .hero-foot {
-    gap: 8px 16px;
-  }
-
-  .section-top h2 {
-    font-size: 20px;
-  }
-
-  .executive {
-    padding: 19px;
-  }
-
-  .insight-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .lead-content {
-    padding: 22px;
-  }
-
-  .lead-visual {
-    min-height: 180px;
-  }
-
-  .metric strong {
-    font-size: 65px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .card .media {
-    height: 185px;
-  }
-
-  .tools-top {
-    grid-template-columns: 1fr;
-  }
-
-  .toolbar {
-    padding: 15px;
-  }
-
-  .filter-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 5px;
-  }
-
-  .filter {
-    white-space: nowrap;
-  }
+  .filter{white-space:nowrap}
+  .section-top h2{font-size:20px}
+  .lead-content{padding:22px}
+  .lead .media{min-height:190px}
 }
 </style>
 </head>
@@ -753,32 +593,27 @@ header {
 
 <header>
   <div class="wrap header-inner">
-
     <div class="brand">
-      <img
-        src="./turkish-cargo-logo.png"
-        alt="Turkish Cargo"
-      >
-
+      <div class="logo-box">
+        <img
+          id="brandLogo"
+          src="./turkish-cargo-logo.png"
+          alt="Turkish Cargo"
+        >
+      </div>
       <div class="brand-divider"></div>
-
       <div>
         <div class="dept">
-          KARGO ÜRÜN VE POSTA MÜDÜRLÜĞÜ
+          Kargo Ürün ve Posta Müdürlüğü
         </div>
         <div class="brand-title">
-          Weekly Bulletin
+          Kargo ve Lojistik Haftalık Bülteni
         </div>
       </div>
     </div>
-
-    <div class="top-right">
-      <div class="top-date" id="topDate"></div>
-      <button class="share" id="shareButton">
-        ↗ Paylaş
-      </button>
-    </div>
-
+    <button class="share" id="shareButton">
+      ↗ Paylaş
+    </button>
   </div>
 </header>
 
@@ -786,76 +621,55 @@ header {
 
   <section class="hero">
     <div class="eyebrow" id="heroEyebrow">
-      WEEKLY INTELLIGENCE
+      HAFTALIK SEKTÖR DEĞERLENDİRMESİ
     </div>
-
-    <h1>
-      Hava Kargo ve Lojistikte Haftanın Gündemi
-    </h1>
-
+    <h1>Hava Kargo ve Lojistikte Haftanın Gündemi</h1>
     <p>
       Küresel pazar, havacılık, endüstri,
-      e-ticaret, posta ve teknolojideki önemli
-      gelişmeler, sektör analizleri ve ürün
-      perspektifleri.
+      e-ticaret, posta ve teknolojideki gelişmelerin
+      kısa özetleri, analizleri ve ürün perspektifleri.
     </p>
-
     <div class="hero-foot">
-      <span id="heroWeek">
-        Hafta yükleniyor...
-      </span>
+      <span id="heroWeek">Hafta yükleniyor...</span>
       <span id="heroCount"></span>
       <span id="heroUpdate"></span>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="summarySection">
     <div class="section-top">
       <div>
-        <div class="overline">
-          HAFTAYA BAKIŞ
-        </div>
+        <div class="overline">HAFTAYA BAKIŞ</div>
         <h2>Yönetici Özeti</h2>
       </div>
-
-      <span class="aside-note">
-        3 temel çıkarım
-      </span>
+      <span class="note">3 temel çıkarım</span>
     </div>
-
     <div class="executive">
-      <div class="insight-grid" id="insights"></div>
+      <div class="insights" id="insights"></div>
     </div>
   </section>
 
   <section class="section" id="leadSection">
     <div class="section-top">
       <div>
-        <div class="overline">
-          01 / ÖNE ÇIKAN
-        </div>
+        <div class="overline">01 / ÖNE ÇIKAN</div>
         <h2>Haftanın Manşeti</h2>
       </div>
     </div>
-
     <div id="leadRoot"></div>
   </section>
 
   <section class="section" id="spotlightSection">
     <div class="section-top">
       <div>
-        <div class="overline">
-          HAFTANIN ÖNCELİKLERİ
-        </div>
+        <div class="overline">HAFTANIN ÖNCELİKLERİ</div>
         <h2>Öne Çıkan Gelişmeler</h2>
       </div>
     </div>
-
     <div class="cards" id="spotlightRoot"></div>
   </section>
 
   <section class="toolbar">
-
     <div class="tools-top">
       <input
         id="search"
@@ -863,7 +677,6 @@ header {
         type="search"
         placeholder="Başlık, şirket, sektör veya üründe ara..."
       >
-
       <select
         id="weekSelect"
         class="week-select"
@@ -872,70 +685,49 @@ header {
       </select>
     </div>
 
-    <div class="filter-label">
-      HABER KATEGORİSİ
-    </div>
+    <div class="filter-label">HABER KATEGORİSİ</div>
+    <div class="filter-row" id="categoryFilters"></div>
 
-    <div
-      class="filter-row"
-      id="categoryFilters"
-    ></div>
-
-    <div class="filter-label">
-      ÜRÜN PERSPEKTİFİ
-    </div>
-
-    <div
-      class="filter-row"
-      id="productFilters"
-    ></div>
-
+    <div class="filter-label">ÜRÜN PERSPEKTİFİ</div>
+    <div class="filter-row" id="productFilters"></div>
   </section>
 
   <section class="section">
-
     <div class="section-top">
       <div>
-        <div class="overline">
-          WEEKLY UPDATES
-        </div>
-        <h2 id="listTitle">
-          Sektörden Diğer Haberler
-        </h2>
+        <div class="overline">HAFTANIN DİĞER GELİŞMELERİ</div>
+        <h2 id="listTitle">Sektörden Diğer Haberler</h2>
       </div>
-
-      <span
-        class="results"
-        id="resultCount"
-      ></span>
+      <span class="results" id="resultCount"></span>
     </div>
 
     <div class="cards" id="newsRoot"></div>
-
-    <div
-      class="empty hidden"
-      id="emptyState"
-    >
+    <div class="empty hidden" id="emptyState">
       Bu filtrelerle eşleşen haber bulunamadı.
     </div>
-
-    <div
-      class="error hidden"
-      id="errorState"
-    ></div>
-
+    <div class="error hidden" id="errorState"></div>
   </section>
 
-  <div
-    class="footnote"
-    id="editorialNote"
-  ></div>
-
-  <footer class="footer">
-    <div>
-      Kargo Ürün ve Posta Müdürlüğü · Weekly Bulletin
+  <section class="section hidden" id="socialSection">
+    <div class="section-top">
+      <div>
+        <div class="overline">
+          RAKİP VE SEKTÖR İLETİŞİMİ
+        </div>
+        <h2>Sosyal Medyada Öne Çıkanlar</h2>
+      </div>
+      <span class="note" id="socialCount"></span>
     </div>
+    <div class="social-grid" id="socialRoot"></div>
+  </section>
 
+  <div class="footnote" id="editorialNote"></div>
+
+  <footer>
+    <div>
+      Kargo Ürün ve Posta Müdürlüğü ·
+      Kargo ve Lojistik Haftalık Bülteni
+    </div>
     <div>
       Haber ve görsel hakları ilgili kaynaklarına aittir.
     </div>
@@ -959,11 +751,9 @@ header {
 
   function safeUrl(value) {
     if (!value) return "";
-
     try {
       const url = new URL(value, location.href);
-
-      return ["https:", "http:"].includes(url.protocol)
+      return ["http:", "https:"].includes(url.protocol)
         ? url.href
         : "";
     } catch {
@@ -971,33 +761,31 @@ header {
     }
   }
 
-  /* PRODUCT GROUPS */
+  const categories = [
+    ["all", "Tümü"],
+    ["market", "Pazar & Rekabet"],
+    ["aviation", "Havacılık & MRO"],
+    ["automotive", "Otomotiv & Endüstri"],
+    ["ecommerce", "E-Ticaret & Posta"],
+    ["digital", "Dijital & Teknoloji"],
+    ["sustainability", "Sürdürülebilirlik"]
+  ];
 
   const groups = [
     {
       id: "speed",
       label: "Hız Odaklı Hizmetler",
-      products: [
-        "TK SMART",
-        "TK PREMIUM",
-        "TK URGENT"
-      ]
+      products: ["TK SMART", "TK PREMIUM", "TK URGENT"]
     },
     {
       id: "industry",
       label: "Endüstri Ürünleri",
-      products: [
-        "TK AERO",
-        "TK AUTO"
-      ]
+      products: ["TK AERO", "TK AUTO"]
     },
     {
       id: "commerce",
       label: "E-Ticaret ve Posta Ürünleri",
-      products: [
-        "TK COURIER",
-        "POSTA"
-      ]
+      products: ["TK COURIER", "POSTA"]
     },
     {
       id: "special",
@@ -1013,20 +801,6 @@ header {
     }
   ];
 
-  /* NEWS CATEGORIES */
-
-  const categories = [
-    ["all", "Tümü"],
-    ["market", "Pazar & Rekabet"],
-    ["aviation", "Havacılık & MRO"],
-    ["automotive", "Otomotiv & Endüstri"],
-    ["ecommerce", "E-Ticaret & Posta"],
-    ["digital", "Dijital & Teknoloji"],
-    ["sustainability", "Sürdürülebilirlik"]
-  ];
-
-  /* SUPPORT FOR OLD BULLETINS */
-
   const legacyCategories = {
     industry: "aviation",
     mail: "ecommerce",
@@ -1034,31 +808,22 @@ header {
     product: "automotive"
   };
 
-  let items = [];
   let issue = null;
+  let items = [];
+  let weeks = [];
+  let currentWeek = "";
   let activeCategory = "all";
   let activeGroup = "all";
 
   function productInfo(item) {
     const data = item.productRelevance || {};
-
     return {
+      relevant: !!data.relevant,
       products: Array.isArray(data.products)
         ? data.products
         : [],
-      analysis: data.analysis || "",
-      relevant: !!data.relevant
+      analysis: data.analysis || ""
     };
-  }
-
-  function itemGroups(item) {
-    const products = productInfo(item).products;
-
-    return groups.filter(group =>
-      group.products.some(product =>
-        products.includes(product)
-      )
-    );
   }
 
   function categoryOf(item) {
@@ -1067,23 +832,25 @@ header {
       "market";
   }
 
+  function itemGroups(item) {
+    const products = productInfo(item).products;
+    return groups.filter(group =>
+      group.products.some(product =>
+        products.includes(product)
+      )
+    );
+  }
+
   function formatDate(value) {
     if (!value) return "";
-
     const date = new Date(value + "T12:00:00");
-
-    if (Number.isNaN(date.getTime())) {
-      return value;
-    }
-
+    if (Number.isNaN(date.getTime())) return value;
     return date.toLocaleDateString("tr-TR", {
       day: "numeric",
       month: "long",
       year: "numeric"
     });
   }
-
-  /* JSON LOADER WITH ERROR DETAILS */
 
   async function loadJSON(path) {
     const response = await fetch(
@@ -1093,173 +860,114 @@ header {
 
     if (!response.ok) {
       throw new Error(
-        path + " dosyası bulunamadı. HTTP " +
-        response.status
+        path + " bulunamadı. HTTP " + response.status
       );
     }
 
-    const text = await response.text();
+    const raw = await response.text();
 
     try {
-      return JSON.parse(text);
+      return JSON.parse(raw);
     } catch (error) {
       throw new Error(
-        path +
-        " dosyasında JSON biçim hatası var: " +
-        error.message
+        path + " dosyasında JSON hatası: " + error.message
       );
     }
   }
-
-  /* ANALYSIS */
-
-  function detailHTML(item) {
-    const info = productInfo(item);
-
-    const important = item.whyImportant
-      ? `
-        <div class="analysis">
-          <div class="detail-label">
-            NEDEN ÖNEMLİ?
-          </div>
-          <p>${escapeHTML(item.whyImportant)}</p>
-        </div>
-      `
-      : "";
-
-    const productBox =
-      info.relevant && info.products.length
-        ? `
-          <div class="product-panel">
-            <div class="detail-label">
-              ÜRÜN PERSPEKTİFİ
-            </div>
-
-            <p>${escapeHTML(info.analysis)}</p>
-
-            <div class="product-pills">
-              ${info.products.map(product =>
-                `<span>${escapeHTML(product)}</span>`
-              ).join("")}
-            </div>
-          </div>
-        `
-        : "";
-
-    if (!important && !productBox) {
-      return "";
-    }
-
-    return `
-      <details class="detail">
-        <summary>Analizi Gör</summary>
-
-        <div class="detail-content">
-          ${important}
-          ${productBox}
-        </div>
-      </details>
-    `;
-  }
-
-  /* IMAGE */
-
-  function imageHTML(item) {
-    const url = safeUrl(item.image);
-
-    if (!url) return "";
-
-    const caption = item.imageCaption ||
-      "Haber görseli";
-
-    return `
-      <div class="media">
-        <img
-          loading="lazy"
-          src="${escapeHTML(url)}"
-          alt="${escapeHTML(caption)}"
-          onerror="this.parentElement.remove()"
-        >
-
-        ${item.imageCredit
-          ? `
-            <div class="photo-caption">
-              ${escapeHTML(caption)}
-            </div>
-          `
-          : ""}
-      </div>
-    `;
-  }
-
-  /* SOURCE */
 
   function sourceHTML(item) {
     const url = safeUrl(item.url);
-    const creditUrl = safeUrl(item.imageCreditUrl);
 
     return `
-      <div class="source-line">
+      <div class="source">
         <small>
           ${escapeHTML(item.source || "Kaynak")}
           ·
           ${escapeHTML(item.publishedDate || "")}
         </small>
-
         ${url
-          ? `
-            <a
-              href="${escapeHTML(url)}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Kaynağı İncele ↗
-            </a>
-          `
+          ? `<a href="${escapeHTML(url)}"
+               target="_blank"
+               rel="noopener noreferrer">
+               Kaynağı İncele ↗
+             </a>`
           : ""}
       </div>
-
-      ${creditUrl
-        ? `
-          <div class="credit">
-            Fotoğraf:
-            <a
-              href="${escapeHTML(creditUrl)}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ${escapeHTML(item.imageCredit || "Görsel kaynağı")}
-            </a>
-          </div>
-        `
-        : ""}
     `;
   }
 
-  /* NEWS CARD */
+  function detailHTML(item) {
+    const product = productInfo(item);
+
+    if (!item.whyImportant &&
+        !(product.relevant && product.products.length)) {
+      return "";
+    }
+
+    const why = item.whyImportant
+      ? `
+        <div class="analysis">
+          <strong>NEDEN ÖNEMLİ?</strong>
+          <p>${escapeHTML(item.whyImportant)}</p>
+        </div>`
+      : "";
+
+    const productBox =
+      product.relevant && product.products.length
+        ? `
+          <div class="product-analysis">
+            <strong>ÜRÜN PERSPEKTİFİ</strong>
+            ${product.analysis
+              ? `<p>${escapeHTML(product.analysis)}</p>`
+              : ""}
+            <div class="pills">
+              ${product.products.map(name =>
+                `<span>${escapeHTML(name)}</span>`
+              ).join("")}
+            </div>
+          </div>`
+        : "";
+
+    return `
+      <details>
+        <summary>Analizi Gör</summary>
+        ${why}
+        ${productBox}
+      </details>
+    `;
+  }
+
+  function imageHTML(item) {
+    const url = safeUrl(item.image);
+    if (!url) return "";
+
+    return `
+      <div class="media">
+        <img
+          src="${escapeHTML(url)}"
+          alt="${escapeHTML(item.imageCaption || item.title)}"
+          loading="lazy"
+          onerror="this.parentElement.remove()"
+        >
+      </div>
+    `;
+  }
 
   function cardHTML(item, isLead = false) {
-    const categoryName =
+    const category =
       item.categoryName ||
       categories.find(
-        category => category[0] === categoryOf(item)
+        entry => entry[0] === categoryOf(item)
       )?.[1] ||
       "Sektör";
 
-    const tags = itemGroups(item)
-      .map(group =>
-        `<span class="group-tag">
-          ${escapeHTML(group.label)}
-        </span>`
-      )
-      .join("");
+    const tags = itemGroups(item).map(group =>
+      `<span class="tag">${escapeHTML(group.label)}</span>`
+    ).join("");
 
     const content = `
-      <div class="meta-top">
-        <span class="category">
-          ${escapeHTML(categoryName)}
-        </span>
-
+      <div class="meta">
+        <span class="category">${escapeHTML(category)}</span>
         <span class="date">
           ${escapeHTML(item.publishedDate || "")}
         </span>
@@ -1267,28 +975,28 @@ header {
 
       <h3>${escapeHTML(item.title)}</h3>
 
-      <p class="card-summary">
-        ${escapeHTML(item.summary)}
-      </p>
+      <p class="summary">${escapeHTML(item.summary)}</p>
 
       ${tags
-        ? `<div class="group-tags">${tags}</div>`
+        ? `<div class="tags">${tags}</div>`
         : ""}
 
-      <div class="card-bottom">
+      <div class="bottom">
         ${detailHTML(item)}
         ${sourceHTML(item)}
+        ${item.imageCredit
+          ? `<div class="image-credit">
+               Görsel: ${escapeHTML(item.imageCredit)}
+             </div>`
+          : ""}
       </div>
     `;
 
     if (isLead) {
       const visual = imageHTML(item) || `
         <div class="lead-visual">
-          <div class="metric">
-            <strong>
-              ${escapeHTML(item.metric || "↗")}
-            </strong>
-
+          <div>
+            <strong>${escapeHTML(item.metric || "↗")}</strong>
             <span>
               ${escapeHTML(
                 item.metricLabel || "SEKTÖR GÜNDEMİ"
@@ -1300,9 +1008,7 @@ header {
 
       return `
         <article class="lead">
-          <div class="lead-content">
-            ${content}
-          </div>
+          <div class="lead-content">${content}</div>
           ${visual}
         </article>
       `;
@@ -1311,82 +1017,35 @@ header {
     return `
       <article class="card">
         ${imageHTML(item)}
-
-        <div class="card-body">
-          ${content}
-        </div>
+        <div class="card-body">${content}</div>
       </article>
     `;
   }
-
-  /* FILTERS */
 
   function renderFilters() {
     $("categoryFilters").innerHTML =
       categories.map(([id, label]) => `
         <button
+          type="button"
           class="filter category-filter
             ${activeCategory === id ? "active" : ""}"
-          data-cat="${id}"
-        >
+          data-cat="${id}">
           ${escapeHTML(label)}
         </button>
       `).join("");
 
     $("productFilters").innerHTML =
       [{ id: "all", label: "Tümü" }, ...groups]
-      .map(group => `
-        <button
-          class="filter
-            ${activeGroup === group.id ? "active" : ""}"
-          data-group="${group.id}"
-        >
-          ${escapeHTML(group.label)}
-        </button>
-      `).join("");
+        .map(group => `
+          <button
+            type="button"
+            class="filter
+              ${activeGroup === group.id ? "active" : ""}"
+            data-group="${group.id}">
+            ${escapeHTML(group.label)}
+          </button>
+        `).join("");
   }
-
-  function matches(item) {
-    const query = $("search").value
-      .toLocaleLowerCase("tr-TR")
-      .trim();
-
-    const info = productInfo(item);
-
-    const searchable = [
-      item.title,
-      item.summary,
-      item.whyImportant,
-      item.company,
-      item.country,
-      item.source,
-      item.categoryName,
-      info.analysis,
-      ...info.products,
-      ...itemGroups(item).map(
-        group => group.label
-      )
-    ]
-    .filter(Boolean)
-    .join(" ")
-    .toLocaleLowerCase("tr-TR");
-
-    const categoryMatch =
-      activeCategory === "all" ||
-      categoryOf(item) === activeCategory;
-
-    const groupMatch =
-      activeGroup === "all" ||
-      itemGroups(item).some(
-        group => group.id === activeGroup
-      );
-
-    return categoryMatch &&
-      groupMatch &&
-      searchable.includes(query);
-  }
-
-  /* EXECUTIVE SUMMARY */
 
   function renderInsights() {
     const themes =
@@ -1401,16 +1060,8 @@ header {
     $("insights").innerHTML =
       themes.slice(0, 3).map(theme => `
         <div class="insight">
-          <div class="insight-label">
-            ${escapeHTML(theme.label)}
-          </div>
-
-          <h3>
-            ${escapeHTML(
-              theme.title || theme.text
-            )}
-          </h3>
-
+          <small>${escapeHTML(theme.label)}</small>
+          <h3>${escapeHTML(theme.title || theme.text)}</h3>
           ${theme.title
             ? `<p>${escapeHTML(theme.text)}</p>`
             : ""}
@@ -1418,7 +1069,39 @@ header {
       `).join("");
   }
 
-  /* RENDER NEWS */
+  function matches(item) {
+    const query = $("search").value
+      .toLocaleLowerCase("tr-TR")
+      .trim();
+
+    const product = productInfo(item);
+
+    const searchable = [
+      item.title,
+      item.summary,
+      item.whyImportant,
+      item.company,
+      item.country,
+      item.source,
+      item.categoryName,
+      product.analysis,
+      ...product.products,
+      ...itemGroups(item).map(group => group.label)
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLocaleLowerCase("tr-TR");
+
+    return (
+      (activeCategory === "all" ||
+        categoryOf(item) === activeCategory) &&
+      (activeGroup === "all" ||
+        itemGroups(item).some(
+          group => group.id === activeGroup
+        )) &&
+      searchable.includes(query)
+    );
+  }
 
   function render() {
     const filtered = items.filter(matches);
@@ -1430,29 +1113,24 @@ header {
 
     const lead = unfiltered
       ? filtered.find(item =>
-          item.priority === "lead" ||
-          item.featured
+          item.priority === "lead" || item.featured
         )
       : null;
 
     const spotlight = unfiltered
       ? filtered.filter(item =>
-          item !== lead &&
-          item.priority === "spotlight"
+          item !== lead && item.priority === "spotlight"
         )
       : [];
 
     const others = filtered.filter(item =>
-      item !== lead &&
-      !spotlight.includes(item)
+      item !== lead && !spotlight.includes(item)
     );
 
-    $("leadSection").classList.toggle(
-      "hidden", !lead
-    );
-
+    $("leadSection").classList.toggle("hidden", !lead);
     $("spotlightSection").classList.toggle(
-      "hidden", !spotlight.length
+      "hidden",
+      !spotlight.length
     );
 
     $("leadRoot").innerHTML = lead
@@ -1460,14 +1138,10 @@ header {
       : "";
 
     $("spotlightRoot").innerHTML =
-      spotlight.map(
-        item => cardHTML(item)
-      ).join("");
+      spotlight.map(item => cardHTML(item)).join("");
 
     $("newsRoot").innerHTML =
-      others.map(
-        item => cardHTML(item)
-      ).join("");
+      others.map(item => cardHTML(item)).join("");
 
     $("listTitle").textContent = unfiltered
       ? "Sektörden Diğer Haberler"
@@ -1484,11 +1158,114 @@ header {
     renderFilters();
   }
 
-  /* LOAD SELECTED WEEK */
+  function socialCardHTML(item) {
+    const postUrl = safeUrl(item.postUrl);
+    const storyUrl = safeUrl(item.storyUrl);
+
+    return `
+      <article class="social-card">
+        <div class="social-top">
+          <div class="social-company">
+            ${escapeHTML(item.company || "")}
+          </div>
+          <div class="social-platform">
+            ${escapeHTML(item.platform || "LinkedIn")}
+            ·
+            ${escapeHTML(item.publishedDate || "")}
+          </div>
+        </div>
+
+        <div class="social-body">
+          <h3>${escapeHTML(item.title)}</h3>
+          <p>${escapeHTML(item.summary)}</p>
+
+          ${item.communicationInsight
+            ? `
+              <div class="social-analysis">
+                <strong>
+                  İLETİŞİM AÇISINDAN NEDEN ÖNEMLİ?
+                </strong>
+                <p>
+                  ${escapeHTML(item.communicationInsight)}
+                </p>
+              </div>`
+            : ""}
+
+          ${item.relatedProduct
+            ? `<div class="tags">
+                 <span class="tag">
+                   İlgili ürün:
+                   ${escapeHTML(item.relatedProduct)}
+                 </span>
+               </div>`
+            : ""}
+
+          <div class="social-links">
+            ${postUrl
+              ? `<a href="${escapeHTML(postUrl)}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   LinkedIn Hesabı ↗
+                 </a>`
+              : ""}
+            ${storyUrl
+              ? `<a href="${escapeHTML(storyUrl)}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Video ve Hikâye ↗
+                 </a>`
+              : ""}
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  async function loadSocial(date) {
+    $("socialSection").classList.add("hidden");
+    $("socialRoot").innerHTML = "";
+
+    try {
+      const response = await fetch(
+        "./data/sosyal-" +
+        encodeURIComponent(date) +
+        ".json?v=" +
+        Date.now(),
+        { cache: "no-store" }
+      );
+
+      if (response.status === 404) return;
+
+      if (!response.ok) {
+        throw new Error("Sosyal medya dosyası açılamadı");
+      }
+
+      const data = await response.json();
+
+      if (date !== currentWeek) return;
+
+      const entries = Array.isArray(data.items)
+        ? data.items
+        : [];
+
+      if (!entries.length) return;
+
+      $("socialRoot").innerHTML =
+        entries.map(socialCardHTML).join("");
+
+      $("socialCount").textContent =
+        entries.length + " paylaşım";
+
+      $("socialSection").classList.remove("hidden");
+    } catch (error) {
+      console.warn("Sosyal medya bölümü:", error);
+    }
+  }
 
   async function loadWeek(date) {
     try {
       $("errorState").classList.add("hidden");
+      $("socialSection").classList.add("hidden");
 
       const path =
         "./data/" +
@@ -1501,97 +1278,73 @@ header {
         ? issue.items
         : [];
 
+      currentWeek = date;
       activeCategory = "all";
       activeGroup = "all";
-
       $("search").value = "";
 
       const label =
         issue.title ||
         issue.date ||
+        weeks.find(week => week.date === date)?.title ||
         date;
 
       $("heroWeek").textContent = label;
-      $("topDate").textContent = label;
-
-      $("heroCount").innerHTML =
-        "<strong>" +
-        items.length +
-        "</strong> haber";
+      $("heroCount").textContent =
+        items.length + " haber";
 
       $("heroUpdate").textContent =
         "Son güncelleme: " +
-        formatDate(
-          issue.updatedAt ||
-          issue.publishedAt ||
-          date
-        );
+        formatDate(issue.updatedAt || date);
 
       $("heroEyebrow").textContent =
-        "WEEKLY INTELLIGENCE · " +
-        (issue.issueStatus || "BÜLTEN");
+        "HAFTALIK SEKTÖR DEĞERLENDİRMESİ · " +
+        (issue.issueStatus || "ARŞİV");
 
       $("editorialNote").textContent =
         issue.editorialNote ||
-        "Haberler kaynaklarına dayanır. " +
-        "Ürün perspektifleri editoryal değerlendirmedir.";
+        "Haberler kaynaklarına dayanır; " +
+        "ürün perspektifleri editoryal değerlendirmedir.";
 
       $("weekSelect").value = date;
 
       renderInsights();
       render();
 
+      loadSocial(date);
+
       const url = new URL(location.href);
-
       url.searchParams.set("week", date);
-
       history.replaceState(
         null,
         "",
         url.pathname + url.search + url.hash
       );
-
     } catch (error) {
       console.error(error);
 
       $("errorState").textContent =
-        "Bülten yüklenemedi. " +
-        error.message;
+        "Bülten yüklenemedi. " + error.message;
 
-      $("errorState").classList.remove(
-        "hidden"
-      );
-
-      $("leadSection").classList.add(
-        "hidden"
-      );
-
-      $("spotlightSection").classList.add(
-        "hidden"
-      );
-
+      $("errorState").classList.remove("hidden");
+      $("leadSection").classList.add("hidden");
+      $("spotlightSection").classList.add("hidden");
       $("leadRoot").innerHTML = "";
       $("spotlightRoot").innerHTML = "";
       $("newsRoot").innerHTML = "";
     }
   }
 
-  /* INITIAL LOAD */
-
   async function start() {
     try {
-      const data = await loadJSON(
-        "./data/index.json"
-      );
+      const data = await loadJSON("./data/index.json");
 
-      const weeks = Array.isArray(data.weeks)
+      weeks = Array.isArray(data.weeks)
         ? data.weeks
         : [];
 
       if (!weeks.length) {
-        throw new Error(
-          "data/index.json içinde hafta bulunamadı."
-        );
+        throw new Error("Hafta listesi boş.");
       }
 
       weeks.sort((a, b) =>
@@ -1609,33 +1362,26 @@ header {
         `).join("");
 
       const requested =
-        new URLSearchParams(
-          location.search
-        ).get("week");
+        new URLSearchParams(location.search).get("week");
 
-      const selected =
-        weeks.some(
-          week => week.date === requested
-        )
-          ? requested
-          : weeks[0].date;
+      const selected = weeks.some(
+        week => week.date === requested
+      )
+        ? requested
+        : (weeks.find(
+            week => week.status === "current"
+          ) || weeks[0]).date;
 
       await loadWeek(selected);
-
     } catch (error) {
       console.error(error);
 
       $("errorState").textContent =
-        "Hafta listesi yüklenemedi. " +
-        error.message;
+        "Hafta listesi yüklenemedi. " + error.message;
 
-      $("errorState").classList.remove(
-        "hidden"
-      );
+      $("errorState").classList.remove("hidden");
     }
   }
-
-  /* EVENTS */
 
   $("categoryFilters").addEventListener(
     "click",
@@ -1643,11 +1389,8 @@ header {
       const button = event.target.closest(
         "button[data-cat]"
       );
-
       if (!button) return;
-
       activeCategory = button.dataset.cat;
-
       render();
     }
   );
@@ -1658,50 +1401,32 @@ header {
       const button = event.target.closest(
         "button[data-group]"
       );
-
       if (!button) return;
-
       activeGroup = button.dataset.group;
-
       render();
     }
   );
 
-  $("search").addEventListener(
-    "input",
-    render
-  );
+  $("search").addEventListener("input", render);
 
   $("weekSelect").addEventListener(
     "change",
-    event => {
-      loadWeek(event.target.value);
-    }
+    event => loadWeek(event.target.value)
   );
-
-  /* SHARE */
 
   $("shareButton").addEventListener(
     "click",
     async () => {
       const url = location.href;
-
       try {
         if (navigator.share) {
           await navigator.share({
-            title: "Weekly Bulletin",
+            title: "Kargo ve Lojistik Haftalık Bülteni",
             url
           });
         } else {
           await navigator.clipboard.writeText(url);
-
-          $("shareButton").textContent =
-            "✓ Kopyalandı";
-
-          setTimeout(() => {
-            $("shareButton").textContent =
-              "↗ Paylaş";
-          }, 1800);
+          $("shareButton").textContent = "✓ Kopyalandı";
         }
       } catch (error) {
         console.log(error);
@@ -1709,8 +1434,102 @@ header {
     }
   );
 
-  start();
+  /* LOGONUN BEYAZ VE ŞEFFAF BOŞLUKLARINI KIRP */
+  function buyutVeKirpLogo() {
+    const logo = $("brandLogo");
+    if (!logo) return;
 
+    const image = new Image();
+
+    image.onload = () => {
+      try {
+        const width = image.naturalWidth;
+        const height = image.naturalHeight;
+
+        if (!width || !height) return;
+
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+
+        const context = canvas.getContext("2d");
+        context.drawImage(image, 0, 0);
+
+        const pixels = context.getImageData(
+          0, 0, width, height
+        ).data;
+
+        let minX = width;
+        let minY = height;
+        let maxX = -1;
+        let maxY = -1;
+
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            const i = (y * width + x) * 4;
+
+            const alpha = pixels[i + 3];
+            const red = pixels[i];
+            const green = pixels[i + 1];
+            const blue = pixels[i + 2];
+
+            const visible =
+              alpha > 45 &&
+              (red < 235 || green < 235 || blue < 235);
+
+            if (!visible) continue;
+
+            minX = Math.min(minX, x);
+            maxX = Math.max(maxX, x);
+            minY = Math.min(minY, y);
+            maxY = Math.max(maxY, y);
+          }
+        }
+
+        if (maxX < minX || maxY < minY) return;
+
+        const padding = Math.max(
+          4,
+          Math.round((maxX - minX + 1) * 0.035)
+        );
+
+        const x = Math.max(0, minX - padding);
+        const y = Math.max(0, minY - padding);
+
+        const cropWidth = Math.min(
+          width - x,
+          maxX - minX + 1 + padding * 2
+        );
+
+        const cropHeight = Math.min(
+          height - y,
+          maxY - minY + 1 + padding * 2
+        );
+
+        const trimmed = document.createElement("canvas");
+        trimmed.width = cropWidth;
+        trimmed.height = cropHeight;
+
+        trimmed.getContext("2d").drawImage(
+          image,
+          x, y, cropWidth, cropHeight,
+          0, 0, cropWidth, cropHeight
+        );
+
+        logo.src = trimmed.toDataURL("image/png");
+      } catch (error) {
+        console.warn(
+          "Logo kırpılamadı, orijinal görsel kullanılıyor.",
+          error
+        );
+      }
+    };
+
+    image.src = "./turkish-cargo-logo.png?v=7";
+  }
+
+  buyutVeKirpLogo();
+  start();
 })();
 </script>
 
