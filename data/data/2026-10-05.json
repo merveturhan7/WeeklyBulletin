@@ -1,0 +1,226 @@
+
+{
+  "weekStart": "2026-10-05",
+  "weekEnd": "2026-10-11",
+  "title": "5–11 Ekim 2026 Haftası",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "issueStatus": "Arşiv Sayısı",
+  "editorialNote": "5–11 Ekim 2026 döneminde yayımlanan sektör haberleri derlenmiştir. Ürün perspektifleri editoryal değerlendirmedir; hizmet uygunluğu veya ticari taahhüt niteliği taşımaz.",
+  "weeklyThemes": [
+    {
+      "label": "PAZAR & REKABET",
+      "title": "Hacim düşerken fiyatlar ayrıştı",
+      "text": "WorldACD haftalık verileri, hacimdeki gerilemeye karşın fiyatların birçok çıkış bölgesinde yükseldiğini gösterdi."
+    },
+    {
+      "label": "HAVACILIK & MRO",
+      "title": "Yedek parça talebi geniş bir ürün grubuna yayıldı",
+      "text": "Eylül parça aramaları, yalnızca motor bileşenlerinde değil, standart donanım ve bakım malzemelerinde de tedarik baskısına işaret etti."
+    },
+    {
+      "label": "E-TİCARET & POSTA",
+      "title": "Paket ve dijital rezervasyon altyapısı büyüyor",
+      "text": "Chicago paket işleme yatırımı ve dijital kurye rezervasyonu, müşteriye yakın operasyon ve erişilebilirlik eğilimlerini öne çıkardı."
+    }
+  ],
+  "items": [
+    {
+      "id": "worldacd-week39",
+      "priority": "lead",
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+      "title": "Küresel hava kargo hacmi haftalık %4 azalırken fiyatlar dirençli kaldı",
+      "summary": "WorldACD’nin 5 Ekim tarihli değerlendirmesine göre küresel ücretlendirilebilir ağırlık önceki haftaya göre %4 geriledi. Afrika dışındaki bütün çıkış bölgelerinde düşüş yaşanırken Asya Pasifik’te daralma %7’ye ulaştı. Buna karşılık Kuzey Amerika haricindeki bölgelerde ortalama fiyatlar yükseldi.",
+      "whyImportant": "Hacim ve fiyatın farklı yönlerde hareket etmesi, pazar performansını yalnızca tonaj üzerinden yorumlamanın yetersiz olduğunu gösteriyor. Bölgesel tatiller ve kapasite değişimleri de dikkate alınmalı.",
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+      "company": "WorldACD",
+      "country": "Küresel",
+      "publishedDate": "05.10.2026",
+      "source": "WorldACD",
+      "url": "https://www.worldacd.com/trend-reports/weekly/worldacd-weekly-air-cargo-trends-2026-week-39/",
+      "image": "",
+      "metric": "-%4",
+      "metricLabel": "Haftalık kargo hacmi"
+    },
+    {
+      "id": "locatory-parts",
+      "priority": "spotlight",
+      "category": "aviation",
+      "categoryName": "Havacılık & MRO",
+      "title": "Uçak yedek parça aramalarında eylülde %34,5 artış kaydedildi",
+      "summary": "Locatory.com’un eylül verileri, uçak parçası aramalarının ağustosa göre %34,5 arttığını ortaya koydu. En çok aranan kalemlerde standart donanım ve contalar %38,8, motor bileşenleri %30,6 pay aldı. Bulunması en zor ürünler listesinde de bakımın farklı alt kategorileri öne çıktı.",
+      "whyImportant": "Bakım malzemelerindeki tedarik sıkışıklığı, küçük parçaların bile uçakların hizmete dönüşünü etkileyebileceğini gösteriyor. Yüksek öncelikli taşımalar için ürün türü kadar teslim süresi de önem kazanıyor.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "TK AERO",
+          "TK URGENT"
+        ],
+        "analysis": "Parça bulunabilirliği ve bakım takvimi baskısı, TK AERO yedek parça akışları ile gerçekten AOG niteliğindeki gönderilerde TK URGENT ihtiyacını değerlendirmek için anlamlı bir sinyal sunuyor."
+      },
+      "company": "Locatory.com",
+      "country": "Küresel",
+      "publishedDate": "07.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/september-2026-parts-data-scarcity-spreads-beyond-a-single-engine-cluster/",
+      "image": ""
+    },
+    {
+      "id": "emirates-south-america",
+      "priority": "spotlight",
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+      "title": "Emirates SkyCargo Güney Amerika çıkışlı ihracat kapasitesini artırıyor",
+      "summary": "Emirates SkyCargo, 2026 içinde Güney Amerika’ya haftalık yedi ek kargo seferi başlattığını duyurdu. Şirketin paylaştığı verilere göre Arjantin çıkışlı ihracat hacmi %57, Brezilya %22, Kolombiya %18 ve Ekvador %14 büyüdü. Taze çiçekler ve diğer bozulabilir ürünler bölgenin önemli taşıma kalemleri arasında.",
+      "whyImportant": "Yeni kargo uçağı frekansları, Latin Amerika çıkışlı özel kargo ve genel kargo akışlarında rekabetçi kapasiteyi artırabilir. Büyümenin ürün ve ülke bazında değerlendirilmesi gerekir.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "Bozulabilir Ürünler"
+        ],
+        "analysis": "Taze çiçek ve bozulabilir ürünlerde kapasite artışı, uygun soğuk zincir süreçleri ve bağlantı seçeneklerinin müşteriler için ne kadar belirleyici olduğunu gösteriyor."
+      },
+      "company": "Emirates SkyCargo",
+      "country": "Güney Amerika",
+      "publishedDate": "08.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/emirates-skycargo-accelerates-export-growth-from-south-america/",
+      "image": ""
+    },
+    {
+      "id": "epost-chicago",
+      "priority": "spotlight",
+      "category": "ecommerce",
+      "categoryName": "E-Ticaret & Posta",
+      "title": "ePost Global Chicago yakınındaki uluslararası paket işleme alanını üçe katladı",
+      "summary": "ePost Global, Chicago O’Hare Havalimanı yakınındaki paket işleme altyapısını genişleterek bölgedeki operasyon alanını üç katına çıkardı. Tesis, şirketin ABD’de sınır ötesi e-ticaret paketleri ve uluslararası posta için kullandığı en büyük işleme noktası oldu. Yatırımın yoğun dönemlerde esneklik ve kapasite sağlaması hedefleniyor.",
+      "whyImportant": "Paket hacmindeki artışa yanıt olarak ayrıştırma ve konsolidasyon kapasitesinin büyütülmesi, e-ticaret ağlarının yalnızca uçuş bağlantılarından oluşmadığını gösteriyor.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "TK COURIER",
+          "POSTA"
+        ],
+        "analysis": "Sınır ötesi paket ve posta akışlarında terminal işleme kapasitesi, teslimat performansını etkileyen önemli bir unsur. Bu gelişme kurye ve posta ağlarının karşılaştırılması açısından değerlendirilebilir."
+      },
+      "company": "ePost Global",
+      "country": "ABD",
+      "publishedDate": "09.10.2026",
+      "source": "STAT Times",
+      "url": "https://www.stattimes.com/latest-news/epost-global-triples-chicago-footprint-for-international-shipping-1360890",
+      "image": ""
+    },
+    {
+      "id": "fiata-report",
+      "priority": "standard",
+      "category": "market",
+      "categoryName": "Pazar & Rekabet",
+      "title": "FIATA raporu tedarik zincirlerinde dayanıklılık ve dijitalleşmeyi öne çıkardı",
+      "summary": "FIATA’nın 2026 Pazar Raporu, 46 bölgeden 111 sektör profesyonelinin değerlendirmelerini bir araya getirdi. Çalışma, jeopolitik belirsizlikler karşısında alternatif koridorların, veri sistemleri arasında uyumun ve daha etkin sınır süreçlerinin önemine dikkat çekti. Freight forwarderların koordinasyon rolünün de genişlediği vurgulandı.",
+      "whyImportant": "Lojistikte hizmet kalitesi artık yalnızca taşıma kapasitesiyle değil; alternatif güzergâh oluşturma, veri paylaşımı ve kesinti yönetimiyle birlikte değerlendiriliyor.",
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+      "company": "FIATA",
+      "country": "Küresel",
+      "publishedDate": "08.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/fiata-launches-2026-market-report/",
+      "image": ""
+    },
+    {
+      "id": "flytrix-documentjet",
+      "priority": "standard",
+      "category": "digital",
+      "categoryName": "Dijital & Teknoloji",
+      "title": "FLYTRIX acil belge taşımaları için çevrim içi rezervasyon hizmeti başlattı",
+      "summary": "FLYTRIX, uluslararası refakatli kurye gönderileri için DocumentJet adlı dijital rezervasyon hizmetini duyurdu. Şirketin açıklamasına göre müşteriler yaklaşık 120 ülkede gönderi ve teslimat bilgilerini girerek fiyat ve tahmini süre alabiliyor. Sistem uçuş, kurye uygunluğu ve operasyon verilerini birleştirerek planlamayı otomatikleştiriyor.",
+      "whyImportant": "Zamana duyarlı gönderilerde dijital fiyatlama ve rezervasyon, müşteri erişimini kolaylaştırabilir. Ancak hizmetin hedeflediği belge taşımacılığı, genel paket ve hava kargo ürünlerinden ayrı değerlendirilmeli.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "TK URGENT"
+        ],
+        "analysis": "Dijital acil rezervasyon örneği, hız odaklı hizmetlerde müşterinin fiyat ve teslimat süresi bilgisine hızlı erişim beklentisini gösteriyor. Hizmet kapsamları doğrudan eşdeğer değildir."
+      },
+      "company": "FLYTRIX",
+      "country": "Küresel",
+      "publishedDate": "07.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/flytrix-launches-instant-online-booking-for-obc-shipments/",
+      "image": ""
+    },
+    {
+      "id": "automotive-urgency",
+      "priority": "standard",
+      "category": "automotive",
+      "categoryName": "Otomotiv & Endüstri",
+      "title": "Avrupa otomotiv tedarik zincirlerinde acil hava kargo ihtiyacı gündemde",
+      "summary": "Air Cargo Week’in 8 Ekim değerlendirmesi, otomotiv üretiminde parça eksikliği, kalite sorunları ve ulaşım kesintilerinin hızlı taşıma kararları gerektirdiğini aktardı. Haberde üretim hattının durmasının yüksek maliyetine dikkat çekilirken, bazı durumlarda özel charter uçuşlarının zaman baskısını karşılamak için tercih edildiği belirtildi.",
+      "whyImportant": "Otomotiv taşımalarında yalnızca navlun maliyeti değil, olası üretim duruşunun toplam etkisi kararları şekillendiriyor. Taşıma modu seçimi gönderinin aciliyeti ve özellikleriyle birlikte değerlendirilmeli.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "TK AUTO",
+          "TK URGENT"
+        ],
+        "analysis": "TK AUTO kapsamında üretim hattına yönelik kritik parça akışlarının izlenmesi ve acil gönderilerde uygun hız odaklı hizmet seçeneklerinin değerlendirilmesi için sektörel bağlam sunuyor."
+      },
+      "company": "Otomotiv lojistiği",
+      "country": "Avrupa",
+      "publishedDate": "08.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/race-against-the-production-line-europes-automotive-airfreight-pressure-points/",
+      "image": ""
+    },
+    {
+      "id": "pharma-handover",
+      "priority": "standard",
+      "category": "aviation",
+      "categoryName": "Havacılık & MRO",
+      "title": "İlaç hava kargosunda teslim noktalarındaki operasyonel riskler öne çıktı",
+      "summary": "9 Ekim’de Mumbai’de düzenlenen Küresel İlaç Lojistiği Zirvesi’nde sektör temsilcileri, biyolojik ilaç ve hücre tedavisi gönderilerinde sorumluluk devri noktalarının risk oluşturabildiğini vurguladı. Soğuk odalara yapılan yatırımlara ek olarak, gerçek zamanlı izleme, kontrollü teslim ve açık sorumluluk tanımları üzerinde duruldu.",
+      "whyImportant": "Hassas sağlık ürünlerinde zincirin yalnızca tek bir tesisinin güçlü olması yeterli değil. Havalimanı, taşıyıcı ve kara operasyonları arasındaki devir süreçleri bütüncül kaliteyi belirliyor.",
+      "productRelevance": {
+        "relevant": true,
+        "products": [
+          "İlaç ve Sağlık Ürünleri"
+        ],
+        "analysis": "İlaç ve sağlık ürünlerinde sıcaklık bütünlüğü, izlenebilirlik ve istasyonlar arası operasyon koordinasyonunun önemini destekleyen somut sektör geri bildirimi sunuyor."
+      },
+      "company": "Global Pharma Logistics Summit",
+      "country": "Hindistan",
+      "publishedDate": "09.10.2026",
+      "source": "STAT Times",
+      "url": "https://www.stattimes.com/latest-news/handover-is-the-weak-link-in-pharma-air-cargo-1360896",
+      "image": ""
+    },
+    {
+      "id": "afkl-winter",
+      "priority": "standard",
+      "category": "aviation",
+      "categoryName": "Havacılık & MRO",
+      "title": "Air France KLM kış kargo ağına üç yeni destinasyon ekliyor",
+      "summary": "Air France KLM Martinair Cargo, 25 Ekim 2026–27 Mart 2027 dönemini kapsayan kış uçuş planını açıkladı. Programda Kahire yeni kargo uçağı noktası olarak yer alırken Punta Cana ve Malé geniş gövdeli yolcu uçağı kargo ağına ekleniyor. Şirket, 14 kargo uçağı ve 112 geniş gövdeli yolcu bağlantılı destinasyon planlıyor.",
+      "whyImportant": "Kış tarifesinde yeni destinasyon ve taşıma tipi tercihleri, hat bazlı kapasiteyi ve aktarma seçeneklerini değiştirebilir. Mevsimsel bağlantılar ürün ve pazar düzeyinde izlenmeli.",
+      "productRelevance": {
+        "relevant": false,
+        "products": [],
+        "analysis": ""
+      },
+      "company": "Air France KLM Martinair Cargo",
+      "country": "Küresel",
+      "publishedDate": "07.10.2026",
+      "source": "Air Cargo Week",
+      "url": "https://aircargoweek.com/air-france-klm-martinair-cargo-adds-cairo-punta-cana-and-male-to-its-winter-network/",
+      "image": ""
+    }
+  ]
+}
