@@ -3,781 +3,639 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#111d33">
 <title>Kargo ve Lojistik Haftalık Bülteni</title>
-
 <style>
-:root {
-  --navy: #111d33;
-  --red: #c8102e;
-  --text: #233044;
-  --muted: #697587;
-  --line: #e3e8ef;
-  --bg: #f5f7fa;
+:root{
+  --navy:#111d33;
+  --red:#c8102e;
+  --ink:#233044;
+  --muted:#697587;
+  --line:#e3e8ef;
+  --bg:#f5f7fa;
 }
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
 }
-
-button, input, select { font: inherit; }
-button { cursor: pointer; }
-a { color: inherit; }
-
-.wrap {
-  width: min(1180px, calc(100% - 32px));
-  margin: auto;
-}
-
-.hidden { display: none !important; }
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+.hidden{display:none!important}
 
 /* ÜST ALAN */
-
-header {
-  background: white;
-  border-bottom: 1px solid var(--line);
+header{background:white;border-bottom:1px solid var(--line)}
+.header-inner{
+  min-height:94px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 0;
+}
+.brand{display:flex;align-items:center;gap:19px;min-width:0}
+.logo-box{width:145px;flex:0 0 145px}
+.logo-box img{
+  display:block;
+  width:100%;
+  max-height:58px;
+  object-fit:contain;
+  object-position:left center;
+}
+.brand-divider{width:1px;height:44px;background:#dce2ea}
+.dept{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.6px;
+}
+.brand-title{
+  color:var(--navy);
+  font-size:20px;
+  font-weight:800;
+  line-height:1.3;
+  margin-top:5px;
+}
+.share{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:9px 12px;
+  color:var(--navy);
+  font-size:11px;
+  font-weight:700;
+  flex-shrink:0;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  min-height: 108px;
-  padding: 15px 0;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  min-width: 0;
-}
-
-.logo-box {
-  width: 180px;
-  flex: 0 0 180px;
-  display: flex;
-  align-items: center;
-}
-
-.logo-box img {
-  display: block;
-  width: 100%;
-  max-height: 72px;
-  object-fit: contain;
-  object-position: left center;
-}
-
-.brand-divider {
-  width: 1px;
-  height: 49px;
-  background: #dce2ea;
-}
-
-.dept {
-  font-size: 10px;
-  color: var(--red);
-  font-weight: 800;
-  letter-spacing: .6px;
-}
-
-.brand-title {
-  margin-top: 6px;
-  font-size: 21px;
-  font-weight: 800;
-  color: var(--navy);
-  line-height: 1.25;
-}
-
-.share {
-  flex-shrink: 0;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: white;
-  border: 1px solid var(--line);
-  color: var(--navy);
-  font-size: 11px;
-  font-weight: 700;
-}
-
-/* KAPAK */
-
-.hero {
-  margin-top: 20px;
-  padding: 38px 42px;
-  border-radius: 19px;
-  color: white;
+/* KÜÇÜLTÜLMÜŞ KAPAK */
+.hero{
+  margin-top:17px;
+  padding:25px 32px;
+  border-radius:17px;
   background:
-    radial-gradient(circle at 90% 0%, #a12a4766, transparent 45%),
-    linear-gradient(125deg, #111d33, #223b5d);
+    radial-gradient(circle at 92% 0%,#a12a4755,transparent 45%),
+    linear-gradient(125deg,#111d33,#233b5c);
+  color:white;
+}
+.eyebrow{
+  color:#ffb0bb;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.hero h1{
+  margin:10px 0 8px;
+  font-size:clamp(23px,3vw,31px);
+  line-height:1.2;
+}
+.hero p{
+  max-width:800px;
+  margin:0;
+  color:#d8e0ea;
+  font-size:12px;
+  line-height:1.65;
+}
+.hero-foot{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 23px;
+  border-top:1px solid #ffffff2e;
+  margin-top:16px;
+  padding-top:13px;
+  color:#d8e0ea;
+  font-size:11px;
 }
 
-.eyebrow {
-  color: #ffacb8;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.2px;
+/* STRATEJİK ÇIKARIM */
+.takeaway{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-top:14px;
+  padding:18px 21px;
+  background:white;
+  border:1px solid var(--line);
+  border-left:4px solid var(--red);
+  border-radius:12px;
+}
+.takeaway-label{
+  min-width:155px;
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  line-height:1.6;
+  letter-spacing:.4px;
+}
+.takeaway-text{
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+  line-height:1.65;
 }
 
-.hero h1 {
-  max-width: 740px;
-  font-size: clamp(28px, 4vw, 43px);
-  line-height: 1.17;
-  margin: 14px 0;
+/* GENEL */
+.section{margin-top:27px}
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:14px;
+  margin-bottom:15px;
 }
-
-.hero p {
-  max-width: 710px;
-  color: #d6dfea;
-  font-size: 13px;
-  line-height: 1.8;
+.overline{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.8px;
 }
-
-.hero-foot {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 23px;
-  border-top: 1px solid #ffffff30;
-  padding-top: 17px;
-  margin-top: 25px;
-  color: #d6dfea;
-  font-size: 11px;
+.section-top h2{
+  color:var(--navy);
+  font-size:22px;
+  margin:6px 0 0;
 }
-
-/* GENEL BÖLÜMLER */
-
-.section { margin-top: 29px; }
-
-.section-top {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 16px;
-}
-
-.overline {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.section-top h2 {
-  color: var(--navy);
-  font-size: 23px;
-  margin: 7px 0 0;
-}
-
-.note {
-  color: var(--muted);
-  font-size: 11px;
-}
+.note,.results{color:var(--muted);font-size:11px}
 
 /* YÖNETİCİ ÖZETİ */
-
-.executive {
-  background: white;
-  padding: 25px;
-  border: 1px solid var(--line);
-  border-radius: 17px;
+.executive{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:23px;
 }
-
-.insights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+.insights{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px;
 }
-
-.insight {
-  border-left: 3px solid var(--red);
-  padding: 3px 14px;
+.insight{border-left:3px solid var(--red);padding:3px 13px}
+.insight small{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
 }
-
-.insight small {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 800;
+.insight h3{
+  color:var(--navy);
+  font-size:15px;
+  line-height:1.4;
+  margin:8px 0;
 }
-
-.insight h3 {
-  color: var(--navy);
-  font-size: 15px;
-  line-height: 1.4;
-  margin: 9px 0;
-}
-
-.insight p {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.7;
-  margin: 0;
+.insight p{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+  margin:0;
 }
 
 /* HAFTANIN SAYILARI */
-
-.number-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+.number-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;
+}
+.number-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:21px;
+}
+.number-value{
+  color:var(--navy);
+  font-size:30px;
+  font-weight:800;
+}
+.number-title{
+  color:var(--navy);
+  font-size:13px;
+  font-weight:800;
+  margin-top:9px;
+}
+.number-note{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+  margin-top:7px;
+}
+.number-source{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  text-decoration:none;
 }
 
-.number-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 23px;
+/* HABERLER */
+.lead{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
+  overflow:hidden;
+}
+.lead-content{padding:27px}
+.lead h3{
+  color:var(--navy);
+  font-size:clamp(22px,3vw,29px);
+  line-height:1.35;
+  margin:12px 0;
+}
+.lead-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:270px;
+  background:linear-gradient(145deg,#29496f,#111d33);
+  color:white;
+  text-align:center;
+}
+.lead-visual strong{display:block;font-size:74px}
+.lead-visual span{font-size:11px;letter-spacing:1px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.card{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+}
+.card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:20px;
+}
+.meta{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.category{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+}
+.date{color:#8993a0;font-size:10px}
+.card h3{
+  color:var(--navy);
+  font-size:17px;
+  line-height:1.4;
+  margin:12px 0;
+}
+.summary{
+  color:#617084;
+  font-size:12px;
+  line-height:1.75;
+  margin:0;
+}
+.card .summary{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:5;
+  overflow:hidden;
+}
+.lead .summary{font-size:13px}
+.tags,.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:12px;
+}
+.tag{
+  background:#f1f4f8;
+  color:#536175;
+  border-radius:20px;
+  padding:6px 9px;
+  font-size:10px;
+  font-weight:700;
+}
+.bottom{margin-top:auto;padding-top:13px}
+details{
+  border-top:1px solid var(--line);
+  margin-top:12px;
+}
+summary{
+  padding-top:13px;
+  color:var(--navy);
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+.analysis{
+  background:#f5f7fa;
+  padding:13px;
+  margin-top:12px;
+  border-radius:10px;
+}
+.product-analysis{
+  background:#fff4f6;
+  border-left:3px solid var(--red);
+  padding:13px;
+  margin-top:10px;
+  border-radius:0 10px 10px 0;
+}
+.analysis strong,.product-analysis strong{
+  display:block;
+  font-size:10px;
+  margin-bottom:7px;
+}
+.product-analysis strong{color:var(--red)}
+.analysis p,.product-analysis p{
+  color:#526071;
+  font-size:11px;
+  line-height:1.75;
+  margin:0;
+}
+.pills span{
+  background:white;
+  color:var(--red);
+  border:1px solid #f0cbd3;
+  border-radius:20px;
+  padding:5px 9px;
+  font-size:10px;
+}
+.source{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:14px;
+}
+.source small{color:#8993a0;font-size:10px}
+.source a{
+  color:var(--red);
+  font-size:11px;
+  font-weight:800;
+  text-decoration:none;
+}
+.media{height:185px;overflow:hidden}
+.media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.lead .media{height:100%;min-height:270px}
+.image-credit{
+  color:#8993a0;
+  font-size:9px;
+  margin-top:8px;
 }
 
-.number-value {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--navy);
+/* ARŞİV VE FİLTRELER */
+.toolbar{
+  margin-top:28px;
+  padding:20px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
 }
-
-.number-title {
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-top: 10px;
+.tools-top{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:12px;
+  margin-bottom:17px;
 }
-
-.number-note {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.7;
-  margin-top: 8px;
+.search,.week-select{
+  width:100%;
+  height:44px;
+  background:white;
+  border:1px solid #dfe5ed;
+  border-radius:10px;
+  padding:0 13px;
+  color:var(--navy);
+  font-size:12px;
 }
-
-.number-source {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 10px;
-  color: var(--red);
-  text-decoration: none;
-  font-weight: 800;
+.filter-label{
+  color:#8792a0;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.8px;
+  margin:14px 0 9px;
 }
-
-/* MANŞET VE HABERLER */
-
-.lead {
-  display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
+.filter-row{display:flex;flex-wrap:wrap;gap:7px}
+.filter{
+  background:white;
+  border:1px solid #e0e6ee;
+  border-radius:25px;
+  padding:8px 11px;
+  color:#566375;
+  font-size:10px;
+  font-weight:700;
 }
-
-.lead-content { padding: 28px; }
-
-.lead h3 {
-  color: var(--navy);
-  font-size: clamp(22px, 3vw, 29px);
-  line-height: 1.35;
-  margin: 13px 0;
+.filter.active{
+  background:var(--navy);
+  border-color:var(--navy);
+  color:white;
 }
-
-.lead-visual {
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, #28486d, #111d33);
-  color: white;
-  text-align: center;
+.filter.category-filter.active{
+  background:var(--red);
+  border-color:var(--red);
 }
-
-.lead-visual strong {
-  display: block;
-  font-size: 76px;
+.empty,.error{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:24px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
 }
-
-.lead-visual span {
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.card {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.category {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.date {
-  color: #8792a1;
-  font-size: 10px;
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 17px;
-  line-height: 1.4;
-  margin: 12px 0;
-}
-
-.summary {
-  color: #617084;
-  font-size: 12px;
-  line-height: 1.75;
-  margin: 0;
-}
-
-.card .summary {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-}
-
-.lead .summary { font-size: 13px; }
-
-.tags, .pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 13px;
-}
-
-.tag {
-  padding: 6px 9px;
-  border-radius: 20px;
-  background: #f1f4f8;
-  color: #536175;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.bottom {
-  margin-top: auto;
-  padding-top: 14px;
-}
-
-details {
-  border-top: 1px solid var(--line);
-  margin-top: 12px;
-}
-
-summary {
-  padding-top: 13px;
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--navy);
-  cursor: pointer;
-}
-
-.analysis {
-  margin-top: 12px;
-  padding: 13px;
-  border-radius: 10px;
-  background: #f5f7fa;
-}
-
-.product-analysis {
-  margin-top: 10px;
-  padding: 13px;
-  background: #fff4f6;
-  border-left: 3px solid var(--red);
-  border-radius: 0 10px 10px 0;
-}
-
-.analysis strong,
-.product-analysis strong {
-  display: block;
-  font-size: 10px;
-  margin-bottom: 8px;
-}
-
-.product-analysis strong { color: var(--red); }
-
-.analysis p,
-.product-analysis p {
-  font-size: 11px;
-  color: #526071;
-  line-height: 1.75;
-  margin: 0;
-}
-
-.pills span {
-  background: white;
-  border: 1px solid #f0cbd3;
-  border-radius: 20px;
-  padding: 5px 9px;
-  color: var(--red);
-  font-size: 10px;
-}
-
-.source {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 14px;
-}
-
-.source small {
-  color: #8993a0;
-  font-size: 10px;
-}
-
-.source a {
-  color: var(--red);
-  font-size: 11px;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.media {
-  height: 185px;
-  overflow: hidden;
-}
-
-.media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.lead .media {
-  height: 100%;
-  min-height: 300px;
-}
-
-.image-credit {
-  color: #8993a0;
-  font-size: 9px;
-  margin-top: 8px;
-}
-
-/* ARAMA VE FİLTRELER */
-
-.toolbar {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  padding: 20px;
-  margin-top: 29px;
-}
-
-.tools-top {
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 12px;
-  margin-bottom: 17px;
-}
-
-.search, .week-select {
-  width: 100%;
-  height: 45px;
-  padding: 0 13px;
-  background: white;
-  border: 1px solid #dfe5ed;
-  border-radius: 10px;
-  color: var(--navy);
-  font-size: 12px;
-}
-
-.filter-label {
-  color: #8792a0;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .8px;
-  margin: 14px 0 9px;
-}
-
-.filter-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.filter {
-  background: white;
-  border: 1px solid #e0e6ee;
-  border-radius: 25px;
-  padding: 8px 11px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #566375;
-}
-
-.filter.active {
-  background: var(--navy);
-  border-color: var(--navy);
-  color: white;
-}
-
-.filter.category-filter.active {
-  background: var(--red);
-  border-color: var(--red);
-}
-
-.results {
-  color: #7d8797;
-  font-size: 11px;
-}
-
-.empty, .error {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.error {
-  background: #fff4f5;
-  color: #a3263c;
-}
+.error{background:#fff4f5;color:#a3263c}
 
 /* ÜRÜN FIRSATLARI */
-
-.opportunity-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+.opportunity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.opportunity-card{
+  background:white;
+  border:1px solid var(--line);
+  border-top:3px solid var(--red);
+  border-radius:15px;
+  padding:20px;
+}
+.opportunity-product{
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+}
+.opportunity-card h3{
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.4;
+  margin:11px 0;
+}
+.opportunity-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.75;
+  margin:0;
 }
 
-.opportunity-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--red);
-  border-radius: 15px;
-  padding: 21px;
+/* YENİ SOSYAL MEDYA KARTLARI */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:17px;
+}
+.social-card{
+  display:flex;
+  flex-direction:column;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
+  overflow:hidden;
+}
+.social-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:18px 20px;
+  background:#f2f5f9;
+  border-bottom:1px solid var(--line);
+}
+.social-company{
+  color:var(--navy);
+  font-size:14px;
+  font-weight:800;
+}
+.social-platform{color:var(--muted);font-size:10px}
+.social-body{padding:20px;flex:1}
+.social-body h3{
+  color:var(--navy);
+  font-size:18px;
+  line-height:1.4;
+  margin:0 0 15px;
+}
+.social-part{
+  border-top:1px solid var(--line);
+  padding:13px 0;
+}
+.social-part:first-of-type{border-top:0}
+.social-part strong{
+  display:block;
+  color:var(--red);
+  font-size:10px;
+  letter-spacing:.4px;
+  margin-bottom:7px;
+}
+.social-part p{
+  color:#596679;
+  font-size:12px;
+  line-height:1.75;
+  margin:0;
+}
+.social-takeaway{
+  background:#f5f7fa;
+  border-left:3px solid var(--red);
+  border-radius:0 10px 10px 0;
+  padding:13px;
+  margin-top:8px;
+}
+.social-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:16px;
+}
+.social-links a{
+  color:var(--red);
+  font-size:11px;
+  font-weight:800;
+  text-decoration:none;
+}
+.social-footer{
+  border-top:1px solid var(--line);
+  padding:12px 20px;
+  color:var(--muted);
+  font-size:10px;
 }
 
-.opportunity-product {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 800;
+/* ALT ALAN */
+.footnote{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:17px;
+  margin-top:27px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.75;
 }
-
-.opportunity-card h3 {
-  color: var(--navy);
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 11px 0;
+footer{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+  border-top:1px solid var(--line);
+  margin-top:32px;
+  padding:20px 0 30px;
+  color:#8993a0;
+  font-size:10px;
 }
-
-.opportunity-card p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.75;
-  margin: 0;
+@media(max-width:950px){
+  .lead{grid-template-columns:1fr}
+  .lead-visual{min-height:190px}
+  .cards{grid-template-columns:repeat(2,1fr)}
 }
-
-/* SOSYAL MEDYA */
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.social-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  overflow: hidden;
-}
-
-.social-top {
-  background: #f2f6fa;
-  border-bottom: 1px solid var(--line);
-  padding: 18px 20px;
-}
-
-.social-company {
-  color: var(--navy);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.social-platform {
-  color: var(--muted);
-  font-size: 10px;
-  margin-top: 5px;
-}
-
-.social-body { padding: 20px; }
-
-.social-body h3 {
-  color: var(--navy);
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 0 0 12px;
-}
-
-.social-body p {
-  color: #596679;
-  font-size: 12px;
-  line-height: 1.75;
-}
-
-.social-analysis {
-  background: #f5f7fa;
-  border-left: 3px solid var(--red);
-  padding: 13px;
-  border-radius: 0 10px 10px 0;
-  margin: 15px 0;
-}
-
-.social-analysis strong {
-  color: var(--red);
-  font-size: 10px;
-}
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.social-links a {
-  color: var(--red);
-  font-size: 11px;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* ALT BİLGİ */
-
-.footnote {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 18px;
-  margin-top: 28px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.75;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 35px;
-  padding: 20px 0 30px;
-  border-top: 1px solid var(--line);
-  color: #8792a0;
-  font-size: 10px;
-}
-
-/* TABLET */
-
-@media (max-width: 950px) {
-  .lead { grid-template-columns: 1fr; }
-  .lead-visual { min-height: 210px; }
-  .cards { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* TELEFON */
-
-@media (max-width: 650px) {
-  .header-inner {
-    min-height: 120px;
-    align-items: flex-start;
-    gap: 9px;
-    padding: 15px 0;
+@media(max-width:650px){
+  .header-inner{
+    align-items:flex-start;
+    min-height:112px;
+    padding:14px 0;
+    gap:8px;
   }
-
-  .brand {
-    flex: 1;
-    min-width: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  .brand{
+    flex:1;
+    min-width:0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
   }
-
-  .logo-box {
-    width: 155px;
-    max-width: 155px;
-    flex: 0 0 auto;
+  .logo-box{width:130px;flex:0 0 auto}
+  .logo-box img{max-height:52px}
+  .brand-divider{display:none}
+  .dept{font-size:9px}
+  .brand-title{font-size:17px}
+  .share{padding:9px;font-size:10px}
+  .hero{padding:22px;margin-top:13px}
+  .hero h1{font-size:24px}
+  .hero p{font-size:11px}
+  .takeaway{display:block;padding:16px}
+  .takeaway-label{margin-bottom:7px}
+  .takeaway-text{font-size:12px}
+  .insights,.number-grid,.cards,
+  .opportunity-grid,.social-grid{
+    grid-template-columns:1fr;
   }
-
-  .logo-box img { max-height: 60px; }
-  .brand-divider { display: none; }
-  .dept { font-size: 9px; }
-  .brand-title { font-size: 17px; }
-
-  .share {
-    font-size: 10px;
-    padding: 9px;
+  .executive{padding:19px}
+  .tools-top{grid-template-columns:1fr}
+  .filter-row{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding-bottom:5px;
   }
-
-  .hero {
-    padding: 27px 23px;
-    margin-top: 13px;
-  }
-
-  .hero h1 { font-size: 28px; }
-
-  .insights,
-  .number-grid,
-  .cards,
-  .opportunity-grid,
-  .social-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .executive { padding: 19px; }
-  .tools-top { grid-template-columns: 1fr; }
-
-  .filter-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 6px;
-  }
-
-  .filter { white-space: nowrap; }
-  .section-top h2 { font-size: 20px; }
-  .lead-content { padding: 22px; }
-  .lead .media { min-height: 190px; }
+  .filter{white-space:nowrap}
+  .section-top h2{font-size:20px}
+  .lead-content{padding:21px}
+  .lead .media{min-height:180px}
 }
 </style>
 </head>
@@ -791,12 +649,10 @@ footer {
         <img
           id="brandLogo"
           src="./turkish-cargo-logo.png"
-          alt="Turkish Cargo logosu"
+          alt="Turkish Cargo"
         >
       </div>
-
       <div class="brand-divider"></div>
-
       <div>
         <div class="dept">
           KARGO ÜRÜN VE POSTA MÜDÜRLÜĞÜ
@@ -806,7 +662,6 @@ footer {
         </div>
       </div>
     </div>
-
     <button class="share" id="shareButton">
       ↗ Paylaş
     </button>
@@ -819,18 +674,12 @@ footer {
     <div class="eyebrow" id="heroEyebrow">
       GÜNCEL SAYI
     </div>
-
-    <h1>
-      Hava Kargo ve Lojistikte Haftanın Gündemi
-    </h1>
-
+    <h1>Hava Kargo ve Lojistikte Haftanın Gündemi</h1>
     <p>
-      Küresel hava kargo pazarı, havacılık,
-      endüstri, e-ticaret, posta ve teknolojideki
-      gelişmelerin özetleri, analizleri ve
-      ürünlerimiz açısından değerlendirmeleri.
+      Küresel pazar, havacılık, endüstri,
+      e-ticaret, posta ve teknolojideki gelişmeler;
+      sektör analizleri ve ürün perspektifleri.
     </p>
-
     <div class="hero-foot">
       <span id="heroWeek">Hafta yükleniyor...</span>
       <span id="heroCount"></span>
@@ -838,7 +687,12 @@ footer {
     </div>
   </section>
 
-  <!-- YÖNETİCİ ÖZETİ -->
+  <section class="takeaway hidden" id="takeawaySection">
+    <div class="takeaway-label">
+      HAFTANIN STRATEJİK ÇIKARIMI
+    </div>
+    <div class="takeaway-text" id="takeawayText"></div>
+  </section>
 
   <section class="section" id="summarySection">
     <div class="section-top">
@@ -848,13 +702,10 @@ footer {
       </div>
       <span class="note">3 temel çıkarım</span>
     </div>
-
     <div class="executive">
       <div class="insights" id="insights"></div>
     </div>
   </section>
-
-  <!-- HAFTANIN SAYILARI -->
 
   <section class="section hidden" id="numbersSection">
     <div class="section-top">
@@ -863,11 +714,8 @@ footer {
         <h2>Haftanın Sayıları</h2>
       </div>
     </div>
-
     <div class="number-grid" id="numbersRoot"></div>
   </section>
-
-  <!-- MANŞET -->
 
   <section class="section" id="leadSection">
     <div class="section-top">
@@ -876,11 +724,8 @@ footer {
         <h2>Haftanın Manşeti</h2>
       </div>
     </div>
-
     <div id="leadRoot"></div>
   </section>
-
-  <!-- ÖNCELİKLİ HABERLER -->
 
   <section class="section" id="spotlightSection">
     <div class="section-top">
@@ -889,11 +734,8 @@ footer {
         <h2>Öne Çıkan Gelişmeler</h2>
       </div>
     </div>
-
     <div class="cards" id="spotlightRoot"></div>
   </section>
-
-  <!-- ARAMA, ARŞİV VE FİLTRELER -->
 
   <section class="toolbar">
     <div class="tools-top">
@@ -903,20 +745,15 @@ footer {
         type="search"
         placeholder="Haber, şirket veya ürün ara..."
       >
-
       <select id="weekSelect" class="week-select">
         <option>Haftalar yükleniyor...</option>
       </select>
     </div>
-
     <div class="filter-label">HABER KATEGORİSİ</div>
     <div class="filter-row" id="categoryFilters"></div>
-
     <div class="filter-label">ÜRÜN PERSPEKTİFİ</div>
     <div class="filter-row" id="productFilters"></div>
   </section>
-
-  <!-- DİĞER HABERLER -->
 
   <section class="section">
     <div class="section-top">
@@ -928,22 +765,14 @@ footer {
       </div>
       <span class="results" id="resultCount"></span>
     </div>
-
     <div class="cards" id="newsRoot"></div>
-
     <div class="empty hidden" id="emptyState">
-      Seçtiğin filtrelere uygun haber bulunamadı.
+      Bu filtrelerle eşleşen haber bulunamadı.
     </div>
-
     <div class="error hidden" id="errorState"></div>
   </section>
 
-  <!-- ÜRÜN FIRSATLARI -->
-
-  <section
-    class="section hidden"
-    id="opportunitiesSection"
-  >
+  <section class="section hidden" id="opportunitiesSection">
     <div class="section-top">
       <div>
         <div class="overline">
@@ -952,14 +781,8 @@ footer {
         <h2>Ürünlerimiz İçin Fırsatlar</h2>
       </div>
     </div>
-
-    <div
-      class="opportunity-grid"
-      id="opportunitiesRoot"
-    ></div>
+    <div class="opportunity-grid" id="opportunitiesRoot"></div>
   </section>
-
-  <!-- SOSYAL MEDYA -->
 
   <section class="section hidden" id="socialSection">
     <div class="section-top">
@@ -969,10 +792,8 @@ footer {
         </div>
         <h2>Sosyal Medyada Öne Çıkanlar</h2>
       </div>
-
       <span class="note" id="socialCount"></span>
     </div>
-
     <div class="social-grid" id="socialRoot"></div>
   </section>
 
@@ -996,61 +817,54 @@ footer {
 
   const $ = id => document.getElementById(id);
 
-  const escapeHTML = value =>
-    String(value ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#39;");
+  const esc = value => String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
 
   function safeUrl(value) {
     if (!value) return "";
-
     try {
-      const url = new URL(value, location.href);
-      return ["http:", "https:"].includes(url.protocol)
-        ? url.href
-        : "";
+      const u = new URL(value,location.href);
+      return ["http:","https:"].includes(u.protocol)
+        ? u.href : "";
     } catch {
       return "";
     }
   }
 
   const categories = [
-    ["all", "Tümü"],
-    ["market", "Pazar ve Rekabet"],
-    ["aviation", "Havacılık ve MRO"],
-    ["automotive", "Otomotiv ve Endüstri"],
-    ["ecommerce", "E-Ticaret ve Posta"],
-    ["digital", "Dijital ve Teknoloji"],
-    ["sustainability", "Sürdürülebilirlik"]
+    ["all","Tümü"],
+    ["market","Pazar ve Rekabet"],
+    ["aviation","Havacılık ve MRO"],
+    ["automotive","Otomotiv ve Endüstri"],
+    ["ecommerce","E-Ticaret ve Posta"],
+    ["digital","Dijital ve Teknoloji"],
+    ["sustainability","Sürdürülebilirlik"]
   ];
 
   const groups = [
     {
-      id: "speed",
-      label: "Hız Odaklı Hizmetler",
-      products: [
-        "TK SMART",
-        "TK PREMIUM",
-        "TK URGENT"
-      ]
+      id:"speed",
+      label:"Hız Odaklı Hizmetler",
+      products:["TK SMART","TK PREMIUM","TK URGENT"]
     },
     {
-      id: "industry",
-      label: "Endüstri Ürünleri",
-      products: ["TK AERO", "TK AUTO"]
+      id:"industry",
+      label:"Endüstri Ürünleri",
+      products:["TK AERO","TK AUTO"]
     },
     {
-      id: "commerce",
-      label: "E-Ticaret ve Posta Ürünleri",
-      products: ["TK COURIER", "POSTA"]
+      id:"commerce",
+      label:"E-Ticaret ve Posta Ürünleri",
+      products:["TK COURIER","POSTA"]
     },
     {
-      id: "special",
-      label: "Özel Kargo Ürünleri",
-      products: [
+      id:"special",
+      label:"Özel Kargo Ürünleri",
+      products:[
         "İlaç ve Sağlık Ürünleri",
         "Canlı Hayvan",
         "Bozulabilir Ürünler",
@@ -1061,11 +875,11 @@ footer {
     }
   ];
 
-  const legacyCategories = {
-    industry: "aviation",
-    mail: "ecommerce",
-    customer: "market",
-    product: "automotive"
+  const legacy = {
+    industry:"aviation",
+    mail:"ecommerce",
+    customer:"market",
+    product:"automotive"
   };
 
   let issue = null;
@@ -1074,551 +888,389 @@ footer {
   let currentWeek = "";
   let activeCategory = "all";
   let activeGroup = "all";
-  let loadSequence = 0;
+  let requestNumber = 0;
 
   function productInfo(item) {
-    const data = item.productRelevance || {};
-
+    const p = item.productRelevance || {};
     return {
-      relevant: !!data.relevant,
-      products: Array.isArray(data.products)
-        ? data.products
-        : [],
-      analysis: data.analysis || ""
+      relevant:!!p.relevant,
+      products:Array.isArray(p.products)?p.products:[],
+      analysis:p.analysis || ""
     };
   }
 
   function categoryOf(item) {
-    return legacyCategories[item.category] ||
-      item.category ||
-      "market";
+    return legacy[item.category] ||
+      item.category || "market";
   }
 
   function itemGroups(item) {
     const products = productInfo(item).products;
-
-    return groups.filter(group =>
-      group.products.some(product =>
-        products.includes(product)
-      )
+    return groups.filter(g =>
+      g.products.some(p => products.includes(p))
     );
   }
 
   function formatDate(value) {
     if (!value) return "";
-
-    const date = new Date(value + "T12:00:00");
-
-    if (Number.isNaN(date.getTime())) {
-      return value;
-    }
-
-    return date.toLocaleDateString("tr-TR", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
+    const date = new Date(value+"T12:00:00");
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleDateString("tr-TR",{
+      day:"numeric",
+      month:"long",
+      year:"numeric"
     });
   }
 
   async function loadJSON(path) {
     const response = await fetch(
-      path + "?v=" + Date.now(),
-      { cache: "no-store" }
+      path+"?v="+Date.now(),
+      {cache:"no-store"}
     );
-
     if (!response.ok) {
       throw new Error(
-        path + " bulunamadı. HTTP " + response.status
+        path+" bulunamadı. HTTP "+response.status
       );
     }
-
     const raw = await response.text();
-
     try {
       return JSON.parse(raw);
-    } catch (error) {
+    } catch(e) {
       throw new Error(
-        path + " dosyasında JSON hatası: " +
-        error.message
+        path+" dosyasında JSON hatası: "+e.message
       );
     }
   }
 
   function sourceHTML(item) {
     const url = safeUrl(item.url);
-
     return `
       <div class="source">
         <small>
-          ${escapeHTML(item.source || "Kaynak")}
-          ·
-          ${escapeHTML(item.publishedDate || "")}
+          ${esc(item.source||"Kaynak")}
+          · ${esc(item.publishedDate||"")}
         </small>
-
         ${url ? `
-          <a
-            href="${escapeHTML(url)}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kaynağı İncele ↗
-          </a>
-        ` : ""}
-      </div>
-    `;
+          <a href="${esc(url)}"
+             target="_blank"
+             rel="noopener noreferrer">
+             Kaynağı İncele ↗
+          </a>` : ""}
+      </div>`;
   }
 
   function detailHTML(item) {
-    const product = productInfo(item);
-
-    if (
-      !item.whyImportant &&
-      !(product.relevant && product.products.length)
-    ) {
+    const p = productInfo(item);
+    if (!item.whyImportant &&
+        !(p.relevant && p.products.length)) {
       return "";
     }
-
-    const why = item.whyImportant ? `
-      <div class="analysis">
-        <strong>NEDEN ÖNEMLİ?</strong>
-        <p>${escapeHTML(item.whyImportant)}</p>
-      </div>
-    ` : "";
-
-    const productBox =
-      product.relevant && product.products.length
-        ? `
-          <div class="product-analysis">
-            <strong>ÜRÜN PERSPEKTİFİ</strong>
-
-            ${product.analysis ? `
-              <p>${escapeHTML(product.analysis)}</p>
-            ` : ""}
-
-            <div class="pills">
-              ${product.products.map(name => `
-                <span>${escapeHTML(name)}</span>
-              `).join("")}
-            </div>
-          </div>
-        `
-        : "";
-
     return `
       <details>
         <summary>Analizi Gör</summary>
-        ${why}
-        ${productBox}
-      </details>
-    `;
+        ${item.whyImportant ? `
+          <div class="analysis">
+            <strong>NEDEN ÖNEMLİ?</strong>
+            <p>${esc(item.whyImportant)}</p>
+          </div>` : ""}
+        ${p.relevant && p.products.length ? `
+          <div class="product-analysis">
+            <strong>ÜRÜN PERSPEKTİFİ</strong>
+            ${p.analysis ? `<p>${esc(p.analysis)}</p>` : ""}
+            <div class="pills">
+              ${p.products.map(x =>
+                `<span>${esc(x)}</span>`
+              ).join("")}
+            </div>
+          </div>` : ""}
+      </details>`;
   }
 
   function imageHTML(item) {
     const url = safeUrl(item.image);
-
     if (!url) return "";
-
     return `
       <div class="media">
-        <img
-          src="${escapeHTML(url)}"
-          alt="${escapeHTML(
-            item.imageCaption || item.title
-          )}"
-          loading="lazy"
-          onerror="this.parentElement.remove()"
-        >
-      </div>
-    `;
+        <img src="${esc(url)}"
+             alt="${esc(item.imageCaption||item.title)}"
+             loading="lazy"
+             onerror="this.parentElement.remove()">
+      </div>`;
   }
 
-  function cardHTML(item, isLead = false) {
-    const category =
-      item.categoryName ||
-      categories.find(
-        entry => entry[0] === categoryOf(item)
-      )?.[1] ||
+  function cardHTML(item,isLead=false) {
+    const category = item.categoryName ||
+      categories.find(c=>c[0]===categoryOf(item))?.[1] ||
       "Sektör";
 
-    const tags = itemGroups(item).map(group => `
-      <span class="tag">
-        ${escapeHTML(group.label)}
-      </span>
-    `).join("");
+    const tags = itemGroups(item).map(g =>
+      `<span class="tag">${esc(g.label)}</span>`
+    ).join("");
 
     const content = `
       <div class="meta">
-        <span class="category">
-          ${escapeHTML(category)}
-        </span>
-
-        <span class="date">
-          ${escapeHTML(item.publishedDate || "")}
-        </span>
+        <span class="category">${esc(category)}</span>
+        <span class="date">${esc(item.publishedDate||"")}</span>
       </div>
-
-      <h3>${escapeHTML(item.title)}</h3>
-
-      <p class="summary">
-        ${escapeHTML(item.summary)}
-      </p>
-
-      ${tags ? `
-        <div class="tags">${tags}</div>
-      ` : ""}
-
+      <h3>${esc(item.title)}</h3>
+      <p class="summary">${esc(item.summary)}</p>
+      ${tags?`<div class="tags">${tags}</div>`:""}
       <div class="bottom">
         ${detailHTML(item)}
         ${sourceHTML(item)}
-
         ${item.imageCredit ? `
           <div class="image-credit">
-            Görsel: ${escapeHTML(item.imageCredit)}
-          </div>
-        ` : ""}
-      </div>
-    `;
+            Görsel: ${esc(item.imageCredit)}
+          </div>` : ""}
+      </div>`;
 
     if (isLead) {
       const visual = imageHTML(item) || `
         <div class="lead-visual">
           <div>
-            <strong>
-              ${escapeHTML(item.metric || "↗")}
-            </strong>
-            <span>
-              ${escapeHTML(
-                item.metricLabel || "SEKTÖR GÜNDEMİ"
-              )}
-            </span>
+            <strong>${esc(item.metric||"↗")}</strong>
+            <span>${esc(item.metricLabel||"SEKTÖR GÜNDEMİ")}</span>
           </div>
-        </div>
-      `;
-
+        </div>`;
       return `
         <article class="lead">
-          <div class="lead-content">
-            ${content}
-          </div>
+          <div class="lead-content">${content}</div>
           ${visual}
-        </article>
-      `;
+        </article>`;
     }
 
     return `
       <article class="card">
         ${imageHTML(item)}
-        <div class="card-body">
-          ${content}
-        </div>
-      </article>
-    `;
+        <div class="card-body">${content}</div>
+      </article>`;
   }
 
   function renderFilters() {
     $("categoryFilters").innerHTML =
-      categories.map(([id, label]) => `
-        <button
-          type="button"
+      categories.map(([id,label])=>`
+        <button type="button"
           class="filter category-filter
-            ${activeCategory === id ? "active" : ""}"
-          data-cat="${id}"
-        >
-          ${escapeHTML(label)}
-        </button>
-      `).join("");
+          ${activeCategory===id?"active":""}"
+          data-cat="${id}">
+          ${esc(label)}
+        </button>`).join("");
 
     $("productFilters").innerHTML =
-      [
-        { id: "all", label: "Tümü" },
-        ...groups
-      ].map(group => `
-        <button
-          type="button"
-          class="filter
-            ${activeGroup === group.id ? "active" : ""}"
-          data-group="${group.id}"
-        >
-          ${escapeHTML(group.label)}
-        </button>
-      `).join("");
+      [{id:"all",label:"Tümü"},...groups].map(g=>`
+        <button type="button"
+          class="filter ${activeGroup===g.id?"active":""}"
+          data-group="${g.id}">
+          ${esc(g.label)}
+        </button>`).join("");
   }
 
   function renderInsights() {
-    const themes =
-      issue.weeklyThemes ||
+    const themes = issue.weeklyThemes ||
       issue.insights ||
-      items.slice(0, 3).map(item => ({
-        label: item.categoryName,
-        title: item.title,
-        text: item.whyImportant || ""
+      items.slice(0,3).map(item=>({
+        label:item.categoryName,
+        title:item.title,
+        text:item.whyImportant||""
       }));
 
-    $("insights").innerHTML =
-      themes.slice(0, 3).map(theme => `
+    $("insights").innerHTML = themes.slice(0,3)
+      .map(t=>`
         <div class="insight">
-          <small>
-            ${escapeHTML(theme.label || "")}
-          </small>
-
-          <h3>
-            ${escapeHTML(theme.title || theme.text)}
-          </h3>
-
-          ${theme.title ? `
-            <p>${escapeHTML(theme.text || "")}</p>
-          ` : ""}
-        </div>
-      `).join("");
+          <small>${esc(t.label||"")}</small>
+          <h3>${esc(t.title||t.text)}</h3>
+          ${t.title?`<p>${esc(t.text||"")}</p>`:""}
+        </div>`).join("");
 
     $("summarySection").classList.toggle(
-      "hidden",
-      themes.length === 0
+      "hidden",!themes.length
     );
   }
 
   function renderExtraSections() {
     const numbers = Array.isArray(issue.weeklyNumbers)
-      ? issue.weeklyNumbers
-      : [];
+      ? issue.weeklyNumbers : [];
 
-    const opportunities =
-      Array.isArray(issue.opportunities)
-        ? issue.opportunities
-        : [];
+    const opportunities = Array.isArray(issue.opportunities)
+      ? issue.opportunities : [];
 
     $("numbersSection").classList.toggle(
-      "hidden",
-      numbers.length === 0
+      "hidden",!numbers.length
     );
 
-    $("numbersRoot").innerHTML =
-      numbers.map(item => {
-        const url = safeUrl(item.url);
-
-        return `
-          <article class="number-card">
-            <div class="number-value">
-              ${escapeHTML(item.value)}
-            </div>
-
-            <div class="number-title">
-              ${escapeHTML(item.title)}
-            </div>
-
-            <div class="number-note">
-              ${escapeHTML(item.note)}
-            </div>
-
-            ${url ? `
-              <a
-                class="number-source"
-                href="${escapeHTML(url)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Kaynağı İncele ↗
-              </a>
-            ` : ""}
-          </article>
-        `;
-      }).join("");
+    $("numbersRoot").innerHTML = numbers.map(n=>{
+      const url = safeUrl(n.url);
+      return `
+        <article class="number-card">
+          <div class="number-value">${esc(n.value)}</div>
+          <div class="number-title">${esc(n.title)}</div>
+          <div class="number-note">${esc(n.note)}</div>
+          ${url?`
+            <a class="number-source"
+               href="${esc(url)}"
+               target="_blank"
+               rel="noopener noreferrer">
+               Kaynağı İncele ↗
+            </a>`:""}
+        </article>`;
+    }).join("");
 
     $("opportunitiesSection").classList.toggle(
-      "hidden",
-      opportunities.length === 0
+      "hidden",!opportunities.length
     );
 
     $("opportunitiesRoot").innerHTML =
-      opportunities.map(item => `
+      opportunities.map(o=>`
         <article class="opportunity-card">
           <div class="opportunity-product">
-            ${escapeHTML(item.product)}
+            ${esc(o.product)}
           </div>
-
-          <h3>${escapeHTML(item.title)}</h3>
-
-          <p>${escapeHTML(item.text)}</p>
-        </article>
-      `).join("");
+          <h3>${esc(o.title)}</h3>
+          <p>${esc(o.text)}</p>
+        </article>`).join("");
   }
 
   function matches(item) {
-    const query = $("search").value
-      .toLocaleLowerCase("tr-TR")
-      .trim();
+    const q = $("search").value
+      .toLocaleLowerCase("tr-TR").trim();
 
-    const product = productInfo(item);
+    const p = productInfo(item);
 
     const searchable = [
-      item.title,
-      item.summary,
-      item.whyImportant,
-      item.company,
-      item.country,
-      item.source,
-      item.categoryName,
-      product.analysis,
-      ...product.products,
-      ...itemGroups(item).map(group => group.label)
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLocaleLowerCase("tr-TR");
+      item.title,item.summary,item.whyImportant,
+      item.company,item.country,item.source,
+      item.categoryName,p.analysis,
+      ...p.products,
+      ...itemGroups(item).map(g=>g.label)
+    ].filter(Boolean).join(" ")
+     .toLocaleLowerCase("tr-TR");
 
     return (
-      (
-        activeCategory === "all" ||
-        categoryOf(item) === activeCategory
-      ) &&
-      (
-        activeGroup === "all" ||
-        itemGroups(item).some(
-          group => group.id === activeGroup
-        )
-      ) &&
-      searchable.includes(query)
+      (activeCategory==="all" ||
+        categoryOf(item)===activeCategory) &&
+      (activeGroup==="all" ||
+        itemGroups(item).some(g=>g.id===activeGroup)) &&
+      searchable.includes(q)
     );
   }
 
   function render() {
     const filtered = items.filter(matches);
-
     const unfiltered =
-      activeCategory === "all" &&
-      activeGroup === "all" &&
+      activeCategory==="all" &&
+      activeGroup==="all" &&
       !$("search").value.trim();
 
     const lead = unfiltered
-      ? filtered.find(item =>
-          item.priority === "lead" ||
-          item.featured
-        )
+      ? filtered.find(i=>i.priority==="lead"||i.featured)
       : null;
 
     const spotlight = unfiltered
-      ? filtered.filter(item =>
-          item !== lead &&
-          item.priority === "spotlight"
+      ? filtered.filter(i=>
+          i!==lead && i.priority==="spotlight"
         )
       : [];
 
-    const others = filtered.filter(item =>
-      item !== lead &&
-      !spotlight.includes(item)
+    const others = filtered.filter(i=>
+      i!==lead && !spotlight.includes(i)
     );
 
-    $("leadSection").classList.toggle(
-      "hidden",
-      !lead
-    );
-
+    $("leadSection").classList.toggle("hidden",!lead);
     $("spotlightSection").classList.toggle(
-      "hidden",
-      spotlight.length === 0
+      "hidden",!spotlight.length
     );
 
-    $("leadRoot").innerHTML = lead
-      ? cardHTML(lead, true)
-      : "";
+    $("leadRoot").innerHTML =
+      lead?cardHTML(lead,true):"";
 
     $("spotlightRoot").innerHTML =
-      spotlight.map(item =>
-        cardHTML(item)
-      ).join("");
+      spotlight.map(i=>cardHTML(i)).join("");
 
     $("newsRoot").innerHTML =
-      others.map(item =>
-        cardHTML(item)
-      ).join("");
+      others.map(i=>cardHTML(i)).join("");
 
     $("listTitle").textContent = unfiltered
-      ? "Sektörden Diğer Haberler"
-      : "Filtrelenen Haberler";
+      ?"Sektörden Diğer Haberler"
+      :"Filtrelenen Haberler";
 
     $("resultCount").textContent =
-      filtered.length + " haber";
+      filtered.length+" haber";
 
     $("emptyState").classList.toggle(
-      "hidden",
-      filtered.length !== 0
+      "hidden",filtered.length!==0
     );
 
     renderFilters();
   }
 
   function socialCardHTML(item) {
-    const postUrl = safeUrl(item.postUrl);
-    const storyUrl = safeUrl(item.storyUrl);
+    const post = safeUrl(item.postUrl);
+    const story = safeUrl(item.storyUrl);
+
+    const subject = item.subject || item.summary || "";
+    const message = item.competitorMessage ||
+      item.communicationInsight || "";
+    const takeaway = item.ourTakeaway ||
+      item.communicationInsight || "";
 
     return `
       <article class="social-card">
-        <div class="social-top">
+        <div class="social-head">
           <div class="social-company">
-            ${escapeHTML(item.company || "")}
+            ${esc(item.company||"")}
           </div>
-
           <div class="social-platform">
-            ${escapeHTML(
-              item.platform || "LinkedIn"
-            )}
-            ·
-            ${escapeHTML(item.publishedDate || "")}
+            ${esc(item.platform||"LinkedIn")}
+            · ${esc(item.publishedDate||"")}
           </div>
         </div>
 
         <div class="social-body">
-          <h3>${escapeHTML(item.title)}</h3>
+          <h3>${esc(item.title)}</h3>
 
-          <p>${escapeHTML(item.summary)}</p>
+          <div class="social-part">
+            <strong>PAYLAŞIMIN KONUSU</strong>
+            <p>${esc(subject)}</p>
+          </div>
 
-          ${item.communicationInsight ? `
-            <div class="social-analysis">
-              <strong>
-                İLETİŞİM AÇISINDAN NEDEN ÖNEMLİ?
-              </strong>
+          <div class="social-part">
+            <strong>RAKİBİN VURGULADIĞI MESAJ</strong>
+            <p>${esc(message)}</p>
+          </div>
 
-              <p>
-                ${escapeHTML(
-                  item.communicationInsight
-                )}
-              </p>
-            </div>
-          ` : ""}
+          <div class="social-part social-takeaway">
+            <strong>BİZİM İÇİN ÇIKARIM</strong>
+            <p>${esc(takeaway)}</p>
+          </div>
 
-          ${item.relatedProduct ? `
+          ${item.relatedProduct?`
             <div class="tags">
               <span class="tag">
-                İlgili ürün:
-                ${escapeHTML(item.relatedProduct)}
+                ${esc(item.relatedProduct)}
               </span>
-            </div>
-          ` : ""}
+            </div>`:""}
 
           <div class="social-links">
-            ${postUrl ? `
-              <a
-                href="${escapeHTML(postUrl)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn Hesabı ↗
-              </a>
-            ` : ""}
+            ${post?`
+              <a href="${esc(post)}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 ${esc(item.postLinkLabel||"LinkedIn Hesabı")} ↗
+              </a>`:""}
 
-            ${storyUrl ? `
-              <a
-                href="${escapeHTML(storyUrl)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Video ve Hikâye ↗
-              </a>
-            ` : ""}
+            ${story?`
+              <a href="${esc(story)}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 İçeriği İncele ↗
+              </a>`:""}
           </div>
         </div>
-      </article>
-    `;
+
+        <div class="social-footer">
+          Rakip iletişimi ve ürün perspektifi
+        </div>
+      </article>`;
   }
 
   async function loadSocial(date) {
@@ -1627,28 +1279,21 @@ footer {
 
     try {
       const response = await fetch(
-        "./data/sosyal-" +
-        encodeURIComponent(date) +
-        ".json?v=" +
-        Date.now(),
-        { cache: "no-store" }
+        "./data/sosyal-"+encodeURIComponent(date)+
+        ".json?v="+Date.now(),
+        {cache:"no-store"}
       );
 
-      if (response.status === 404) return;
-
+      if (response.status===404) return;
       if (!response.ok) {
-        throw new Error(
-          "Sosyal medya dosyası açılamadı."
-        );
+        throw new Error("Sosyal medya dosyası açılamadı.");
       }
 
       const data = await response.json();
-
-      if (date !== currentWeek) return;
+      if (date!==currentWeek) return;
 
       const entries = Array.isArray(data.items)
-        ? data.items
-        : [];
+        ? data.items : [];
 
       if (!entries.length) return;
 
@@ -1656,114 +1301,88 @@ footer {
         entries.map(socialCardHTML).join("");
 
       $("socialCount").textContent =
-        entries.length + " paylaşım";
+        entries.length+" paylaşım";
 
       $("socialSection").classList.remove("hidden");
-    } catch (error) {
-      console.warn("Sosyal medya bölümü:", error);
+    } catch(e) {
+      console.warn("Sosyal medya:",e);
     }
   }
 
   async function loadWeek(date) {
-    const requestId = ++loadSequence;
+    const requestId = ++requestNumber;
 
     try {
       $("errorState").classList.add("hidden");
 
       const path =
-        "./data/" +
-        encodeURIComponent(date) +
-        ".json";
+        "./data/"+encodeURIComponent(date)+".json";
 
-      const loadedIssue = await loadJSON(path);
+      const loaded = await loadJSON(path);
+      if (requestId!==requestNumber) return;
 
-      if (requestId !== loadSequence) return;
-
-      issue = loadedIssue;
-
-      items = Array.isArray(issue.items)
-        ? issue.items
-        : [];
-
+      issue = loaded;
+      items = Array.isArray(issue.items)?issue.items:[];
       currentWeek = date;
       activeCategory = "all";
       activeGroup = "all";
-
       $("search").value = "";
 
-      const label =
-        issue.title ||
-        issue.date ||
-        weeks.find(
-          week => week.date === date
-        )?.title ||
-        date;
+      const selectedWeek = weeks.find(w=>w.date===date);
+      const isCurrent = selectedWeek?.status==="current";
 
-      $("heroWeek").textContent = label;
+      $("heroWeek").textContent =
+        issue.title||selectedWeek?.title||date;
 
       $("heroCount").textContent =
-        items.length + " haber";
+        items.length+" haber";
 
       $("heroUpdate").textContent =
-        "Son güncelleme: " +
-        formatDate(issue.updatedAt || date);
-
-      const selectedWeek = weeks.find(
-        week => week.date === date
-      );
-
-      const isCurrent =
-        selectedWeek?.status === "current";
+        "Son güncelleme: "+
+        formatDate(issue.updatedAt||date);
 
       $("heroEyebrow").textContent =
-        isCurrent
-          ? "GÜNCEL SAYI"
-          : "ARŞİV SAYISI";
+        isCurrent?"GÜNCEL SAYI":"ARŞİV SAYISI";
+
+      const takeaway = issue.strategicTakeaway||"";
+      $("takeawayText").textContent = takeaway;
+      $("takeawaySection").classList.toggle(
+        "hidden",!takeaway
+      );
 
       $("editorialNote").textContent =
-        issue.editorialNote ||
-        "Haberler belirtilen kaynaklara dayanır. " +
-        "Ürün perspektifleri editoryal değerlendirmedir.";
+        issue.editorialNote||
+        "Kaynak ve yayın tarihleri haber kartlarında "+
+        "belirtilmiştir. Ürün perspektifleri "+
+        "editoryal değerlendirmedir.";
 
       $("weekSelect").value = date;
 
       renderInsights();
       renderExtraSections();
       render();
-
       loadSocial(date);
 
       const url = new URL(location.href);
-      url.searchParams.set("week", date);
-
+      url.searchParams.set("week",date);
       history.replaceState(
-        null,
-        "",
-        url.pathname +
-        url.search +
-        url.hash
+        null,"",url.pathname+url.search+url.hash
       );
-    } catch (error) {
-      if (requestId !== loadSequence) return;
-
-      console.error(error);
+    } catch(e) {
+      if (requestId!==requestNumber) return;
+      console.error(e);
 
       $("errorState").textContent =
-        "Bülten yüklenemedi. " +
-        error.message;
+        "Bülten yüklenemedi. "+e.message;
 
       $("errorState").classList.remove("hidden");
 
       [
-        "leadSection",
-        "spotlightSection",
-        "summarySection",
-        "numbersSection",
-        "opportunitiesSection",
+        "takeawaySection","summarySection",
+        "numbersSection","leadSection",
+        "spotlightSection","opportunitiesSection",
         "socialSection"
-      ].forEach(id =>
-        $(id).classList.add("hidden")
-      );
+      ].forEach(id=>$(id).classList.add("hidden"));
 
       $("leadRoot").innerHTML = "";
       $("spotlightRoot").innerHTML = "";
@@ -1773,251 +1392,137 @@ footer {
 
   async function start() {
     try {
-      const data = await loadJSON(
-        "./data/index.json"
-      );
-
-      weeks = Array.isArray(data.weeks)
-        ? data.weeks
-        : [];
+      const data = await loadJSON("./data/index.json");
+      weeks = Array.isArray(data.weeks)?data.weeks:[];
 
       if (!weeks.length) {
-        throw new Error(
-          "Hafta listesi boş."
-        );
+        throw new Error("Hafta listesi boş.");
       }
 
-      weeks.sort((a, b) =>
-        b.date.localeCompare(a.date)
-      );
+      weeks.sort((a,b)=>b.date.localeCompare(a.date));
 
       $("weekSelect").innerHTML =
-        weeks.map(week => `
-          <option
-            value="${escapeHTML(week.date)}"
-          >
-            ${escapeHTML(week.title)}
-            ${week.status === "current"
-              ? " · Güncel Sayı"
-              : ""}
-          </option>
-        `).join("");
+        weeks.map(w=>`
+          <option value="${esc(w.date)}">
+            ${esc(w.title)}
+            ${w.status==="current"?" · Güncel Sayı":""}
+          </option>`).join("");
 
       const requested =
-        new URLSearchParams(
-          location.search
-        ).get("week");
+        new URLSearchParams(location.search).get("week");
 
-      const selected = weeks.some(
-        week => week.date === requested
-      )
+      const selected = weeks.some(w=>w.date===requested)
         ? requested
-        : (
-            weeks.find(
-              week => week.status === "current"
-            ) || weeks[0]
-          ).date;
+        : (weeks.find(w=>w.status==="current")||weeks[0]).date;
 
       await loadWeek(selected);
-    } catch (error) {
-      console.error(error);
-
+    } catch(e) {
+      console.error(e);
       $("errorState").textContent =
-        "Hafta listesi yüklenemedi. " +
-        error.message;
-
+        "Hafta listesi yüklenemedi. "+e.message;
       $("errorState").classList.remove("hidden");
     }
   }
 
-  $("categoryFilters").addEventListener(
-    "click",
-    event => {
-      const button = event.target.closest(
-        "button[data-cat]"
-      );
+  $("categoryFilters").addEventListener("click",e=>{
+    const b = e.target.closest("button[data-cat]");
+    if (!b) return;
+    activeCategory = b.dataset.cat;
+    render();
+  });
 
-      if (!button) return;
+  $("productFilters").addEventListener("click",e=>{
+    const b = e.target.closest("button[data-group]");
+    if (!b) return;
+    activeGroup = b.dataset.group;
+    render();
+  });
 
-      activeCategory = button.dataset.cat;
-      render();
-    }
-  );
-
-  $("productFilters").addEventListener(
-    "click",
-    event => {
-      const button = event.target.closest(
-        "button[data-group]"
-      );
-
-      if (!button) return;
-
-      activeGroup = button.dataset.group;
-      render();
-    }
-  );
-
-  $("search").addEventListener(
-    "input",
-    render
-  );
+  $("search").addEventListener("input",render);
 
   $("weekSelect").addEventListener(
-    "change",
-    event => loadWeek(event.target.value)
+    "change",e=>loadWeek(e.target.value)
   );
 
-  $("shareButton").addEventListener(
-    "click",
-    async () => {
-      const url = location.href;
-
-      try {
-        if (navigator.share) {
-          await navigator.share({
-            title:
-              "Kargo ve Lojistik Haftalık Bülteni",
-            url
-          });
-        } else {
-          await navigator.clipboard.writeText(url);
-
-          $("shareButton").textContent =
-            "✓ Kopyalandı";
-        }
-      } catch (error) {
-        console.log(error);
+  $("shareButton").addEventListener("click",async()=>{
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title:"Kargo ve Lojistik Haftalık Bülteni",
+          url:location.href
+        });
+      } else {
+        await navigator.clipboard.writeText(location.href);
+        $("shareButton").textContent = "✓ Kopyalandı";
       }
+    } catch(e) {
+      console.log(e);
     }
-  );
+  });
 
-  /* LOGO ÇEVRESİNDEKİ BOŞLUKLARI KIRP */
-
+  /* LOGONUN GEREKSİZ BOŞLUKLARINI KIRP */
   function duzenleLogo() {
     const logo = $("brandLogo");
     if (!logo) return;
 
     const image = new Image();
 
-    image.onload = () => {
+    image.onload = ()=>{
       try {
-        const width = image.naturalWidth;
-        const height = image.naturalHeight;
+        const w = image.naturalWidth;
+        const h = image.naturalHeight;
+        if (!w||!h) return;
 
-        if (!width || !height) return;
+        const canvas = document.createElement("canvas");
+        canvas.width=w;
+        canvas.height=h;
+        const ctx=canvas.getContext("2d");
+        ctx.drawImage(image,0,0);
+        const px=ctx.getImageData(0,0,w,h).data;
 
-        const canvas =
-          document.createElement("canvas");
+        let minX=w,minY=h,maxX=-1,maxY=-1;
 
-        canvas.width = width;
-        canvas.height = height;
-
-        const context = canvas.getContext("2d");
-
-        context.drawImage(image, 0, 0);
-
-        const pixels = context.getImageData(
-          0, 0, width, height
-        ).data;
-
-        let minX = width;
-        let minY = height;
-        let maxX = -1;
-        let maxY = -1;
-
-        for (let y = 0; y < height; y++) {
-          for (let x = 0; x < width; x++) {
-            const i = (y * width + x) * 4;
-
-            const alpha = pixels[i + 3];
-            const red = pixels[i];
-            const green = pixels[i + 1];
-            const blue = pixels[i + 2];
-
-            const visible =
-              alpha > 45 &&
-              (
-                red < 235 ||
-                green < 235 ||
-                blue < 235
-              );
-
-            if (!visible) continue;
-
-            minX = Math.min(minX, x);
-            maxX = Math.max(maxX, x);
-            minY = Math.min(minY, y);
-            maxY = Math.max(maxY, y);
+        for(let y=0;y<h;y++){
+          for(let x=0;x<w;x++){
+            const i=(y*w+x)*4;
+            const visible=px[i+3]>45 &&
+              (px[i]<235||px[i+1]<235||px[i+2]<235);
+            if(!visible) continue;
+            minX=Math.min(minX,x);
+            minY=Math.min(minY,y);
+            maxX=Math.max(maxX,x);
+            maxY=Math.max(maxY,y);
           }
         }
 
-        if (maxX < minX || maxY < minY) return;
+        if(maxX<minX||maxY<minY) return;
 
-        const padding = Math.max(
-          4,
-          Math.round(
-            (maxX - minX + 1) * .035
-          )
+        const pad=Math.max(
+          4,Math.round((maxX-minX+1)*.035)
         );
+        const x=Math.max(0,minX-pad);
+        const y=Math.max(0,minY-pad);
+        const cw=Math.min(w-x,maxX-minX+1+pad*2);
+        const ch=Math.min(h-y,maxY-minY+1+pad*2);
 
-        const x = Math.max(
-          0,
-          minX - padding
-        );
-
-        const y = Math.max(
-          0,
-          minY - padding
-        );
-
-        const cropWidth = Math.min(
-          width - x,
-          maxX - minX + 1 + padding * 2
-        );
-
-        const cropHeight = Math.min(
-          height - y,
-          maxY - minY + 1 + padding * 2
-        );
-
-        const trimmed =
-          document.createElement("canvas");
-
-        trimmed.width = cropWidth;
-        trimmed.height = cropHeight;
-
+        const trimmed=document.createElement("canvas");
+        trimmed.width=cw;
+        trimmed.height=ch;
         trimmed.getContext("2d").drawImage(
-          image,
-          x,
-          y,
-          cropWidth,
-          cropHeight,
-          0,
-          0,
-          cropWidth,
-          cropHeight
+          image,x,y,cw,ch,0,0,cw,ch
         );
-
-        logo.src = trimmed.toDataURL(
-          "image/png"
-        );
-      } catch (error) {
-        console.warn(
-          "Logo orijinal hâliyle gösteriliyor.",
-          error
-        );
+        logo.src=trimmed.toDataURL("image/png");
+      } catch(e) {
+        console.warn("Orijinal logo kullanılıyor.",e);
       }
     };
 
-    image.src =
-      "./turkish-cargo-logo.png?v=8";
+    image.src="./turkish-cargo-logo.png?v=9";
   }
 
   duzenleLogo();
   start();
 })();
 </script>
-
 </body>
 </html>
