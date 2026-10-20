@@ -1,1528 +1,1252 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111d33">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101c32">
 <title>Kargo ve Lojistik Haftalık Bülteni</title>
 <style>
+
 :root{
-  --navy:#111d33;
-  --red:#c8102e;
-  --ink:#233044;
-  --muted:#697587;
-  --line:#e3e8ef;
-  --bg:#f5f7fa;
+
+  --red:#c8102e;--navy:#101c32;--ink:#1c2739;
+
+  --muted:#667184;--line:#e4e9f0;--paper:#f5f7fa;
+
 }
+
 *{box-sizing:border-box}
+
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:Arial,Helvetica,sans-serif;
+
+  margin:0;background:var(--paper);color:var(--ink);
+
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif
+
 }
+
 button,input,select{font:inherit}
+
 button{cursor:pointer}
+
 a{color:inherit}
-.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+
+.wrap{width:min(1190px,calc(100% - 32px));margin:auto}
+
+.topbar{background:white;border-bottom:1px solid var(--line)}
+
+.topbar-inner{
+
+  min-height:110px;display:flex;align-items:center;
+
+  justify-content:space-between;gap:18px;padding:15px 0
+
+}
+
+.brand{display:flex;align-items:center;gap:18px;min-width:0}
+
+.logo{width:220px;max-height:90px;object-fit:contain}
+
+.brand-divider{width:1px;height:42px;background:#dce2e9}
+
+.dept{font-size:10px;font-weight:800;color:var(--red);letter-spacing:1px}
+
+.brand-title{font-size:23px;font-weight:800;color:var(--navy);margin-top:5px}
+
+.share{
+
+  border:1px solid var(--line);background:white;color:var(--navy);
+
+  border-radius:10px;padding:11px;font-size:12px;font-weight:700
+
+}
+
+.hero{
+
+  background:var(--navy);color:white;margin-top:22px;
+
+  padding:38px 40px;border-radius:20px;position:relative;overflow:hidden
+
+}
+
+.hero:after{
+
+  content:"";position:absolute;width:310px;height:310px;
+
+  border:1px solid #ffffff20;border-radius:50%;right:-80px;top:-130px;
+
+  box-shadow:0 0 0 60px #ffffff08,0 0 0 115px #ffffff05
+
+}
+
+.eyebrow{color:#ff9eab;font-size:10px;font-weight:800;letter-spacing:1.7px}
+
+.hero h1{font-size:clamp(27px,4vw,43px);line-height:1.15;margin:15px 0}
+
+.hero p{font-size:13px;line-height:1.7;color:#c7d2e1;max-width:690px}
+
+.hero-foot{display:flex;flex-wrap:wrap;gap:20px;margin-top:25px;padding-top:16px;border-top:1px solid #ffffff30}
+
+.hero-foot span{font-size:11px;color:#d4deeb}
+
+.toolbar{
+
+  background:white;border:1px solid var(--line);border-radius:18px;
+
+  padding:23px;margin-top:23px;box-shadow:0 8px 30px #101c3208
+
+}
+
+.overline{font-size:10px;font-weight:800;color:var(--red);letter-spacing:1.3px;text-transform:uppercase}
+
+.toolbar h2{font-size:22px;color:var(--navy);margin:7px 0}
+
+.toolbar p{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 18px}
+
+.tools{display:grid;grid-template-columns:1fr 250px;gap:10px;margin-bottom:17px}
+
+.search,.week{
+
+  width:100%;height:44px;border:1px solid #dfe5ec;
+
+  border-radius:10px;background:white;padding:0 12px;font-size:12px
+
+}
+
+.filter-label{
+
+  font-size:10px;font-weight:800;color:#7d8797;
+
+  letter-spacing:.8px;margin:17px 0 10px;text-transform:uppercase
+
+}
+
+.filter-row{display:flex;flex-wrap:wrap;gap:7px}
+
+.filter{
+
+  background:white;border:1px solid #dfe5ec;border-radius:30px;
+
+  padding:8px 11px;font-size:10px;font-weight:700;color:#536176
+
+}
+
+.filter.active{background:var(--navy);color:white;border-color:var(--navy)}
+
+.category-filter.active{background:var(--red);border-color:var(--red)}
+
+.group-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+
+.group-box{background:#fafbfd;border:1px solid var(--line);border-radius:13px;padding:15px}
+
+.group-title{font-size:12px;font-weight:800;color:var(--navy);margin-bottom:12px}
+
+.group-box .filter{padding:7px 10px}
+
+.group-box .filter.active{background:var(--red);border-color:var(--red)}
+
+.addon{grid-column:1/-1;background:#fff8f9;border-color:#eebec7}
+
+.addon .group-title{color:var(--red)}
+
+.filter-status{font-size:11px;color:var(--muted);margin-top:15px}
+
+.filter-status strong{color:var(--navy)}
+
+.section{margin-top:30px}
+
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-bottom:15px}
+
+.section h2{font-size:23px;color:var(--navy);margin:6px 0 0}
+
+.count{font-size:11px;color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+
+.card,.lead{
+
+  background:white;border:1px solid var(--line);border-radius:17px;
+
+  overflow:hidden;box-shadow:0 5px 25px #101c3208
+
+}
+
+.card{display:flex;flex-direction:column}
+
+.media{width:100%;height:180px;object-fit:cover;display:block}
+
+.card-body{padding:20px;display:flex;flex-direction:column;flex:1}
+
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+
+.category{font-size:10px;color:var(--red);font-weight:800;text-transform:uppercase}
+
+.date{font-size:10px;color:#8993a2}
+
+.card h3,.lead h3{font-size:17px;line-height:1.4;color:var(--navy);margin:13px 0 10px}
+
+.summary{font-size:12px;line-height:1.7;color:#637184;margin:0}
+
+.card .summary{
+
+  display:-webkit-box;-webkit-box-orient:vertical;
+
+  -webkit-line-clamp:5;overflow:hidden
+
+}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+
+.tag{background:#f0f3f7;color:#4c5c70;border-radius:20px;padding:6px 9px;font-size:10px;font-weight:700}
+
+.tag.project{background:#eaf0f8;color:#27446d}
+
+.bottom{margin-top:auto;padding-top:15px}
+
+.detail{margin-top:10px}
+
+.detail summary{
+
+  list-style:none;display:flex;align-items:center;gap:8px;
+
+  border:1.5px solid var(--red);border-radius:11px;
+
+  background:#fff0f2;color:#9d0a24;
+
+  padding:14px 12px;font-size:12px;font-weight:800;cursor:pointer
+
+}
+
+.detail summary::-webkit-details-marker{display:none}
+
+.detail summary:before{content:"◈";font-size:18px;color:var(--red)}
+
+.detail summary:after{content:"⌄";font-size:22px;margin-left:auto}
+
+.detail[open] summary{
+
+  background:var(--red);color:white;border-radius:11px 11px 0 0
+
+}
+
+.detail[open] summary:before{color:white}
+
+.detail[open] summary:after{content:"⌃"}
+
+.detail-content{
+
+  border:1px solid #efc6ce;border-top:0;border-radius:0 0 11px 11px;
+
+  padding:13px;background:#fffafb
+
+}
+
+.analysis{background:white;border:1px solid #edf0f4;border-radius:9px;padding:12px;margin-bottom:10px}
+
+.product-panel{background:#fff0f2;border-left:3px solid var(--red);padding:12px;border-radius:0 9px 9px 0;margin-bottom:10px}
+
+.project-panel{background:#f0f4fa;border-left:3px solid #27446d;padding:12px;border-radius:0 9px 9px 0;margin-bottom:10px}
+
+.detail-label{font-size:10px;color:var(--red);font-weight:800;margin-bottom:7px;letter-spacing:.5px}
+
+.detail-content p{font-size:11px;line-height:1.75;color:#526071;margin:0}
+
+.source{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px;flex-wrap:wrap}
+
+.source small{font-size:10px;color:#8791a0}
+
+.source a{font-size:11px;color:var(--red);font-weight:800;text-decoration:none}
+
+.lead{display:grid;grid-template-columns:1.3fr .7fr}
+
+.lead .card-body{padding:30px}
+
+.lead h3{font-size:clamp(22px,3vw,30px)}
+
+.lead .media{height:100%;min-height:300px}
+
+.lead-visual{
+
+  background:linear-gradient(145deg,#24436b,#101c32);color:white;
+
+  display:flex;align-items:center;justify-content:center;min-height:300px
+
+}
+
+.lead-visual strong{font-size:70px}
+
+.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+
+.social-card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px}
+
+.social-card h3{font-size:17px;color:var(--navy)}
+
+.social-card p{font-size:12px;line-height:1.7;color:var(--muted)}
+
+.social-company{font-size:11px;font-weight:800;color:var(--red)}
+
+.social-note{background:#f4f6f9;border-radius:10px;padding:13px;margin-top:12px}
+
+.social-note strong{font-size:10px;color:var(--navy)}
+
+.social-links{margin-top:14px;display:flex;flex-wrap:wrap;gap:12px}
+
+.social-links a{font-size:11px;color:var(--red);font-weight:800}
+
+.empty,.error,.footnote{
+
+  background:white;border:1px solid var(--line);border-radius:13px;
+
+  padding:20px;color:var(--muted);font-size:12px;line-height:1.7
+
+}
+
+.footnote{margin-top:30px}
+
+.footer{
+
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+
+  margin:35px 0;padding:22px 0;border-top:1px solid var(--line);
+
+  font-size:10px;color:#8b95a3
+
+}
+
 .hidden{display:none!important}
 
-/* ÜST ALAN */
-header{background:white;border-bottom:1px solid var(--line)}
-.header-inner{
-  min-height:94px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:12px 0;
-}
-.brand{display:flex;align-items:center;gap:19px;min-width:0}
-.logo-box{width:145px;flex:0 0 145px}
-.logo-box img{
-  display:block;
-  width:100%;
-  max-height:58px;
-  object-fit:contain;
-  object-position:left center;
-}
-.brand-divider{width:1px;height:44px;background:#dce2ea}
-.dept{
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.6px;
-}
-.brand-title{
-  color:var(--navy);
-  font-size:20px;
-  font-weight:800;
-  line-height:1.3;
-  margin-top:5px;
-}
-.share{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:9px;
-  padding:9px 12px;
-  color:var(--navy);
-  font-size:11px;
-  font-weight:700;
-  flex-shrink:0;
-}
-
-/* KÜÇÜLTÜLMÜŞ KAPAK */
-.hero{
-  margin-top:17px;
-  padding:25px 32px;
-  border-radius:17px;
-  background:
-    radial-gradient(circle at 92% 0%,#a12a4755,transparent 45%),
-    linear-gradient(125deg,#111d33,#233b5c);
-  color:white;
-}
-.eyebrow{
-  color:#ffb0bb;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1px;
-}
-.hero h1{
-  margin:10px 0 8px;
-  font-size:clamp(23px,3vw,31px);
-  line-height:1.2;
-}
-.hero p{
-  max-width:800px;
-  margin:0;
-  color:#d8e0ea;
-  font-size:12px;
-  line-height:1.65;
-}
-.hero-foot{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 23px;
-  border-top:1px solid #ffffff2e;
-  margin-top:16px;
-  padding-top:13px;
-  color:#d8e0ea;
-  font-size:11px;
-}
-
-/* STRATEJİK ÇIKARIM */
-.takeaway{
-  display:flex;
-  align-items:flex-start;
-  gap:16px;
-  margin-top:14px;
-  padding:18px 21px;
-  background:white;
-  border:1px solid var(--line);
-  border-left:4px solid var(--red);
-  border-radius:12px;
-}
-.takeaway-label{
-  min-width:155px;
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-  line-height:1.6;
-  letter-spacing:.4px;
-}
-.takeaway-text{
-  color:var(--navy);
-  font-size:13px;
-  font-weight:700;
-  line-height:1.65;
-}
-
-/* GENEL */
-.section{margin-top:27px}
-.section-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:14px;
-  margin-bottom:15px;
-}
-.overline{
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.8px;
-}
-.section-top h2{
-  color:var(--navy);
-  font-size:22px;
-  margin:6px 0 0;
-}
-.note,.results{color:var(--muted);font-size:11px}
-
-/* YÖNETİCİ ÖZETİ */
-.executive{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:23px;
-}
-.insights{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:17px;
-}
-.insight{border-left:3px solid var(--red);padding:3px 13px}
-.insight small{
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-}
-.insight h3{
-  color:var(--navy);
-  font-size:15px;
-  line-height:1.4;
-  margin:8px 0;
-}
-.insight p{
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.7;
-  margin:0;
-}
-
-/* HAFTANIN SAYILARI */
-.number-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:15px;
-}
-.number-card{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:21px;
-}
-.number-value{
-  color:var(--navy);
-  font-size:30px;
-  font-weight:800;
-}
-.number-title{
-  color:var(--navy);
-  font-size:13px;
-  font-weight:800;
-  margin-top:9px;
-}
-.number-note{
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.7;
-  margin-top:7px;
-}
-.number-source{
-  display:inline-block;
-  margin-top:10px;
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-  text-decoration:none;
-}
-
-/* HABERLER */
-.lead{
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:17px;
-  overflow:hidden;
-}
-.lead-content{padding:27px}
-.lead h3{
-  color:var(--navy);
-  font-size:clamp(22px,3vw,29px);
-  line-height:1.35;
-  margin:12px 0;
-}
-.lead-visual{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:270px;
-  background:linear-gradient(145deg,#29496f,#111d33);
-  color:white;
-  text-align:center;
-}
-.lead-visual strong{display:block;font-size:74px}
-.lead-visual span{font-size:11px;letter-spacing:1px}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
-}
-.card{
-  min-width:0;
-  display:flex;
-  flex-direction:column;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-}
-.card-body{
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  padding:20px;
-}
-.meta{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.category{
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-}
-.date{color:#8993a0;font-size:10px}
-.card h3{
-  color:var(--navy);
-  font-size:17px;
-  line-height:1.4;
-  margin:12px 0;
-}
-.summary{
-  color:#617084;
-  font-size:12px;
-  line-height:1.75;
-  margin:0;
-}
-.card .summary{
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:5;
-  overflow:hidden;
-}
-.lead .summary{font-size:13px}
-.tags,.pills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-top:12px;
-}
-.tag{
-  background:#f1f4f8;
-  color:#536175;
-  border-radius:20px;
-  padding:6px 9px;
-  font-size:10px;
-  font-weight:700;
-}
-.bottom{margin-top:auto;padding-top:13px}
-details{
-  border-top:1px solid var(--line);
-  margin-top:12px;
-}
-summary{
-  padding-top:13px;
-  color:var(--navy);
-  font-size:11px;
-  font-weight:800;
-  cursor:pointer;
-}
-.analysis{
-  background:#f5f7fa;
-  padding:13px;
-  margin-top:12px;
-  border-radius:10px;
-}
-.product-analysis{
-  background:#fff4f6;
-  border-left:3px solid var(--red);
-  padding:13px;
-  margin-top:10px;
-  border-radius:0 10px 10px 0;
-}
-.analysis strong,.product-analysis strong{
-  display:block;
-  font-size:10px;
-  margin-bottom:7px;
-}
-.product-analysis strong{color:var(--red)}
-.analysis p,.product-analysis p{
-  color:#526071;
-  font-size:11px;
-  line-height:1.75;
-  margin:0;
-}
-.pills span{
-  background:white;
-  color:var(--red);
-  border:1px solid #f0cbd3;
-  border-radius:20px;
-  padding:5px 9px;
-  font-size:10px;
-}
-.source{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:8px;
-  margin-top:14px;
-}
-.source small{color:#8993a0;font-size:10px}
-.source a{
-  color:var(--red);
-  font-size:11px;
-  font-weight:800;
-  text-decoration:none;
-}
-.media{height:185px;overflow:hidden}
-.media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.lead .media{height:100%;min-height:270px}
-.image-credit{
-  color:#8993a0;
-  font-size:9px;
-  margin-top:8px;
-}
-
-/* ARŞİV VE FİLTRELER */
-.toolbar{
-  margin-top:28px;
-  padding:20px;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:16px;
-}
-.tools-top{
-  display:grid;
-  grid-template-columns:1fr 260px;
-  gap:12px;
-  margin-bottom:17px;
-}
-.search,.week-select{
-  width:100%;
-  height:44px;
-  background:white;
-  border:1px solid #dfe5ed;
-  border-radius:10px;
-  padding:0 13px;
-  color:var(--navy);
-  font-size:12px;
-}
-.filter-label{
-  color:#8792a0;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.8px;
-  margin:14px 0 9px;
-}
-.filter-row{display:flex;flex-wrap:wrap;gap:7px}
-.filter{
-  background:white;
-  border:1px solid #e0e6ee;
-  border-radius:25px;
-  padding:8px 11px;
-  color:#566375;
-  font-size:10px;
-  font-weight:700;
-}
-.filter.active{
-  background:var(--navy);
-  border-color:var(--navy);
-  color:white;
-}
-.filter.category-filter.active{
-  background:var(--red);
-  border-color:var(--red);
-}
-.empty,.error{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:24px;
-  text-align:center;
-  color:var(--muted);
-  font-size:12px;
-}
-.error{background:#fff4f5;color:#a3263c}
-
-/* ÜRÜN FIRSATLARI */
-.opportunity-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
-}
-.opportunity-card{
-  background:white;
-  border:1px solid var(--line);
-  border-top:3px solid var(--red);
-  border-radius:15px;
-  padding:20px;
-}
-.opportunity-product{
-  color:var(--red);
-  font-size:10px;
-  font-weight:800;
-}
-.opportunity-card h3{
-  color:var(--navy);
-  font-size:16px;
-  line-height:1.4;
-  margin:11px 0;
-}
-.opportunity-card p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.75;
-  margin:0;
-}
-
-/* YENİ SOSYAL MEDYA KARTLARI */
-.social-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:17px;
-}
-.social-card{
-  display:flex;
-  flex-direction:column;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:17px;
-  overflow:hidden;
-}
-.social-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-  padding:18px 20px;
-  background:#f2f5f9;
-  border-bottom:1px solid var(--line);
-}
-.social-company{
-  color:var(--navy);
-  font-size:14px;
-  font-weight:800;
-}
-.social-platform{color:var(--muted);font-size:10px}
-.social-body{padding:20px;flex:1}
-.social-body h3{
-  color:var(--navy);
-  font-size:18px;
-  line-height:1.4;
-  margin:0 0 15px;
-}
-.social-part{
-  border-top:1px solid var(--line);
-  padding:13px 0;
-}
-.social-part:first-of-type{border-top:0}
-.social-part strong{
-  display:block;
-  color:var(--red);
-  font-size:10px;
-  letter-spacing:.4px;
-  margin-bottom:7px;
-}
-.social-part p{
-  color:#596679;
-  font-size:12px;
-  line-height:1.75;
-  margin:0;
-}
-.social-takeaway{
-  background:#f5f7fa;
-  border-left:3px solid var(--red);
-  border-radius:0 10px 10px 0;
-  padding:13px;
-  margin-top:8px;
-}
-.social-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:16px;
-}
-.social-links a{
-  color:var(--red);
-  font-size:11px;
-  font-weight:800;
-  text-decoration:none;
-}
-.social-footer{
-  border-top:1px solid var(--line);
-  padding:12px 20px;
-  color:var(--muted);
-  font-size:10px;
-}
-
-/* ALT ALAN */
-.footnote{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:13px;
-  padding:17px;
-  margin-top:27px;
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.75;
-}
-footer{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:12px;
-  border-top:1px solid var(--line);
-  margin-top:32px;
-  padding:20px 0 30px;
-  color:#8993a0;
-  font-size:10px;
-}
 @media(max-width:950px){
-  .lead{grid-template-columns:1fr}
-  .lead-visual{min-height:190px}
-  .cards{grid-template-columns:repeat(2,1fr)}
+
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+
 }
+
 @media(max-width:650px){
-  .header-inner{
-    align-items:flex-start;
-    min-height:112px;
-    padding:14px 0;
-    gap:8px;
-  }
-  .brand{
-    flex:1;
-    min-width:0;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:8px;
-  }
-  .logo-box{width:130px;flex:0 0 auto}
-  .logo-box img{max-height:52px}
+
+  .topbar-inner{align-items:flex-start;gap:10px}
+
+  .brand{flex-direction:column;align-items:flex-start;gap:7px}
+
+  .logo{width:165px;max-height:80px}
+
   .brand-divider{display:none}
-  .dept{font-size:9px}
+
+  .dept{font-size:8px}
+
   .brand-title{font-size:17px}
-  .share{padding:9px;font-size:10px}
-  .hero{padding:22px;margin-top:13px}
-  .hero h1{font-size:24px}
-  .hero p{font-size:11px}
-  .takeaway{display:block;padding:16px}
-  .takeaway-label{margin-bottom:7px}
-  .takeaway-text{font-size:12px}
-  .insights,.number-grid,.cards,
-  .opportunity-grid,.social-grid{
-    grid-template-columns:1fr;
-  }
-  .executive{padding:19px}
-  .tools-top{grid-template-columns:1fr}
-  .filter-row{
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    padding-bottom:5px;
-  }
-  .filter{white-space:nowrap}
-  .section-top h2{font-size:20px}
-  .lead-content{padding:21px}
-  .lead .media{min-height:180px}
+
+  .share{font-size:10px;padding:9px}
+
+  .hero{padding:28px 23px}
+
+  .tools{grid-template-columns:1fr}
+
+  .toolbar{padding:16px}
+
+  .group-grid,.cards,.social-grid{grid-template-columns:1fr}
+
+  .addon{grid-column:auto}
+
+  .lead{grid-template-columns:1fr}
+
+  .lead .media,.lead-visual{min-height:190px;height:190px;order:-1}
+
+  .lead .card-body{padding:22px}
+
+  .section h2{font-size:20px}
+
 }
 </style>
 </head>
-
 <body>
-
-<header>
-  <div class="wrap header-inner">
-    <div class="brand">
-      <div class="logo-box">
-        <img
-          id="brandLogo"
-          src="./turkish-cargo-logo.png"
-          alt="Turkish Cargo"
-        >
-      </div>
-      <div class="brand-divider"></div>
-      <div>
-        <div class="dept">
-          KARGO ÜRÜN VE POSTA MÜDÜRLÜĞÜ
-        </div>
-        <div class="brand-title">
-          Kargo ve Lojistik Haftalık Bülteni
-        </div>
-      </div>
-    </div>
-    <button class="share" id="shareButton">
-      ↗ Paylaş
-    </button>
-  </div>
+<header class="topbar">
+<div class="wrap topbar-inner">
+<div class="brand">
+<img class="logo" src="./turkish-cargo-logo.png" alt="Turkish Cargo">
+<div class="brand-divider"></div>
+<div>
+<div class="dept">Kargo Ürün ve Posta Müdürlüğü</div>
+<div class="brand-title">Kargo ve Lojistik Haftalık Bülteni</div>
+</div>
+</div>
+<button class="share" id="shareButton">↗ Paylaş</button>
+</div>
 </header>
-
 <main class="wrap">
+<section class="hero">
+<div class="eyebrow" id="heroEyebrow">ÜRÜN VE PROJE ODAKLI HAFTALIK BÜLTEN</div>
+<h1>Ürünlerimiz ve Projelerimiz Açısından Haftanın Gündemi</h1>
+<p>Ürün ve hizmetlerimiz ile Add-on projelerimizle ilişkili sektör gelişmeleri, somut değerlendirmeler ve potansiyel ticari fırsatlar.</p>
+<div class="hero-foot">
+<span id="heroWeek">Yükleniyor…</span>
+<span id="heroCount"></span>
+<span id="heroUpdate"></span>
+</div>
+</section>
+<section class="toolbar">
+<div class="overline">İlgi Alanınıza Göre Keşfedin</div>
+<h2>Ürün ve Proje Filtreleri</h2>
+<p>İlgilendiğiniz ürün veya projeyi seçerek ilgili sektör haberlerini ve değerlendirmeleri görüntüleyin.</p>
+<div class="tools">
+<input id="search" class="search" type="search" placeholder="Haber, ürün, proje, müşteri veya hat ara…">
+<select id="weekSelect" class="week">
+<option>Haftalar yükleniyor…</option>
+</select>
+</div>
+<div class="filter-label">Haber Kategorisi</div>
+<div class="filter-row" id="categoryFilters"></div>
+<div class="filter-label">Ürün Perspektifi ve Add-on Projeler</div>
+<div class="group-grid" id="productFilters"></div>
+<div class="filter-status" id="filterStatus"></div>
+</section>
+<section class="section hidden" id="leadSection">
+<div class="section-head">
+<div>
+<div class="overline">01 / Öne Çıkan</div>
+<h2>Haftanın Manşeti</h2>
+</div>
+</div>
+<div id="leadRoot"></div>
+</section>
+<section class="section hidden" id="spotlightSection">
+<div class="section-head">
+<div>
+<div class="overline">Haftanın Öncelikleri</div>
+<h2>Öne Çıkan Gelişmeler</h2>
+</div>
+</div>
+<div class="cards" id="spotlightRoot"></div>
+</section>
+<section class="section">
+<div class="section-head">
+<div>
+<div class="overline">Ürün ve Proje Gündemi</div>
+<h2 id="listTitle">Diğer Haberler</h2>
+</div>
+<span class="count" id="resultCount"></span>
+</div>
+<div class="cards" id="newsRoot"></div>
+<div class="empty hidden" id="emptyState">
 
-  <section class="hero">
-    <div class="eyebrow" id="heroEyebrow">
-      GÜNCEL SAYI
-    </div>
-    <h1>Hava Kargo ve Lojistikte Haftanın Gündemi</h1>
-    <p>
-      Küresel pazar, havacılık, endüstri,
-      e-ticaret, posta ve teknolojideki gelişmeler;
-      sektör analizleri ve ürün perspektifleri.
-    </p>
-    <div class="hero-foot">
-      <span id="heroWeek">Hafta yükleniyor...</span>
-      <span id="heroCount"></span>
-      <span id="heroUpdate"></span>
-    </div>
-  </section>
-
-  <section class="takeaway hidden" id="takeawaySection">
-    <div class="takeaway-label">
-      HAFTANIN STRATEJİK ÇIKARIMI
-    </div>
-    <div class="takeaway-text" id="takeawayText"></div>
-  </section>
-
-  <section class="section" id="summarySection">
-    <div class="section-top">
-      <div>
-        <div class="overline">HAFTAYA BAKIŞ</div>
-        <h2>Yönetici Özeti</h2>
-      </div>
-      <span class="note">3 temel çıkarım</span>
-    </div>
-    <div class="executive">
-      <div class="insights" id="insights"></div>
-    </div>
-  </section>
-
-  <section class="section hidden" id="numbersSection">
-    <div class="section-top">
-      <div>
-        <div class="overline">PAZAR GÖSTERGELERİ</div>
-        <h2>Haftanın Sayıları</h2>
-      </div>
-    </div>
-    <div class="number-grid" id="numbersRoot"></div>
-  </section>
-
-  <section class="section" id="leadSection">
-    <div class="section-top">
-      <div>
-        <div class="overline">01 / ÖNE ÇIKAN</div>
-        <h2>Haftanın Manşeti</h2>
-      </div>
-    </div>
-    <div id="leadRoot"></div>
-  </section>
-
-  <section class="section" id="spotlightSection">
-    <div class="section-top">
-      <div>
-        <div class="overline">HAFTANIN ÖNCELİKLERİ</div>
-        <h2>Öne Çıkan Gelişmeler</h2>
-      </div>
-    </div>
-    <div class="cards" id="spotlightRoot"></div>
-  </section>
-
-  <section class="toolbar">
-    <div class="tools-top">
-      <input
-        id="search"
-        class="search"
-        type="search"
-        placeholder="Haber, şirket veya ürün ara..."
-      >
-      <select id="weekSelect" class="week-select">
-        <option>Haftalar yükleniyor...</option>
-      </select>
-    </div>
-    <div class="filter-label">HABER KATEGORİSİ</div>
-    <div class="filter-row" id="categoryFilters"></div>
-    <div class="filter-label">ÜRÜN PERSPEKTİFİ</div>
-    <div class="filter-row" id="productFilters"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-top">
-      <div>
-        <div class="overline">
-          HAFTANIN DİĞER GELİŞMELERİ
-        </div>
-        <h2 id="listTitle">Sektörden Diğer Haberler</h2>
-      </div>
-      <span class="results" id="resultCount"></span>
-    </div>
-    <div class="cards" id="newsRoot"></div>
-    <div class="empty hidden" id="emptyState">
-      Bu filtrelerle eşleşen haber bulunamadı.
-    </div>
-    <div class="error hidden" id="errorState"></div>
-  </section>
-
-  <section class="section hidden" id="opportunitiesSection">
-    <div class="section-top">
-      <div>
-        <div class="overline">
-          ÜRÜN ODAKLI DEĞERLENDİRME
-        </div>
-        <h2>Ürünlerimiz İçin Fırsatlar</h2>
-      </div>
-    </div>
-    <div class="opportunity-grid" id="opportunitiesRoot"></div>
-  </section>
-
-  <section class="section hidden" id="socialSection">
-    <div class="section-top">
-      <div>
-        <div class="overline">
-          RAKİP VE SEKTÖR İLETİŞİMİ
-        </div>
-        <h2>Sosyal Medyada Öne Çıkanlar</h2>
-      </div>
-      <span class="note" id="socialCount"></span>
-    </div>
-    <div class="social-grid" id="socialRoot"></div>
-  </section>
-
-  <div class="footnote" id="editorialNote"></div>
-
-  <footer>
-    <div>
-      Kargo Ürün ve Posta Müdürlüğü ·
-      Kargo ve Lojistik Haftalık Bülteni
-    </div>
-    <div>
-      Haber ve görsel hakları ilgili kaynaklarına aittir.
-    </div>
-  </footer>
-
+    Bu hafta seçilen ürün veya projeyle eşleşen haber bulunamadı.
+</div>
+<div class="error hidden" id="errorState"></div>
+</section>
+<section class="section hidden" id="socialSection">
+<div class="section-head">
+<div>
+<div class="overline">Rakip ve Sektör İletişimi</div>
+<h2>Sosyal Medyada Öne Çıkanlar</h2>
+</div>
+<span class="count" id="socialCount"></span>
+</div>
+<div class="social-grid" id="socialRoot"></div>
+</section>
+<div class="footnote" id="editorialNote"></div>
+<footer class="footer">
+<span>Kargo Ürün ve Posta Müdürlüğü · Haftalık Bülten</span>
+<span>Haber ve görsel hakları ilgili kaynaklarına aittir. <span id="footerYear"></span></span>
+</footer>
 </main>
-
 <script>
-(() => {
-  "use strict";
 
-  const $ = id => document.getElementById(id);
+(()=>{
 
-  const esc = value => String(value ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#39;");
+"use strict";
 
-  function safeUrl(value) {
-    if (!value) return "";
-    try {
-      const u = new URL(value,location.href);
-      return ["http:","https:"].includes(u.protocol)
-        ? u.href : "";
-    } catch {
-      return "";
-    }
+const $=id=>document.getElementById(id);
+
+const esc=v=>String(v??"")
+
+  .replaceAll("&","&amp;")
+
+  .replaceAll("<","&lt;")
+
+  .replaceAll(">","&gt;")
+
+  .replaceAll('"',"&quot;")
+
+  .replaceAll("'","&#39;");
+
+const safeUrl=u=>{
+
+  try{
+
+    const x=new URL(u,location.href);
+
+    return ["http:","https:"].includes(x.protocol)?x.href:"";
+
+  }catch{return ""}
+
+};
+
+const groups=[
+
+  {
+
+    id:"speed",
+
+    label:"Hız Odaklı Hizmetler",
+
+    products:["TK SMART","TK PREMIUM","TK URGENT"]
+
+  },
+
+  {
+
+    id:"industry",
+
+    label:"Endüstri Ürünleri",
+
+    products:["TK AERO","TK AUTO"]
+
+  },
+
+  {
+
+    id:"commerce",
+
+    label:"E-Ticaret ve Posta Ürünleri",
+
+    products:["TK COURIER","POSTA"]
+
+  },
+
+  {
+
+    id:"special",
+
+    label:"Özel Kargo Ürünleri",
+
+    products:[
+
+      "İlaç ve Sağlık Ürünleri",
+
+      "Canlı Hayvan",
+
+      "Bozulabilir Ürünler",
+
+      "Tehlikeli Madde",
+
+      "Değerli Kargolar",
+
+      "Hassas Kargolar"
+
+    ]
+
   }
 
-  const categories = [
-    ["all","Tümü"],
-    ["market","Pazar ve Rekabet"],
-    ["aviation","Havacılık ve MRO"],
-    ["automotive","Otomotiv ve Endüstri"],
-    ["ecommerce","E-Ticaret ve Posta"],
-    ["digital","Dijital ve Teknoloji"],
-    ["sustainability","Sürdürülebilirlik"]
-  ];
+];
 
-  const groups = [
-    {
-      id:"speed",
-      label:"Hız Odaklı Hizmetler",
-      products:["TK SMART","TK PREMIUM","TK URGENT"]
-    },
-    {
-      id:"industry",
-      label:"Endüstri Ürünleri",
-      products:["TK AERO","TK AUTO"]
-    },
-    {
-      id:"commerce",
-      label:"E-Ticaret ve Posta Ürünleri",
-      products:["TK COURIER","POSTA"]
-    },
-    {
-      id:"special",
-      label:"Özel Kargo Ürünleri",
-      products:[
-        "İlaç ve Sağlık Ürünleri",
-        "Canlı Hayvan",
-        "Bozulabilir Ürünler",
-        "Tehlikeli Madde",
-        "Değerli Kargolar",
-        "Hassas Kargolar"
-      ]
-    }
-  ];
+const projects=[
 
-  const legacy = {
-    industry:"aviation",
-    mail:"ecommerce",
-    customer:"market",
-    product:"automotive"
+  "High Speed Station",
+
+  "time:matters & Bireysel Gönderici",
+
+  "Erken Teslimat",
+
+  "Yarı İletken Çip",
+
+  "Server Rack",
+
+  "Enerji Sektörü",
+
+  "Hava Kargo Sigortası"
+
+];
+
+const categories=[
+
+  ["all","Tümü"],
+
+  ["market","Pazar & Rekabet"],
+
+  ["aviation","Havacılık & MRO"],
+
+  ["automotive","Otomotiv & Endüstri"],
+
+  ["ecommerce","E-Ticaret & Posta"],
+
+  ["digital","Dijital & Teknoloji"],
+
+  ["sustainability","Sürdürülebilirlik"]
+
+];
+
+const legacy={
+
+  industry:"aviation",
+
+  mail:"ecommerce",
+
+  customer:"market",
+
+  product:"automotive"
+
+};
+
+let weeks=[];
+
+let items=[];
+
+let issue=null;
+
+let currentWeek="";
+
+let activeCategory="all";
+
+let activeGroup="all";
+
+function productInfo(item){
+
+  const p=item.productRelevance||{};
+
+  return {
+
+    products:Array.isArray(p.products)?p.products:[],
+
+    analysis:p.analysis||"",
+
+    relevant:!!p.relevant
+
   };
 
-  let issue = null;
-  let items = [];
-  let weeks = [];
-  let currentWeek = "";
-  let activeCategory = "all";
-  let activeGroup = "all";
-  let requestNumber = 0;
+}
 
-  function productInfo(item) {
-    const p = item.productRelevance || {};
-    return {
-      relevant:!!p.relevant,
-      products:Array.isArray(p.products)?p.products:[],
-      analysis:p.analysis || ""
-    };
-  }
+function projectInfo(item){
 
-  function categoryOf(item) {
-    return legacy[item.category] ||
-      item.category || "market";
-  }
+  const p=item.addonRelevance||{};
 
-  function itemGroups(item) {
-    const products = productInfo(item).products;
-    return groups.filter(g =>
-      g.products.some(p => products.includes(p))
-    );
-  }
+  return {
 
-  function formatDate(value) {
-    if (!value) return "";
-    const date = new Date(value+"T12:00:00");
-    if (Number.isNaN(date.getTime())) return value;
-    return date.toLocaleDateString("tr-TR",{
-      day:"numeric",
-      month:"long",
-      year:"numeric"
-    });
-  }
+    projects:Array.isArray(p.projects)
 
-  async function loadJSON(path) {
-    const response = await fetch(
-      path+"?v="+Date.now(),
-      {cache:"no-store"}
-    );
-    if (!response.ok) {
-      throw new Error(
-        path+" bulunamadı. HTTP "+response.status
-      );
-    }
-    const raw = await response.text();
-    try {
-      return JSON.parse(raw);
-    } catch(e) {
-      throw new Error(
-        path+" dosyasında JSON hatası: "+e.message
-      );
-    }
-  }
+      ?p.projects.filter(x=>projects.includes(x)):[],
 
-  function sourceHTML(item) {
-    const url = safeUrl(item.url);
-    return `
-      <div class="source">
-        <small>
-          ${esc(item.source||"Kaynak")}
-          · ${esc(item.publishedDate||"")}
-        </small>
-        ${url ? `
-          <a href="${esc(url)}"
-             target="_blank"
-             rel="noopener noreferrer">
-             Kaynağı İncele ↗
-          </a>` : ""}
-      </div>`;
-  }
+    analysis:p.analysis||"",
 
-  function detailHTML(item) {
-    const p = productInfo(item);
-    if (!item.whyImportant &&
-        !(p.relevant && p.products.length)) {
-      return "";
-    }
-    return `
-      <details>
-        <summary>Analizi Gör</summary>
-        ${item.whyImportant ? `
-          <div class="analysis">
-            <strong>NEDEN ÖNEMLİ?</strong>
-            <p>${esc(item.whyImportant)}</p>
-          </div>` : ""}
-        ${p.relevant && p.products.length ? `
-          <div class="product-analysis">
-            <strong>ÜRÜN PERSPEKTİFİ</strong>
-            ${p.analysis ? `<p>${esc(p.analysis)}</p>` : ""}
-            <div class="pills">
-              ${p.products.map(x =>
-                `<span>${esc(x)}</span>`
-              ).join("")}
-            </div>
-          </div>` : ""}
-      </details>`;
-  }
+    action:p.action||""
 
-  function imageHTML(item) {
-    const url = safeUrl(item.image);
-    if (!url) return "";
-    return `
-      <div class="media">
-        <img src="${esc(url)}"
-             alt="${esc(item.imageCaption||item.title)}"
-             loading="lazy"
-             onerror="this.parentElement.remove()">
-      </div>`;
-  }
+  };
 
-  function cardHTML(item,isLead=false) {
-    const category = item.categoryName ||
-      categories.find(c=>c[0]===categoryOf(item))?.[1] ||
-      "Sektör";
+}
 
-    const tags = itemGroups(item).map(g =>
-      `<span class="tag">${esc(g.label)}</span>`
-    ).join("");
+function categoryOf(item){
 
-    const content = `
-      <div class="meta">
-        <span class="category">${esc(category)}</span>
-        <span class="date">${esc(item.publishedDate||"")}</span>
-      </div>
-      <h3>${esc(item.title)}</h3>
-      <p class="summary">${esc(item.summary)}</p>
-      ${tags?`<div class="tags">${tags}</div>`:""}
-      <div class="bottom">
-        ${detailHTML(item)}
+  return legacy[item.category]||item.category||"market";
+
+}
+
+function itemGroups(item){
+
+  const p=productInfo(item).products;
+
+  return groups.filter(g=>g.products.some(x=>p.includes(x)));
+
+}
+
+function hasMatch(item){
+
+  const p=productInfo(item);
+
+  const a=projectInfo(item);
+
+  return (p.relevant&&p.products.length>0)||a.projects.length>0;
+
+}
+
+function matches(item){
+
+  if(!hasMatch(item))return false;
+
+  const p=productInfo(item);
+
+  const a=projectInfo(item);
+
+  if(activeCategory!=="all"&&categoryOf(item)!==activeCategory)
+
+    return false;
+
+  if(activeGroup==="projects"&&!a.projects.length)
+
+    return false;
+
+  if(activeGroup.startsWith("project:")&&
+
+     !a.projects.includes(activeGroup.slice(8)))
+
+    return false;
+
+  if(activeGroup.startsWith("product:")&&
+
+     !p.products.includes(activeGroup.slice(8)))
+
+    return false;
+
+  if(
+
+    !["all","projects"].includes(activeGroup)&&
+
+    !activeGroup.startsWith("project:")&&
+
+    !activeGroup.startsWith("product:")&&
+
+    !itemGroups(item).some(g=>g.id===activeGroup)
+
+  )return false;
+
+  const q=$("search").value.trim().toLocaleLowerCase("tr-TR");
+
+  const content=[
+
+    item.title,item.summary,item.whyImportant,
+
+    item.company,item.country,item.source,item.categoryName,
+
+    item.suggestedAction,p.analysis,a.analysis,a.action,
+
+    ...p.products,...a.projects
+
+  ].join(" ").toLocaleLowerCase("tr-TR");
+
+  return content.includes(q);
+
+}
+
+function renderFilters(){
+
+  $("categoryFilters").innerHTML=categories.map(([id,label])=>
+
+    `<button class="filter category-filter ${activeCategory===id?"active":""}"
+
+      data-cat="${id}">${esc(label)}</button>`
+
+  ).join("");
+
+  const groupBox=g=>`
+<div class="group-box">
+<div class="group-title">${esc(g.label)}</div>
+<div class="filter-row">
+<button class="filter ${activeGroup===g.id?"active":""}"
+
+          data-group="${g.id}">Tümünü Gör</button>
+
+        ${g.products.map(p=>`
+<button class="filter ${activeGroup==="product:"+p?"active":""}"
+
+            data-group="product:${esc(p)}">${esc(p)}</button>
+
+        `).join("")}
+</div>
+</div>
+
+  `;
+
+  $("productFilters").innerHTML=`
+<div class="group-box">
+<div class="group-title">Tüm Ürün ve Projeler</div>
+<div class="filter-row">
+<button class="filter ${activeGroup==="all"?"active":""}"
+
+          data-group="all">Tüm Haberler</button>
+</div>
+</div>
+
+    ${groups.map(groupBox).join("")}
+<div class="group-box addon">
+<div class="group-title">✦ Add-on Projeler</div>
+<div class="filter-row">
+<button class="filter ${activeGroup==="projects"?"active":""}"
+
+          data-group="projects">Tüm Add-on Projeler</button>
+
+        ${projects.map(p=>`
+<button class="filter ${activeGroup==="project:"+p?"active":""}"
+
+            data-group="project:${esc(p)}">${esc(p)}</button>
+
+        `).join("")}
+</div>
+</div>
+
+  `;
+
+  let label="Tüm ürün ve proje haberleri";
+
+  if(activeGroup==="projects")label="Tüm Add-on projeler";
+
+  else if(activeGroup.startsWith("project:"))label=activeGroup.slice(8);
+
+  else if(activeGroup.startsWith("product:"))label=activeGroup.slice(8);
+
+  else if(activeGroup!=="all")
+
+    label=groups.find(g=>g.id===activeGroup)?.label||activeGroup;
+
+  $("filterStatus").innerHTML=
+
+    `Seçili filtre: <strong>${esc(label)}</strong>`;
+
+}
+
+function detailsHTML(item){
+
+  const p=productInfo(item);
+
+  const a=projectInfo(item);
+
+  const why=item.whyImportant?`
+<div class="analysis">
+<div class="detail-label">NEDEN ÖNEMLİ?</div>
+<p>${esc(item.whyImportant)}</p>
+</div>`:"";
+
+  const product=p.relevant&&p.products.length?`
+<div class="product-panel">
+<div class="detail-label">ÜRÜN PERSPEKTİFİ</div>
+<p>${esc(p.analysis)}</p>
+<div class="tags">
+
+        ${p.products.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}
+</div>
+</div>`:"";
+
+  const project=a.projects.length?`
+<div class="project-panel">
+<div class="detail-label">ADD-ON PROJE PERSPEKTİFİ</div>
+<p>${esc(a.analysis)}</p>
+
+      ${a.action?`
+<div class="detail-label" style="margin-top:12px">
+
+          DEĞERLENDİRİLEBİLECEK ADIM
+</div>
+<p>${esc(a.action)}</p>`:""}
+<div class="tags">
+
+        ${a.projects.map(x=>`<span class="tag project">${esc(x)}</span>`).join("")}
+</div>
+</div>`:"";
+
+  const action=item.suggestedAction?`
+<div class="analysis">
+<div class="detail-label">ÖNERİLEN DEĞERLENDİRME</div>
+<p>${esc(item.suggestedAction)}</p>
+</div>`:"";
+
+  return `
+<details class="detail">
+<summary>Ürünlerimiz Açısından Değerlendirme · İncele</summary>
+<div class="detail-content">
+
+        ${why}${product}${project}${action}
+</div>
+</details>
+
+  `;
+
+}
+
+function imageHTML(item){
+
+  const u=safeUrl(item.image);
+
+  return u?`<img class="media" loading="lazy"
+
+    src="${esc(u)}" alt="${esc(item.imageCaption||item.title)}"
+
+    onerror="this.remove()">`:"";
+
+}
+
+function sourceHTML(item){
+
+  const u=safeUrl(item.url);
+
+  return `
+<div class="source">
+<small>${esc(item.source||"Kaynak")} · ${esc(item.publishedDate||"")}</small>
+
+      ${u?`<a href="${esc(u)}" target="_blank"
+
+        rel="noopener noreferrer">Kaynağı İncele ↗</a>`:""}
+</div>
+
+  `;
+
+}
+
+function cardHTML(item,isLead=false){
+
+  const p=productInfo(item);
+
+  const a=projectInfo(item);
+
+  const tags=[
+
+    ...p.products.map(x=>`<span class="tag">${esc(x)}</span>`),
+
+    ...a.projects.map(x=>`<span class="tag project">${esc(x)}</span>`)
+
+  ].join("");
+
+  const body=`
+<div class="card-body">
+<div class="meta">
+<span class="category">${esc(item.categoryName||"Sektör")}</span>
+<span class="date">${esc(item.publishedDate||"")}</span>
+</div>
+<h3>${esc(item.title)}</h3>
+<p class="summary">${esc(item.summary)}</p>
+<div class="tags">${tags}</div>
+<div class="bottom">
+
+        ${detailsHTML(item)}
+
         ${sourceHTML(item)}
-        ${item.imageCredit ? `
-          <div class="image-credit">
-            Görsel: ${esc(item.imageCredit)}
-          </div>` : ""}
-      </div>`;
+</div>
+</div>
 
-    if (isLead) {
-      const visual = imageHTML(item) || `
-        <div class="lead-visual">
-          <div>
-            <strong>${esc(item.metric||"↗")}</strong>
-            <span>${esc(item.metricLabel||"SEKTÖR GÜNDEMİ")}</span>
-          </div>
-        </div>`;
-      return `
-        <article class="lead">
-          <div class="lead-content">${content}</div>
-          ${visual}
-        </article>`;
-    }
+  `;
 
-    return `
-      <article class="card">
-        ${imageHTML(item)}
-        <div class="card-body">${content}</div>
-      </article>`;
+  if(isLead){
+
+    const visual=imageHTML(item)||`
+<div class="lead-visual">
+<strong>${esc(item.metric||"↗")}</strong>
+</div>
+
+    `;
+
+    return `<article class="lead">${body}${visual}</article>`;
+
   }
 
-  function renderFilters() {
-    $("categoryFilters").innerHTML =
-      categories.map(([id,label])=>`
-        <button type="button"
-          class="filter category-filter
-          ${activeCategory===id?"active":""}"
-          data-cat="${id}">
-          ${esc(label)}
-        </button>`).join("");
+  return `<article class="card">${imageHTML(item)}${body}</article>`;
 
-    $("productFilters").innerHTML =
-      [{id:"all",label:"Tümü"},...groups].map(g=>`
-        <button type="button"
-          class="filter ${activeGroup===g.id?"active":""}"
-          data-group="${g.id}">
-          ${esc(g.label)}
-        </button>`).join("");
-  }
+}
 
-  function renderInsights() {
-    const themes = issue.weeklyThemes ||
-      issue.insights ||
-      items.slice(0,3).map(item=>({
-        label:item.categoryName,
-        title:item.title,
-        text:item.whyImportant||""
-      }));
+function render(){
 
-    $("insights").innerHTML = themes.slice(0,3)
-      .map(t=>`
-        <div class="insight">
-          <small>${esc(t.label||"")}</small>
-          <h3>${esc(t.title||t.text)}</h3>
-          ${t.title?`<p>${esc(t.text||"")}</p>`:""}
-        </div>`).join("");
+  const filtered=items.filter(matches);
 
-    $("summarySection").classList.toggle(
-      "hidden",!themes.length
-    );
-  }
+  const defaultView=
 
-  function renderExtraSections() {
-    const numbers = Array.isArray(issue.weeklyNumbers)
-      ? issue.weeklyNumbers : [];
+    activeCategory==="all"&&activeGroup==="all"&&
 
-    const opportunities = Array.isArray(issue.opportunities)
-      ? issue.opportunities : [];
+    !$("search").value.trim();
 
-    $("numbersSection").classList.toggle(
-      "hidden",!numbers.length
-    );
+  const lead=defaultView
 
-    $("numbersRoot").innerHTML = numbers.map(n=>{
-      const url = safeUrl(n.url);
-      return `
-        <article class="number-card">
-          <div class="number-value">${esc(n.value)}</div>
-          <div class="number-title">${esc(n.title)}</div>
-          <div class="number-note">${esc(n.note)}</div>
-          ${url?`
-            <a class="number-source"
-               href="${esc(url)}"
-               target="_blank"
-               rel="noopener noreferrer">
-               Kaynağı İncele ↗
-            </a>`:""}
-        </article>`;
-    }).join("");
+    ?filtered.find(x=>x.priority==="lead"||x.featured):null;
 
-    $("opportunitiesSection").classList.toggle(
-      "hidden",!opportunities.length
-    );
+  const spot=defaultView
 
-    $("opportunitiesRoot").innerHTML =
-      opportunities.map(o=>`
-        <article class="opportunity-card">
-          <div class="opportunity-product">
-            ${esc(o.product)}
-          </div>
-          <h3>${esc(o.title)}</h3>
-          <p>${esc(o.text)}</p>
-        </article>`).join("");
-  }
+    ?filtered.filter(x=>x!==lead&&x.priority==="spotlight"):[];
 
-  function matches(item) {
-    const q = $("search").value
-      .toLocaleLowerCase("tr-TR").trim();
+  const others=filtered.filter(x=>x!==lead&&!spot.includes(x));
 
-    const p = productInfo(item);
+  $("leadSection").classList.toggle("hidden",!lead);
 
-    const searchable = [
-      item.title,item.summary,item.whyImportant,
-      item.company,item.country,item.source,
-      item.categoryName,p.analysis,
-      ...p.products,
-      ...itemGroups(item).map(g=>g.label)
-    ].filter(Boolean).join(" ")
-     .toLocaleLowerCase("tr-TR");
+  $("spotlightSection").classList.toggle("hidden",!spot.length);
 
-    return (
-      (activeCategory==="all" ||
-        categoryOf(item)===activeCategory) &&
-      (activeGroup==="all" ||
-        itemGroups(item).some(g=>g.id===activeGroup)) &&
-      searchable.includes(q)
-    );
-  }
+  $("leadRoot").innerHTML=lead?cardHTML(lead,true):"";
 
-  function render() {
-    const filtered = items.filter(matches);
-    const unfiltered =
-      activeCategory==="all" &&
-      activeGroup==="all" &&
-      !$("search").value.trim();
+  $("spotlightRoot").innerHTML=spot.map(x=>cardHTML(x)).join("");
 
-    const lead = unfiltered
-      ? filtered.find(i=>i.priority==="lead"||i.featured)
-      : null;
+  $("newsRoot").innerHTML=others.map(x=>cardHTML(x)).join("");
 
-    const spotlight = unfiltered
-      ? filtered.filter(i=>
-          i!==lead && i.priority==="spotlight"
-        )
-      : [];
+  $("listTitle").textContent=defaultView
 
-    const others = filtered.filter(i=>
-      i!==lead && !spotlight.includes(i)
+    ?"Ürünlerimizle İlişkili Diğer Haberler":"Filtrelenen Haberler";
+
+  $("resultCount").textContent=filtered.length+" haber";
+
+  $("emptyState").classList.toggle("hidden",filtered.length>0);
+
+  renderFilters();
+
+}
+
+function socialCardHTML(item){
+
+  const post=safeUrl(item.postUrl);
+
+  const story=safeUrl(item.storyUrl);
+
+  return `
+<article class="social-card">
+<div class="social-company">${esc(item.company||"Sektör Paylaşımı")}</div>
+<h3>${esc(item.title||"")}</h3>
+<p>${esc(item.summary||"")}</p>
+
+      ${item.communicationInsight?`
+<div class="social-note">
+<strong>İLETİŞİM AÇISINDAN NEDEN ÖNEMLİ?</strong>
+<p>${esc(item.communicationInsight)}</p>
+</div>`:""}
+
+      ${item.relatedProduct?`
+<div class="tags">
+<span class="tag">${esc(item.relatedProduct)}</span>
+</div>`:""}
+<div class="social-links">
+
+        ${post?`<a href="${esc(post)}" target="_blank"
+
+          rel="noopener noreferrer">LinkedIn ↗</a>`:""}
+
+        ${story?`<a href="${esc(story)}" target="_blank"
+
+          rel="noopener noreferrer">Video ve Hikâye ↗</a>`:""}
+</div>
+</article>
+
+  `;
+
+}
+
+async function loadSocial(date){
+
+  $("socialSection").classList.add("hidden");
+
+  $("socialRoot").innerHTML="";
+
+  try{
+
+    const res=await fetch(
+
+      "./data/sosyal-"+encodeURIComponent(date)+".json?v="+Date.now(),
+
+      {cache:"no-store"}
+
     );
 
-    $("leadSection").classList.toggle("hidden",!lead);
-    $("spotlightSection").classList.toggle(
-      "hidden",!spotlight.length
+    if(!res.ok)return;
+
+    const data=await res.json();
+
+    const list=Array.isArray(data.items)?data.items:[];
+
+    if(date!==currentWeek||!list.length)return;
+
+    $("socialRoot").innerHTML=list.map(socialCardHTML).join("");
+
+    $("socialCount").textContent=list.length+" paylaşım";
+
+    $("socialSection").classList.remove("hidden");
+
+  }catch(e){
+
+    console.warn("Sosyal medya dosyası:",e);
+
+  }
+
+}
+
+async function loadWeek(date){
+
+  try{
+
+    $("errorState").classList.add("hidden");
+
+    const res=await fetch(
+
+      "./data/"+encodeURIComponent(date)+".json?v="+Date.now(),
+
+      {cache:"no-store"}
+
     );
 
-    $("leadRoot").innerHTML =
-      lead?cardHTML(lead,true):"";
+    if(!res.ok)throw Error(date+".json yüklenemedi.");
 
-    $("spotlightRoot").innerHTML =
-      spotlight.map(i=>cardHTML(i)).join("");
+    issue=await res.json();
 
-    $("newsRoot").innerHTML =
-      others.map(i=>cardHTML(i)).join("");
+    items=Array.isArray(issue.items)?issue.items:[];
 
-    $("listTitle").textContent = unfiltered
-      ?"Sektörden Diğer Haberler"
-      :"Filtrelenen Haberler";
+    currentWeek=date;
 
-    $("resultCount").textContent =
-      filtered.length+" haber";
+    activeCategory="all";
 
-    $("emptyState").classList.toggle(
-      "hidden",filtered.length!==0
-    );
+    activeGroup="all";
 
-    renderFilters();
-  }
+    $("search").value="";
 
-  function socialCardHTML(item) {
-    const post = safeUrl(item.postUrl);
-    const story = safeUrl(item.storyUrl);
+    const label=issue.title||date;
 
-    const subject = item.subject || item.summary || "";
-    const message = item.competitorMessage ||
-      item.communicationInsight || "";
-    const takeaway = item.ourTakeaway ||
-      item.communicationInsight || "";
+    $("heroWeek").textContent=label;
 
-    return `
-      <article class="social-card">
-        <div class="social-head">
-          <div class="social-company">
-            ${esc(item.company||"")}
-          </div>
-          <div class="social-platform">
-            ${esc(item.platform||"LinkedIn")}
-            · ${esc(item.publishedDate||"")}
-          </div>
-        </div>
+    $("heroCount").textContent=
 
-        <div class="social-body">
-          <h3>${esc(item.title)}</h3>
+      items.filter(hasMatch).length+" ürün / proje eşleşmeli haber";
 
-          <div class="social-part">
-            <strong>PAYLAŞIMIN KONUSU</strong>
-            <p>${esc(subject)}</p>
-          </div>
+    $("heroUpdate").textContent=
 
-          <div class="social-part">
-            <strong>RAKİBİN VURGULADIĞI MESAJ</strong>
-            <p>${esc(message)}</p>
-          </div>
+      "Son güncelleme: "+(issue.updatedAt||issue.publishedAt||date);
 
-          <div class="social-part social-takeaway">
-            <strong>BİZİM İÇİN ÇIKARIM</strong>
-            <p>${esc(takeaway)}</p>
-          </div>
+    $("heroEyebrow").textContent=
 
-          ${item.relatedProduct?`
-            <div class="tags">
-              <span class="tag">
-                ${esc(item.relatedProduct)}
-              </span>
-            </div>`:""}
+      "ÜRÜN VE PROJE ODAKLI HAFTALIK BÜLTEN · "+
 
-          <div class="social-links">
-            ${post?`
-              <a href="${esc(post)}"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                 ${esc(item.postLinkLabel||"LinkedIn Hesabı")} ↗
-              </a>`:""}
+      (issue.issueStatus||"ARŞİV");
 
-            ${story?`
-              <a href="${esc(story)}"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                 İçeriği İncele ↗
-              </a>`:""}
-          </div>
-        </div>
+    $("editorialNote").textContent=
 
-        <div class="social-footer">
-          Rakip iletişimi ve ürün perspektifi
-        </div>
-      </article>`;
-  }
+      issue.editorialNote||
 
-  async function loadSocial(date) {
-    $("socialSection").classList.add("hidden");
-    $("socialRoot").innerHTML = "";
+      "Ürün ve proje değerlendirmeleri editoryal yorumlardır.";
 
-    try {
-      const response = await fetch(
-        "./data/sosyal-"+encodeURIComponent(date)+
-        ".json?v="+Date.now(),
-        {cache:"no-store"}
-      );
+    $("weekSelect").value=date;
 
-      if (response.status===404) return;
-      if (!response.ok) {
-        throw new Error("Sosyal medya dosyası açılamadı.");
-      }
-
-      const data = await response.json();
-      if (date!==currentWeek) return;
-
-      const entries = Array.isArray(data.items)
-        ? data.items : [];
-
-      if (!entries.length) return;
-
-      $("socialRoot").innerHTML =
-        entries.map(socialCardHTML).join("");
-
-      $("socialCount").textContent =
-        entries.length+" paylaşım";
-
-      $("socialSection").classList.remove("hidden");
-    } catch(e) {
-      console.warn("Sosyal medya:",e);
-    }
-  }
-
-  async function loadWeek(date) {
-    const requestId = ++requestNumber;
-
-    try {
-      $("errorState").classList.add("hidden");
-
-      const path =
-        "./data/"+encodeURIComponent(date)+".json";
-
-      const loaded = await loadJSON(path);
-      if (requestId!==requestNumber) return;
-
-      issue = loaded;
-      items = Array.isArray(issue.items)?issue.items:[];
-      currentWeek = date;
-      activeCategory = "all";
-      activeGroup = "all";
-      $("search").value = "";
-
-      const selectedWeek = weeks.find(w=>w.date===date);
-      const isCurrent = selectedWeek?.status==="current";
-
-      $("heroWeek").textContent =
-        issue.title||selectedWeek?.title||date;
-
-      $("heroCount").textContent =
-        items.length+" haber";
-
-      $("heroUpdate").textContent =
-        "Son güncelleme: "+
-        formatDate(issue.updatedAt||date);
-
-      $("heroEyebrow").textContent =
-        isCurrent?"GÜNCEL SAYI":"ARŞİV SAYISI";
-
-      const takeaway = issue.strategicTakeaway||"";
-      $("takeawayText").textContent = takeaway;
-      $("takeawaySection").classList.toggle(
-        "hidden",!takeaway
-      );
-
-      $("editorialNote").textContent =
-        issue.editorialNote||
-        "Kaynak ve yayın tarihleri haber kartlarında "+
-        "belirtilmiştir. Ürün perspektifleri "+
-        "editoryal değerlendirmedir.";
-
-      $("weekSelect").value = date;
-
-      renderInsights();
-      renderExtraSections();
-      render();
-      loadSocial(date);
-
-      const url = new URL(location.href);
-      url.searchParams.set("week",date);
-      history.replaceState(
-        null,"",url.pathname+url.search+url.hash
-      );
-    } catch(e) {
-      if (requestId!==requestNumber) return;
-      console.error(e);
-
-      $("errorState").textContent =
-        "Bülten yüklenemedi. "+e.message;
-
-      $("errorState").classList.remove("hidden");
-
-      [
-        "takeawaySection","summarySection",
-        "numbersSection","leadSection",
-        "spotlightSection","opportunitiesSection",
-        "socialSection"
-      ].forEach(id=>$(id).classList.add("hidden"));
-
-      $("leadRoot").innerHTML = "";
-      $("spotlightRoot").innerHTML = "";
-      $("newsRoot").innerHTML = "";
-    }
-  }
-
-  async function start() {
-    try {
-      const data = await loadJSON("./data/index.json");
-      weeks = Array.isArray(data.weeks)?data.weeks:[];
-
-      if (!weeks.length) {
-        throw new Error("Hafta listesi boş.");
-      }
-
-      weeks.sort((a,b)=>b.date.localeCompare(a.date));
-
-      $("weekSelect").innerHTML =
-        weeks.map(w=>`
-          <option value="${esc(w.date)}">
-            ${esc(w.title)}
-            ${w.status==="current"?" · Güncel Sayı":""}
-          </option>`).join("");
-
-      const requested =
-        new URLSearchParams(location.search).get("week");
-
-      const selected = weeks.some(w=>w.date===requested)
-        ? requested
-        : (weeks.find(w=>w.status==="current")||weeks[0]).date;
-
-      await loadWeek(selected);
-    } catch(e) {
-      console.error(e);
-      $("errorState").textContent =
-        "Hafta listesi yüklenemedi. "+e.message;
-      $("errorState").classList.remove("hidden");
-    }
-  }
-
-  $("categoryFilters").addEventListener("click",e=>{
-    const b = e.target.closest("button[data-cat]");
-    if (!b) return;
-    activeCategory = b.dataset.cat;
     render();
-  });
 
-  $("productFilters").addEventListener("click",e=>{
-    const b = e.target.closest("button[data-group]");
-    if (!b) return;
-    activeGroup = b.dataset.group;
-    render();
-  });
+    loadSocial(date);
 
-  $("search").addEventListener("input",render);
+    const u=new URL(location.href);
 
-  $("weekSelect").addEventListener(
-    "change",e=>loadWeek(e.target.value)
-  );
+    u.searchParams.set("week",date);
 
-  $("shareButton").addEventListener("click",async()=>{
-    try {
-      if (navigator.share) {
-        await navigator.share({
-          title:"Kargo ve Lojistik Haftalık Bülteni",
-          url:location.href
-        });
-      } else {
-        await navigator.clipboard.writeText(location.href);
-        $("shareButton").textContent = "✓ Kopyalandı";
-      }
-    } catch(e) {
-      console.log(e);
-    }
-  });
+    history.replaceState(null,"",u.pathname+u.search+u.hash);
 
-  /* LOGONUN GEREKSİZ BOŞLUKLARINI KIRP */
-  function duzenleLogo() {
-    const logo = $("brandLogo");
-    if (!logo) return;
+  }catch(e){
 
-    const image = new Image();
+    console.error(e);
 
-    image.onload = ()=>{
-      try {
-        const w = image.naturalWidth;
-        const h = image.naturalHeight;
-        if (!w||!h) return;
+    $("errorState").textContent="Bülten yüklenemedi: "+e.message;
 
-        const canvas = document.createElement("canvas");
-        canvas.width=w;
-        canvas.height=h;
-        const ctx=canvas.getContext("2d");
-        ctx.drawImage(image,0,0);
-        const px=ctx.getImageData(0,0,w,h).data;
+    $("errorState").classList.remove("hidden");
 
-        let minX=w,minY=h,maxX=-1,maxY=-1;
-
-        for(let y=0;y<h;y++){
-          for(let x=0;x<w;x++){
-            const i=(y*w+x)*4;
-            const visible=px[i+3]>45 &&
-              (px[i]<235||px[i+1]<235||px[i+2]<235);
-            if(!visible) continue;
-            minX=Math.min(minX,x);
-            minY=Math.min(minY,y);
-            maxX=Math.max(maxX,x);
-            maxY=Math.max(maxY,y);
-          }
-        }
-
-        if(maxX<minX||maxY<minY) return;
-
-        const pad=Math.max(
-          4,Math.round((maxX-minX+1)*.035)
-        );
-        const x=Math.max(0,minX-pad);
-        const y=Math.max(0,minY-pad);
-        const cw=Math.min(w-x,maxX-minX+1+pad*2);
-        const ch=Math.min(h-y,maxY-minY+1+pad*2);
-
-        const trimmed=document.createElement("canvas");
-        trimmed.width=cw;
-        trimmed.height=ch;
-        trimmed.getContext("2d").drawImage(
-          image,x,y,cw,ch,0,0,cw,ch
-        );
-        logo.src=trimmed.toDataURL("image/png");
-      } catch(e) {
-        console.warn("Orijinal logo kullanılıyor.",e);
-      }
-    };
-
-    image.src="./turkish-cargo-logo.png?v=9";
   }
 
-  duzenleLogo();
-  start();
+}
+
+async function start(){
+
+  try{
+
+    const res=await fetch(
+
+      "./data/index.json?v="+Date.now(),
+
+      {cache:"no-store"}
+
+    );
+
+    if(!res.ok)throw Error("data/index.json bulunamadı.");
+
+    const data=await res.json();
+
+    weeks=Array.isArray(data.weeks)?data.weeks:[];
+
+    if(!weeks.length)throw Error("Hafta listesi boş.");
+
+    weeks.sort((a,b)=>b.date.localeCompare(a.date));
+
+    $("weekSelect").innerHTML=weeks.map(w=>`
+<option value="${esc(w.date)}">
+
+        ${esc(w.title||w.date)}
+
+        ${w.status==="current"?" · Güncel Sayı":""}
+</option>
+
+    `).join("");
+
+    const requested=new URLSearchParams(location.search).get("week");
+
+    const chosen=weeks.some(w=>w.date===requested)
+
+      ?requested
+
+      :(weeks.find(w=>w.status==="current")||weeks[0]).date;
+
+    await loadWeek(chosen);
+
+  }catch(e){
+
+    $("errorState").textContent=e.message;
+
+    $("errorState").classList.remove("hidden");
+
+  }
+
+}
+
+$("categoryFilters").addEventListener("click",e=>{
+
+  const b=e.target.closest("button[data-cat]");
+
+  if(!b)return;
+
+  activeCategory=b.dataset.cat;
+
+  render();
+
+});
+
+$("productFilters").addEventListener("click",e=>{
+
+  const b=e.target.closest("button[data-group]");
+
+  if(!b)return;
+
+  activeGroup=b.dataset.group;
+
+  render();
+
+});
+
+$("search").addEventListener("input",render);
+
+$("weekSelect").addEventListener("change",e=>{
+
+  loadWeek(e.target.value);
+
+});
+
+$("shareButton").addEventListener("click",async()=>{
+
+  try{
+
+    if(navigator.share){
+
+      await navigator.share({
+
+        title:"Kargo ve Lojistik Haftalık Bülteni",
+
+        url:location.href
+
+      });
+
+    }else{
+
+      await navigator.clipboard.writeText(location.href);
+
+      $("shareButton").textContent="✓ Kopyalandı";
+
+      setTimeout(()=>{
+
+        $("shareButton").textContent="↗ Paylaş";
+
+      },2000);
+
+    }
+
+  }catch(e){
+
+    console.warn(e);
+
+  }
+
+});
+
+$("footerYear").textContent=new Date().getFullYear();
+
+start();
+
 })();
 </script>
 </body>
 </html>
+ 
