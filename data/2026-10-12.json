@@ -8,11 +8,11 @@
 
   "publishedAt": "2026-10-16",
 
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-20",
 
-  "issueStatus": "Arşiv",
+  "issueStatus": "Arşiv Sayısı",
 
-  "editorialNote": "Bültende yalnızca müdürlüğümüzün ürünleri veya Add-on projeleriyle ilişkilendirilebilen gelişmelere yer verilmiştir. Değerlendirmeler editoryal yorum niteliğindedir; öneriler kesinleşmiş ticari fırsat anlamına gelmez.",
+  "editorialNote": "Yalnızca müdürlüğümüzün ürünleri veya Add-on projeleriyle ilişkilendirilen haberler listelenmiştir. Ürün ve proje değerlendirmeleri editoryal yorumlardır; öneriler kesinleşmiş ticari fırsat anlamına gelmez.",
 
   "items": [
 
@@ -150,9 +150,7 @@
 
       "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html",
 
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/UPS_Airbus_A300_N130UP_on_final_approach_to_Boston_July_2026_02.jpg?width=1280",
-
-      "imageCaption": "Temsili fotoğraf: UPS A300, Boston; Clark tesisi değildir.",
+      "image": "",
 
       "suggestedAction": "Filipinler bağlantılı mevcut TK COURIER ve POSTA akışlarının hacim ve teslimat performansı incelenebilir. Clark bir operasyon merkezidir; haberde belirtilmeyen nihai gönderi O&D'leri varsayılmamalıdır."
 
